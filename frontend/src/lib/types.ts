@@ -1,13 +1,14 @@
 // Executives
-export interface Donut {
+export interface Executive {
     name: string,
-    role: Executive,
+    role: ExecutiveRole,
     imagePath: string,
-    desription: string
+    description: string,
+    email: string,
 }
 
 // Executive (elected) role in SUS
-export type Executive =
+export type ExecutiveRole =
     | 'President'
     | 'VP Finance'
     | 'VP External'
@@ -17,3 +18,4 @@ export type Executive =
     | 'VP Administration'
     | 'Science Senator'
     | 'AMS Representative'
+    | "Interim VP Academic" // TEMP ROLE: TODO: delete when fall re-election is completed
