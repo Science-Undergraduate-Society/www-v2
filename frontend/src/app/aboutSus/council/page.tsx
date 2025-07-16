@@ -1,3 +1,5 @@
+import styles from './council.module.css'
+
 export default function Council({
 
 } : {
@@ -5,7 +7,7 @@ export default function Council({
 }) {
 
     return (
-        <div>
+        <div className={styles.container}>
             Council Page
         </div>
     )
