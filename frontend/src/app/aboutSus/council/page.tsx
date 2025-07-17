@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import styles from './council.module.css'
 
 export default function Council({
