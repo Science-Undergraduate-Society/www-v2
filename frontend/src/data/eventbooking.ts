@@ -7,7 +7,7 @@ export const allOrgs = [
     "External Organizations",
 ];
 
-export default function Alssc() {
+export default function Eventbooking() {
     const firstFloorItems = [
         'Printer – connected to UBCPayForPrint',
         'Study cubicles for silent study',

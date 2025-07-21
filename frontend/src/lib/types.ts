@@ -60,3 +60,8 @@ export interface PolicyTerm {
     title: string;
     description: string;
 }
+
+export interface RoomFeatures {
+    name: string,
+    features: string[],
+}
