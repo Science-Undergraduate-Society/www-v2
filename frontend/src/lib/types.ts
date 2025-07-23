@@ -20,6 +20,13 @@ export type ExecutiveRole =
     | 'AMS Representative'
     | "Interim VP Academic" // TEMP ROLE: TODO: delete when fall re-election is completed
 
+// Ways to get involved in SUS
+export interface GetInvolved {
+    id: number,
+    title: string,
+    description: string,
+}
+
 export interface AncillaryFee {
     applicableCategories: string[],
     description: string,
