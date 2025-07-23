@@ -133,3 +133,12 @@ export type Industry =
     | 'Housing'
     | 'Emergency food relief'
     | 'Art & Museum'
+
+
+// wellness
+export type HealthResource = {
+  label: string; 
+  href: string;  
+  type: "phone" | "url";
+  description?: string; 
+};
