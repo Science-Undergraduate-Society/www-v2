@@ -72,3 +72,64 @@ export interface RoomFeatures {
     name: string,
     features: string[],
 }
+
+export interface BlueCardPartner {
+    name: string, 
+    logoSrc: string,
+    description: string,
+    location: string,
+    website: string
+}
+
+// Subsidies and Grants
+export type FundingType = 'Grant' | 'Subsidy';
+
+export interface FundingOpportunity {
+  title: string;
+  type: FundingType;
+  link: string;
+  eligibleRecipient: FundingRecipient[];
+  description: string;
+  rubric: string;
+}
+
+export type FundingRecipient =
+    | "SUS Clubs"
+    | "Science Students"
+    | "New SUS Clubs"
+
+// Tutors
+export interface Tutor {
+    name: string,
+    courses: string, // maybe change to a type later
+    image: string,
+    description: string
+}
+
+// Volunteer Oppertunities + types
+export interface VolunteerOpportunity {
+    "id": number,
+    "title": string,
+    "company": string,
+    "location": string,
+    "type": WorkMode[],
+    "logo": string,
+    "description": string,
+    "website": string,
+    "industry": Industry[]
+}
+
+export type WorkMode =
+    | 'In-Person'
+    | 'Virtual'
+    | 'Hybrid'
+
+export type Industry =
+    | 'Non-profit'
+    | 'Education'
+    | 'Healthcare'
+    | 'Environment'
+    | 'Farming'
+    | 'Housing'
+    | 'Emergency food relief'
+    | 'Art & Museum'
