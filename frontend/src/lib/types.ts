@@ -26,3 +26,49 @@ export interface GetInvolved {
     title: string,
     description: string,
 }
+
+export interface AncillaryFee {
+    applicableCategories: string[],
+    description: string,
+    fee: string,
+}
+
+export interface BookingFee {
+    category: string
+    mainFloor: string
+    mezzanine: string
+    mainFloorMezzanine: string
+    fullBuilding: string
+    frontPorch: string
+    damageDeposit: string
+}
+
+export interface FAQ {
+    question: string,
+    answer: string
+}
+
+export interface BookingGroupCategory {
+    id: string;
+    name: string;
+    description: string;
+}
+
+export interface DeadlineRule {
+    id: string;
+    title: string;
+    description: string;
+    daysBefore: number;
+    category?: string;
+}
+
+export interface PolicyTerm {
+    id: string;
+    title: string;
+    description: string;
+}
+
+export interface RoomFeatures {
+    name: string,
+    features: string[],
+}
