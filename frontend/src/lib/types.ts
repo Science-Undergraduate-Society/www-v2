@@ -1,3 +1,10 @@
+// Routes
+export interface Route {
+    title: string,
+    href: string,
+    content: string,
+}
+
 // Executives
 export interface Executive {
     name: string,
@@ -85,12 +92,12 @@ export interface BlueCardPartner {
 export type FundingType = 'Grant' | 'Subsidy';
 
 export interface FundingOpportunity {
-  title: string;
-  type: FundingType;
-  link: string;
-  eligibleRecipient: FundingRecipient[];
-  description: string;
-  rubric: string;
+    title: string;
+    type: FundingType;
+    link: string;
+    eligibleRecipient: FundingRecipient[];
+    description: string;
+    rubric: string;
 }
 
 export type FundingRecipient =
@@ -137,8 +144,8 @@ export type Industry =
 
 // wellness
 export type HealthResource = {
-  label: string; 
-  href: string;  
-  type: "phone" | "url";
-  description?: string; 
+    label: string; 
+    href: string;  
+    type: "phone" | "url";
+    description?: string; 
 };
