@@ -2,8 +2,7 @@
 .footer {
     position: relative;
     width: 100%;
-    max-width: 1512px;
-    height: 471px;
+    height: 470px;
     overflow: hidden;
     background-color: var(--color-ui-80);
 }
