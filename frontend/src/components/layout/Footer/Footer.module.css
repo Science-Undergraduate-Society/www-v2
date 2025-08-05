@@ -5,7 +5,7 @@
     max-width: 1512px;
     height: 471px;
     overflow: hidden;
-    background-color: #222755;
+    background-color: var(--color-ui-80);
 }
 
 .footer::before {
