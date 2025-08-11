@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.4.5",
     "dotenv": "^17.2.1",
     "googleapis": "^154.1.0",
     "clsx": "^2.1.1",
