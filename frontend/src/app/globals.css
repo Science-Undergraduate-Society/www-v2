@@ -18,10 +18,10 @@
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 
-  --color-ui-10: #FFFFFF;
+  --color-ui-10: #ffffff;
   --color-ui-20: #e7edf7;
   --color-ui-60: #0173be;
-  --color-ui-80: #ffffff;
+  --color-ui-80: #222755;
   --color-ui-100: #000000;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
