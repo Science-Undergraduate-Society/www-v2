@@ -1,0 +1,69 @@
+:root {
+    --nav-bg: #222755;
+    --panel-bg: rgba(143, 210, 254, 0.25);
+    --accent: #0173be;
+    --card-ring-angle: 135deg;
+    --card-ring-a: rgba(34, 39, 85, 1);
+    --card-ring-b: rgba(34, 39, 85, 0.7);
+    --card-ring-c: rgba(143, 210, 254, 0.25);
+    --radius: 16px;
+}
+
+.noWrap {
+    white-space: nowrap;
+}
+
+.tabActive {
+    position: relative;
+    overflow: hidden;
+}
+
+.tabActive::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    border: 1px solid #000;
+    pointer-events: none;
+    filter: blur(2px);
+}
+
+.pointerSvg {
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18));
+}
+
+.card {
+    position: relative;
+    border-radius: var(--radius);
+}
+
+.ringGradient {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 150ms ease;
+}
+
+.ringGradient::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px; /* ring thickness */
+    background: linear-gradient(
+            var(--card-ring-angle),
+            var(--card-ring-a) 0%,
+            var(--card-ring-b) 50%,
+            var(--card-ring-c) 100%
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.card:hover .ringGradient,
+.card:focus-visible .ringGradient {
+    opacity: 1;
+}

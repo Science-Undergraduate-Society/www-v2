@@ -1,3 +1,10 @@
+// Routes
+export interface Route {
+    title: string,
+    href: string,
+    content: string,
+}
+
 // Executives
 export interface Executive {
     name: string,
@@ -71,6 +78,9 @@ export interface PolicyTerm {
 export interface RoomFeatures {
     name: string,
     features: string[],
+    img: string,
+    capacity: number,
+    roomNumber: number,
 }
 
 export interface BlueCardPartner {
@@ -85,12 +95,12 @@ export interface BlueCardPartner {
 export type FundingType = 'Grant' | 'Subsidy';
 
 export interface FundingOpportunity {
-  title: string;
-  type: FundingType;
-  link: string;
-  eligibleRecipient: FundingRecipient[];
-  description: string;
-  rubric: string;
+    title: string;
+    type: FundingType;
+    link: string;
+    eligibleRecipient: FundingRecipient[];
+    description: string;
+    rubric: string;
 }
 
 export type FundingRecipient =
@@ -137,11 +147,16 @@ export type Industry =
 
 // wellness
 export type HealthResource = {
-  label: string; 
-  href: string;  
-  type: "phone" | "url";
-  description?: string; 
+    label: string; 
+    href: string;  
+    type: "phone" | "url";
+    description?: string; 
 };
+
+
+//Navbar
+export type Item = { label: string; href: string; icon?: string };
+export type Menu = { label: string; items: Item[] };
 
 export type Event = {
     title: string;
