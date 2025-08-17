@@ -24,18 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-      <html
+    <html
           lang="en"
           className={`${figtree.className} ${figtree.variable}`}
       >
-      <body>
+      <body></body>
       {children}
-    <html lang="en">
-      <GoogleTagManager gtmId={gtmId} />
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-        <Footer />
-      </body>
       </html>
   );
 }
