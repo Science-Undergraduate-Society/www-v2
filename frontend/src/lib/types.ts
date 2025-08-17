@@ -142,3 +142,17 @@ export type HealthResource = {
   type: "phone" | "url";
   description?: string; 
 };
+
+export type Event = {
+    title: string;
+    location: string;
+    time: string;
+    date: string;
+    description: EventDescription;
+}
+
+export type EventDescription = {
+    demographic: string;
+    workingGroup: string;
+    collaborator: string; // see if these should be replaced with   
+}
