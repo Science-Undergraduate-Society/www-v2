@@ -158,11 +158,12 @@ export type HealthResource = {
 export type Item = { label: string; href: string; icon?: string };
 export type Menu = { label: string; items: Item[] };
 
+// events
 export type Event = {
     title: string;
     location: string;
     time: string;
-    date: string;
+    date: Date;
     description: EventDescription;
 }
 
