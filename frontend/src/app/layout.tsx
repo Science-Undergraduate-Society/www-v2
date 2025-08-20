@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Figtree } from "next/font/google";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Figtree, Geist, Geist_Mono } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Footer } from "@/components/layout/Footer/Footer";
 import "./globals.css";
@@ -11,7 +10,17 @@ const figtree = Figtree({
   variable: "--font-figtree",
 });
 
-const gtmId = "GTM-PGBF9S6V"
+const geistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
+
+const gtmId = "GTM-PGBF9S6V";
 
 export const metadata: Metadata = {
   title: "UBC SUS",
@@ -19,23 +28,22 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-                                     children,
-                                   }: {
+  children,
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-      <html
-          lang="en"
-          className={`${figtree.className} ${figtree.variable}`}
-      >
-      <body>
-      {children}
-    <html lang="en">
-      <GoogleTagManager gtmId={gtmId} />
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html
+      lang="en"
+      className={`${figtree.variable} ${geistSans.variable} ${geistMono.variable}`}
+    >
+      <head>
+        <GoogleTagManager gtmId={gtmId} />
+      </head>
+      <body className={`${figtree.className}`}>
         {children}
         <Footer />
       </body>
-      </html>
+    </html>
   );
 }
