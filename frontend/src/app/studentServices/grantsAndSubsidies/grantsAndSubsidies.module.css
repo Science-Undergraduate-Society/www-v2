@@ -1,7 +1,209 @@
-.container {
-    /* EXAMPLE STYLING */
-    color: var(--color-ui-20);
+.grantsAndSubsidies {
+    font-family: 'Figtree', Helvetica, sans-serif;
+    color: var(--color-ui-10);
+    background: var(--color-ui-10);
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.card {
+    background: color-mix(in srgb, #e6f5ff, transparent 25%);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+}
+
+.glassButton {
+    padding: 20px 40px;
+    background: color-mix(in srgb, var(--color-ui-10), transparent 90%);
+    backdrop-filter: blur(20px);
+    box-shadow:
+        0px 4px 20px 0px color-mix(in srgb, var(--color-ui-100), transparent 75%),
+        inset 0 2px 2px -2px var(--color-ui-10),
+        inset 0 -2px 2px -2px var(--color-ui-10);
+    border-radius: 16px;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-ui-10);
+    white-space: nowrap;
+}
+
+.blueButton {
+    padding: 20px 40px;
     background: var(--color-ui-80);
-    width: 90%;
-    height: 50%;
+    box-shadow: 0px 4px 20px 0px color-mix(in srgb, var(--color-ui-100), transparent 75%);
+    border-radius: 16px;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-ui-10);
+    white-space: nowrap;
+}
+
+.header {
+    padding: 80px 10% 300px 10%;
+    background: url('/assets/backgrounds/background-stem-blue.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
+
+    h1 {
+        padding: 1rem 0;
+        font-size: 64px;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+}
+
+.applicationInformation {
+    padding: 0 5%;
+
+    .applicationInformationCard {
+        padding: 50px 75px;
+        transform: translateY(-200px);
+
+        div {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: bold;
+            color: var(--color-ui-80);
+        }
+
+        p {
+            font-size: 24px;
+            color: var(--color-ui-100);
+
+            .deadline {
+                color: var(--color-ui-60);
+            }
+
+            .callout {
+                font-weight: 600;
+                color: var(--color-ui-80);
+            }
+
+            a {
+                color: var(--color-ui-60);
+                text-decoration: underline;
+            }
+        }
+
+        .closed {
+            padding: 15px 40px;
+            background: var(--color-ui-80);
+            border-radius: 16px;
+            font-size: 40px;
+            font-weight: bold;
+            color: var(--color-ui-10);
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.grants,
+.subsidies {
+    display: flex;
+    padding-inline: 5%;
+    align-items: center;
+
+    h1 {
+        padding-top: 1rem;
+        font-size: 64px;
+        font-weight: bold;
+    }
+
+    .grantsButtons,
+    .subsidiesButtons {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px 0 40px;
+        justify-content: center;
+    }
+
+    .grantsList,
+    .subsidiesList {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+
+        .card {
+            height: fit-content;
+            max-width: 500px;
+            box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            padding: 0;
+            font-size: 40px;
+            font-weight: 600;
+            color: var(--color-ui-80);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: var(--color-ui-60);
+        }
+
+        p {
+            padding: 20px 0 45px 0;
+            font-size: 20px;
+            color: var(--color-ui-100);
+        }
+    }
+}
+
+.grants {
+    padding-block: 10vw;
+    background: url('/assets/backgrounds/background-stem-blue.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 calc(100% - 10vw));
+
+    .grantsButtons {
+        gap: 25px
+    }
+
+    .grantsList {
+        height: 2000px;
+
+        .card {
+            padding: 40px 50px 80px;
+        }
+    }
+}
+
+.subsidies {
+    padding-bottom: 200px;
+
+    h1 {
+        color: var(--color-ui-80);
+    }
+
+    .subsidiesList {
+        height: 1750px;
+
+        .card {
+            padding: 40px 50px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .grantsList,
+    .subsidiesList {
+        height: auto !important;
+    }
 }
