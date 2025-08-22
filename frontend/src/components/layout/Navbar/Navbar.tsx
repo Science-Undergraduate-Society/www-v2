@@ -5,11 +5,11 @@ import Link from "next/link";
 import { MENUS } from "@/data/nav";
 import styles from "./Navbar.module.css";
 
-const PANEL_W = 761;
-const PANEL_TOP_OFFSET = 40;
-const POINTER_W = 80;
-const POINTER_H = 35;
-const POINTER_EDGE_GUTTER = 24;
+const PANEL_WIDTH_VW = 47.5625;
+const PANEL_TOP_OFFSET_REM = 2.5;
+const POINTER_WIDTH_REM = 5;
+const POINTER_HEIGHT_REM = 2.1875;
+const POINTER_EDGE_GUTTER_REM = 1.5;
 
 export default function Navbar() {
     const [open, setOpen] = useState<string | null>(null);
@@ -17,6 +17,7 @@ export default function Navbar() {
     const [anchorY, setAnchorY] = useState(0);
     const [panelLeft, setPanelLeft] = useState(0);
     const [pointerLeft, setPointerLeft] = useState(0);
+
     const navRef = useRef<HTMLDivElement | null>(null);
 
     const handleEnter = (label: string, e: React.MouseEvent) => {
@@ -36,12 +37,11 @@ export default function Navbar() {
         };
         recompute();
         window.addEventListener("resize", recompute);
-        window.addEventListener("scroll", recompute, { passive: true });
+        window.addEventListener("scroll", recompute, { passive: true } as any);
         return () => {
             window.removeEventListener("resize", recompute);
             window.removeEventListener("scroll", recompute);
         };
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [x]);
 
     useEffect(() => {
@@ -54,66 +54,85 @@ export default function Navbar() {
         if (!navRef.current) return;
         const r = navRef.current.getBoundingClientRect();
 
+        // Calculate panel width based on viewport width and rem
+        const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+        const panelWidthPx = Math.min(
+            window.innerWidth * (PANEL_WIDTH_VW / 100), // Use percentage of viewport
+            47.5625 * remInPx // Maximum size in pixels (converted from rem)
+        );
+
+        // Calculate pointer dimensions in pixels
+        const pointerWidthPx = POINTER_WIDTH_REM * remInPx;
+        const pointerEdgeGutterPx = POINTER_EDGE_GUTTER_REM * remInPx;
+
         // clamp panel so left/right align with nav bounds
-        const left = Math.min(Math.max(cx - PANEL_W / 2, r.left), r.right - PANEL_W);
+        const left = Math.min(
+            Math.max(cx - panelWidthPx / 2, r.left),
+            r.right - panelWidthPx
+        );
         setPanelLeft(left);
 
         // pointer position inside panel, kept away from rounded corners
         const pointerX = Math.min(
-            Math.max(cx - left, POINTER_W / 2 + POINTER_EDGE_GUTTER),
-            PANEL_W - POINTER_W / 2 - POINTER_EDGE_GUTTER
+            Math.max(cx - left, pointerWidthPx / 2 + pointerEdgeGutterPx),
+            panelWidthPx - pointerWidthPx / 2 - pointerEdgeGutterPx
         );
         setPointerLeft(pointerX);
     };
 
+    // Calculate responsive panel width
+    const getPanelWidth = () => {
+        const remInPx = typeof window !== 'undefined'
+            ? parseFloat(getComputedStyle(document.documentElement).fontSize)
+            : 16;
+
+        return Math.min(
+            typeof window !== 'undefined' ? window.innerWidth * (PANEL_WIDTH_VW / 100) : 761,
+            47.5625 * remInPx
+        );
+    };
+
+    // Calculate responsive offset
+    const getPanelTopOffset = () => {
+        const remInPx = typeof window !== 'undefined'
+            ? parseFloat(getComputedStyle(document.documentElement).fontSize)
+            : 16;
+
+        return PANEL_TOP_OFFSET_REM * remInPx;
+    };
+
     return (
-        <div className="relative z-[9999] overflow-visible pt-[8px]">
+        <div className={styles.navbarRoot}>
             {/* Top bar */}
-            <nav
-                ref={navRef}
-                className="bg-[#222755] rounded-xl shadow-lg overflow-visible select-none max-w-[1512px] w-full mx-auto"
-            >
-                <div className="h-[95px] flex items-center text-white overflow-visible px-8">
+            <nav ref={navRef} className={styles.navbar}>
+                <div className={styles.navbarBar}>
                     {/* Logo */}
-                    <Link href="/" className="shrink-0 mr-16">
-                        <img src="/assets/logos/logo-blue.png" alt="SUS logo" className="h-[75px] w-[75px]" />
+                    <Link href="/" className={styles.navbarLogo}>
+                        <img src="/assets/logos/logo-blue.png" alt="SUS logo" className={styles.navbarLogoImg} />
                     </Link>
 
                     {/* Primary links */}
-                    <div className="flex-1 flex justify-center">
-                        <ul className="flex items-center gap-8 overflow-visible">
+                    <div className={styles.navbarCenter}>
+                        <ul className={styles.navbarList}>
                             {MENUS.map((m) => (
-                                <li key={m.label} className="relative overflow-visible">
+                                <li key={m.label} className={styles.navbarItem}>
                                     {m.items.length === 1 ? (
-                                        <Link
-                                            href={m.items[0].href}
-                                            className={`flex items-center justify-center gap-2 px-[30px] h-[58px] rounded-[16px] font-semibold text-[20px] leading-[30px] transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 hover:bg-white/10 hover:text-[#8db5ff] ${styles.noWrap}`}
-                                        >
+                                        <Link href={m.items[0].href} className={styles.navPill}>
                                             {m.label}
                                         </Link>
                                     ) : (
                                         <button
                                             onMouseEnter={(e) => handleEnter(m.label, e)}
                                             onFocus={(e) => handleEnter(m.label, e as any)}
-                                            className={[
-                                                "flex items-center justify-center gap-2 px-[30px] h-[58px] rounded-[16px] font-semibold text-[20px] leading-[30px] transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60",
-                                                styles.noWrap,
-                                                open === m.label
-                                                    ? [
-                                                        "bg-[#0173BE]/40 text-white",
-                                                        styles.tabActive, // inside stroke + blur via CSS module
-                                                    ].join(" ")
-                                                    : "hover:bg-white/10 hover:text-[#8db5ff]",
-                                            ].join(" ")}
+                                            className={`${styles.navPill} ${open === m.label ? styles.isActive : ""}`}
                                         >
                                             {m.label}
                                             <svg
-                                                className={`h-[17px] w-[17px] transition-transform duration-150 ${
-                                                    open === m.label ? "rotate-180" : ""
-                                                }`}
+                                                className={`${styles.navCaret} ${open === m.label ? styles.rotated : ""}`}
                                                 viewBox="0 0 24 24"
                                                 fill="none"
                                                 stroke="currentColor"
+                                                aria-hidden="true"
                                             >
                                                 <path d="M19 9l-7 7-7-7" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
                                             </svg>
@@ -125,10 +144,7 @@ export default function Navbar() {
                     </div>
 
                     {/* Join SUS */}
-                    <Link
-                        href="/join"
-                        className="w-[150px] h-[58px] rounded-[16px] bg-white text-[#0E1A4B] text-[20px] leading-[30px] font-semibold flex items-center justify-center hover:bg-[#d7e9f9] transition-colors ml-8 shrink-0"
-                    >
+                    <Link href="/join" className={styles.joinBtn}>
                         Join SUS
                     </Link>
                 </div>
@@ -141,22 +157,31 @@ export default function Navbar() {
                     open === menu.label && (
                         <div
                             key={menu.label}
-                            className="fixed inset-0 z-[9998] pointer-events-none"
+                            className={styles.dropdownOverlay}
                             onMouseLeave={() => setOpen(null)}
                             onClick={() => setOpen(null)}
                         >
                             {/* panel */}
-                            <div className="absolute pointer-events-auto" style={{ left: panelLeft, top: anchorY + PANEL_TOP_OFFSET }}>
-                                <div className="w-[761px] rounded-[16px] bg-[rgba(143,210,254,0.25)] shadow-[0_12px_24px_rgba(0,0,0,0.12)] p-6 pb-[30px] relative">
+                            <div
+                                className={styles.dropdownPanelWrap}
+                                style={{
+                                    left: panelLeft,
+                                    top: anchorY + getPanelTopOffset()
+                                }}
+                            >
+                                <div
+                                    className={styles.dropdownPanel}
+                                    style={{ width: getPanelWidth() }}
+                                >
                                     {/* pointer */}
                                     <div
-                                        className="absolute -translate-x-1/2"
-                                        style={{ left: `${pointerLeft}px`, top: "-34.5px" }}
+                                        className={styles.dropdownPointer}
+                                        style={{ left: pointerLeft }}
                                         aria-hidden="true"
                                     >
                                         <svg
-                                            width={POINTER_W}
-                                            height={POINTER_H}
+                                            width={`${POINTER_WIDTH_REM}rem`}
+                                            height={`${POINTER_HEIGHT_REM}rem`}
                                             viewBox="0 0 80 35"
                                             className={styles.pointerSvg}
                                         >
@@ -170,43 +195,31 @@ export default function Navbar() {
                           Q80,35 68,35
                           Z
                         "
-                                                fill="rgba(143,210,254,0.25)"
+                                                fill="#E7F2FF"
                                             />
                                         </svg>
                                     </div>
 
                                     {/* cards */}
-                                    <ul className="grid grid-cols-2 gap-4">
+                                    <ul className={styles.menuGrid}>
                                         {menu.items.map((item) => (
-                                            <li key={item.href}>
-                                                <Link
-                                                    href={item.href}
-                                                    className={[
-                                                        "group flex items-center gap-[19px] w-[303px] h-[125px] rounded-[16px] px-[30px] py-[21px] transition-[background,border,box-shadow,transform] duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#222755]/40",
-                                                        styles.card, // enables gradient ring targeting
-                                                    ].join(" ")}
-                                                >
-                                                    {/* gradient ring */}
-                                                    <span className={styles.ringGradient} />
-
+                                            <li key={item.href} className={styles.menuGridItem}>
+                                                <Link href={item.href} className={styles.navCard}>
+                                                    <span className={styles.ringGradient} aria-hidden="true" />
                                                     {item.icon && (
-                                                        <span className="inline-flex items-center justify-center h-12 w-12 shrink-0">
+                                                        <span className={styles.iconWrap}>
                               <img
                                   src={`/assets/nav-bar-icons/${item.icon}.png`}
                                   alt=""
-                                  className="h-12 w-12"
+                                  className={styles.iconImg}
                                   onError={(e) => {
                                       (e.currentTarget as HTMLImageElement).style.display = "none";
                                   }}
                               />
                             </span>
                                                     )}
-                                                    <span className="font-semibold text-[20px] leading-[30px] text-[#222755]">
-                            {item.label}
-                          </span>
-
-                                                    {/* subtle hover fill */}
-                                                    <span className="absolute inset-0 rounded-[16px] bg-[rgba(143,210,254,0.25)] opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-150" />
+                                                    <span className={styles.label}>{item.label}</span>
+                                                    <span className={styles.hoverFill} aria-hidden="true" />
                                                 </Link>
                                             </li>
                                         ))}
