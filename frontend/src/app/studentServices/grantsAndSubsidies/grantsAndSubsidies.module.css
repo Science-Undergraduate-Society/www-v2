@@ -1,6 +1,6 @@
 .grantsAndSubsidies {
     font-family: 'Figtree', Helvetica, sans-serif;
-    color: var(--color-ui-10);
+    color: var(--color-ui-80);
     background: var(--color-ui-10);
 
     section {
@@ -47,6 +47,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
+    color: var(--color-ui-10);
 
     h1 {
         padding: 1rem 0;
@@ -76,12 +77,10 @@
         h1 {
             font-size: 40px;
             font-weight: bold;
-            color: var(--color-ui-80);
         }
 
         p {
             font-size: 24px;
-            color: var(--color-ui-100);
 
             .deadline {
                 color: var(--color-ui-60);
@@ -89,7 +88,6 @@
 
             .callout {
                 font-weight: 600;
-                color: var(--color-ui-80);
             }
 
             a {
@@ -172,6 +170,10 @@
     background-repeat: no-repeat;
     clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 calc(100% - 10vw));
 
+    h1 {
+        color: var(--color-ui-10);
+    }
+
     .grantsButtons {
         gap: 25px
     }
@@ -187,10 +189,6 @@
 
 .subsidies {
     padding-bottom: 200px;
-
-    h1 {
-        color: var(--color-ui-80);
-    }
 
     .subsidiesList {
         height: 1750px;
