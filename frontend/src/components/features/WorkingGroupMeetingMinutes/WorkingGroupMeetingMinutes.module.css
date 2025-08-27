@@ -1,0 +1,53 @@
+.workingGroupMeetingMinutes {
+    ul {
+        display: flex;
+    }
+
+    li {
+        display: flex;
+        padding: 20px 30px;
+        background: color-mix(in srgb, #e6f5ff, transparent 25%);
+        backdrop-filter: blur(20px);
+        border: 2px solid color-mix(in srgb, var(--color-ui-80), transparent 75%);
+        border-bottom: none;
+        border-radius: 16px 16px 0 0;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: capitalize;
+        align-items: center;
+        cursor: pointer;
+
+        &.selected {
+            background: var(--color-ui-80);
+            color: var(--color-ui-10);
+        }
+    }
+}
+
+.meetingMinutesView {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+    padding: 80px;
+    background: var(--color-ui-80);
+    border-radius: 0 16px 16px 16px;
+    place-items: center;
+
+    .meetingMinuteButton {
+        width: 350px;
+        padding: 30px;
+        margin: 30px 15px;
+        background: color-mix(in srgb, var(--color-ui-10), transparent 90%);
+        backdrop-filter: blur(20px);
+        box-shadow:
+            0px 4px 20px 0px color-mix(in srgb, var(--color-ui-100), transparent 75%),
+            inset 0 2px 2px -2px var(--color-ui-10),
+            inset 0 -2px 2px -2px var(--color-ui-10);
+        border-radius: 16px;
+        font-size: 24px;
+        font-weight: bold;
+        color: var(--color-ui-10);
+        text-align: center;
+        white-space: normal;
+    }
+}

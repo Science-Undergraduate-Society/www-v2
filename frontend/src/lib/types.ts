@@ -153,6 +153,12 @@ export type HealthResource = {
     description?: string; 
 };
 
+export interface WorkingGroupMeetingMinute {
+    title: string;
+    link: string;
+}
+
+export type WorkingGroupMeetingMinutes = Record<string, WorkingGroupMeetingMinute[]>
 
 //Navbar
 export type Item = { label: string; href: string; icon?: string };
