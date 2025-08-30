@@ -20,9 +20,12 @@
 
   --color-ui-10: #ffffff;
   --color-ui-20: #e7edf7;
+  --color-ui-30: rgba(230, 245, 255, 0.8);
   --color-ui-60: #0173be;
   --color-ui-80: #222755;
   --color-ui-100: #000000;
+
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -154,7 +157,6 @@ body {
   }
 
 }
-
 .navbar-container {
   overflow: visible !important;
 }
