@@ -1,12 +1,12 @@
 import { grants, subsidies } from '@/data/grantsAndSubsidies'
+import FrostedCard from '@/components/ui/FrostedCard/FrostedCard'
 import styles from './grantsAndSubsidies.module.css'
 
 export default function GrantsAndSubsidies() {
     return (
         <div className={styles.grantsAndSubsidies}>
-            <section className={styles.header}>
+            <section className="page-banner-header">
                 <h1>Grants & Subsidies</h1>
-                <h2>$48,250 for individuals and clubs</h2>
             </section>
             <section className={styles.applicationInformation}>
                 <div className={`${styles.card} ${styles.applicationInformationCard}`}>
@@ -45,12 +45,12 @@ export default function GrantsAndSubsidies() {
                 </div>
                 <div className={styles.grantsList}>
                     {grants.map((grant, index) => (
-                        <div key={index} className={styles.card}>
+                        <FrostedCard key={index} className={styles.card}>
                             <h1>{grant.title}</h1>
                             <h2>For {grant.eligibleRecipient.join(' & ')}</h2>
                             <p>{grant.description}</p>
                             <h2><a href={grant.rubric} target="_blank">Adjudication Rubric</a></h2>
-                        </div>
+                        </FrostedCard>
                     ))}
                 </div>
             </section>
@@ -61,11 +61,11 @@ export default function GrantsAndSubsidies() {
                 </div>
                 <div className={styles.subsidiesList}>
                     {subsidies.map((subsidy, index) => (
-                        <div key={index} className={styles.card}>
+                        <FrostedCard key={index} className={styles.card}>
                             <h1>{subsidy.title}</h1>
                             <h2>For {subsidy.eligibleRecipient.join(' & ')}</h2>
                             <p>{subsidy.description}</p>
-                        </div>
+                        </FrostedCard>
                     ))}
                 </div>
             </section>

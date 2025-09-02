@@ -9,12 +9,6 @@
     }
 }
 
-.card {
-    background: color-mix(in srgb, #e6f5ff, transparent 25%);
-    backdrop-filter: blur(20px);
-    border-radius: 20px;
-}
-
 .glassButton {
     padding: 20px 40px;
     background: color-mix(in srgb, var(--color-ui-10), transparent 90%);
@@ -41,27 +35,8 @@
     white-space: nowrap;
 }
 
-.header {
-    padding: 80px 10% 300px 10%;
-    background: url('/assets/backgrounds/background-stem-blue.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
-    color: var(--color-ui-10);
-
-    h1 {
-        padding: 1rem 0;
-        font-size: 64px;
-        font-weight: bold;
-    }
-
-    h2 {
-        font-size: 40px;
-    }
-}
-
 .applicationInformation {
-    padding: 0 5%;
+    padding: 0 5% 100px;
 
     .applicationInformationCard {
         padding: 50px 75px;
