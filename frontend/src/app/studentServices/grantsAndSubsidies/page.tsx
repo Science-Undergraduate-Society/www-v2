@@ -9,33 +9,39 @@ export default function GrantsAndSubsidies() {
                 <h1>Grants & Subsidies</h1>
             </section>
             <section className={styles.applicationInformation}>
-                <div className={`${styles.card} ${styles.applicationInformationCard}`}>
-                    <div>
+                <FrostedCard className={styles.applicationInformationCard}>
+                    <div className={styles.header}>
                         <h1>Application Information</h1>
-                        <div className={styles.closed}>CLOSED</div>
+                        <div className={styles.status}>OPENING SOON</div>
                     </div>
-                    <p>
-                        <b>Applications for 25/26 Grant and Subsidies will open in <span className={styles.deadline}>Early October 2025!</span></b>
-                        <br /><br />
-                        Applications for Grants & Subsidies will open on October 7, 2024 and will be reviewed on a first-submitted, first-reviewed basis.
-                        SUS will be accepting applications until March 10, 2025, or until funds run out.
-                        Please utilize the following resources and submission link to put forth your application.
-                        <br /><br />
-                        To read more about the 2024/2025 available grants and subsidies, as well as to view the application form, see below and click on the name of the grant/subsidy you are interested in.
-                        <br /><br /><br />
-                        <span className={styles.callout}>TO APPLY:</span>
-                        <br /><br />
-                        Please submit your application package by emailing <a href="mailto:vpfinance@sus.ubc.ca">vpfinance@sus.ubc.ca</a> and cc-ing <a href="mailto:">avp.finance@sus.ubc.ca</a>.
-                        You will receive a confirmation email upon receipt of your application.
-                        <br /><br /><br />
-                        <span className={styles.callout}>NOTE:</span>
-                        <br /><br />
-                        All grant & subsidy applications have a checklist at the bottom of the document which details the required documentation that is necessary to be considered for a given grant/subsidy.
-                        Best of luck to all applicants!
-                        <br /><br />
-                        *Applications MUST be submitted to the Qualtrics form above to be considered
-                    </p>
-                </div>
+                    <div className={styles.description}>
+                        <p>
+                            <b>Applications for 25/26 Grant and Subsidies will open in <span className={styles.deadline}>Early September 2025!</span></b>
+                            <br /><br />
+                            Applications for Grants & Subsidies will open on <b>September 15, 2025</b> and will be reviewed on a first-submitted, first-reviewed basis.
+                            SUS will be accepting applications until <b>April 10, 2026, or until funds run out. </b>
+                            Please utilize the following resources and submission link to put forth your application.
+                            <br /><br />
+                            To read more about the 2025/2026 available grants and subsidies, as well as to view the application form, see below and click on the name of the grant/subsidy you are interested in.
+                        </p>
+                    </div>
+                    <div className={styles.description}>
+                        <h1>TO APPLY:</h1>
+                        <p>
+                            Please submit your application package by emailing <a href="mailto:vpfinance@sus.ubc.ca">vpfinance@sus.ubc.ca</a> and cc-ing <a href="mailto:">avp.finance@sus.ubc.ca</a>.
+                            You will receive a confirmation email upon receipt of your application.
+                        </p>
+                    </div>
+                    <div className={styles.description}>
+                        <h1>NOTE:</h1>
+                        <p>
+                            All grant & subsidy applications have a checklist at the bottom of the document which details the required documentation that is necessary to be considered for a given grant/subsidy.
+                            Best of luck to all applicants!
+                            <br /><br />
+                            Best of luck to all applicants!
+                        </p>
+                    </div>
+                </FrostedCard>
             </section>
             <section className={styles.grants}>
                 <h1>Grants</h1>

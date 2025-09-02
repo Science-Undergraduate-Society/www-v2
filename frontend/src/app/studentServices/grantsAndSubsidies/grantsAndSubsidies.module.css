@@ -39,29 +39,30 @@
     padding: 0 5% 100px;
 
     .applicationInformationCard {
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
         padding: 50px 75px;
-        transform: translateY(-200px);
+        font-size: 24px;
 
-        div {
+        .header {
             display: flex;
-            margin-bottom: 30px;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-        }
 
-        h1 {
-            font-size: 40px;
-            font-weight: bold;
-        }
-
-        p {
-            font-size: 24px;
-
-            .deadline {
-                color: var(--color-ui-60);
+            h1 {
+                font-size: 40px;
+                font-weight: bold;
             }
+        }
 
-            .callout {
+        .description {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            h1 {
                 font-weight: 600;
             }
 
@@ -69,9 +70,13 @@
                 color: var(--color-ui-60);
                 text-decoration: underline;
             }
+
+            .deadline {
+                color: var(--color-ui-60);
+            }
         }
 
-        .closed {
+        .status {
             padding: 15px 40px;
             background: var(--color-ui-80);
             border-radius: 16px;
