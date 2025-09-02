@@ -13,19 +13,20 @@ export async function GET() {
 
   const calendar = google.calendar({
     version: 'v3',
-    auth: process.env.GOOGLE_CALENDAR_API_KEY, // use API key here
+    auth: process.env.GOOGLE_CALENDAR_API_KEY,
   });
 
   try {
     const events = await calendar.events.list({
       calendarId,
       timeMin: new Date().toISOString(),
-      maxResults: 5,
+      maxResults: 20,
       singleEvents: true,
       orderBy: 'startTime',
     });
 
-    return NextResponse.json(events.data.items ?? []);
+    const ans =  NextResponse.json(events.data.items ?? []);
+    return ans;
   } catch (err: any) {
     return NextResponse.json({ error: err.message || 'Failed to fetch events' }, { status: 500 });
   }
