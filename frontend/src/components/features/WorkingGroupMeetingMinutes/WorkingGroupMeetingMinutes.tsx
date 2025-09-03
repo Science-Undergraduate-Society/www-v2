@@ -4,7 +4,7 @@ import { useState } from "react";
 import { workingGroupMeetingMinutes } from '@/data/workingGroupMeetingMinutes'
 import styles from "./WorkingGroupMeetingMinutes.module.css";
 
-export function WorkingGroupMeetingMinutes() {
+export default function WorkingGroupMeetingMinutes() {
     const [selected, setSelected] = useState(Object.keys(workingGroupMeetingMinutes)[0])
 
     return (

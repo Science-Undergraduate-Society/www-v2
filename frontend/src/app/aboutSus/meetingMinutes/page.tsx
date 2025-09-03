@@ -1,6 +1,6 @@
 import FrostedCard from "@/components/ui/FrostedCard/FrostedCard";
 import BlueButton from "@/components/ui/BlueButton/BlueButton";
-import { WorkingGroupMeetingMinutes } from "@/components/features/WorkingGroupMeetingMinutes/WorkingGroupMeetingMinutes";
+import WorkingGroupMeetingMinutes from "@/components/features/WorkingGroupMeetingMinutes/WorkingGroupMeetingMinutes";
 import styles from './meetingMinutes.module.css'
 
 export default function MeetingMinutes() {
