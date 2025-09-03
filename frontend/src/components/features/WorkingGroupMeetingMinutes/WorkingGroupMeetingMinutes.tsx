@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { workingGroupMeetingMinutes } from '@/data/workingGroupMeetingMinutes'
+import GlassButton from "@/components/ui/GlassButton/GlassButton";
 import styles from "./WorkingGroupMeetingMinutes.module.css";
 
 export default function WorkingGroupMeetingMinutes() {
@@ -22,14 +23,13 @@ export default function WorkingGroupMeetingMinutes() {
             </ul>
             <div className={styles.meetingMinutesView}>
                 {workingGroupMeetingMinutes[selected]?.map(({ title, link }, index) => (
-                    <a
+                    <GlassButton
                         key={index}
                         href={link}
-                        target="_blank"
-                        className={styles.meetingMinuteButton}
+                        className={styles.button}
                     >
                         {title}
-                    </a>
+                    </GlassButton>
                 ))}
             </div>
         </div>

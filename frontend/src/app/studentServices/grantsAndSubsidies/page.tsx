@@ -1,5 +1,6 @@
 import { grants, subsidies } from '@/data/grantsAndSubsidies'
 import FrostedCard from '@/components/ui/FrostedCard/FrostedCard'
+import GlassButton from '@/components/ui/GlassButton/GlassButton'
 import BlueButton from '@/components/ui/BlueButton/BlueButton'
 import styles from './grantsAndSubsidies.module.css'
 
@@ -47,8 +48,18 @@ export default function GrantsAndSubsidies() {
             <section className={styles.grants}>
                 <h1>Grants</h1>
                 <div className={styles.grantsButtons}>
-                    <a href="https://drive.google.com/open?id=10IOyK3iQT9NZMmGeMr5C6I6umKnYtuP7" className={styles.glassButton}>Grants Information 24/25</a>
-                    <a href="https://drive.google.com/open?id=1qJldIJrrRcPXTXhdPitiryMFsFKS34Y6" className={styles.glassButton}>Grants Rubric 24/25</a>
+                    <GlassButton
+                        href="https://drive.google.com/open?id=10IOyK3iQT9NZMmGeMr5C6I6umKnYtuP7"
+                        className={styles.button}
+                    >
+                        Grants Information 24/25
+                    </GlassButton>
+                    <GlassButton
+                        href="https://drive.google.com/open?id=1qJldIJrrRcPXTXhdPitiryMFsFKS34Y6"
+                        className={styles.button}
+                    >
+                        Grants Rubric 24/25
+                    </GlassButton>
                 </div>
                 <div className={styles.grantsList}>
                     {grants.map((grant, index) => (
