@@ -1,5 +1,5 @@
 import { FundingOpportunity } from "@/lib/types";
-import { FundingRecipient } from "@/lib/types";
+// import { FundingRecipient } from "@/lib/types";
  
 
 export const grants: FundingOpportunity[] = [

@@ -1,4 +1,4 @@
-import styles from './studentCenterInfo.module.css'
+import styles from './info.module.css'
 
 export default function StudentCenterInfo({
 

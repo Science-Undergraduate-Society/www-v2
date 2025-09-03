@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import styles from './council.module.css'
+import styles from './portfoliosAndCommittees.module.css'
 
 export default function Council({
 
@@ -9,7 +9,7 @@ export default function Council({
 
     return (
         <div className={styles.container}>
-            Council Page
+            Portfolios and Committees Page
         </div>
     )
 }

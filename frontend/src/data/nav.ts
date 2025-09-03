@@ -4,16 +4,15 @@ export const MENUS: Menu[] = [
     {
         label: "About",
         items: [
-            { label: "Our Executives", href: "/aboutSus/executives", icon: "executives" },
-            { label: "Council", href: "/aboutSus/council", icon: "council" },
-            { label: "Procedures", href: "/aboutSus/procedures", icon: "procedures" },
-            { label: "Meeting Minutes", href: "/about/minutes", icon: "minutes" },
+            { label: "Council & Procedures", href: "/about/council-and-procedures", icon: "procedures" },
+            { label: "Portfolios & committees", href: "/about/portfolios-and-committees", icon: "council" },
+            { label: "Meeting Minutes", href: "/about/meetingMinutes", icon: "minutes" },
+            { label: "Our Executives", href: "/about/executives", icon: "executives" },
         ],
     },
     {
         label: "Get Involved",
         items: [
-            { label: "Volunteer Portal", href: "/getInvolved/volunteerPortal", icon: "volunteer" },
             { label: "Join SUS", href: "/getInvolved/joinSus", icon: "join" },
             { label: "SUS Clubs", href: "/getInvolved/susClubs", icon: "clubs" },
             { label: "Events", href: "/getInvolved/susEvents", icon: "events" },

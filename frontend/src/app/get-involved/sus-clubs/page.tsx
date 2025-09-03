@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./susClubs.module.css";
+import styles from "./events.module.css";
 import Navbar from "@/components/layout/Navbar/Navbar";
 import { ClubsInfo } from "@/data/clubs";
 import ClubCard from "@/components/ui/ClubCard";

@@ -23,7 +23,7 @@ export const executives: Executive[] = [
         email: "vpadministration@sus.ubc.ca",
     },
     {
-        name: "Anika Lee",
+        name: "(TEMP) Anika Lee",
         role: "Interim VP Academic",
         imagePath: "/assets/executive-images/anika-lee.png",
         description: `Hey UBC Science! I’m Anika Lee, a 4th-year Neuroscience Student, and I’m excited to be your interim VP Academic for SUS!

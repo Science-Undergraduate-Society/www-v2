@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { roomFeatures, MeetingRoomPolicies } from "@/data/roombooking";
 import Navbar from "@/components/layout/Navbar/Navbar";
-import styles from "./bookings.module.css"; // <-- import the module mapping
+import styles from "./roomBookings.module.css"; // <-- import the module mapping
 
 export default function MeetingRoomBookingsPage() {
     return (
@@ -28,7 +28,7 @@ export default function MeetingRoomBookingsPage() {
                                     priority
                                 />
                                 <span className={styles["location-name"]}>
-                  Abdul Ladha Science Student Centre (ALSSC)
+                    Abdul Ladha Science Student Centre (ALSSC)
                 </span>
                             </div>
                         </div>

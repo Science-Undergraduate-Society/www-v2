@@ -20,7 +20,7 @@ export default function Navbar() {
 
     const navRef = useRef<HTMLDivElement | null>(null);
 
-    const handleEnter = (label: string, e: React.MouseEvent) => {
+    const handleEnter = (label: string, e: React.MouseEvent | React.FocusEvent) => {
         const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
         const cx = rect.left + rect.width / 2;
         setX(cx);
@@ -37,7 +37,7 @@ export default function Navbar() {
         };
         recompute();
         window.addEventListener("resize", recompute);
-        window.addEventListener("scroll", recompute, { passive: true } as any);
+        window.addEventListener("scroll", recompute, { passive: true });
         return () => {
             window.removeEventListener("resize", recompute);
             window.removeEventListener("scroll", recompute);
@@ -123,7 +123,7 @@ export default function Navbar() {
                                     ) : (
                                         <button
                                             onMouseEnter={(e) => handleEnter(m.label, e)}
-                                            onFocus={(e) => handleEnter(m.label, e as any)}
+                                            onFocus={(e: React.FocusEvent<HTMLButtonElement>) => handleEnter(m.label, e)}
                                             className={`${styles.navPill} ${open === m.label ? styles.isActive : ""}`}
                                         >
                                             {m.label}
