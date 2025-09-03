@@ -9,84 +9,34 @@
     }
 }
 
-.card {
-    background: color-mix(in srgb, #e6f5ff, transparent 25%);
-    backdrop-filter: blur(20px);
-    border-radius: 20px;
-}
-
-.glassButton {
-    padding: 20px 40px;
-    background: color-mix(in srgb, var(--color-ui-10), transparent 90%);
-    backdrop-filter: blur(20px);
-    box-shadow:
-        0px 4px 20px 0px color-mix(in srgb, var(--color-ui-100), transparent 75%),
-        inset 0 2px 2px -2px var(--color-ui-10),
-        inset 0 -2px 2px -2px var(--color-ui-10);
-    border-radius: 16px;
-    font-size: 40px;
-    font-weight: bold;
-    color: var(--color-ui-10);
-    white-space: nowrap;
-}
-
-.blueButton {
-    padding: 20px 40px;
-    background: var(--color-ui-80);
-    box-shadow: 0px 4px 20px 0px color-mix(in srgb, var(--color-ui-100), transparent 75%);
-    border-radius: 16px;
-    font-size: 40px;
-    font-weight: bold;
-    color: var(--color-ui-10);
-    white-space: nowrap;
-}
-
-.header {
-    padding: 80px 10% 300px 10%;
-    background: url('/assets/backgrounds/background-stem-blue.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
-    color: var(--color-ui-10);
-
-    h1 {
-        padding: 1rem 0;
-        font-size: 64px;
-        font-weight: bold;
-    }
-
-    h2 {
-        font-size: 40px;
-    }
-}
-
 .applicationInformation {
-    padding: 0 5%;
+    padding: 0 5% 100px;
 
     .applicationInformationCard {
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
         padding: 50px 75px;
-        transform: translateY(-200px);
+        font-size: 24px;
 
-        div {
+        .header {
             display: flex;
-            margin-bottom: 30px;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-        }
 
-        h1 {
-            font-size: 40px;
-            font-weight: bold;
-        }
-
-        p {
-            font-size: 24px;
-
-            .deadline {
-                color: var(--color-ui-60);
+            h1 {
+                font-size: 40px;
+                font-weight: bold;
             }
+        }
 
-            .callout {
+        .description {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            h1 {
                 font-weight: 600;
             }
 
@@ -94,9 +44,13 @@
                 color: var(--color-ui-60);
                 text-decoration: underline;
             }
+
+            .deadline {
+                color: var(--color-ui-60);
+            }
         }
 
-        .closed {
+        .status {
             padding: 15px 40px;
             background: var(--color-ui-80);
             border-radius: 16px;
@@ -175,7 +129,12 @@
     }
 
     .grantsButtons {
-        gap: 25px
+        gap: 25px;
+
+        .button {
+            font-size: 40px;
+            font-weight: bold;
+        }
     }
 
     .grantsList {
@@ -189,6 +148,11 @@
 
 .subsidies {
     padding-bottom: 200px;
+
+    .subsidiesButtons {
+        font-size: 40px;
+        font-weight: bold;
+    }
 
     .subsidiesList {
         height: 1750px;

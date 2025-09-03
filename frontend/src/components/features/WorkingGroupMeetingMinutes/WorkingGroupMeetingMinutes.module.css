@@ -33,20 +33,12 @@
     border-radius: 0 16px 16px 16px;
     place-items: center;
 
-    .meetingMinuteButton {
+    .button {
         width: 350px;
         padding: 30px;
         margin: 30px 15px;
-        background: color-mix(in srgb, var(--color-ui-10), transparent 90%);
-        backdrop-filter: blur(20px);
-        box-shadow:
-            0px 4px 20px 0px color-mix(in srgb, var(--color-ui-100), transparent 75%),
-            inset 0 2px 2px -2px var(--color-ui-10),
-            inset 0 -2px 2px -2px var(--color-ui-10);
-        border-radius: 16px;
         font-size: 24px;
         font-weight: bold;
-        color: var(--color-ui-10);
         text-align: center;
         white-space: normal;
     }

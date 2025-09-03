@@ -9,30 +9,11 @@
     }
 }
 
-.header {
-    padding: 80px 10% 200px 10%;
-    background: url('/assets/backgrounds/background-stem-blue.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
-    color: var(--color-ui-10);
-
-    h1 {
-        padding: 1rem 0;
-        font-size: 64px;
-        font-weight: bold;
-    }
-}
-
 .access {
-    padding: 0 5%;
+    padding: 0 5% 100px;
 
     .accessCard {
         padding: 50px 75px;
-        background: color-mix(in srgb, #e6f5ff, transparent 25%);
-        backdrop-filter: blur(20px);
-        border-radius: 20px;
-        transform: translateY(-150px);
 
         p {
             font-size: 24px;
@@ -79,15 +60,8 @@
         color: var(--color-ui-100);
     }
 
-    a {
-        width: fit-content;
-        padding: 20px 30px;
-        background: var(--color-ui-80);
-        box-shadow: 0px 4px 20px 0px color-mix(in srgb, var(--color-ui-100), transparent 75%);
-        border-radius: 16px;
+    .button {
         font-size: 24px;
         font-weight: bold;
-        color: var(--color-ui-10);
-        white-space: nowrap;
     }
 }
