@@ -1,7 +1,48 @@
-.container {
-    /* EXAMPLE STYLING */
-    color: var(--color-ui-20);
-    background: var(--color-ui-80);
-    width: 90%;
-    height: 50%;
+.dropInTutoring {
+    font-family: 'Figtree', Helvetica, sans-serif;
+    color: var(--color-ui-80);
+    background: var(--color-ui-10);
+
+    section {
+        display: flex;
+        flex-direction: column;
+        padding-inline: 5%;
+    }
+}
+
+.buttons {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 40px;
+    padding: 300px 0 30px;
+    justify-content: center;
+
+    .button {
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+
+.schedule,
+.tutors {
+    .header {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 60px;
+    }
+}
+
+.schedule {
+    padding-block: 30px;
+}
+
+.tutors {
+    padding-block: 30px 150px;
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
