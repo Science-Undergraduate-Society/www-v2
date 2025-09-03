@@ -1,0 +1,198 @@
+/* Meeting Room Bookings — CSS Module (relative-units version) */
+
+.meeting-page{
+    --ink:#222755;
+    --brand:#0173BE;
+    --bg-blue:#CCEBFF;
+
+    --max: min(80rem, 96vw);
+    --cut: clamp(3.5rem, 10vw, 10rem);
+
+    /* shared effects */
+    --card-shadow: 0 1px 2px rgba(0,0,0,.06), 0 1px 1px rgba(0,0,0,.04);
+    --card-shadow-hover: 0 25px 50px -12px rgba(0,0,0,.25);
+    --elevate: .2s ease-out;
+
+    display:flex; flex-direction:column; gap:4rem;
+}
+
+.meeting-page *{ box-sizing:border-box; }
+.meeting-page img{ display:block; max-width:100%; }
+
+.container{ max-width:var(--max); margin-inline:auto; padding-inline:1.5rem; }
+
+/* HERO */
+.hero{
+    position:relative; isolation:isolate; color:#fff;
+    background:url('/assets/backgrounds/background-one.svg') center/cover no-repeat;
+    padding-bottom:4rem;
+    overflow:visible;
+    /* was -200px: make relative to viewport so it scales with screen */
+    margin-top:-20vh;
+}
+
+.hero-navbar{ position:relative; z-index:1000; padding-top:2rem; }
+
+.hero-content{
+    padding-top: min(14vh, 10rem);
+    display:flex; align-items:flex-start; justify-content:space-between;
+    margin-top:-1rem; /* small nudge is fine as rem */
+    padding-bottom: clamp(4rem, 12vh, 9rem);
+    position:relative; z-index:150; gap:2rem;
+}
+
+.hero-left{ display:flex; flex-direction:column; gap:1.5rem; }
+.hero-heading{ position:relative; display:flex; flex-direction:column; gap:.75rem; padding-top:3rem; }
+
+.hero-title{
+    font-size: clamp(2.25rem, 6vw, 3.75rem);
+    line-height:1.1; font-weight:700; margin:0;
+}
+
+.location-row{ display:flex; align-items:center; gap:.5rem; }
+.location-icon{ width:2rem; height:2rem; flex-shrink:0; padding-right:.5rem; }
+
+.location-name{
+    font-size: clamp(1.25rem, 4vw, 2.25rem);
+    font-weight:300;
+}
+
+.hero-blurb{
+    text-align:right; line-height:1.625; max-width:20rem; font-weight:400;
+    padding-top:3rem; margin:0;
+}
+
+/* angled white shape */
+.hero-angle{ position:absolute; inset:0; z-index:1; pointer-events:none; }
+.hero-angle::after{
+    content:"";
+    position:absolute;
+    left:-.125rem; right:-.125rem; bottom:-.125rem;        /* ~2px */
+    height:calc(100% + .25rem);                             /* ~4px */
+    background:#fff;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 calc(100% - var(--cut)));
+    backface-visibility:hidden;
+    transform: translateZ(0);
+}
+
+/* POLICIES */
+.policies{
+    position:relative; z-index:1;
+    /* 24px -> 1.5rem; keep var(--cut) responsive */
+    margin-top: calc(-1 * var(--cut) + 1.5rem);
+    padding-top:0;
+}
+
+.section-title{
+    color:var(--ink);
+    font-size: clamp(1.5rem, 3.2vw, 1.875rem);
+    font-weight:600; margin:0; padding-bottom:.5rem;
+}
+
+.section-paragraph, .section-subtitle, .policy-list, .contact-line, .contact-address{
+    color:var(--ink); padding-bottom:1rem;
+}
+
+.policy-list{
+    list-style:disc;
+    padding-left:1.25em;                 /* scales with font size */
+    display:flex; flex-direction:column; gap:.5rem;
+}
+
+/* LINKS */
+.link-primary{ color:var(--brand); text-decoration:none; }
+.link-primary:hover{ text-decoration:underline; text-underline-offset:.25rem; }
+
+/* BOOKING BANNER */
+.booking-banner{
+    /* 289px -> proportional to viewport height */
+    height: clamp(14rem, 25vh, 20rem);
+    background:var(--bg-blue);
+}
+.booking-banner-inner{
+    display:flex; flex-direction:column; justify-content:flex-start; padding-top:2rem;
+}
+
+/* CARDS */
+.booking-cards{
+    /* -10rem remains fine in rem; could also be -12vh if you prefer */
+    margin-top: clamp(-12vh, -10rem, -6rem);
+    padding-bottom:4rem;
+}
+.card-grid{ display:grid; gap:1.5rem; }
+@media (min-width:64rem){ /* 1024px */
+    .card-grid{ grid-template-columns:repeat(3,1fr); }
+}
+
+.room-card{
+    display:flex; flex-direction:column; overflow:hidden; border-radius:.75rem; background:#fff;
+    box-shadow:var(--card-shadow);
+    transition:transform var(--elevate), box-shadow var(--elevate);
+}
+.room-card:hover{ box-shadow:var(--card-shadow-hover); transform:scale(1.05); }
+
+.room-card-image{
+    width:100%;
+    /* 18rem -> flexible between small and tall screens */
+    height: clamp(12rem, 30vh, 18rem);
+    object-fit:cover; border-radius:.75rem;
+}
+.room-card-body{ display:flex; flex:1; flex-direction:column; gap:1rem; padding:1rem; }
+.room-card-header{ display:flex; align-items:center; justify-content:space-between; }
+
+.room-card-title{ font-size: clamp(1.25rem, 2.2vw, 1.5rem); font-weight:700; color:var(--ink); margin:0; }
+.room-capacity{ font-size: clamp(1rem, 1.8vw, 1.125rem); font-weight:600; color:var(--ink); }
+
+.feature-heading{ padding-bottom:.25rem; color:var(--ink); }
+.feature-list{
+    margin-left:2em;                      /* scales with text */
+    list-style:disc;
+    display:flex; flex-direction:column; gap:.25rem; color:var(--ink);
+}
+
+/* BUTTON */
+.btn-primary{
+    margin-top:auto;
+    width:100%;
+    /* 54px -> 3.375rem; but allow line-height to control height via padding */
+    border-radius:.75rem;
+    padding:.75rem 1rem;
+    font-size: clamp(1rem, 2.2vw, 1.25rem);  /* 16–20px */
+    font-weight:600; line-height:1.5;
+    border:none; background:var(--brand); color:#fff;
+    cursor:pointer;
+    transition: background var(--elevate), transform var(--elevate), box-shadow var(--elevate), filter var(--elevate);
+}
+.btn-primary:hover{ filter:brightness(.95); box-shadow:0 12px 24px rgba(1,115,190,.25); }
+.btn-primary:active{ transform:translateY(1px); }
+
+/* CONTACT */
+.contact-section{
+    margin-top: clamp(-10vh, -8rem, -4rem);
+    padding: clamp(3rem, 6vh, 4.5rem) 0;
+}
+
+.contact-container{ text-align:left; display:flex; flex-direction:column; }
+
+.contact-address{
+    font-style:normal;
+    display:flex; flex-direction:column; gap:.25rem;
+    margin-top:-.25rem;
+}
+.contact-address p{ margin:0; }
+.contact-address a{
+    color:var(--brand);
+    text-decoration:underline;
+    text-underline-offset:.25rem;
+    word-break:break-all;
+}
+
+/* small utility equivalents (already relative) */
+.text-sm{ font-size:.875rem; }
+.font-medium{ font-weight:500; }
+
+/* Motion preference */
+@media (prefers-reduced-motion: reduce){
+    .room-card, .btn-primary{ transition: none; }
+    .room-card:hover{ transform:none; }
+}

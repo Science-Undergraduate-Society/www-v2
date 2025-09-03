@@ -1,0 +1,95 @@
+.toggleContainer {
+    display: flex;
+    background-color: var(--color-ui-30);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.25);
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+    filter: drop-shadow(0px 0.25rem 1.25rem rgba(0, 0, 0, 0.25));
+
+}
+
+.toggleButton {
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    outline: none;
+    font-family: 'Figtree', sans-serif;
+    position: relative;
+    z-index: 1;
+    min-width: 12rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    padding: 1.25rem 6rem;
+}
+
+.toggleButton:first-child {
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.toggleButton:last-child {
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius)
+}
+
+.toggleButton:last-child.active {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+
+.active {
+    background-color: var(--color-ui-80);
+    color: var(--color-ui-10, #ffffff);
+    box-shadow:
+            0 1px 3px rgba(34, 39, 85, 0.2),
+            0 0 0 1px rgba(34, 39, 85, 0.1);
+    transform: translateY(-1px);
+}
+
+.inactive {
+    background-color: transparent;
+    color: var(--color-ui-80);
+}
+
+.inactive:hover {
+    background-color: var(--color-ui-30);
+    color: var(--color-ui-80);
+    transform: translateY(-0.5px);
+}
+
+.active:hover {
+    box-shadow:
+            0 2px 8px rgba(34, 39, 85, 0.25),
+            0 0 0 1px rgba(34, 39, 85, 0.15);
+    transform: translateY(-1px);
+}
+
+.toggleButton:focus-visible {
+    outline: 2px solid var(--color-ui-80);
+    outline-offset: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .toggleButton {
+        padding: 8px 16px;
+        font-size: 13px;
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .toggleButton {
+        padding: 8px 12px;
+        font-size: 12px;
+        min-width: 80px;
+    }
+
+    .toggleContainer {
+        padding: 1px;
+    }
+}

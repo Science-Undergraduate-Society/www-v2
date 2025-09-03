@@ -1,0 +1,7 @@
+.container {
+    /* EXAMPLE STYLING */
+    color: var(--color-ui-20);
+    background: var(--color-ui-80);
+    width: 90%;
+    height: 50%;
+}

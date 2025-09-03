@@ -1,0 +1,157 @@
+/* ---------- Hero ---------- */
+.heroSection {
+    padding: 4.8rem 1.5rem;
+    padding-left: 4rem;
+    color: #fff;
+    background-position: center -4rem;
+    overflow: hidden;
+    padding-bottom: 14rem;
+
+}
+
+.heroSection::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url("/assets/backgrounds/background-stem-blue.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -4rem;
+    --slant: 8vw;
+    clip-path: polygon(0 0, 100% 0, 100% calc(65% - var(--slant)), 0 35%);
+}
+
+.heroSection h1 {
+    padding-left: 4.5rem;
+    margin: 0 0 1rem;
+    font-weight: 700;
+    font-size: 64px;
+}
+
+.heroSection p {
+    padding-left: 4.5rem;
+    max-width: 80%;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.content {
+    padding: 4.5rem 4.5rem 14rem;
+}
+
+.topContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem 0;
+    flex-wrap: nowrap;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 0 0 auto; /* don't grow */
+}
+
+.searchContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    max-width: 40rem;
+}
+
+.searchBar {
+    flex: 1 1 40rem;
+    width: 100%;
+    height: 4.5rem;
+    padding: 0 1rem 0 4rem;
+    border-radius: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    background: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.searchIcon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #000;
+    pointer-events: none; /* Prevent icon from blocking input clicks */
+    z-index: 1; /* Ensure icon appears above input */
+}
+
+.clubsContainer {
+    display: flex;
+    flex-direction: column;
+
+    background: var(--color-ui-30);
+    padding: 4rem 4.8rem;
+    border-radius: var(--border-radius);
+    font-weight: var(--font-weight-bold);
+
+    height: clamp(1080px, 70vh, 800px);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+}
+
+.clubsContainer::-webkit-scrollbar {
+    width: 8px;
+}
+.clubsContainer::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+}
+.clubsContainer::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 4px;
+}
+.clubsContainer::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.clubsContainer {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.28) transparent;
+}
+
+.categoryButton {
+    text-align: center;
+    background: #000;
+    border-radius: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .heroSection h1 { font-size: 48px; }
+    .heroSection p  { font-size: 28px; max-width: 90%; }
+    .topContainer   { padding: 2rem; }
+    .clubsContainer { padding: 2rem; }
+}
+
+@media (max-width: 640px) {
+    .topContainer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+    .searchBar {
+        flex: 1 1 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+
+
+
