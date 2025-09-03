@@ -1,5 +1,6 @@
 import { grants, subsidies } from '@/data/grantsAndSubsidies'
 import FrostedCard from '@/components/ui/FrostedCard/FrostedCard'
+import BlueButton from '@/components/ui/BlueButton/BlueButton'
 import styles from './grantsAndSubsidies.module.css'
 
 export default function GrantsAndSubsidies() {
@@ -63,7 +64,12 @@ export default function GrantsAndSubsidies() {
             <section className={styles.subsidies}>
                 <h1>Subsidies</h1>
                 <div className={styles.subsidiesButtons}>
-                    <a href="https://drive.google.com/open?id=1Wh8PZTiKSlZcphLSQyc1oEbir2ag-JuB" className={styles.blueButton}>Subsidies Information 24/25</a>
+                    <BlueButton
+                        href='https://drive.google.com/open?id=1Wh8PZTiKSlZcphLSQyc1oEbir2ag-JuB'
+                        className={styles.button}
+                    >
+                        Subsidies Information 24/25
+                    </BlueButton>
                 </div>
                 <div className={styles.subsidiesList}>
                     {subsidies.map((subsidy, index) => (

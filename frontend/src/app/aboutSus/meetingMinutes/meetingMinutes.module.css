@@ -60,15 +60,8 @@
         color: var(--color-ui-100);
     }
 
-    a {
-        width: fit-content;
-        padding: 20px 30px;
-        background: var(--color-ui-80);
-        box-shadow: 0px 4px 20px 0px color-mix(in srgb, var(--color-ui-100), transparent 75%);
-        border-radius: 16px;
+    .button {
         font-size: 24px;
         font-weight: bold;
-        color: var(--color-ui-10);
-        white-space: nowrap;
     }
 }

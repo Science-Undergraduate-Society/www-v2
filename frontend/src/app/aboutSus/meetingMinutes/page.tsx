@@ -1,4 +1,5 @@
 import FrostedCard from "@/components/ui/FrostedCard/FrostedCard";
+import BlueButton from "@/components/ui/BlueButton/BlueButton";
 import { WorkingGroupMeetingMinutes } from "@/components/features/WorkingGroupMeetingMinutes/WorkingGroupMeetingMinutes";
 import styles from './meetingMinutes.module.css'
 
@@ -19,10 +20,13 @@ export default function MeetingMinutes() {
                         <p>
                             If you wish to access the meeting minutes of previous years, please email our VP Admin:
                         </p>
-                        <a href="mailto:vpadministration@sus.ubc.ca" className={styles.email}>
+                        <BlueButton
+                            href="mailto:vpadministration@sus.ubc.ca"
+                            className={styles.email}
+                        >
                             <img src="/assets/footer-icons/email.png" />
                             <p>Email</p>
-                        </a>
+                        </BlueButton>
                     </div>
                 </FrostedCard>
             </section>
@@ -34,7 +38,12 @@ export default function MeetingMinutes() {
                     <br /><br />
                     The meeting minutes are being updated periodically.
                 </p>
-                <a href="https://drive.google.com/drive/folders/1-PVBSWfZlZPP7NPNQT3oZn8dIP7jsXa1" target="_blank">View Council Meeting Minutes</a>
+                <BlueButton
+                    href="https://drive.google.com/drive/folders/1-PVBSWfZlZPP7NPNQT3oZn8dIP7jsXa1"
+                    className={styles.button}
+                >
+                    View Council Meeting Minutes
+                </BlueButton>
             </section>
             <section className={styles.meetingMinutesType}>
                 <h1>Executive Meeting Minutes</h1>
@@ -43,7 +52,12 @@ export default function MeetingMinutes() {
                     <br /><br />
                     The meeting minutes are being updated periodically.
                 </p>
-                <a href="https://drive.google.com/drive/folders/1lJJ4gWDYDzz1B4FDpwPFL5Jo10TjwFKR" target="_blank">View Executive Meeting Minutes</a>
+                <BlueButton
+                    href="https://drive.google.com/drive/folders/1lJJ4gWDYDzz1B4FDpwPFL5Jo10TjwFKR"
+                    className={styles.button}
+                >
+                    View Executive Meeting Minutes
+                </BlueButton>
             </section>
             <section className={styles.meetingMinutesType}>
                 <h1>Working Group Meeting Minutes</h1>
