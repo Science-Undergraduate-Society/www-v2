@@ -208,15 +208,15 @@ export default function Navbar() {
                                                     <span className={styles.ringGradient} aria-hidden="true" />
                                                     {item.icon && (
                                                         <span className={styles.iconWrap}>
-                              <img
-                                  src={`/assets/nav-bar-icons/${item.icon}.png`}
-                                  alt=""
-                                  className={styles.iconImg}
-                                  onError={(e) => {
-                                      (e.currentTarget as HTMLImageElement).style.display = "none";
-                                  }}
-                              />
-                            </span>
+                                                            <img
+                                                                src={`/assets/nav-bar-icons/${item.icon}.png`}
+                                                                alt=""
+                                                                className={styles.iconImg}
+                                                                onError={(e) => {
+                                                                    (e.currentTarget as HTMLImageElement).style.display = "none";
+                                                                }}
+                                                            />
+                                                        </span>
                                                     )}
                                                     <span className={styles.label}>{item.label}</span>
                                                     <span className={styles.hoverFill} aria-hidden="true" />
