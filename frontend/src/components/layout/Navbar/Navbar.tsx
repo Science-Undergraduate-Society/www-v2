@@ -144,8 +144,8 @@ export default function Navbar() {
                     </div>
 
                     {/* Join SUS */}
-                    <Link href="/join" className={styles.joinBtn}>
-                        Join SUS
+                    <Link href="/get-involved/events" className={styles.eventsBtn}>
+                        Events
                     </Link>
                 </div>
             </nav>
@@ -187,14 +187,14 @@ export default function Navbar() {
                                         >
                                             <path
                                                 d="
-                          M12,35
-                          Q0,35 7.5,28.2
-                          L32,7.8
-                          Q40,0 48,7.8
-                          L72.5,28.2
-                          Q80,35 68,35
-                          Z
-                        "
+                                                    M12,35
+                                                    Q0,35 7.5,28.2
+                                                    L32,7.8
+                                                    Q40,0 48,7.8
+                                                    L72.5,28.2
+                                                    Q80,35 68,35
+                                                    Z
+                                                "
                                                 fill="#E7F2FF"
                                             />
                                         </svg>

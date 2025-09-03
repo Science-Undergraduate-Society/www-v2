@@ -109,7 +109,11 @@
 .rotated { transform: rotate(180deg); }
 
 /* CTA BUTTON */
+<<<<<<< HEAD
 .joinBtn {
+=======
+.eventsBtn {
+>>>>>>> master
     width: 9.375rem;
     height: var(--pill-height);
     border-radius: var(--border-radius);
