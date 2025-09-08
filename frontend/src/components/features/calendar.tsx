@@ -1,152 +1,285 @@
 'use client';
 
-import Calendar from 'react-calendar';
-import { useEffect, useState } from 'react';
-import { Event, EventDescription } from '@/lib/types';
-import 'react-calendar/dist/Calendar.css';
-import { format } from 'date-fns';
-import styles from './features.module.css'
+import React, { useEffect, useMemo, useState, useRef } from 'react';
+import { createPortal } from 'react-dom';
+import { EventDescription, Event } from '@/lib/types';
+import styles from './calendar.module.css';
+import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
+
+function parseDescription(desc: string = ''): EventDescription {
+  const lines = desc.split('\n').map((l) => l.trim());
+  const map: Record<string, string> = {};
+  for (const line of lines) {
+    const [key, ...rest] = line.split(':');
+    if (!key || !rest.length) continue;
+    map[key.trim().toLowerCase()] = rest.join(':').trim();
+  }
+  return {
+    demographic: map['demographic'] || 'Any student',
+    workingGroup: map['working group'] || map['workinggroup'] || 'N/A',
+    collaborator: map['collaborator'] || map['collaborators'] || 'None',
+    link: map['link'] || map['links'] || 'None',
+  };
+}
+
+function parseEvents(data: any[]): Event[] {
+  return (data || []).map((item) => {
+    const startStr = item.start?.dateTime || item.start?.date;
+    const startDate = new Date(startStr);
+    const match = item.summary?.match(/(?<=\().*?(?=\))/);
+    const time = match && match[0].trim() !== '' ? match[0] : 'All day event';
+
+    return {
+      title: (item.summary || '').replace(/\s*\([^)]*\)/g, '').trim(),
+      location: item.location ?? 'TBA',
+      date: startDate,
+      time,
+      description: parseDescription(item.description || ''),
+    } as Event;
+  });
+}
+
+function startOfMonth(d: Date) {
+  return new Date(d.getFullYear(), d.getMonth(), 1);
+}
+
+function addDays(d: Date, n: number) {
+  const x = new Date(d);
+  x.setDate(x.getDate() + n);
+  return x;
+}
+
+function isSameDay(a: Date, b: Date) {
+  return (
+    a.getFullYear() === b.getFullYear() &&
+    a.getMonth() === b.getMonth() &&
+    a.getDate() === b.getDate()
+  );
+}
+
+function getMonthMatrix(viewDate: Date): Date[] {
+  const start = startOfMonth(viewDate);
+  const startWeekday = start.getDay();
+  const days: Date[] = [];
+  const gridStart = addDays(start, -startWeekday);
+  for (let i = 0; i < 42; i++) {
+    days.push(addDays(gridStart, i));
+  }
+  return days;
+}
 
 export default function SusCalendar() {
   const [loading, setLoading] = useState(true);
   const [events, setEvents] = useState<Event[]>([]);
+  const [viewDate, setViewDate] = useState(new Date());
+  const [popupInfo, setPopupInfo] = useState<{ events: Event[]; rect: DOMRect } | null>(null);
+  const popupRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     fetch('/api/calendar')
-      .then((res) => res.json())
-      .then((data) => {
-        const parsed = parseEvents(data);
-        setEvents(parsed);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error('Failed to fetch calendar events:', err);
-        setLoading(false);
-      });
+      .then((r) => r.json())
+      .then((data) => setEvents(parseEvents(data)))
+      .catch((e) => console.error('Failed to fetch calendar events:', e))
+      .finally(() => setLoading(false));
   }, []);
 
-const parseEvents = (data: any[]): Event[] => {
-  return data.map((item) => {
-    const startStr = item.start?.dateTime || item.start?.date;
-    const startDate = new Date(startStr);
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (popupRef.current && !popupRef.current.contains(e.target as Node)) {
+        setPopupInfo(null);
+      }
+    }
+    if (popupInfo) document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, [popupInfo]);
 
-    const match = item.summary.match(/(?<=\().*?(?=\))/);
-  const time = match && match[0].trim() !== "" ? match[0] : "All day event";
+  const days = useMemo(() => getMonthMatrix(viewDate), [viewDate]);
+  const monthLabel = useMemo(
+    () => new Intl.DateTimeFormat('en', { month: 'long', year: 'numeric' }).format(viewDate),
+    [viewDate]
+  );
 
-    return {
-      title: item.summary.replace(/\s*\([^)]*\)/g, '').trim(),
-      location: item.location ?? 'TBA',
-      date: startDate,
-      time: time,
-      description: parseDescription(item.description),
-    };
-  });
-};
+  const eventsByDay = useMemo(() => {
+    const key = (d: Date) => `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+    const map = new Map<string, Event[]>();
+    for (const ev of events) {
+      const k = key(ev.date);
+      if (!map.has(k)) map.set(k, []);
+      map.get(k)!.push(ev);
+    }
+    return (date: Date) => map.get(key(date)) || [];
+  }, [events]);
 
-  const parseDescription = (desc: string = ''): EventDescription => {
-    const lines = desc.split('\n').map(line => line.trim());
-    const descMap: Record<string, string> = {};
+  const goPrev = () => setViewDate((d) => new Date(d.getFullYear(), d.getMonth() - 1, 1));
+  const goNext = () => setViewDate((d) => new Date(d.getFullYear(), d.getMonth() + 1, 1));
 
-    for (const line of lines) {
-      const [key, ...rest] = line.split(':');
-      if (!key || !rest.length) continue;
-      descMap[key.trim().toLowerCase()] = rest.join(':').trim();
+  // ---------------- Popup Handling ----------------
+  const handleEventClick = (event: Event, targetRect: DOMRect) => {
+    const popupWidth = 320; 
+    const popupHeight = 220;
+
+    let left = targetRect.right + 8 + window.scrollX;
+    let top = targetRect.top + window.scrollY;
+
+    const viewportWidth = window.innerWidth;
+    if (left + popupWidth > viewportWidth) {
+      left = Math.max(8, viewportWidth - popupWidth - 8);
     }
 
-    return {
-      demographic: descMap['demographic'] || 'Any student',
-      workingGroup: descMap['working group'] || descMap['workinggroup'] || 'N/A',
-      collaborator: descMap['collaborator'] || descMap['collaborators'] || 'None',
-    };
+    const viewportHeight = window.innerHeight + window.scrollY;
+    if (top + popupHeight > viewportHeight) {
+      top = Math.max(8, viewportHeight - popupHeight - 8);
+    }
+
+    setPopupInfo({ events: [event], rect: { ...targetRect, top, left } as DOMRect });
   };
 
-  // const getEventsForDate = (date: Date): Event[] => {
-  //   const key = format(date, 'yyyy-MM-dd');
-  //   return events.filter((e) => e.date === key);
-  // };
-
-  const EventCard = ({ event }: { event: Event }) => {
-    const match = event.location.match(/^(.*?),.*/);
-    const eventLocation = match ? match[1] : event.location;
-    console.log(event.title)
-    console.log(event.time.length === 0)
-    const month = new Intl.DateTimeFormat('en', { month: 'short' }).format(event.date);
-    const weekday = new Intl.DateTimeFormat('en', { weekday: 'short' }).format(event.date);
-    const date = event.date.getDate()
-    const eventDesc = "Grab your best Y2K fit and party it up like it's the 2000s with a free photo booth, sick beats, and nostalgic refreshments. The first 50 people to arrive get a free tote bag! (Note: This is an alcohol-free event.)"
+  const renderCell = (date: Date, idx: number) => {
+    const inMonth = date.getMonth() === viewDate.getMonth();
+    const dayEvents = eventsByDay(date);
+    const hasEvents = dayEvents.length > 0;
+    const isSingleEvent = dayEvents.length === 1;
+    const isToday = isSameDay(date, new Date());
 
     return (
-      <div className={styles.parentEventCard}>
-        <div className={styles.header}>
-          <div className={styles.headerCorner}>
-            <div className={styles.cornerText} > {month}. </div>
-            <div className={styles.cornerText} > {date} </div>
+      <div
+        key={idx}
+        className={[
+          styles.cell,
+          inMonth ? '' : styles.cellOutside,
+          hasEvents ? styles.cellWithEvents : styles.cellPlain,
+          isToday ? styles.cellToday : '',
+        ].join(' ')}
+      >
+        <div className={styles.cellHeaderCorner}>
+          <span className={styles.cellDayNumber}>{date.getDate()}</span>
         </div>
 
-        <div className={styles.headerTextContainer}>
-          <div className= {styles.headerTextRow}>
-            <div className={styles.calendarIcon}></div>
-            <div className={styles.headerText} > {weekday}. | {event.time}</div>
+        {hasEvents && isSingleEvent &&(
+          <div className={styles.cellEventsWrapper}>
+            <button className={styles.singeEvent}
+                onClick={(e) => handleEventClick(dayEvents[0], e.currentTarget.getBoundingClientRect())}
+                title={dayEvents[0].title}>
+                  {dayEvents[0].title}
+            </button>
           </div>
-          
-          <div className= {styles.headerTextRow}>
-            <div className={styles.locationIcon}></div>
-            <div className={styles.headerText} >{eventLocation}</div>
+        )}
+
+        {hasEvents && !isSingleEvent &&(
+          <div className={styles.cellEventsWrapper}>
+            {dayEvents.map((ev, eventIdx) => (
+              <button
+                key={eventIdx}
+                className={styles.cellEventRow}
+                onClick={(e) => handleEventClick(ev, e.currentTarget.getBoundingClientRect())}
+                title={ev.title} 
+              >
+                {ev.title}
+              </button>
+            ))}
           </div>
-          
-        </div>
-        
+        )}
       </div>
-      <div className={styles.bodyTextContainer} >
-        <div className={styles.eventTitle} > {event.title}</div>
-        <div className={styles.bodyText} > {eventDesc} </div>
-      </div>
-      <div className={styles.buttonContainer} >
-         <div className={styles.button} >RSVP</div>
-      </div>
-    </div>
-    )
-    
-  };
+    );
+};
 
-  const EventList = () => (
-  <>
-    {events.map((e: Event) => (
-      <EventCard event= {e}/>
-    ))}
-  </>
-);
 
-  if (loading) return <p>Loading events...</p>;
+  if (loading) return <p className={styles.loading}>Loading events...</p>;
 
   return (
-    <div>
-      <h2 className="text-xl font-bold mb-4">SUS Events Calendar</h2>
-      {/* <Calendar
-        tileContent={({ date, view }) => {
-          if (view !== 'month') return null;
-          const dayEvents = getEventsForDate(date);
-          return (
-            <div className="overflow-y-auto max-h-20">
-              {dayEvents.map((event, i) => (
-                <EventCard key={i} event={event} />
-              ))}
+    <div className={styles.calendarParentContainer}>
+      <div className={styles.calendarBox}>
+        <div className={styles.calendarContainer}>
+          <div className={styles.headerBar}>
+            <div className={styles.headerLeft}>
+              <div className={styles.monthLabel}>{monthLabel}</div>
+              <button className={styles.navBtn} onClick={goPrev} aria-label="Previous month">
+                <GoChevronLeft />
+              </button>
+              <button className={styles.navBtn} onClick={goNext} aria-label="Next month">
+                <GoChevronRight />
+              </button>
             </div>
-          );
-        }}
-        tileClassName={({ date, view }) => {
-          if (view !== 'month') return '';
-          return getEventsForDate(date).length > 0 ? 'bg-yellow-100' : '';
-        }}
-        onClickDay={(date) => {
-          const dayEvents = getEventsForDate(date);
-          if (dayEvents.length > 0) {
-            console.log('Events on', date.toDateString(), dayEvents);
-          }
-        }}
-      /> */}
-      <EventList></EventList>
+          </div>
+
+          <div className={styles.grid}>
+            {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((d) => (
+              <div key={d} className={styles.weekday}>
+                {d}
+              </div>
+            ))}
+            {days.map((date, idx) => renderCell(date, idx))}
+          </div>
+
+          {popupInfo &&
+            createPortal(
+              <div
+                ref={popupRef}
+                className={styles.popup}
+                style={{
+                  top: popupInfo.rect.top,
+                  left: popupInfo.rect.left,
+                }}
+              >
+                {popupInfo.events.length
+                  ? popupInfo.events.map((e, i) => <EventCard key={i} event={e} />)
+                  : <p className={styles.noEvents}>No events for this day.</p>}
+              </div>,
+              document.body
+            )}
+        </div>
+      </div>
     </div>
   );
 }
 
+// ---------------- Event Card ----------------
+function EventCard({ event }: { event: Event }) {
+  const m = event.location.match(/^(.*?),.*/);
+  const eventLocation = m ? m[1] : event.location;
+  const month = new Intl.DateTimeFormat('en', { month: 'short' }).format(event.date);
+  const weekday = new Intl.DateTimeFormat('en', { weekday: 'short' }).format(event.date);
+  const date = event.date.getDate();
+  const hasLink = (event.description.link === 'None')
+
+  return (
+    <div className={styles.parentEventCard}>
+      <div className={styles.header}>
+        <div className={styles.headerCorner}>
+          <div className={styles.cornerText}>{month}.</div>
+          <div className={styles.cornerText}>{date}</div>
+        </div>
+        <div className={styles.headerTextContainer}>
+          <div className={styles.headerTextRow}>
+            <div className={styles.calendarIcon} />
+            <div className={styles.headerText}>
+              {weekday}. | {event.time}
+            </div>
+          </div>
+          <div className={styles.headerTextRow}>
+            <div className={styles.locationIcon} />
+            <div className={styles.headerText}>{eventLocation}</div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.bodyTextContainer}>
+        <div className={styles.eventTitle}>{event.title}</div>
+        <div className={styles.bodyText}>
+          <div>
+            <strong>Demographic:</strong> {event.description.demographic}
+          </div>
+          <div>
+            <strong>Collaborator(s):</strong> {event.description.collaborator}
+          </div>
+        </div>
+      </div>
+      {/* {hasLink &&  // TODO: uncomment when we know where rsvp link comes from
+      <div className={styles.buttonContainer}>
+        <button className={styles.button} type="button">
+          RSVP
+        </button>
+      </div>
+      } */}
+    </div>
+  );
+}
