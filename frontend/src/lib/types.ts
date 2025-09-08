@@ -170,5 +170,12 @@ export type Event = {
 export type EventDescription = {
     demographic: string;
     workingGroup: string;
-    collaborator: string; // see if these should be replaced with   
+    collaborator: string;
+    link: string;
+}
+
+export type EventLocation = {
+    fullName: string;
+    shortName: string;
+    link: string;
 }
