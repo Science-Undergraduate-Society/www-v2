@@ -1,3 +1,4 @@
+import SusCalendar from "@/components/features/calendar";
 import styles from "./home.module.css";
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
         <h1>Check Out Our Events!</h1>
         <h2>Upcoming Events</h2>
         <p>Hover over the event to view details!</p>
+        <SusCalendar></SusCalendar>
         <h2>Past Events</h2>
       </section>
     </div>
