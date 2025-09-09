@@ -2,7 +2,10 @@ import {RoomFeatures} from "@/lib/types";
 
 export const roomFeatures: RoomFeatures[] = [
     {
-        name: "Rooms 103",
+        name: "Room 103",
+        roomNumber: 103,
+        capacity: 8,
+        img: "/assets/room-images/room-103.jpg",
         features: [
             "8 Chairs",
             "Whiteboard",
@@ -12,7 +15,10 @@ export const roomFeatures: RoomFeatures[] = [
         ]
     },
     {
-        name: "Rooms 103",
+        name: "Room 104",
+        roomNumber: 104,
+        capacity: 8,
+        img: "/assets/room-images/room-103.jpg",
         features: [
             "8 Chairs",
             "Whiteboard",
@@ -23,6 +29,9 @@ export const roomFeatures: RoomFeatures[] = [
     },
     {
         name: "Room 105",
+        roomNumber: 105,
+        capacity: 5,
+        img: "/assets/room-images/room-105.jpg",
         features: [
             "5 Chairs",
             "Whiteboard",
@@ -32,6 +41,7 @@ export const roomFeatures: RoomFeatures[] = [
         ]
     }
 ];
+
 
 export const MeetingRoomPolicies: string[] = [
     "A group (not each member of a group) may book a room for up to 2 hours per day, 3 times a week, up to 2 weeks in advance.",

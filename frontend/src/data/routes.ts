@@ -63,6 +63,12 @@ export const routes: Route[] = [
         href: "/studentServices/susPantry",
         content: "Food bank access and hours"
     },
+    {
+        title: "Health & Wellness",
+        href: "/studentServices/healthAndWellness",
+        content: "Health And Wellness"
+    },
+
 
     // Get Involved
     {

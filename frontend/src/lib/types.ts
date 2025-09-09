@@ -84,7 +84,7 @@ export interface RoomFeatures {
 }
 
 export interface BlueCardPartner {
-    name: string, 
+    name: string,
     logoSrc: string,
     description: string,
     location: string,
@@ -147,12 +147,31 @@ export type Industry =
 
 // wellness
 export type HealthResource = {
-    label: string; 
-    href: string;  
+    label: string;
+    href: string;
     type: "phone" | "url";
-    description?: string; 
+    description?: string;
 };
 
+export type ClubInfo = {
+    name: string;
+    type: "departmental" | "non-departmental";
+    description: string;
+    img: string;
+    website?: string;
+    email?: string;
+    linkedin?: string;
+    facebook?: string;
+    twitter?: string;
+    instagram?: string;
+};
+
+export interface WorkingGroupMeetingMinute {
+    title: string;
+    link: string;
+}
+
+export type WorkingGroupMeetingMinutes = Record<string, WorkingGroupMeetingMinute[]>
 
 //Navbar
 export type Item = { label: string; href: string; icon?: string };

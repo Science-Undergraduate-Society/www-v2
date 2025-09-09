@@ -1,0 +1,171 @@
+.grantsAndSubsidies {
+    font-family: 'Figtree', Helvetica, sans-serif;
+    color: var(--color-ui-80);
+    background: var(--color-ui-10);
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.applicationInformation {
+    padding: 0 5% 100px;
+
+    .applicationInformationCard {
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+        padding: 50px 75px;
+        font-size: 24px;
+
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            h1 {
+                font-size: 40px;
+                font-weight: bold;
+            }
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            h1 {
+                font-weight: 600;
+            }
+
+            a {
+                color: var(--color-ui-60);
+                text-decoration: underline;
+            }
+
+            .deadline {
+                color: var(--color-ui-60);
+            }
+        }
+
+        .status {
+            padding: 15px 40px;
+            background: var(--color-ui-80);
+            border-radius: 16px;
+            font-size: 40px;
+            font-weight: bold;
+            color: var(--color-ui-10);
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.grants,
+.subsidies {
+    display: flex;
+    padding-inline: 5%;
+    align-items: center;
+
+    h1 {
+        padding-top: 1rem;
+        font-size: 64px;
+        font-weight: bold;
+    }
+
+    .grantsButtons,
+    .subsidiesButtons {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px 0 40px;
+        justify-content: center;
+    }
+
+    .grantsList,
+    .subsidiesList {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+
+        .card {
+            height: fit-content;
+            max-width: 500px;
+            box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            padding: 0;
+            font-size: 40px;
+            font-weight: 600;
+            color: var(--color-ui-80);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: var(--color-ui-60);
+        }
+
+        p {
+            padding: 20px 0 45px 0;
+            font-size: 20px;
+            color: var(--color-ui-100);
+        }
+    }
+}
+
+.grants {
+    padding-block: 10vw;
+    background: url('/assets/backgrounds/background-stem-blue.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 calc(100% - 10vw));
+
+    h1 {
+        color: var(--color-ui-10);
+    }
+
+    .grantsButtons {
+        gap: 25px;
+
+        .button {
+            font-size: 40px;
+            font-weight: bold;
+        }
+    }
+
+    .grantsList {
+        height: 2000px;
+
+        .card {
+            padding: 40px 50px 80px;
+        }
+    }
+}
+
+.subsidies {
+    padding-bottom: 200px;
+
+    .subsidiesButtons {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .subsidiesList {
+        height: 1750px;
+
+        .card {
+            padding: 40px 50px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .grantsList,
+    .subsidiesList {
+        height: auto !important;
+    }
+}

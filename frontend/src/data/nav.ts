@@ -4,37 +4,37 @@ export const MENUS: Menu[] = [
     {
         label: "About",
         items: [
-            { label: "Our Executives", href: "/about/executive", icon: "executives" },
-            { label: "Council", href: "/about/council", icon: "council" },
-            { label: "Procedures", href: "/about/procedures", icon: "procedures" },
-            { label: "Meeting Minutes", href: "/about/minutes", icon: "minutes" },
+            { label: "Council & Procedures", href: "/about/council-and-procedures", icon: "procedures" },
+            { label: "Portfolios & committees", href: "/about/portfolios-and-committees", icon: "council" },
+            { label: "Meeting Minutes", href: "/about/meetingMinutes", icon: "minutes" },
+            { label: "Our Executives", href: "/about/executives", icon: "executives" },
         ],
     },
     {
         label: "Get Involved",
         items: [
-            { label: "Volunteer Portal", href: "/involved/volunteer", icon: "volunteer" },
-            { label: "Join SUS", href: "/join", icon: "join" },
-            { label: "SUS Clubs", href: "/involved/clubs", icon: "clubs" },
-            { label: "Events", href: "/events", icon: "events" },
+            { label: "Join SUS", href: "/get-involved/join-sus", icon: "join" },
+            { label: "SUS Clubs", href: "/get-involved/sus-clubs", icon: "clubs" },
+            { label: "Events", href: "/get-involved/events", icon: "events" },
         ],
     },
     {
         label: "Student Services",
         items: [
-            { label: "Blue Card Program", href: "/services/blue-card", icon: "blue-card" },
-            { label: "Drop-in Tutoring", href: "/services/tutoring", icon: "tutoring" },
-            { label: "Grants & Bursaries", href: "/services/grants", icon: "grants" },
-            { label: "Health & Wellness", href: "/services/health", icon: "health" },
-            { label: "SUS Pantry", href: "/services/pantry", icon: "pantry" },
+            { label: "Blue Card Program", href: "/student-services/blue-card", icon: "blue-card" },
+            { label: "Drop-in Tutoring", href: "/student-services/drop-in-tutoring", icon: "tutoring" },
+            { label: "External Subsidies", href: "/student-services/external-subsidies", icon: "grants" },
+            { label: "Grants & Subsidies", href: "/student-services/grants-and-subsidies", icon: "grants" },
+            { label: "SUS Pantry", href: "/student-services/sus-pantry", icon: "pantry" },
         ],
     },
     {
         label: "Science Student Centre",
         items: [
-            { label: "Science Student Centre", href: "/ssc", icon: "science-centre" },
-            { label: "Bookings", href: "/ssc/bookings", icon: "bookings" },
+            { label: "Info", href: "/science-student-centre/info", icon: "science-centre" },
+            { label: "Event Bookings", href: "/science-student-centre/event-bookings", icon: "science-centre" },
+            { label: "Meeting Room Bookings", href: "/science-student-centre/room-bookings", icon: "science-centre" },
         ],
     },
-    { label: "Shop", items: [{ label: "Merch", href: "/shop", icon: "merch" }] },
+    { label: "Shop", items: [{ label: "Merch", href: "https://shop.susubc.ca/", icon: "merch" }] },
 ];

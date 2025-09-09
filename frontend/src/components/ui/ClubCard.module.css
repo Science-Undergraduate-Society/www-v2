@@ -1,0 +1,100 @@
+.container {
+    width: 100%;
+    margin: 0 auto 2rem;
+    background: var(--background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.25rem 5rem rgba(0,0,0,0.1);
+    padding: 2rem 2rem 1.5rem;
+    color: var(--color-ui-80);
+}
+
+/* top bar */
+.topbar {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.title {
+    margin: 0;
+    font-weight: 700;
+    font-size: var(--text-2xl, 1.5rem);
+    line-height: var(--text-2xl--line-height, 1.3);
+    color: var(--color-ui-80, #111827);
+}
+
+.arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    background-color: var(--color-ui-80);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 17rem 1fr;
+    gap: 7rem;
+    align-items: start;
+    padding: 2rem 8rem 4rem;
+
+}
+
+.image {
+    width: 17rem;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: contain; /* Changed from cover to contain */
+    object-position: center; /* Centers the image within the container */
+    display: block;
+    border-radius: calc(var(--border-radius, 16px) + 4px);
+    flex-shrink: 0;
+    background-color: #f8f9fa; /* Optional: adds background for letterboxing */
+}
+
+.desc {
+    margin: .25rem 0 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: var(--color-ui-80, #1f2937);
+}
+
+.links {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    gap: 4rem;
+    justify-content: center;
+
+}
+
+.iconLink { display: inline-flex; align-items: center; }
+
+.iconMask {
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    background-color: var(--color-ui-80);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    transition: transform .2s ease;
+}
+
+.iconLink:hover .iconMask { transform: scale(1.08); }
+.arrowExpanded {transform: rotate(180deg);}

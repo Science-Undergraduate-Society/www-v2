@@ -1,0 +1,5 @@
+.frostedCard {
+  background: color-mix(in srgb, #e6f5ff, transparent 25%);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+}

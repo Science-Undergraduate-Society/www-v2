@@ -1,0 +1,67 @@
+.meetingMinutes {
+    font-family: 'Figtree', Helvetica, sans-serif;
+    color: var(--color-ui-80);
+    background: var(--color-ui-10);
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.access {
+    padding: 0 5% 100px;
+
+    .accessCard {
+        padding: 50px 75px;
+
+        p {
+            font-size: 24px;
+        }
+
+        .requestAccess {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            align-items: center;
+
+            .email {
+                display: flex;
+                padding: 14px 24px;
+                gap: 10px;
+                background: var(--color-ui-80);
+                border-radius: 20px;
+                font-size: 24px;
+                font-weight: bold;
+                color: var(--color-ui-10);
+                align-items: center;
+
+                img {
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+
+.meetingMinutesType {
+    padding: 0 5%;
+    margin-bottom: 100px;
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    p {
+        margin: 60px 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--color-ui-100);
+    }
+
+    .button {
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
