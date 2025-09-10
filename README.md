@@ -9,8 +9,8 @@
 - None 
 
 ## Routing & Directory Structure
-This project uses Next.js' **Next Router**. The routes are managed as folders and files in `src/pages`:
-- Routes are files: `src/pages/aboutSus/council/page.tsx` will be accessible at the `/aboutSus/council` URL 
+This project uses Next.js' **App Router**. The routes are managed as folders and files in `src/app/`:
+- Routes are files: `src/app/about/council-and-procedures/page.tsx` will be accessible at the `www.susubc.ca/about/council-and-procedures` URL 
 
 ```
 src/
