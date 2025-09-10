@@ -26,6 +26,7 @@ export default function Home() {
           </p>
         </div>
       </section>
+      
       <section className={styles.events}>
         <h1>Check Out Our Events!</h1>
         <h2>Upcoming Events</h2>
