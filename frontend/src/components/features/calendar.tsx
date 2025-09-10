@@ -167,7 +167,23 @@ export default function SusCalendar() {
           <span className={styles.cellDayNumber}>{date.getDate()}</span>
         </div>
 
-        {hasEvents && (
+        {hasEvents && isSingleEvent &&(
+          <div className={styles.cellEventsWrapper}>
+            <button className={styles.singeEvent}
+                onClick={(e) => handleEventClick(dayEvents[0], e.currentTarget.getBoundingClientRect(), 'click')}
+                onMouseEnter={(e) =>
+                  handleEventClick(dayEvents[0], e.currentTarget.getBoundingClientRect(), 'hover')
+                }
+                onMouseLeave={() => {
+                  if (openMode === 'hover') setPopupInfo(null);
+                }}
+                title={dayEvents[0].title}>
+                  {dayEvents[0].title}
+            </button>
+          </div>
+        )}
+
+        {hasEvents && !isSingleEvent &&(
           <div className={styles.cellEventsWrapper}>
             {dayEvents.map((ev, eventIdx) => (
               <button
