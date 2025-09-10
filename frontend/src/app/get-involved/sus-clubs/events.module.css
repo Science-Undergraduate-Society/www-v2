@@ -1,12 +1,10 @@
 /* ---------- Hero ---------- */
 .heroSection {
-    padding: 4.8rem 1.5rem;
+    padding-top: 12rem;
     padding-left: 4rem;
     color: #fff;
     background-position: center -4rem;
     overflow: hidden;
-    padding-bottom: 14rem;
-
 }
 
 .heroSection::before {
