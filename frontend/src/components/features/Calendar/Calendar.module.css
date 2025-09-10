@@ -2,6 +2,32 @@
   font-family: 'Figtree', sans-serif;
 }
 
+.dots {
+  display: inline-block;
+}
+
+.dots span {
+  opacity: 0;
+  animation: blink 1.5s infinite;
+}
+
+.dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+.dots span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.dots span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
 .calendarParentContainer {
   padding: 5%;
   display: flex;
@@ -100,7 +126,6 @@
           padding: 0;
           border: 1px solid #000;
           background: #fff;
-          cursor: pointer;
           height: 12vh;
           min-height: 12vh;
           max-height: 12vh;
@@ -111,8 +136,8 @@
           &:focus { outline: 2px solid #9fd3ff; outline-offset: 2px; }
 
           &.cellOutside { opacity: 0.45; }
-          &.cellSelected { box-shadow: 0 0 0 2px #1f7a8c inset; }
-          &.cellToday { box-shadow: 0 0 0 2px #9fd3ff inset; }
+          &.cellSelected { box-shadow: 0 0 0 2x #1f7a8c inset; }
+          &.cellToday { box-shadow: 0 0 0 3px #9fd3ff inset; }
           &.cellPlain { background: #fff; }
           &.cellWithEvents {
             background-image: url('/assets/backgrounds/background-two.svg');
@@ -156,6 +181,8 @@
               border-radius: 0.25rem;
               overflow: hidden;
               font-size: 0.95rem;
+              &:hover { border: 1px solid #00aaff };
+              cursor: pointer;
               text-overflow: ellipsis;
               white-space: nowrap;
               display: -webkit-box;
@@ -167,6 +194,8 @@
             .cellEventRow {
               padding: 0.2rem 0.3rem;
               border-radius: 0.25rem;
+              &:hover { border: 1px solid #00aaff };
+              cursor: pointer;
               overflow: hidden;
               font-size: 0.95rem;
               text-overflow: ellipsis;

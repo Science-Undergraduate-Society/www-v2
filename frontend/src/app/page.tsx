@@ -1,4 +1,4 @@
-import SusCalendar from "@/components/features/calendar";
+import SusCalendar from "@/components/features/Calendar/Calendar";
 import styles from "./home.module.css";
 import Navbar from "@/components/layout/Navbar/Navbar";
 

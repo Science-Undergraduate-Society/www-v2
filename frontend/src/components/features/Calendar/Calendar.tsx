@@ -3,7 +3,7 @@
 import React, { useEffect, useMemo, useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { EventDescription, Event } from '@/lib/types';
-import styles from './calendar.module.css';
+import styles from './Calendar.module.css';
 import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
 
 // -------------------- Utils --------------------
@@ -166,10 +166,11 @@ export default function SusCalendar() {
         <div className={styles.cellHeaderCorner}>
           <span className={styles.cellDayNumber}>{date.getDate()}</span>
         </div>
-
+        
+        {/* Single Event Cell */}
         {hasEvents && isSingleEvent &&(
           <div className={styles.cellEventsWrapper}>
-            <button className={styles.singeEvent}
+            <button className={styles.singleEvent}
                 onClick={(e) => handleEventClick(dayEvents[0], e.currentTarget.getBoundingClientRect(), 'click')}
                 onMouseEnter={(e) =>
                   handleEventClick(dayEvents[0], e.currentTarget.getBoundingClientRect(), 'hover')
@@ -183,6 +184,7 @@ export default function SusCalendar() {
           </div>
         )}
 
+        {/* Multiple Event Cell */}
         {hasEvents && !isSingleEvent &&(
           <div className={styles.cellEventsWrapper}>
             {dayEvents.map((ev, eventIdx) => (
@@ -209,7 +211,15 @@ export default function SusCalendar() {
     );
   };
 
-  if (loading) return <p className={styles.loading}>Loading events...</p>;
+  if (loading) return (
+    <p className={styles.loading}>
+      Loading events<span className={styles.dots}>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+      </span>
+    </p>
+  );
 
   return (
     <div className={styles.calendarParentContainer}>
