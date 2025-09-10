@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import styles from "./events.module.css";
-import Navbar from "@/components/layout/NavbarDesktop/NavbarDesktop";
 import { ClubsInfo } from "@/data/clubs";
 import ClubCard from "@/components/ui/ClubCard";
 import ToggleButton from "@/components/ui/ToggleButton";
@@ -75,8 +74,6 @@ export default function SusClubs() {
 
     return (
         <div>
-            <Navbar />
-
             <section className={styles.heroSection}>
                 <h1>Clubs</h1>
                 <p>
