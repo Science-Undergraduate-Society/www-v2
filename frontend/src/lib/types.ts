@@ -176,3 +176,25 @@ export type WorkingGroupMeetingMinutes = Record<string, WorkingGroupMeetingMinut
 //Navbar
 export type Item = { label: string; href: string; icon?: string };
 export type Menu = { label: string; items: Item[] };
+
+// events
+export type Event = {
+    title: string;
+    location: string;
+    time: string;
+    date: Date;
+    description: EventDescription;
+}
+
+export type EventDescription = {
+    demographic: string;
+    workingGroup: string;
+    collaborator: string;
+    link: string;
+}
+
+export type EventLocation = {
+    fullName: string;
+    shortName: string;
+    link: string;
+}
