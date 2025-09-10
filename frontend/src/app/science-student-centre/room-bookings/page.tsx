@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { roomFeatures, MeetingRoomPolicies } from "@/data/roombooking";
-import Navbar from "@/components/layout/Navbar/Navbar";
+import Navbar from "@/components/layout/NavbarDesktop/NavbarDesktop";
 import styles from "./roomBookings.module.css"; // <-- import the module mapping
 
 export default function MeetingRoomBookingsPage() {

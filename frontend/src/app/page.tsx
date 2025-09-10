@@ -1,11 +1,9 @@
 import SusCalendar from "@/components/features/Calendar/Calendar";
 import styles from "./home.module.css";
-import Navbar from "@/components/layout/Navbar/Navbar";
 
 export default function Home() {
   return (
     <div className={styles.home}>
-      <Navbar />
       <section className={styles.header}>
         <img src="/assets/home-header.svg" alt="Representing 9,900+ Science Students & 50+ Science Clubs" draggable="false" />
         <div className={styles.headerGradient1} />

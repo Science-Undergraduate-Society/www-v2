@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Figtree, Geist, Geist_Mono } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
-import { Footer } from "@/components/layout/Footer/Footer";
 import "./globals.css";
+
+// LAYOUT COMPONENTS
+import { Navbar } from "@/components/layout/Navbar/Navbar";
+import { Footer } from "@/components/layout/Footer/Footer";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -41,6 +44,7 @@ export default function RootLayout({
         <GoogleTagManager gtmId={gtmId} />
       </head>
       <body className={`${figtree.className}`}>
+        <Navbar />
         {children}
         <Footer />
       </body>

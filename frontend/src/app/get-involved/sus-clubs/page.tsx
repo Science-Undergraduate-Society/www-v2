@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./events.module.css";
-import Navbar from "@/components/layout/Navbar/Navbar";
+import Navbar from "@/components/layout/NavbarDesktop/NavbarDesktop";
 import { ClubsInfo } from "@/data/clubs";
 import ClubCard from "@/components/ui/ClubCard";
 import ToggleButton from "@/components/ui/ToggleButton";
