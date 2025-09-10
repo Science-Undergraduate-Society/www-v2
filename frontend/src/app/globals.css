@@ -165,7 +165,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 80px 10% 0;
+  padding: 12rem 10% 0;
   color: var(--color-ui-10);
 
   &::before {
@@ -175,7 +175,7 @@ body {
     height: calc(100% + 200px);
     top: 0;
     left: 0;
-    background: url('/assets/backgrounds/background-stem-blue.svg');
+    background: url('/assets/backgrounds/background-stem-blue-reverse.svg');
     background-size: cover;
     background-repeat: no-repeat;
     filter: blur(2px);

@@ -13,6 +13,7 @@
 }
 
 .header {
+    padding-top: 8rem;
     img {
         width: 90%;
         max-width: calc(var(--max-width) + 5rem);

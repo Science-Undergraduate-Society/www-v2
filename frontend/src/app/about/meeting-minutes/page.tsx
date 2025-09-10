@@ -9,6 +9,7 @@ export default function MeetingMinutes() {
             <section className="page-banner-header">
                 <h1>Meeting Minutes</h1>
             </section>
+            
             <section className={styles.access}>
                 <FrostedCard className={styles.accessCard}>
                     <p>
