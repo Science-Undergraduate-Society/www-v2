@@ -6,6 +6,7 @@ import { EventDescription, Event } from '@/lib/types';
 import styles from './calendar.module.css';
 import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
 
+// -------------------- Utils --------------------
 function parseDescription(desc: string = ''): EventDescription {
   const lines = desc.split('\n').map((l) => l.trim());
   const map: Record<string, string> = {};
@@ -68,11 +69,13 @@ function getMonthMatrix(viewDate: Date): Date[] {
   return days;
 }
 
+// -------------------- Main --------------------
 export default function SusCalendar() {
   const [loading, setLoading] = useState(true);
   const [events, setEvents] = useState<Event[]>([]);
   const [viewDate, setViewDate] = useState(new Date());
   const [popupInfo, setPopupInfo] = useState<{ events: Event[]; rect: DOMRect } | null>(null);
+  const [openMode, setOpenMode] = useState<'hover' | 'click' | null>(null);
   const popupRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -87,6 +90,7 @@ export default function SusCalendar() {
     function handleClick(e: MouseEvent) {
       if (popupRef.current && !popupRef.current.contains(e.target as Node)) {
         setPopupInfo(null);
+        setOpenMode(null);
       }
     }
     if (popupInfo) document.addEventListener('mousedown', handleClick);
@@ -114,25 +118,33 @@ export default function SusCalendar() {
   const goNext = () => setViewDate((d) => new Date(d.getFullYear(), d.getMonth() + 1, 1));
 
   // ---------------- Popup Handling ----------------
-  const handleEventClick = (event: Event, targetRect: DOMRect) => {
-    const popupWidth = 320; 
+  const handleEventClick = (event: Event, targetRect: DOMRect, mode: 'hover' | 'click') => {
+    const popupWidth = 320;
     const popupHeight = 220;
 
-    let left = targetRect.right + 8 + window.scrollX;
+    let left = targetRect.right + window.scrollX; 
     let top = targetRect.top + window.scrollY;
 
-    const viewportWidth = window.innerWidth;
+    const viewportWidth = window.innerWidth + window.scrollX;
+    const viewportHeight = window.innerHeight + window.scrollY;
+
+    
     if (left + popupWidth > viewportWidth) {
-      left = Math.max(8, viewportWidth - popupWidth - 8);
+      left = targetRect.left - popupWidth - 8 + window.scrollX;
+      if (left < 8) {
+        left = Math.max(8, viewportWidth - popupWidth - 8); 
+      }
     }
 
-    const viewportHeight = window.innerHeight + window.scrollY;
+
     if (top + popupHeight > viewportHeight) {
       top = Math.max(8, viewportHeight - popupHeight - 8);
     }
 
     setPopupInfo({ events: [event], rect: { ...targetRect, top, left } as DOMRect });
+    setOpenMode(mode);
   };
+
 
   const renderCell = (date: Date, idx: number) => {
     const inMonth = date.getMonth() === viewDate.getMonth();
@@ -155,24 +167,22 @@ export default function SusCalendar() {
           <span className={styles.cellDayNumber}>{date.getDate()}</span>
         </div>
 
-        {hasEvents && isSingleEvent &&(
-          <div className={styles.cellEventsWrapper}>
-            <button className={styles.singeEvent}
-                onClick={(e) => handleEventClick(dayEvents[0], e.currentTarget.getBoundingClientRect())}
-                title={dayEvents[0].title}>
-                  {dayEvents[0].title}
-            </button>
-          </div>
-        )}
-
-        {hasEvents && !isSingleEvent &&(
+        {hasEvents && (
           <div className={styles.cellEventsWrapper}>
             {dayEvents.map((ev, eventIdx) => (
               <button
                 key={eventIdx}
                 className={styles.cellEventRow}
-                onClick={(e) => handleEventClick(ev, e.currentTarget.getBoundingClientRect())}
-                title={ev.title} 
+                title={ev.title}
+                onMouseEnter={(e) =>
+                  handleEventClick(ev, e.currentTarget.getBoundingClientRect(), 'hover')
+                }
+                onMouseLeave={() => {
+                  if (openMode === 'hover') setPopupInfo(null);
+                }}
+                onClick={(e) =>
+                  handleEventClick(ev, e.currentTarget.getBoundingClientRect(), 'click')
+                }
               >
                 {ev.title}
               </button>
@@ -181,8 +191,7 @@ export default function SusCalendar() {
         )}
       </div>
     );
-};
-
+  };
 
   if (loading) return <p className={styles.loading}>Loading events...</p>;
 
@@ -220,10 +229,15 @@ export default function SusCalendar() {
                   top: popupInfo.rect.top,
                   left: popupInfo.rect.left,
                 }}
+                onMouseLeave={() => {
+                  if (openMode === 'hover') setPopupInfo(null);
+                }}
               >
-                {popupInfo.events.length
-                  ? popupInfo.events.map((e, i) => <EventCard key={i} event={e} />)
-                  : <p className={styles.noEvents}>No events for this day.</p>}
+                {popupInfo.events.length ? (
+                  popupInfo.events.map((e, i) => <EventCard key={i} event={e} />)
+                ) : (
+                  <p className={styles.noEvents}>No events for this day.</p>
+                )}
               </div>,
               document.body
             )}
@@ -240,7 +254,6 @@ function EventCard({ event }: { event: Event }) {
   const month = new Intl.DateTimeFormat('en', { month: 'short' }).format(event.date);
   const weekday = new Intl.DateTimeFormat('en', { weekday: 'short' }).format(event.date);
   const date = event.date.getDate();
-  const hasLink = (event.description.link === 'None')
 
   return (
     <div className={styles.parentEventCard}>
@@ -273,13 +286,6 @@ function EventCard({ event }: { event: Event }) {
           </div>
         </div>
       </div>
-      {/* {hasLink &&  // TODO: uncomment when we know where rsvp link comes from
-      <div className={styles.buttonContainer}>
-        <button className={styles.button} type="button">
-          RSVP
-        </button>
-      </div>
-      } */}
     </div>
   );
 }
