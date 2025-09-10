@@ -9,6 +9,7 @@ export default function Home() {
         <div className={styles.headerGradient1} />
         <div className={styles.headerGradient2} />
       </section>
+      
       <section className={styles.about}>
         <div className={styles.whoWeAre}>
           <h1>Who We Are</h1>
@@ -25,6 +26,7 @@ export default function Home() {
           </p>
         </div>
       </section>
+      
       <section className={styles.events}>
         <h1>Check Out Our Events!</h1>
         <h2>Upcoming Events</h2>
