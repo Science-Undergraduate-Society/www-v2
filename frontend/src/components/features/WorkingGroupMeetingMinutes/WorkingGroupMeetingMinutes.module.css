@@ -1,21 +1,11 @@
-.workingGroupMeetingMinutes {
-    ul {
-        display: flex;
-    }
+.meetingMinutesTabs {
+    display: flex;
 
     li {
-        display: flex;
-        padding: 20px 30px;
         background: color-mix(in srgb, #e6f5ff, transparent 25%);
         backdrop-filter: blur(20px);
-        border: 2px solid color-mix(in srgb, var(--color-ui-80), transparent 75%);
         border-bottom: none;
         border-radius: 16px 16px 0 0;
-        font-size: 20px;
-        font-weight: bold;
-        text-transform: capitalize;
-        align-items: center;
-        cursor: pointer;
 
         &.selected {
             background: var(--color-ui-80);
@@ -24,17 +14,91 @@
     }
 }
 
+.meetingMinutesTabs li,
+.meetingMinutesDropdownButton,
+.meetingMinutesDropdownPanel li {
+    display: flex;
+    padding: 20px calc(min(30px, 2vw));
+    border: 2px solid color-mix(in srgb, var(--color-ui-80), transparent 75%);
+    border-bottom: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    align-items: center;
+    cursor: pointer;
+}
+
+.meetingMinutesDropdown {
+    display: none;
+
+    .meetingMinutesDropdownButton {
+        background: var(--color-ui-80);
+        border-radius: 16px 16px 0 0;
+        color: var(--color-ui-10);
+
+        .meetingMinutesDropdownIcon {
+            position: relative;
+            margin-left: 16px;
+            background: var(--color-ui-10);
+            text-align: left;
+            transform: rotate(-60deg) skewX(-30deg) scale(1,.866) scale(-1);
+            transition: all 0.3s ease;
+
+            &,
+            &::before,
+            &::after {
+                width: 8px;
+                height: 8px;
+                border-top-right-radius: 30%;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: inherit;
+            }
+
+            &::before {
+                transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%);
+            }
+
+            &::after {
+                transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+            }
+
+            &.open {
+                transform: rotate(120deg) skewX(-30deg) scale(1, 0.866) scale(-1) translateY(-3px)
+            }
+        }
+    }
+
+    .meetingMinutesDropdownPanel {
+        position: absolute;
+        z-index: 1;
+
+        li {
+            background: color-mix(in srgb, #e6f5ff, transparent 25%);
+
+            &:last-child {
+                border-bottom: 2px solid color-mix(in srgb, var(--color-ui-80), transparent 75%);
+                border-radius: 0 0 16px 16px;
+            }
+        }
+    }
+}
+
 .meetingMinutesView {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 100%;
-    padding: 80px;
+    padding: 80px 5vw;
     background: var(--color-ui-80);
     border-radius: 0 16px 16px 16px;
     place-items: center;
 
-    .button {
-        width: 350px;
+    .meetingMinutesButton {
+        width: calc(min(350px, 25vw));
         padding: 30px;
         margin: 30px 15px;
         font-size: 24px;
@@ -43,3 +107,25 @@
         white-space: normal;
     }
 }
+
+@media (max-width: 1490px) {
+    .meetingMinutesTabs {
+        display: none;
+    }
+
+    .meetingMinutesDropdown {
+        display: unset;
+    }
+}
+
+@media (max-width: 1100px) {
+    .meetingMinutesView {
+        grid-template-columns: none;
+        padding: 40px 5vw;
+
+        .meetingMinutesButton {
+            width: calc(min(350px, 75vw));
+        }
+    }
+}
+
