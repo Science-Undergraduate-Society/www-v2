@@ -7,65 +7,96 @@
 /* ---------- HERO ---------- */
 .hero {
     position: relative;
-    /* Much bigger banner height (match Clubs scale) */
-    padding: clamp(120px, 18vw, 220px) 0 clamp(52px, 7vw, 96px);
-    min-height: clamp(320px, 36vw, 520px);
+    /* Keep hero compact */
+    padding-top: clamp(3rem, 5.5vw, 6rem);
+    padding-bottom: clamp(1.5rem, 3.5vw, 3.75rem);
     color: #fff;
     overflow: hidden;
 }
 
-/* Diagonal background, consistent with Events/Clubs */
+/* Diagonal background — mirror Events/Clubs formatting */
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: -2;
     background-image: url("/assets/backgrounds/background-stem-blue.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    /* opposite-direction diagonal with a shallower depth */
-    --slant: 10vw;
-    /* Top edge stays straight. Bottom edge slopes DOWN toward the right (left side is higher). */
+    background-position: center -4rem;
+    /* Fill the entire hero and only slant the bottom edge */
+    --slant: 6vw;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - var(--slant)));
 }
 
+/* remove extra overlay box */
+.hero::after {
+    content: none;
+    display: none;
+}
+
+/* remove extra overlay box */
+.hero::after {
+    content: none;
+    display: none;
+}
+
 .heroInner {
-    width: min(1280px, 94%);
+    width: min(1400px, 92%);
     margin: 0 auto;
     display: flex;
     align-items: flex-end;
+    /* keep bottoms aligned */
     justify-content: space-between;
     gap: 16px;
+    padding-left: clamp(2rem, 4vw, 4.5rem);
+    padding-right: clamp(1rem, 5vw, 4rem);
+    /* Move title + status further down without increasing overall hero height */
+    padding-top: clamp(6rem, 9vw, 10rem);
 }
 
 .title {
-    font-size: clamp(44px, 7.2vw, 88px);
+    font-size: clamp(48px, 7.6vw, 96px);
+    /* bigger headline like reference */
     font-weight: 800;
     letter-spacing: 0.2px;
+    line-height: 1;
+    margin: 0;
+    margin-left: 0;
+    /* remove previous nudge */
 }
 
 .statusText {
     white-space: nowrap;
-    font-size: clamp(18px, 3.2vw, 34px);
-    font-weight: 600;
+    font-size: clamp(24px, 3.8vw, 44px);
+    /* larger */
+    font-weight: 300;
+    /* skinnier */
     color: #ffffff;
-    opacity: 0.92;
+    opacity: 0.96;
+    line-height: 1;
+    /* align bottoms with title */
+    margin: 0;
+    letter-spacing: 0.3px;
 }
 
 .heroNotice {
-    width: min(1280px, 94%);
-    margin: clamp(28px, 4vw, 40px) auto 0;
-    padding: clamp(32px, 4vw, 48px);
+    /* Make the frosted card span a good chunk of the screen, responsively */
+    width: clamp(680px, 72vw, 1280px);
+    /* Push the card further down from the header row */
+    margin: clamp(48px, 8vw, 110px) auto 0;
+    padding: clamp(32px, 3.8vw, 56px) clamp(28px, 3.4vw, 48px);
     color: #0a0a0a !important;
-    /* black text inside frosted card */
-    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.2);
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(242, 252, 255, 0.75) 0%, rgba(221, 236, 246, 0.8) 55%, rgba(235, 247, 255, 0.85) 100%);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 34px 70px rgba(0, 0, 0, 0.18);
 }
 
 .heroNotice p {
     margin: 0;
-    font-size: clamp(18px, 1.8vw, 22px);
-    line-height: 1.65;
+    font-size: clamp(20px, 2.1vw, 28px);
+    line-height: 1.7;
 }
 
 .heroNoticeSub {
@@ -249,4 +280,9 @@
 
 .simpleList li {
     margin: 6px 0;
+}
+
+/* Push any hero CTA buttons further down if present */
+.hero :is(button, a[role="button"], .BlueButton, .GlassButton, .blueButton, .glassButton) {
+    margin-top: clamp(12px, 2.5vw, 28px);
 }
