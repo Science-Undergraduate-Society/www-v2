@@ -53,9 +53,9 @@ export const featuredEvents: FeaturedEventsInitiative[] = [
     dates: "September 2-5, 2025",
     description: "Get ready for an unforgettable start to the school year with the Science Undergraduate Society (SUS) First Week! Join us for four days of fun, September 2-5. Kick things off at Imagine Day & Faculty Fair on September 2nd to grab some free merch. On September 3rd, unwind at Sips and Swirls at Abdul Ladha from 6-8 p.m., where you can enjoy mocktails and paint while getting a hand or scalp massage from Lush Spa or even creating your own custom bubble bar! Show off your competitive side at Squidlympics on the Macinnes Field from 5:30-7:30 p.m. on September 4th, with a chance to win prizes. We'll end the week with our Welcome Back BBQ on September 5th outside Abdul Ladha from 5-8 p.m., featuring free food, a dunk tank, and a raffle full of exciting prizes. We can't wait to see you there!",
     pictures: [
-      "frontend/public/assets/event-images/sus_first_week_1.png",
-      "frontend/public/assets/event-images/sus_first_week_2.png",
-      "frontend/public/assets/event-images/sus_first_week_3.png"
+      "/assets/event-images/sus_first_week_1.png",
+      "/assets/event-images/sus_first_week_2.png",
+      "/assets/event-images/sus_first_week_3.png"
     ],
     links: []
   },
@@ -65,9 +65,9 @@ export const featuredEvents: FeaturedEventsInitiative[] = [
     dates: "September 13-14, 2025",
     description: "Science RXN is the ultimate kickoff flagship event for first-year science students at UBC! Happening September 13-14, this two-day experience is designed to help you make lasting friendships and dive into campus life. Day one is packed with fun indoor and outdoor activities where you’ll bond with peers through games, challenges, and team-building. On day two, dress up in blue for our signature dinner and dance, a chance to celebrate the start of your university journey with new friends and unforgettable memories. Don’t miss this exciting opportunity to connect, celebrate, and start your UBC Science adventure on the right foot!",
     pictures: [
-      "frontend/public/assets/event-images/science_RXN_1.png",
-      "frontend/public/assets/event-images/science_RXN_2.png",
-      "frontend/public/assets/event-images/science_RXN_3.png"
+      "/assets/event-images/science_RXN_1.png",
+      "/assets/event-images/science_RXN_2.png",
+      "/assets/event-images/science_RXN_3.png"
     ],
     links: []
   },
