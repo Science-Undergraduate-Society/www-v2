@@ -1,7 +1,279 @@
-.container {
-    /* EXAMPLE STYLING */
-    color: var(--color-ui-20);
-    background: var(--color-ui-80);
+.heroSection {
+    padding: 4.8rem 1.5rem;
+    padding-left: 4rem;
+    color: #fff;
+    background-position: center -4rem;
+    overflow: hidden;
+    padding-bottom: 14rem;
+
+}
+
+.heroSection::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url("/assets/backgrounds/background-stem-blue.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -4rem;
+    --slant: 8vw;
+    clip-path: polygon(0 0, 100% 0, 100% calc(65% - var(--slant)), 0 35%);
+}
+
+.heroSection h1 {
+    padding-left: 4.5rem;
+    margin: 0 0 1rem;
+    font-weight: 700;
+    font-size: 64px;
+}
+
+.socialMediaBox {
+    position: absolute;
+    top: calc(100% - 65vh);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: color-mix(in srgb, #e6f5ff, transparent 10%);
+    border-radius: 20px;
+    color: var(--color-ui-100);
+    width: 80vw;
+    height: 30vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 2rem;
+    z-index: 10;
+    font-size: larger;
+    flex-direction: column;
+}
+.socialMediaBox p {
+    margin: 0;
+}
+
+.socialMediaBox em {
+    color: var(--color-ui-60);
+    font-style: normal;
+}
+
+.socialMediaBox a {
+  text-decoration: underline; 
+  color: inherit;             
+}
+
+.socialMediaBox a:hover {
+  text-decoration: underline; 
+  color: var(--color-ui-60);  
+
+}
+
+.iconButtons a img {
+  width: 80%;
+  height: 80%;
+  transition: transform 0.2s ease;
+}
+
+.iconButtons a img:hover {
+  transform: scale(1.1);
+}
+.iconButtons {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    position:relative;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    
+}
+
+.monthEventsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+}
+
+.monthEventsContainer h1 {
+    color: var(--color-ui-80);
+    font-weight: 700;
+    font-size: 40px;
+    padding-left: 10vw;
+    margin: 0 0 1rem;
+    font-weight: 700;
+    align-self: flex-start;
+    padding-top: 5%;
+
+}
+
+.firstWord {
+    color: var(--color-ui-60);
+    font-weight: bold;
+}
+
+.spacer {
+    height: 5vh;
+}
+
+.monthEvent {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    width: 100%;
+    align-self: center;
+    align-items: start;
+}
+
+.monthEvent h1 {
+    font-size: 40px;
+    color:var(--color-ui-80);
+    font-weight: bold;
+
+}
+
+.monthEvent h2 {
+    font-size: 24;
+    font-weight: bold;
+
+}
+
+.monthEvent p {
+    font-size: 20;
+
+}
+
+.monthEventButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
+
+.monthEventPictureContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    width: auto;
+    gap: 1rem;
+
+}
+
+.monthEventPicture {
+    border-radius: 20px;
+
+}
+
+.afterEventsContainer {
+    --slant: 8vw;
+    position: relative; 
+    min-height: 70vh;
+    padding-top: var(--slant);
+    padding-bottom: var(--slant);
+    padding-left:10vw;
+    padding-top:15vh;
+}
+
+.afterEventsContainer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url("/assets/backgrounds/background-stem-blue.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -4rem;
+    --slant: 8vw;
+    clip-path: polygon(
+    0 0,                              
+    100% var(--slant),                
+    100% 100%,                        
+    0 calc(100% - var(--slant))
+    );
+    display: flex;
+    color: var(--color-ui-10);
+}
+
+
+.afterEventsContainer h1 {
+    font-weight: 700;
+    align-self: start;
+    font-size: 40px;
+    color: var(--color-ui-10);
+}
+
+.afterEvent {
+    display: flex;
+    flex-direction: column;
+    padding-left:1vw;
     width: 90%;
-    height: 50%;
+    align-items: start;
+    color: var(--color-ui-10);
+    text-align: start;
+    align-items: start;
+    justify-content: start;
+    align-self: center;
+
+}
+
+.afterEvent h1 {
+    font-weight: 500;
+    font-size: 40px;
+    width: 100%;
+}
+
+.afterEvent p {
+    font-size: 20px;
+}
+
+.initiativesContainer {
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+
+}
+
+.initiativesTitle {
+    color: var(--color-ui-80);
+    font-weight: 700;
+    font-size: 40px;
+    padding-left: 10vw;
+    margin: 0 0 1rem;
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+.button {
+    display: flex;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 16px;
+    height: 6vh;
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 1vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.button.whiteBg { 
+    background: var(--color-ui-10);
+    color: var(--color-ui-100);
+}
+
+.button.navyBg{
+    background: var(--color-ui-80);
+    color: var(--color-ui-10);
+}
+
+.smallSpacer {
+    height: 3vh;
 }
