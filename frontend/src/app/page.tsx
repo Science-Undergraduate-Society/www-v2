@@ -1,15 +1,15 @@
+import SusCalendar from "@/components/features/Calendar/Calendar";
 import styles from "./home.module.css";
-import Navbar from "@/components/layout/Navbar/Navbar";
 
 export default function Home() {
   return (
     <div className={styles.home}>
-      <Navbar />
       <section className={styles.header}>
         <img src="/assets/home-header.svg" alt="Representing 9,900+ Science Students & 50+ Science Clubs" draggable="false" />
         <div className={styles.headerGradient1} />
         <div className={styles.headerGradient2} />
       </section>
+      
       <section className={styles.about}>
         <div className={styles.whoWeAre}>
           <h1>Who We Are</h1>
@@ -26,10 +26,12 @@ export default function Home() {
           </p>
         </div>
       </section>
+      
       <section className={styles.events}>
         <h1>Check Out Our Events!</h1>
         <h2>Upcoming Events</h2>
         <p>Hover over the event to view details!</p>
+        <SusCalendar></SusCalendar>
         <h2>Past Events</h2>
       </section>
     </div>

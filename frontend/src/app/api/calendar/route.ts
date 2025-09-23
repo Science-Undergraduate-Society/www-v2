@@ -9,25 +9,24 @@ const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.resolve(__dirname, '../../../../../.env.local') });
 
 export async function GET() {
-  const auth = new google.auth.JWT({
-    email: process.env.GOOGLE_CLIENT_EMAIL!,
-    key: process.env.GOOGLE_PRIVATE_KEY!.replace(/\\n/g, '\n'),
-    scopes: ['https://www.googleapis.com/auth/calendar.readonly'],
-  });
+  const calendarId = 'c_d4a570600fdaa112f1ac7be82285135369cdeb870a16b32a4b68df61fdad7dd5@group.calendar.google.com';
 
-  const calendarId = 'e1f9d113998bf7ebd1121aafd4ef44c911436102a57abba096cb5e0cbd19e551@group.calendar.google.com';
-  const calendar = google.calendar({ version: 'v3', auth });
+  const calendar = google.calendar({
+    version: 'v3',
+    auth: process.env.GOOGLE_CALENDAR_API_KEY,
+  });
 
   try {
     const events = await calendar.events.list({
       calendarId,
       timeMin: new Date().toISOString(),
-      maxResults: 5,
+      maxResults: 20,
       singleEvents: true,
       orderBy: 'startTime',
     });
 
-    return NextResponse.json(events.data.items ?? []);
+    const ans =  NextResponse.json(events.data.items ?? []);
+    return ans;
   } catch (err: any) {
     return NextResponse.json({ error: err.message || 'Failed to fetch events' }, { status: 500 });
   }

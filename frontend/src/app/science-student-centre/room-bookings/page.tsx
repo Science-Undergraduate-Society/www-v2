@@ -1,19 +1,12 @@
 import Image from "next/image";
 import { roomFeatures, MeetingRoomPolicies } from "@/data/roombooking";
-import Navbar from "@/components/layout/Navbar/Navbar";
 import styles from "./roomBookings.module.css"; // <-- import the module mapping
 
 export default function MeetingRoomBookingsPage() {
     return (
         <main className={styles["meeting-page"]}>
-            {/* Hero */}
-            <div className={styles["hero-navbar"]}>
-                <Navbar />
-            </div>
+            
             <section className={styles.hero}>
-
-
-
                 <div className={`${styles.container} ${styles["hero-content"]}`}>
                     <div className={styles["hero-left"]}>
                         <div className={styles["hero-heading"]}>
@@ -27,9 +20,7 @@ export default function MeetingRoomBookingsPage() {
                                     className={styles["location-icon"]}
                                     priority
                                 />
-                                <span className={styles["location-name"]}>
-                    Abdul Ladha Science Student Centre (ALSSC)
-                </span>
+                                <span className={styles["location-name"]}>Abdul Ladha Science Student Centre (ALSSC)</span>
                             </div>
                         </div>
                     </div>

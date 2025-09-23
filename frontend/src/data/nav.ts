@@ -6,7 +6,7 @@ export const MENUS: Menu[] = [
         items: [
             { label: "Council & Procedures", href: "/about/council-and-procedures", icon: "procedures" },
             { label: "Portfolios & committees", href: "/about/portfolios-and-committees", icon: "council" },
-            { label: "Meeting Minutes", href: "/about/meetingMinutes", icon: "minutes" },
+            { label: "Meeting Minutes", href: "/about/meeting-minutes", icon: "minutes" },
             { label: "Our Executives", href: "/about/executives", icon: "executives" },
         ],
     },

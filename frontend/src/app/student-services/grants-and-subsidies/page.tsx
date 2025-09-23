@@ -8,7 +8,7 @@ export default function GrantsAndSubsidies() {
     return (
         <div className={styles.grantsAndSubsidies}>
             <section className="page-banner-header">
-                <h1>Grants & Subsidies</h1>
+                <h1>Internal Grants & Subsidies</h1>
             </section>
             <section className={styles.applicationInformation}>
                 <FrostedCard className={styles.applicationInformationCard}>

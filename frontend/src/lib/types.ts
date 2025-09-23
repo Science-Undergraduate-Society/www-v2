@@ -194,3 +194,25 @@ export type EventLink = {
     description: string; // documentation purposes
     url: string;
 }
+
+// events
+export type Event = {
+    title: string;
+    location: string;
+    time: string;
+    date: Date;
+    description: EventDescription;
+}
+
+export type EventDescription = {
+    demographic: string;
+    workingGroup: string;
+    collaborator: string;
+    link: string;
+}
+
+export type EventLocation = {
+    fullName: string;
+    shortName: string;
+    link: string;
+}
