@@ -24,7 +24,8 @@ function parseDescription(desc: string = ''): EventDescription {
 }
 
 function parseEvents(data: any[]): Event[] {
-  return (data || []).map((item) => {
+  const safeData = Array.isArray(data) ? data : [];
+  return safeData.map((item) => {
     const startStr = item.start?.dateTime || item.start?.date;
     const startDate = new Date(startStr);
     const match = item.summary?.match(/(?<=\().*?(?=\))/);
