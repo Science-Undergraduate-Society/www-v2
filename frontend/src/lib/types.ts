@@ -177,6 +177,24 @@ export type WorkingGroupMeetingMinutes = Record<string, WorkingGroupMeetingMinut
 export type Item = { label: string; href: string; icon?: string };
 export type Menu = { label: string; items: Item[] };
 
+
+// for events on the Events page, not on calendar
+// if isEvent is false the type is initiative
+export type FeaturedEventsInitiative = {
+    isEvent: boolean;
+    title: string;
+    dates: string;
+    description: string;
+    pictures: string[];
+    links: EventLink[];
+}
+
+export type EventLink = {
+    label: string;
+    description: string; // documentation purposes
+    url: string;
+}
+
 // events
 export type Event = {
     title: string;
