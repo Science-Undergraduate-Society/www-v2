@@ -1,5 +1,5 @@
 import styles from './susEvents.module.css'
-import Navbar from "@/components/layout/Navbar/Navbar";
+import { Navbar } from "@/components/layout/Navbar/Navbar";
 import { FeaturedEventsInitiative } from '@/lib/types';
 import { featuredEvents } from '@/data/getInvolved';
 import BlueButton from '@/components/ui/BlueButton/BlueButton';
@@ -99,7 +99,7 @@ export default function SusEvents() {
             <Navbar />
 
             <section className={styles.heroSection}>
-                <h1>Events</h1>
+                <h1>Events & Initiatives</h1>
             </section>
             
             <div className={styles.spacer}></div> 
@@ -113,9 +113,8 @@ export default function SusEvents() {
                     <a href="https://calendar.google.com/calendar/u/0/r?cid=Y19kNGE1NzA2MDBmZGFhMTEyZjFhYzdiZTgyMjg1MTM1MzY5Y2RlYjg3MGExNmIzMmE0YjY4ZGY2MWZkYWQ3ZGQ1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20">Google Calendar</a>&nbsp;and follow our&nbsp;
                     <a href="https://www.instagram.com/susubc/">Instagram</a>!
                 </p>
-
-                <div className={styles.iconButtons}>
-                   <a 
+                {/* <div className={styles.iconButtons}>
+                    <a 
                         href="https://calendar.google.com/calendar/u/0/r?cid=Y19kNGE1NzA2MDBmZGFhMTEyZjFhYzdiZTgyMjg1MTM1MzY5Y2RlYjg3MGExNmIzMmE0YjY4ZGY2MWZkYWQ3ZGQ1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" 
                         target="_blank" 
                         rel="noopener noreferrer"
@@ -130,8 +129,7 @@ export default function SusEvents() {
                     >
                         <img src="/assets/icons/instagram.svg" alt="Instagram" />
                     </a>
-                </div>
-
+                </div> */}
             </div>
 
 

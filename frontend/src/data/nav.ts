@@ -15,7 +15,7 @@ export const MENUS: Menu[] = [
         items: [
             { label: "Join SUS", href: "/get-involved/join-sus", icon: "join" },
             { label: "SUS Clubs", href: "/get-involved/sus-clubs", icon: "clubs" },
-            { label: "Events", href: "/get-involved/events", icon: "events" },
+            { label: "Events & Initiatives", href: "/get-involved/events-and-initiatives", icon: "events" },
         ],
     },
     {
