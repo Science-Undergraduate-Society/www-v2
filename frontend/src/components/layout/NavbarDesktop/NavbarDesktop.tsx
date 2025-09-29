@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { MENUS } from "@/data/nav";
+import { NavMenus } from "@/data/nav";
 import styles from "./NavbarDesktop.module.css";
 
 const PANEL_WIDTH_VW = 47.5625;
@@ -114,7 +114,7 @@ export const NavbarDesktop = () => {
                     {/* Primary links */}
                     <div className={styles.navbarCenter}>
                         <ul className={styles.navbarList}>
-                            {MENUS.map((m) => (
+                            {NavMenus.map((m) => (
                                 <li key={m.label} className={styles.navbarItem}>
                                     {m.items.length === 1 ? (
                                         <Link href={m.items[0].href} className={styles.navPill}>
@@ -151,7 +151,7 @@ export const NavbarDesktop = () => {
             </nav>
 
             {/* Dropdown layer */}
-            {MENUS.map(
+            {NavMenus.map(
                 (menu) =>
                     menu.items.length > 1 &&
                     open === menu.label && (
