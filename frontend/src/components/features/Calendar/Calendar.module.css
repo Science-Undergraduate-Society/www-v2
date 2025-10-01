@@ -131,6 +131,7 @@
           max-height: 12vh;
           min-width: 0;
           width: 100%;
+          flex-wrap: wrap;
 
           &:hover { box-shadow: 0 1px 6px rgba(0,0,0,0.08); }
           &:focus { outline: 2px solid #9fd3ff; outline-offset: 2px; }
@@ -183,8 +184,6 @@
               font-size: 0.95rem;
               &:hover { border: 1px solid #00aaff };
               cursor: pointer;
-              text-overflow: ellipsis;
-              white-space: nowrap;
               display: -webkit-box;
               -webkit-box-orient: vertical;
               -webkit-line-clamp: 3;
@@ -217,6 +216,25 @@
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .cell {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .cellHeaderCorner {
+      margin-bottom: 0.25rem;
+    }
+
+    .cellEventsWrapper {
+      width: 100%;
+    }
+
+    .singleEvent {
+      white-space: nowrap;
     }
   }
 }
@@ -365,14 +383,46 @@
     }
   }
 
+@media (max-width: 1000px) {
+  .parentEventCard {
+    width: 50vw;           
+    min-height: 50vw;
+    
+  }
+}
+
+/* For typical phones */
+@media (max-width: 480px) {
+  .parentEventCard {
+    width: 80vw;           
+    min-height: auto;      
+    max-width: 80vw;       
+    margin: 0 auto;
+   }
+
+  .parentEventCard .header .headerTextContainer .headerText {
+    font-size: 0.9rem;     
+  }
+
+  .parentEventCard .button {
+    width: 6.5rem;         
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+}
 
 /* Popup */
 .popup {
   position: absolute;
   z-index: 9999;
-  width: 320px;
-  max-width: 90vw;
+  min-width: 320px;
   animation: fadeIn 0.15s ease-in-out;
+}
+
+@media (max-width: 480px) {
+  .popup {
+    width: 300px;           
+  }
 }
 
 @keyframes fadeIn {
