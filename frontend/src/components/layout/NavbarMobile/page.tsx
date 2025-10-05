@@ -52,18 +52,20 @@ export const NavbarMobile = () => {
                                     <div className={styles.dropdownButtonBar} />
                                 </div>
                             </div>
-                            <div className={styles.submenu}>
-                                {menuState === menuItem.label && menuItem.items.map(submenuItem => (
-                                    <Link
-                                        key={submenuItem.label}
-                                        href={submenuItem.href}
-                                        className={styles.submenuItem}
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        {submenuItem.label}
-                                    </Link>
-                                ))}
-                            </div>
+                            {menuState === menuItem.label && (
+                                <div className={styles.submenu}>
+                                    {menuItem.items.map(submenuItem => (
+                                        <Link
+                                            key={submenuItem.label}
+                                            href={submenuItem.href}
+                                            className={styles.submenuItem}
+                                            onClick={() => setIsMenuOpen(false)}
+                                        >
+                                            {submenuItem.label}
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     ))}
                     <Link href="https://shop.susubc.ca/" className={styles.shop}>
