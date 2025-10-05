@@ -143,20 +143,20 @@
             cursor: pointer;
         }
     }
-}
 
-.shop {
-    width: fit-content;
-    margin: 8px 0;
-    font-weight: bold;
-}
+    .shop {
+        width: fit-content;
+        margin: 8px 0;
+        font-weight: bold;
+    }
 
-.joinSus {
-    width: fit-content;
-    padding: 4px 12px;
-    margin-top: 8px;
-    background: var(--color-ui-10);
-    border-radius: 8px;
-    font-weight: bold;
-    color: var(--color-ui-80);
+    .joinSus {
+        width: fit-content;
+        padding: 4px 12px;
+        margin-top: 8px;
+        background: var(--color-ui-10);
+        border-radius: 8px;
+        font-weight: bold;
+        color: var(--color-ui-80);
+    }
 }
