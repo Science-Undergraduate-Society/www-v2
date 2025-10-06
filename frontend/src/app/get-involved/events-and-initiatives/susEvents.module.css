@@ -4,8 +4,8 @@
     color: #fff;
     background-position: center -4rem;
     overflow: hidden;
-    padding-bottom: 14rem;
-
+    padding-bottom: 20vh;
+   height: 60vh;
 }
 
 .heroSection::before {
@@ -19,6 +19,18 @@
     background-position: center -4rem;
     --slant: 8vw;
     clip-path: polygon(0 0, 100% 0, 100% calc(65% - var(--slant)), 0 35%);
+}
+
+@media (max-width: 768px) {
+    .heroSection::before {
+        clip-path: polygon(0 0, 100% 0, 100% calc(75% - var(--slant)), 0 55%);
+    }
+}
+
+@media (max-width: 480px) {
+    .heroSection::before {
+        clip-path: polygon(0 0, 100% 0, 100% calc(85% - var(--slant)), 0 65%);
+    }
 }
 
 .heroSection h1 {
@@ -46,6 +58,21 @@
     font-size: larger;
     flex-direction: column;
 }
+
+@media (max-width: 768px) {
+    .socialMediaBox {
+        top: calc(100% - 45vh); 
+        width: 85vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .socialMediaBox {
+        top: calc(100% - 35vh);
+        width: 90vw;
+    }
+}
+
 .socialMediaBox p {
     margin: 0;
 }
@@ -63,7 +90,6 @@
 .socialMediaBox a:hover {
   text-decoration: underline; 
   color: var(--color-ui-60);  
-
 }
 
 .iconButtons a img {
@@ -85,7 +111,6 @@
     align-items: center;
     justify-content: space-between;
     align-self: center;
-    
 }
 
 .monthEventsContainer {
@@ -93,7 +118,19 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
+    padding-top: 5vh; /* Add padding instead of margin */
+}
 
+@media (max-width: 768px) {
+    .monthEventsContainer {
+        padding-top: 25vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .monthEventsContainer {
+        padding-top: 30vh;
+    }
 }
 
 .monthEventsContainer h1 {

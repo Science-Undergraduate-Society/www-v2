@@ -96,14 +96,11 @@ export default function SusEvents() {
 
     return (
         <div>
-            <Navbar />
 
             <section className={styles.heroSection}>
                 <h1>Events & Initiatives</h1>
             </section>
             
-            <div className={styles.spacer}></div> 
-
             <div className={styles.socialMediaBox}>
                 <p>
                     <em>Fall 2026 has arrived, UBC! </em> Check out what's coming up this September.  
@@ -113,26 +110,7 @@ export default function SusEvents() {
                     <a href="https://calendar.google.com/calendar/u/0/r?cid=Y19kNGE1NzA2MDBmZGFhMTEyZjFhYzdiZTgyMjg1MTM1MzY5Y2RlYjg3MGExNmIzMmE0YjY4ZGY2MWZkYWQ3ZGQ1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20">Google Calendar</a>&nbsp;and follow our&nbsp;
                     <a href="https://www.instagram.com/susubc/">Instagram</a>!
                 </p>
-                {/* <div className={styles.iconButtons}>
-                    <a 
-                        href="https://calendar.google.com/calendar/u/0/r?cid=Y19kNGE1NzA2MDBmZGFhMTEyZjFhYzdiZTgyMjg1MTM1MzY5Y2RlYjg3MGExNmIzMmE0YjY4ZGY2MWZkYWQ3ZGQ1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                    >
-                        <img src="/assets/icons/calendar.svg" alt="Google Calendar" />
-                    </a>
-
-                    <a 
-                        href="https://www.instagram.com/susubc/" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                    >
-                        <img src="/assets/icons/instagram.svg" alt="Instagram" />
-                    </a>
-                </div> */}
             </div>
-
-
             <div className={styles.monthEventsContainer}>
                 <h1>September Events</h1>
             </div>
