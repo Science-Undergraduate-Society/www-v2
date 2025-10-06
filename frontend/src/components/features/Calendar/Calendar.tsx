@@ -119,32 +119,41 @@ export default function SusCalendar() {
   const goNext = () => setViewDate((d) => new Date(d.getFullYear(), d.getMonth() + 1, 1));
 
   // ---------------- Popup Handling ----------------
-  const handleEventClick = (event: Event, targetRect: DOMRect, mode: 'hover' | 'click') => {
-    const popupWidth = 320;
-    const popupHeight = 220;
+const handleEventClick = (event: Event, targetRect: DOMRect, mode: 'hover' | 'click') => {
+  let popupWidth = 320;
+  const popupHeight = 220;
 
-    let left = targetRect.right + window.scrollX; 
-    let top = targetRect.top + window.scrollY;
+  let left = targetRect.right + window.scrollX;
+  let top = targetRect.top + window.scrollY;
 
-    const viewportWidth = window.innerWidth + window.scrollX;
-    const viewportHeight = window.innerHeight + window.scrollY;
+  const viewportWidth = window.innerWidth + window.scrollX;
+  const viewportHeight = window.innerHeight + window.scrollY;
 
-    
-    if (left + popupWidth > viewportWidth) {
-      left = targetRect.left - popupWidth - 8 + window.scrollX;
-      if (left < 8) {
-        left = Math.max(8, viewportWidth - popupWidth - 8); 
-      }
+  // --- Desktop positioning ---
+  if (left + popupWidth > viewportWidth) {
+    left = targetRect.left - popupWidth - 8 + window.scrollX;
+    if (left < 8) {
+      left = Math.max(8, viewportWidth - popupWidth - 8);
     }
+  }
 
+  if (top + popupHeight > viewportHeight) {
+    top = Math.max(8, viewportHeight - popupHeight - 8);
+  }
 
-    if (top + popupHeight > viewportHeight) {
-      top = Math.max(8, viewportHeight - popupHeight - 8);
-    }
+  // --- Mobile override: center horizontally & vertically ---
+  if (window.innerWidth < 600) {
+    popupWidth = Math.floor(window.innerWidth * 0.8);       // 80% of viewport width
+    left = Math.floor((window.innerWidth - popupWidth) / 2 + window.scrollX); // horizontal center
+    top = Math.floor((window.innerHeight - popupHeight) / 2 + window.scrollY); // vertical center
+  }
 
-    setPopupInfo({ events: [event], rect: { ...targetRect, top, left } as DOMRect });
-    setOpenMode(mode);
-  };
+  setPopupInfo({
+    events: [event],
+    rect: { ...targetRect, top, left, width: popupWidth, height: popupHeight } as DOMRect
+  });
+  setOpenMode(mode);
+};
 
 
   const renderCell = (date: Date, idx: number) => {
@@ -168,7 +177,6 @@ export default function SusCalendar() {
           <span className={styles.cellDayNumber}>{date.getDate()}</span>
         </div>
         
-        {/* Single Event Cell */}
         {hasEvents && isSingleEvent &&(
           <div className={styles.cellEventsWrapper}>
             <button className={styles.singleEvent}
