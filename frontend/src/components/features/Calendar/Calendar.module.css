@@ -76,6 +76,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding-top: 1vh;
 
         .headerLeft {
           display: flex;
@@ -221,7 +222,7 @@
 
   @media (max-width: 600px) {
     .grid {
-      font-size: 8px;
+      font-size: 8px ! important;
     }
     .cell {
       flex-direction: column ! important;
@@ -245,7 +246,10 @@
 @media (max-width: 480px) {
   .calendarParentContainer {
     width: 100%;
+    padding-top: 5%;
+    padding: 2%
   }
+  
 }
 
 /* Sidebar */
