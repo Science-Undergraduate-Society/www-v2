@@ -1,5 +1,5 @@
 import { NavbarDesktop } from "../NavbarDesktop/NavbarDesktop";
-import { NavbarMobile } from "../NavbarMobile/page";
+import { NavbarMobile } from "../NavbarMobile/NavbarMobile";
 import styles from "./Navbar.module.css";
 
 export const Navbar = () => {

@@ -174,8 +174,16 @@ export interface WorkingGroupMeetingMinute {
 export type WorkingGroupMeetingMinutes = Record<string, WorkingGroupMeetingMinute[]>
 
 //Navbar
-export type Item = { label: string; href: string; icon?: string };
-export type Menu = { label: string; items: Item[] };
+export type NavMenu = {
+    label: string;
+    items: NavMenuItem[];
+}
+
+export type NavMenuItem = {
+    label: string;
+    href: string;
+    icon?: string;
+}
 
 
 // for events on the Events page, not on calendar
