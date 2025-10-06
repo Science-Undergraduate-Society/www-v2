@@ -26,7 +26,7 @@ export const workingGroupMeetingMinutes: WorkingGroupMeetingMinutes = {
         { title: 'Tutoring (T)', link: 'https://drive.google.com/drive/folders/1f6yToHgYx9p3h5ebMaX89ikKAa-BaIjW' },
         { title: 'Mentorship (MENT)', link: 'https://drive.google.com/drive/folders/1FR3NqZ1vrHoWdmMF4nn4zwy9kHHJVgtG' }
     ],
-    communication: [
+    communications: [
         { title: 'First Week (FW)', link: 'https://drive.google.com/drive/folders/1C6D100bM86sqWnR8ZNe_ofpZxsZt0ZIe' },
         { title: 'Marketing (MKTG)', link: 'https://drive.google.com/drive/folders/1H6e0B1qx5Qmrcyq8yt1uUYdfsVDabxRz' },
         { title: 'Productions (PRODS)', link: 'https://drive.google.com/drive/folders/19xEJrWYceRueUfb2tMZoiX23WYG07McC' },
