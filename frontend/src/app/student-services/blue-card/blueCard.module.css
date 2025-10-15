@@ -249,6 +249,7 @@
         width: calc(33.333% - 1rem); /* 3 columns with gap */
         min-width: 300px;
         max-width: 400px; /* prevents items from getting too large */
+        border-radius: 20px;
     }
 
     .sponsorIcon {
@@ -256,9 +257,8 @@
         height: auto;
         aspect-ratio: 1;
         object-fit: contain;
-        border-radius: 15px;
-        border: 10px solid var(--color-ui-80);
-        background-color: white;
+        border-radius: 20px;
+        border: 10px solid color-mix(in srgb, var(--color-ui-80), transparent 25%);
         margin: 0 auto;
         display: block;
         overflow: hidden; 
@@ -266,17 +266,17 @@
 
     .tooltiptext {
         visibility: hidden;
-        opacity: 0;
-        background-color: var(--color-ui-80);
+        background-color: color-mix(in srgb, var(--color-ui-80), transparent 15%);
         color: var(--color-ui-10);
         text-align: center;
         padding: 20px;
-        border-radius: 6px;
+        border-radius: 20px;
         position: absolute;
         z-index: 2;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%); 
+        border: 10px solid transparent;
         width: 80%;
         height: 100%;
         transition: opacity 0.2s ease;
@@ -291,7 +291,6 @@
     .sponsorIconWrapper:hover .tooltiptext {
         visibility: visible;
         z-index: 10;
-        opacity: 0.85;
     }
 }
 
