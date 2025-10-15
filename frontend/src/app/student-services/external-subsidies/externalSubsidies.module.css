@@ -7,7 +7,7 @@
     flex-direction: column;
     color: var(--color-ui-100);
     padding: 2rem;
-    margin: 0 5% 0 5%;
+    margin: 0 10% 0 10%;
     font-size: 24px;
 
     em {
@@ -28,14 +28,16 @@
 .searchbarContainer {
     display: flex;
     flex-direction: row;
-    padding: 2rem;
-    width: 100%;
-    height: 15vh;
-    justify-content: center;
+    padding: 1rem 0; /* only vertical padding */
+    justify-content: space-between;
+    margin: 0 10%; /* consistent with other sections */
+    margin-top: 5vh;
+    width: 80%;
+    height: 12vh;
     gap: 1%;
 
     .searchbar {
-        width: 25%;
+        width: 32%; /* slightly wider to balance visual space */
         border-radius: 16px;
         border-color: color-mix(in srgb, var(--color-ui-100), transparent 30%);
         border-width: 2px;
@@ -97,7 +99,6 @@
         }
 
         .searchButton {
-            
             font-size: 1rem;
             padding: 0.5rem;
         }
