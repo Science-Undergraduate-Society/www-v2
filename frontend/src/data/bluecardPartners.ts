@@ -52,7 +52,7 @@ export const blueCardPartners: BlueCardPartner[] = [
   },
   {
     name: "MYST Asian Fusion",
-    logoSrc: "/assets/bluecard-images/partner-logos/myst-asian-fusion-logo.jpg",
+    logoSrc: "/assets/bluecard-images/partner-logos/myst-asian-fusion-logo.png",
     description:
       "10% off all in-person meals,\n15% off event orders (50+ meals), and \n20% off event orders (100+ meals).",
     location:
