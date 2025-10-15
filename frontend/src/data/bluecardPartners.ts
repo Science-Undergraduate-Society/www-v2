@@ -68,7 +68,7 @@ export const blueCardPartners: BlueCardPartner[] = [
   },
   {
     name: "Steve's Poke Bar",
-    logoSrc: "/assets/bluecard-images/partner-logos/Steve_s Poke Bar Logo.png",
+    logoSrc: "/assets/bluecard-images/partner-logos/steve-poke-logo.png",
     description: "$5 off first mobile order",
     location: "Valid at www.stevespokebar.ca",
     website: "https://www.stevespokebar.ca/",
