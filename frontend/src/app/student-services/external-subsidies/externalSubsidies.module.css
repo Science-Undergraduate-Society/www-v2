@@ -111,6 +111,12 @@
     }
 }
 
+ @media (max-width: 768px) {
+    .searchbarContainer {
+        margin-bottom: 15vh;
+    }
+}
+
 .grantsContainer {
     display: flex;
     flex-direction: column;

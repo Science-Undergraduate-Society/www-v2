@@ -74,7 +74,7 @@ export default function ExternalSubsidies({}: {}) {
 
             <section className={styles.searchbarContainer}>
                 <div className={styles.searchbar}>
-                    <Search size={20} />
+                    <Search/>
                     <input
                         type="text"
                         placeholder="keyword..."
