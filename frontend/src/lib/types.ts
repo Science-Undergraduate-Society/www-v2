@@ -108,6 +108,35 @@ export type FundingRecipient =
     | "Science Students"
     | "New SUS Clubs"
 
+export type ExternalGranter =
+    | "AMS"
+    | "UBC"
+
+export type ExternalGrantKeyword =
+    | "#Sustainability"
+    | "#Initiatives"
+    | "#WomenInSTEM"
+    | "#2SLGBTQIA+"
+    | "#Community"
+    | "#Research"
+    | "#BIPOC"
+    | "#Indigenous"
+
+type BlurbItem = string | { bullets: string[] };
+
+export type ExternalGrant = {
+  title: string;
+  granter: string;
+  deadline: string;
+  keywords: string[];
+  contact?: string;
+  link?: string;
+  eligiblityBlurb: BlurbItem[];
+  amount: BlurbItem[];
+  responseDate?: string;
+  opendate?: string;
+};
+
 // Tutors
 export interface Tutor {
     name: string,
