@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "./events.module.css";
 import { ClubsInfo } from "@/data/clubs";
+import BannerHeader from '@/components/ui/BannerHeader/BannerHeader'
 import ClubCard from "@/components/ui/ClubCard";
 import ToggleButton from "@/components/ui/ToggleButton";
 import type { ClubInfo } from "@/lib/types";
@@ -74,13 +75,10 @@ export default function SusClubs() {
 
     return (
         <div>
-            <section className={styles.heroSection}>
+            <BannerHeader>
                 <h1>Clubs</h1>
-                <p>
-                    Science Undergraduate Society is proud to support 26 departmental and
-                    26 non-departmental clubs for the 2023/2024 academic year.
-                </p>
-            </section>
+                <h2>Science Undergraduate Society is proud to support 26 departmental and 26 non-departmental clubs for the 2023/2024 academic year.</h2>
+            </BannerHeader>
 
             <section className={styles.content}>
                 <div className={styles.topContainer}>

@@ -1,12 +1,13 @@
+import BannerHeader from '@/components/ui/BannerHeader/BannerHeader'
 import FrostedCard from '@/components/ui/FrostedCard/FrostedCard'
 import styles from './susPantry.module.css'
 
 export default function SusPantry() {
     return (
         <div className={styles.susPantry}>
-            <section className="page-banner-header">
+            <BannerHeader>
                 <h1>SUS Pantry</h1>
-            </section>
+            </BannerHeader>
             <section className={styles.about}>
                 <FrostedCard className={styles.aboutCard}>
                     In September 2024, the Community Engagement and Student Benefits working groups founded <b>SUStainable Eats and SUStenance Food Pantry. </b>

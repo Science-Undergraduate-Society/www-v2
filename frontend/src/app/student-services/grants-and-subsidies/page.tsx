@@ -1,4 +1,5 @@
 import { grants, subsidies } from '@/data/grantsAndSubsidies'
+import BannerHeader from '@/components/ui/BannerHeader/BannerHeader'
 import FrostedCard from '@/components/ui/FrostedCard/FrostedCard'
 import GlassButton from '@/components/ui/GlassButton/GlassButton'
 import BlueButton from '@/components/ui/BlueButton/BlueButton'
@@ -7,9 +8,9 @@ import styles from './grantsAndSubsidies.module.css'
 export default function GrantsAndSubsidies() {
     return (
         <div className={styles.grantsAndSubsidies}>
-            <section className="page-banner-header">
+            <BannerHeader>
                 <h1>Internal Grants & Subsidies</h1>
-            </section>
+            </BannerHeader>
             <section className={styles.applicationInformation}>
                 <FrostedCard className={styles.applicationInformationCard}>
                     <div className={styles.header}>
