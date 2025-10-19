@@ -1,3 +1,4 @@
+import BannerSection from '@/components/ui/BannerSection/BannerSection'
 import SusCalendar from "@/components/features/Calendar/Calendar";
 import styles from "./home.module.css";
 
@@ -9,8 +10,7 @@ export default function Home() {
         <div className={styles.headerGradient1} />
         <div className={styles.headerGradient2} />
       </section>
-      
-      <section className={styles.about}>
+      <BannerSection className={styles.about}>
         <div className={styles.whoWeAre}>
           <h1>Who We Are</h1>
           <p>
@@ -25,8 +25,7 @@ export default function Home() {
             Throughout the year, dozens of <a href="/events">events</a> are run to in an effort to support our peers here at UBC.
           </p>
         </div>
-      </section>
-      
+      </BannerSection>
       <section className={styles.events}>
         <h1>Check Out Our Events!</h1>
         <h2>Upcoming Events</h2>

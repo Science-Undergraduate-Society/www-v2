@@ -1,3 +1,4 @@
+import BannerHeader from '@/components/ui/BannerHeader/BannerHeader'
 import FrostedCard from "@/components/ui/FrostedCard/FrostedCard";
 import BlueButton from "@/components/ui/BlueButton/BlueButton";
 import WorkingGroupMeetingMinutes from "@/components/features/WorkingGroupMeetingMinutes/WorkingGroupMeetingMinutes";
@@ -6,10 +7,9 @@ import styles from './meetingMinutes.module.css'
 export default function MeetingMinutes() {
     return (
         <div className={styles.meetingMinutes}>
-            <section className="page-banner-header">
+            <BannerHeader>
                 <h1>Meeting Minutes</h1>
-            </section>
-            
+            </BannerHeader>
             <section className={styles.access}>
                 <FrostedCard className={styles.accessCard}>
                     <p>

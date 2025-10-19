@@ -118,12 +118,6 @@
 }
 
 .grants {
-    padding-block: 10vw;
-    background: url('/assets/backgrounds/background-stem-blue.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 calc(100% - 10vw));
-
     h1 {
         color: var(--color-ui-10);
     }
