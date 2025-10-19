@@ -1,7 +1,230 @@
-.container {
-    /* EXAMPLE STYLING */
-    color: var(--color-ui-20);
-    background: var(--color-ui-80);
-    width: 90%;
-    height: 50%;
+.externalGrantsPage {
+    width: 100%;
+}
+
+.headerCard {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-ui-100);
+    padding: 2rem;
+    margin: 0 10% 0 10%;
+    font-size: 24px;
+
+    em {
+        color: var(--color-ui-60);
+        font-weight: bold;
+        font-style: normal;
+        display: inline;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 1rem;
+        font-size: 18px;
+    }
+}
+
+.searchbarContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0; /* only vertical padding */
+    justify-content: space-between;
+    margin: 0 10%; /* consistent with other sections */
+    margin-top: 5vh;
+    width: 80%;
+    height: 12vh;
+    max-height: 120px;
+    gap: 1%;
+
+    .searchbar {
+        width: 32%; /* slightly wider to balance visual space */
+        border-radius: 16px;
+        border-color: color-mix(in srgb, var(--color-ui-100), transparent 30%);
+        border-width: 2px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+        padding-left: 2rem;
+        font-size: 20px;
+
+        input {
+            outline: none;
+            border: none;
+        }
+
+        input:focus {
+            outline: none;
+            border: none;
+        }
+    }
+
+    .filterDropdown {
+        width: 55%;
+        border-radius: 16px;
+        border-color: color-mix(in srgb, var(--color-ui-100), transparent 30%);
+        border-width: 2px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        gap: 1rem;
+
+        select {
+            outline: none;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .searchButton {
+        border-radius: 16px;
+        width: 10%;
+        background-color: var(--color-ui-80);
+        color: var(--color-ui-10);
+        font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+
+        .searchbar, .filterDropdown, .searchButton {
+            width: 100% !important;
+            border-radius: 10px;
+        }
+
+        .searchButton {
+            font-size: 1rem;
+            padding: 0.5rem;
+        }
+
+        input, select {
+            font-size: 16px;
+            padding: 0.5rem;
+        }
+    }
+}
+
+ @media (max-width: 768px) {
+    .searchbarContainer {
+        margin-bottom: 15vh;
+    }
+}
+
+.grantsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5vh;
+    margin: 5vh 0 5vh 0;
+
+    @media (max-width: 768px) {
+        padding: 0 0.5rem;
+    }
+}
+
+.grantsCard {
+    padding: 2rem;
+    margin: 0 5% 0 5%;
+    background-color: var(--color-ui-30);
+    height: fit-content;
+    width: 80%;
+    border-radius: 20px;
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    .dates {
+        align-self: flex-start;
+        margin: 0;
+        text-align: left;
+        padding: 0;
+    }
+
+    .cardLayout {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .grantInfo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: end;
+    }
+
+    .grantSection {
+        margin-bottom: 1rem;
+    }
+
+    h1 { color: var(--color-ui-80); font-size: 40px; font-weight: bold; }
+    h2 { color: var(--color-ui-60); font-size: 24px; }
+    h3 { color: var(--color-ui-60); font-size: 20px; font-weight: bold; }
+    a { color: var(--color-ui-60); font-size: 24px; text-decoration: underline; }
+    p, b { font-size: 20px; color: var(--color-ui-100); }
+    ul { list-style-type: disc; padding-left: 1.5rem; margin: 0.5rem 0; }
+    li { font-size: 20px; line-height: 1.5; margin-bottom: 0.5rem; }
+    small { color: var(--color-ui-60); font-size: 16px; }
+    .contact { color: var(--color-ui-60); font-size: 24px; }
+
+    @media (max-width: 768px) {
+        width: 100% !important;
+        margin: 0 auto 2rem auto;
+        padding: 1.5rem;
+
+        .cardLayout { flex-direction: column; align-items: flex-start; }
+        .grantInfo { width: 100%; }
+        .dates { width: 100%; margin-top: 1rem; text-align: left; align-self: flex-start; }
+        .footer { flex-direction: column; align-items: flex-start; }
+        .contact { font-size: 16px; }
+
+        h1 { font-size: 28px; }
+        h2 { font-size: 20px; }
+        h3 { font-size: 18px; }
+        p, li, b, a { font-size: 16px; }
+
+    }
+}
+
+.noGrants {
+    padding: 2rem;
+    background-color: var(--color-ui-30);
+    height: 30vh;
+    width: 50%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3vh;
+
+    button {
+        background-color: var(--color-ui-80);
+        color: var(--color-ui-10);
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+    }
 }
