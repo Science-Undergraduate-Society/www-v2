@@ -111,9 +111,10 @@ export type FundingRecipient =
 // Tutors
 export interface Tutor {
     name: string,
-    courses: string, // maybe change to a type later
+    courses: string[],
     image: string,
-    description: string
+    link: string,
+    bio: string
 }
 
 // Volunteer Oppertunities + types
