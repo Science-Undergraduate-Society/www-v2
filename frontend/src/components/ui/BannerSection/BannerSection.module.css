@@ -3,5 +3,6 @@
   background: url('/assets/backgrounds/background-stem-blue.svg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top;
   clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 calc(100% - 10vw));
 }
