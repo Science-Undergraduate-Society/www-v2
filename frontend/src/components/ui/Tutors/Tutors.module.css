@@ -1,0 +1,179 @@
+.tutors {
+    padding: 40px 60px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    color: var(--color-ui-10);
+
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+
+        .department {
+            padding: 16px 42px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid var(--color-ui-80);
+            border-radius: 16px;
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--color-ui-80);
+            transition: all 0.1s ease;
+            user-select: none;
+            cursor: pointer;
+
+            &:hover {
+                background: var(--color-ui-60);
+                border-color: var(--color-ui-10);
+                color: var(--color-ui-10);
+            }
+
+            &.selected {
+                border: 2px solid var(--color-ui-10);
+                color: var(--color-ui-10);
+            }
+        }
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 60px 0 0;
+
+        .card {
+            display: flex;
+            gap: 50px;
+            font-size: 20px;
+
+            img {
+                width: 250px;
+                height: 250px;
+                border-radius: 16px;
+                object-fit: cover;
+                aspect-ratio: 1 / 1;
+            }
+
+            .profile {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+
+                h1 {
+                    margin-bottom: 16px;
+                    font-size: 24px;
+                }
+
+                a {
+                    width: fit-content;
+                    padding: 12px 16px;
+                    margin-top: 12px;
+                    border: 2px solid var(--color-ui-10);
+                    border-radius: 16px;
+                    align-self: flex-end;
+                    transition: all 0.1s ease;
+
+                    &:hover {
+                        background-color: var(--color-ui-60);
+                    }
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            font-size: 20px;
+            align-self: center;
+
+            .page,
+            .prev,
+            .next {
+                display: flex;
+                width: 65px;
+                height: 65px;
+                border-radius: 16px;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.1s ease;
+            }
+
+            .page {
+                background: color-mix(in srgb, var(--color-ui-10), transparent 20%);
+                font-weight: bold;
+                color: var(--color-ui-80);
+                user-select: none;
+            }
+
+            .prev,
+            .next {
+                background: color-mix(in srgb, var(--color-ui-80), transparent 30%);
+                cursor: pointer;
+
+                &:hover {
+                    background: var(--color-ui-60);
+                }
+
+                &.disabled {
+                    background: color-mix(in srgb, var(--color-ui-10), transparent 80%);
+                    cursor: auto;
+                }
+
+                .button {
+                    display: flex;
+                    flex-direction: column;
+
+                    .bar {
+                        width: 12px;
+                        height: 4px;
+                        background: var(--color-ui-10);
+                        border-radius: 16px;
+                        transition: all 0.3s ease;
+                    }
+                }
+            }
+
+            .prev .button .bar {
+                &:nth-child(1) {
+                    transform: translateY(-25%) rotate(-45deg);
+                }
+
+                &:nth-child(2) {
+                    transform: translateY(25%) rotate(45deg);
+                }
+            }
+
+            .next .button .bar {
+                &:nth-child(1) {
+                    transform: translateY(-25%) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    transform: translateY(25%) rotate(-45deg);
+                }
+            }
+        }
+
+        .dropdownButton {
+            display: flex;
+
+            .dropdownButtonBar {
+                width: 12px;
+                height: 4px;
+                background: var(--color-ui-10);
+                border-radius: 16px;
+                transition: all 0.3s ease;
+
+                &:nth-child(1) {
+                    transform: translateX(25%) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    transform: translateX(-25%) rotate(-45deg);
+                }
+            }
+        }
+    }
+}
