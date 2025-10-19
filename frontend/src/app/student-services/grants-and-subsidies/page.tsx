@@ -1,5 +1,6 @@
 import { grants, subsidies } from '@/data/grantsAndSubsidies'
 import BannerHeader from '@/components/ui/BannerHeader/BannerHeader'
+import BannerSection from '@/components/ui/BannerSection/BannerSection'
 import FrostedCard from '@/components/ui/FrostedCard/FrostedCard'
 import GlassButton from '@/components/ui/GlassButton/GlassButton'
 import BlueButton from '@/components/ui/BlueButton/BlueButton'
@@ -46,7 +47,7 @@ export default function GrantsAndSubsidies() {
                     </div>
                 </FrostedCard>
             </section>
-            <section className={styles.grants}>
+            <BannerSection className={styles.grants}>
                 <h1>Grants</h1>
                 <div className={styles.grantsButtons}>
                     <GlassButton
@@ -72,7 +73,7 @@ export default function GrantsAndSubsidies() {
                         </FrostedCard>
                     ))}
                 </div>
-            </section>
+            </BannerSection>
             <section className={styles.subsidies}>
                 <h1>Subsidies</h1>
                 <div className={styles.subsidiesButtons}>
