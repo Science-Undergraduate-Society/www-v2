@@ -6,43 +6,115 @@
     section {
         display: flex;
         flex-direction: column;
-        padding-inline: 5%;
     }
 }
 
-.buttons {
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 40px;
-    padding: 300px 0 30px;
-    justify-content: center;
+.survivalGuide {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    margin: 0 10% 50px;
+    font-size: 24px;
+    align-items: center;
+
+    b {
+        color: var(--color-ui-60);
+    }
+
+    strong {
+        width: 100%;
+    }
+
+    a {
+        padding: 12px 16px;
+        border: 2px solid var(--color-ui-80);
+        border-radius: 16px;
+        font-weight: bold;
+        transition: all 0.1s ease;
+
+        &:hover {
+            color: var(--color-ui-10);
+            background: var(--color-ui-60);
+        }
+    }
+}
+
+.weeklyDropIns,
+.appointmentBased,
+.examReviewSessions,
+.studentFeedbackForm {
+    padding: 50px 10%;
+    font-size: 20px;
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--color-ui-60);
+    }
+
+    p {
+        margin: 28px 0;
+    }
+
+    b {
+        margin-top: 64px;
+    }
+
+    ol {
+        list-style-type: decimal;
+        margin-left: 20px;
+
+        li {
+            padding-left: 16px;
+
+            &::marker {
+                font-size: 24px;
+                font-weight: bold;
+                color: var(--color-ui-60);
+            }
+        }
+    }
+
+    img {
+        width: 75px;
+        height: 75px;
+        margin-inline: auto;
+    }
+
+    .card {
+        padding: 30px 36px;
+        margin: 16px 0;
+        border-radius: 20px;
+
+        p {
+            margin: 18px 0 0;
+        }
+    }
 
     .button {
-        font-size: 24px;
-        font-weight: bold;
+        margin-top: 20px;
     }
 }
 
-.schedule,
-.tutors {
-    .header {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 60px;
+.appointmentBased {
+    a {
+        color: var(--color-ui-60);
+        text-decoration: underline; 
     }
 }
 
-.schedule {
-    padding-block: 30px;
-}
+.book  {
+    padding: 0 10%;
 
-.tutors {
-    padding-block: 30px 150px;
-
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    h1 {
+        margin-bottom: 50px;
+        font-size: 40px;
+        font-weight: bold;
+        color: var(--color-ui-10);
     }
 }
