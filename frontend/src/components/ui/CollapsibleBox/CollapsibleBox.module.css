@@ -1,0 +1,44 @@
+.collapsibleBox {
+  background: color-mix(in srgb, #e6f5ff, transparent 20%);
+
+  .header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .collapseButton {
+    display: flex;
+    height: 24px;
+    margin-left: auto;
+    align-items: center;
+
+    .collapseButtonBar {
+      width: 16px;
+      height: 4px;
+      background: var(--color-ui-80);
+      border-radius: 16px;
+      transition: all 0.3s ease;
+
+      &:nth-child(1) {
+        transform: translateX(20%) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: translateX(-20%) rotate(-45deg);
+      }
+    }
+  }
+
+  &.open {
+    .collapseButtonBar {
+      &:nth-child(1) {
+        transform: translateX(20%) rotate(-45deg);
+      }
+
+      &:nth-child(2) {
+        transform: translateX(-20%) rotate(45deg);
+      }
+    }
+  }
+}

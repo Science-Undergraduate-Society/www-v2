@@ -1,8 +1,23 @@
 .bannerSection {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   padding-block: 10vw 15vw !important;
-  background: url('/assets/backgrounds/background-stem-blue.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
   clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 calc(100% - 10vw));
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 200px);
+    top: 0;
+    left: 0;
+    background: url('/assets/backgrounds/background-stem-blue.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    filter: blur(2px);
+    clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 calc(100% - 10vw));
+    z-index: -1;
+  }
 }
