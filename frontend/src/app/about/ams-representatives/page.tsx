@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./executives.module.css";
-import { executives } from "@/data/executives";
+import { AMSrepresentatives } from "@/data/amsrepresentatives";
 import { Executive } from "@/lib/types";
 import BannerHeader from "@/components/ui/BannerHeader/BannerHeader";
 
@@ -26,7 +26,7 @@ export default function Executives() {
       </div>
 
       <div className={styles.executiveContainer}>
-        {executives.map((e: Executive, i: number) => {
+        {AMSrepresentatives.map((e: Executive, i: number) => {
           const side = i % 2 === 0 ? "left" : "right";
           const isSelected = selectedExec === e.name;
 
