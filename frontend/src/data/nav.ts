@@ -5,7 +5,7 @@ export const NavMenus: NavMenu[] = [
         label: "About",
         items: [
             { label: "Our Executives", href: "/about/executives", icon: "executives" },
-            { label: "AMS Representatives", href: "/about/ams-representatives", icon: "executives" },
+            // { label: "AMS Representatives", href: "/about/ams-representatives", icon: "executives" },
             { label: "Council & Procedures", href: "/about/council-and-procedures", icon: "council-and-procedures" },
             { label: "Portfolios & Committees", href: "/about/portfolios-and-committees", icon: "portfolios-and-committees" },
             { label: "Meeting Minutes", href: "/about/meeting-minutes", icon: "meeting-minutes" },
