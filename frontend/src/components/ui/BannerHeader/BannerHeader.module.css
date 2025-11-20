@@ -17,18 +17,20 @@
     background-repeat: no-repeat;
     filter: blur(2px);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - min(11vw, 175px)));
-    z-index: -1;
+    z-index: 1;
   }
 
   h1 {
     margin-bottom: 30px;
     font-size: 64px;
     font-weight: bold;
+    z-index: 1;
   }
 
   h2 {
     margin-bottom: 30px;
     font-size: 40px;
     font-weight: normal;
+    z-index: 1;
   }
 }
