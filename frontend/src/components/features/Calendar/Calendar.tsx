@@ -6,6 +6,17 @@ import { EventDescription, Event } from '@/lib/types';
 import styles from './Calendar.module.css';
 import { GoChevronLeft, GoChevronRight } from 'react-icons/go';
 
+// -------------------- Types --------------------
+interface CalendarApiItem {
+  summary?: string;
+  location?: string;
+  description?: string;
+  start?: {
+    dateTime?: string;
+    date?: string;
+  };
+}
+
 // -------------------- Utils --------------------
 function parseDescription(desc: string = ''): EventDescription {
   const lines = desc.split('\n').map((l) => l.trim());
@@ -23,20 +34,21 @@ function parseDescription(desc: string = ''): EventDescription {
   };
 }
 
-function parseEvents(data: any[]): Event[] {
+function parseEvents(data: unknown[]): Event[] {
   const safeData = Array.isArray(data) ? data : [];
   return safeData.map((item) => {
-    const startStr = item.start?.dateTime || item.start?.date;
-    const startDate = new Date(startStr);
-    const match = item.summary?.match(/(?<=\().*?(?=\))/);
+    const calItem = item as CalendarApiItem;
+    const startStr = calItem.start?.dateTime || calItem.start?.date;
+    const startDate = new Date(startStr || '');
+    const match = calItem.summary?.match(/(?<=\().*?(?=\))/);
     const time = match && match[0].trim() !== '' ? match[0] : 'All day event';
 
     return {
-      title: (item.summary || '').replace(/\s*\([^)]*\)/g, '').trim(),
-      location: item.location ?? 'TBA',
+      title: (calItem.summary || '').replace(/\s*\([^)]*\)/g, '').trim(),
+      location: calItem.location ?? 'TBA',
       date: startDate,
       time,
-      description: parseDescription(item.description || ''),
+      description: parseDescription(calItem.description || ''),
     } as Event;
   });
 }

@@ -45,7 +45,7 @@ export default function DropInTutoring() {
                     <ol>
                         <li>Click on the Koalendar profile link for the tutor you would like to book a session with.</li>
                         <li>Pick a time from the availability listed.</li>
-                        <li>Fill out your name and email, and a Google Meet link will automatically be sent to your email with the schedule's date and time. </li>
+                        <li>Fill out your name and email, and a Google Meet link will automatically be sent to your email with the schedule&apos;s date and time. </li>
                     </ol>
                 </FrostedCard>
                 <b>Note: Please put the course you are booking a session for in brackets in addition to your name.</b>

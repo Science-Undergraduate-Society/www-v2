@@ -27,7 +27,8 @@ export async function GET() {
 
     const ans =  NextResponse.json(events.data.items ?? []);
     return ans;
-  } catch (err: any) {
-    return NextResponse.json({ error: err.message || 'Failed to fetch events' }, { status: 500 });
+  } catch (err: unknown) {
+    const errorMessage = err instanceof Error ? err.message : 'Failed to fetch events';
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }

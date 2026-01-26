@@ -30,7 +30,7 @@ export default function SusPantry() {
                 <h1>SUStainable <b>Eats</b></h1>
                 <p>
                     A series of Community Dinners hosted at the Abdul Ladha Building where free, nutritious meals are prepared live and handed out to students.
-                    Please follow our instagram for more information for our upcoming SUS Eat's initiative!
+                    Please follow our instagram for more information for our upcoming SUS Eat&apos;s initiative!
                 </p>
                 <h1>SUStenance <b>Food Pantry</b></h1>
                 <p>

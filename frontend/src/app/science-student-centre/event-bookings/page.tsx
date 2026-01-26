@@ -1,10 +1,6 @@
 import styles from './eventBookings.module.css'
 
-export default function EventBookings({
-
-} : {
-
-}) {
+export default function EventBookings() {
 
     return (
         <div className={styles.container}>
