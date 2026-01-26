@@ -1,7 +1,339 @@
 .container {
-    /* EXAMPLE STYLING */
-    color: var(--color-ui-20);
-    background: var(--color-ui-80);
-    width: 90%;
-    height: 50%;
+    font-family: 'Figtree', Helvetica, sans-serif;
+    min-height: 100vh;
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Header Styles */
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+    h1 {
+        margin: 0;
+    }
+}
+
+.statusBadge {
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 24px;
+    z-index: 2;
+}
+
+/* Access Card Section */
+.access {
+    padding: 0 5% 100px;
+
+    .accessCard {
+        padding: 50px 75px;
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+    }
+}
+
+/* Join Steps Section */
+.join_steps {
+    padding: 60px 5%;
+    margin-bottom: 60px;
+    background-color: white;
+
+    p {
+        margin-top: 12px;
+        margin-bottom: 40px;
+        font-size: 24px;
+        color: var(--color-ui-100);
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .steps_container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        gap: 40px;
+    }
+
+    .steps_individual_step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 200px;
+        
+        .stepNumber {
+            color: #0173BE;
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+        }
+
+        h2 {
+            color: #222755;
+            font-size: 32px;
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+}
+
+/* Society Section */
+.societySection {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 80px 5%;
+    color: white;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        color: white;
+    }
+
+    .sectionDescription {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 48px;
+        max-width: 900px;
+    }
+}
+
+.hiringCards {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+    gap: 32px;
+    margin-top: 40px;
+    align-items: flex-start;
+}
+
+.hiringCard {
+    padding: 40px;
+    
+    h3 {
+        color: #1e3a8a;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .hiringTiming {
+        color: #0173BE;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    .hiringDetails {
+        p {
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: #222755;
+
+            strong {
+                font-weight: 700;
+            }
+        }
+
+        ul {
+            margin: 8px 0 0 20px;
+            padding: 0;
+            list-style-type: disc;
+
+            li {
+                font-size: 15px;
+                margin-bottom: 8px;
+                line-height: 1.6;
+                color: #374151;
+            }
+        }
+
+        a {
+            color: #0173BE;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.fallHiring {
+    margin-top: -30px;
+}
+
+.summerHiring {
+    margin-top: 30px;
+}
+
+/* Council Section */
+.councilSection {
+    padding: 80px 5%;
+    background-color: white;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: #222755;
+    }
+}
+
+.councilContent {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.councilText {
+    flex: 1;
+
+    p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #374151;
+    }
+
+    a {
+        color: #0173BE;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.councilImage {
+    flex: 1;
+}
+
+/* Experience Section */
+.experienceSection {
+    padding: 80px 5%;
+    background-color: #f9fafb;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: #222755;
+        line-height: 1.2;
+    }
+}
+
+.experienceContent {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.experienceImage {
+    flex: 1;
+}
+
+.experienceList {
+    flex: 1;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        /* list-style: none; */
+
+        li {
+            font-size: 18px;
+            padding: 16px 0;
+            border-bottom: 1px solid #e5e7eb;
+            color: #374151;
+            position: relative;
+            padding-left: 24px;
+
+            &:before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                color: #0173BE;
+                font-size: 24px;
+                font-weight: 700;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+/* Image Styles */
+.imageRounded {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .headerContent {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .statusBadge {
+        align-self: flex-start;
+    }
+
+    .access .accessCard {
+        padding: 30px 40px;
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .join_steps {
+        padding: 40px 5%;
+        margin-bottom: 60px;
+
+        .steps_container {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    .hiringCards {
+        grid-template-columns: 1fr;
+    }
+
+    .societySection,
+    .councilSection,
+    .experienceSection {
+        padding: 60px 5%;
+
+        h2 {
+            font-size: 28px;
+        }
+    }
 }
