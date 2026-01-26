@@ -6,7 +6,7 @@ import { ExternalGrantKeyword } from '@/lib/types';
 import FrostedCard from '@/components/ui/FrostedCard/FrostedCard'
 import { Search, SlidersHorizontal } from 'lucide-react'
 
-export default function ExternalSubsidies({}: {}) {
+export default function ExternalSubsidies() {
     const [searchTerm, setSearchTerm] = useState('')
     const [selectedKeyword, setSelectedKeyword] = useState<ExternalGrantKeyword | 'All'>('All')
     const [isMobile, setIsMobile] = useState(false);

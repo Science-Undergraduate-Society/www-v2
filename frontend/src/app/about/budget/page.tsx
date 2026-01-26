@@ -4,11 +4,7 @@ import BannerSection from '@/components/ui/BannerSection/BannerSection'
 import GlassButton from '@/components/ui/GlassButton/GlassButton'
 import BlueButton from '@/components/ui/BlueButton/BlueButton'
 
-export default function Budget({
-
-} : {
-
-}) {
+export default function Budget () {
     const glassButtonLinks = [
         {
             name: "Budget Overview '24/'25",
@@ -49,8 +45,8 @@ export default function Budget({
                     <p>The Science Undergraduate Society operates a $275k+ budget and is governed by policies evoked by the AMS and the Science Student body. 
                         The following document outline how the student fees are used.</p>
                         <div className= {styles.buttonsContainer}>
-                            <BlueButton className = {styles.boldButton} href='https://docs.google.com/spreadsheets/d/1wG0j87hcq3qMozuOmajBFcDe5VX3q59m-PKoudzG2Gg/edit?gid=233773177#gid=233773177'>'24/'25 Budget</BlueButton>
-                            <BlueButton className = {styles.boldButton} href='https://docs.google.com/spreadsheets/d/1mTV5qEMztb5FDoOYDqMI97Zs_CXli-7742ceRT7fyuI/edit?gid=974909021#gid=974909021'>Itemized Spending Spreadsheet '24/'25</BlueButton>
+                            <BlueButton className = {styles.boldButton} href='https://docs.google.com/spreadsheets/d/1wG0j87hcq3qMozuOmajBFcDe5VX3q59m-PKoudzG2Gg/edit?gid=233773177#gid=233773177'>&apos;24/&apos;25 Budget</BlueButton>
+                            <BlueButton className = {styles.boldButton} href='https://docs.google.com/spreadsheets/d/1mTV5qEMztb5FDoOYDqMI97Zs_CXli-7742ceRT7fyuI/edit?gid=974909021#gid=974909021'>Itemized Spending Spreadsheet &apos;24/&apos;25</BlueButton>
                         </div>
                 </div>
                 

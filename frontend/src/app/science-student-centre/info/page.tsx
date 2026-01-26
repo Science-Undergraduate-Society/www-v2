@@ -60,7 +60,7 @@ export default function ScienceStudentCentreInfo() {
                         Abdul Ladha, an Honours graduate in Electrical Engineering from UBC, has made significant contributions across business, philanthropy, and education.
                         As CEO of Ableauctions.com Inc., he pioneered live online auction technology, making it a global leader serving platforms like eBay.
                         He also founded SPARK, a philanthropic foundation supporting youth initiatives and providing care for thousands of children in Africa.
-                        Abdul's achievements have earned him awards such as the Great Trekker and Entrepreneur of the Year.
+                        Abdul&apos;s achievements have earned him awards such as the Great Trekker and Entrepreneur of the Year.
                         A dedicated supporter of UBC, he holds the distinction of having the Science Student Centre named in his honour.
                         Additionally, he is a key benefactor of Lions Gate Hospice and a founding director of The Canadian Institute for Technological Advancement.
                     </p>

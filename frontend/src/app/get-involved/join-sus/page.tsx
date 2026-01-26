@@ -5,12 +5,7 @@ import FrostedCard from "@/components/ui/FrostedCard/FrostedCard";
 import BlueButton from "@/components/ui/BlueButton/BlueButton";
 import Image from 'next/image';
 
-export default function JoinSus({
-
-} : {
-
-}) {
-
+export default function JoinSus() {
     return (
         <div className={styles.container}>
             <BannerHeader>
@@ -87,7 +82,7 @@ export default function JoinSus({
                             <p><strong>Posting/Application Info:</strong></p>
                             <ul>
                                 <li>Positions are posted on CareersOnline (resume and cover letter needed)</li>
-                                <li>Look out for an Instagram (<a href="https://www.instagram.com/susubc" target="_blank" rel="noopener noreferrer">@ubcsus</a>) post or <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> event titled "SUS Executive Hiring 20XX [Summer]" for a list of all available positions!</li>
+                                <li>Look out for an Instagram (<a href="https://www.instagram.com/susubc" target="_blank" rel="noopener noreferrer">@ubcsus</a>) post or <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> event titled &quot;SUS Executive Hiring 20XX [Summer]&quot; for a list of all available positions!</li>
                             </ul>
 
                             <p><strong>Typical Positions:</strong></p>
