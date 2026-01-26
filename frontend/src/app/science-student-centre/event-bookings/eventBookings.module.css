@@ -1,7 +1,526 @@
 .container {
-    /* EXAMPLE STYLING */
-    color: var(--color-ui-20);
-    background: var(--color-ui-80);
-    width: 90%;
-    height: 50%;
+    font-family: 'Figtree', Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+.hero-left{ display:flex; flex-direction:column; margin-bottom: 3rem; }
+.hero-heading{ position:relative; display:flex; flex-direction:column; }
+
+.hero-title{
+    line-height:1.1; font-weight:700; margin:0;
+}
+
+.location-row{ display:flex; align-items:center; gap:.5rem; }
+.location-icon{ width:2rem; height:2rem; flex-shrink:0; padding-right:.5rem; }
+
+.location-name{
+    font-size: clamp(1.25rem, 4vw, 2.25rem);
+    font-weight:300;
+}
+
+/* Introduction Section */
+.intro {
+    padding: 0 5% 60px;
+}
+
+.introCard {
+    padding: 40px 50px;
+
+    p {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 16px;
+        color: #374151;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        color: #0173BE;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Booking Process Section */
+.bookingProcess {
+    padding: 60px 5%;
+    background-color: white;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: #222755;
+    }
+}
+
+.processSection {
+    margin-bottom: 40px;
+
+    h3 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #222755;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 24px;
+        list-style-type: disc;
+
+        li {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            color: #374151;
+
+            a {
+                color: #0173BE;
+                text-decoration: none;
+                font-weight: 600;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            strong {
+                font-weight: 700;
+                color: #222755;
+            }
+        }
+    }
+}
+
+.note {
+    background-color: #f0f9ff;
+    padding: 20px 24px;
+    border-radius: 8px;
+    border-left: 4px solid #0173BE;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #374151;
+    margin-top: 24px;
+
+    strong {
+        color: #222755;
+        font-weight: 700;
+    }
+}
+
+.warningNote {
+    background-color: #fffbeb;
+    padding: 20px 24px;
+    border-radius: 8px;
+    border-left: 4px solid #f59e0b;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #374151;
+    margin-top: 16px;
+    font-style: italic;
+}
+
+/* Building Availability Calendar Section */
+.calendar {
+    padding: 60px 5%;
+    background-color: white;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 32px;
+        color: #222755;
+    }
+}
+
+.calendarPlaceholder {
+    background-color: #f9fafb;
+    border: 2px dashed #d1d5db;
+    border-radius: 12px;
+    padding: 60px 40px;
+    text-align: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        font-size: 18px;
+        color: #6b7280;
+        margin: 0;
+    }
+}
+
+/* Booking Information Section */
+.bookingInfo {
+    padding: 60px 5%;
+    background-color: #f9fafb;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 32px;
+        color: #222755;
+    }
+}
+
+.collapsibles {
+    display: flex;
+    flex-direction: column;
+    /* gap: 16px; */
+}
+
+.collapsibleContent {
+    padding: 24px;
+    background-color: white;
+    animation: slideDown 0.3s ease-out;
+
+    p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #374151;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        margin: 16px 0;
+        padding-left: 24px;
+        list-style-type: disc;
+
+        li {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 12px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            ul {
+                margin-top: 12px;
+                padding-left: 24px;
+
+                li {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fees Section */
+.fees {
+    padding: 60px 5%;
+    background-color: white;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 32px;
+        color: #222755;
+    }
+}
+
+.feeSection {
+    margin-bottom: 40px;
+
+    h3 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        color: #222755;
+    }
+}
+
+.tableContainer {
+    overflow-x: auto;
+    margin-bottom: 16px;
+}
+
+.feeTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+
+    thead {
+        background-color: #1e3a8a;
+        
+        tr {
+            th {
+                padding: 16px;
+                text-align: left;
+                font-size: 14px;
+                font-weight: 600;
+                color: white;
+                border-bottom: 2px solid #0173BE;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid #e5e7eb;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:nth-child(even) {
+                background-color: #f9fafb;
+            }
+
+            td {
+                padding: 14px 16px;
+                font-size: 14px;
+                color: #374151;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+.footnote {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 8px 0;
+    font-style: italic;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 60px 5%;
+    background-color: #f9fafb;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 32px;
+        color: #222755;
+    }
+}
+
+/* Submit Booking Section */
+.submitBooking {
+    padding: 60px 5%;
+    background-color: white;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #222755;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #374151;
+        margin-bottom: 32px;
+
+        a {
+            color: #0173BE;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.jotformPlaceholder {
+    background-color: #f9fafb;
+    border: 2px solid #d1d5db;
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 800px;
+}
+
+.jotformIframe {
+    width: 100%;
+    min-height: 1200px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 5%;
+    background-color: white;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        color: #222755;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #374151;
+        margin-bottom: 12px;
+
+        a {
+            color: #0173BE;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .intro {
+        padding: 0 5% 40px;
+    }
+
+    .introCard {
+        padding: 24px 20px;
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .calendar {
+        padding: 40px 5%;
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .calendarPlaceholder {
+        padding: 40px 20px;
+        min-height: 300px;
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .bookingProcess,
+    .bookingInfo,
+    .fees,
+    .faq,
+    .submitBooking,
+    .previousJotform,
+    .contact {
+        padding: 40px 5%;
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .processSection {
+        h3 {
+            font-size: 18px;
+        }
+
+        ul {
+            padding-left: 20px;
+
+            li {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .note,
+    .warningNote {
+        padding: 16px 20px;
+        font-size: 14px;
+    }
+
+    .feeSection {
+        h3 {
+            font-size: 18px;
+        }
+    }
+
+    .feeTable {
+        font-size: 12px;
+
+        thead tr th {
+            padding: 12px 8px;
+            font-size: 12px;
+        }
+
+        tbody tr td {
+            padding: 10px 8px;
+            font-size: 12px;
+        }
+    }
+
+    .footnote {
+        font-size: 12px;
+    }
+
+    .collapsibleContent {
+        padding: 16px;
+
+        p {
+            font-size: 14px;
+        }
+
+        ul {
+            padding-left: 20px;
+
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .jotformPlaceholder {
+        padding: 40px 20px;
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .contact p {
+        font-size: 16px;
+    }
 }

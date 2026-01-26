@@ -1,22 +1,43 @@
 .collapsibleBox {
-  background: color-mix(in srgb, #e6f5ff, transparent 20%);
+  background: #e8f4f8;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
 
   .header {
     display: flex;
     align-items: center;
     cursor: pointer;
+    padding: 28px 24px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #d9eef5;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: #222755;
+      flex: 1;
+    }
   }
 
   .collapseButton {
     display: flex;
-    height: 24px;
-    margin-left: auto;
+    height: 16px;
+    width: 16px;
+    margin-left: 20px;
     align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 
     .collapseButtonBar {
-      width: 16px;
-      height: 4px;
-      background: var(--color-ui-80);
+      width: 12px;
+      height: 3px;
+      background: #222755;
       border-radius: 16px;
       transition: all 0.3s ease;
 
@@ -40,5 +61,17 @@
         transform: translateX(-20%) rotate(45deg);
       }
     }
+  }
+}
+
+/* Animation for content */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
