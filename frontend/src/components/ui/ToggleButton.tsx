@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import styles from './ToggleButton.module.css';
 
-const ToggleButton = ({ onToggle }) => {
+interface ToggleButtonProps {
+    onToggle?: (option: string) => void;
+}
+
+const ToggleButton = ({ onToggle }: ToggleButtonProps) => {
     const [activeOption, setActiveOption] = useState('departmental');
 
-    const handleToggle = (option) => {
+    const handleToggle = (option: string) => {
         setActiveOption(option);
         if (onToggle) {
             onToggle(option);

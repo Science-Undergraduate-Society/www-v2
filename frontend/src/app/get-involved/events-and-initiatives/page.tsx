@@ -103,7 +103,7 @@ export default function SusEvents() {
             
             <div className={styles.socialMediaBox}>
                 <p>
-                    <em>Fall 2026 has arrived, UBC! </em> Check out what's coming up this September.  
+                    <em>Fall 2026 has arrived, UBC! </em> Check out what&apos;s coming up this September.  
                     <br /><br />
                     
                     To keep up to date on all our events, please check out our&nbsp;

@@ -9,12 +9,12 @@ type LinkItem = { name: string; href: string; src: string };
 
 const buildLinks = (club: ClubInfo): LinkItem[] => {
     const links: (LinkItem | false)[] = [
-        club.website && { name: "Website", href: normalizeUrl(club.website), src: "/assets/icons/globe.svg" },
-        club.email && { name: "Email", href: `mailto:${club.email}`, src: "/assets/footer-icons/email.svg" },
-        club.linkedin && { name: "LinkedIn", href: normalizeUrl(club.linkedin), src: "/assets/footer-icons/linkedin.svg" },
-        club.facebook && { name: "Facebook", href: normalizeUrl(club.facebook), src: "/assets/footer-icons/facebook.svg" },
-        club.twitter && { name: "Twitter", href: normalizeUrl(club.twitter), src: "/assets/icons/twitter.svg" },
-        club.instagram && { name: "Instagram", href: normalizeUrl(club.instagram), src: "/assets/footer-icons/instagram.svg" },
+        club.website ? { name: "Website", href: normalizeUrl(club.website), src: "/assets/icons/globe.svg" } : false,
+        club.email ? { name: "Email", href: `mailto:${club.email}`, src: "/assets/footer-icons/email.svg" } : false,
+        club.linkedin ? { name: "LinkedIn", href: normalizeUrl(club.linkedin), src: "/assets/footer-icons/linkedin.svg" } : false,
+        club.facebook ? { name: "Facebook", href: normalizeUrl(club.facebook), src: "/assets/footer-icons/facebook.svg" } : false,
+        club.twitter ? { name: "Twitter", href: normalizeUrl(club.twitter), src: "/assets/icons/twitter.svg" } : false,
+        club.instagram ? { name: "Instagram", href: normalizeUrl(club.instagram), src: "/assets/footer-icons/instagram.svg" } : false,
     ];
     return links.filter(Boolean) as LinkItem[];
 };
