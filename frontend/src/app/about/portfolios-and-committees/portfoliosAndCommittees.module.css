@@ -1,7 +1,277 @@
-.container {
-    /* EXAMPLE STYLING */
-    color: var(--color-ui-20);
-    background: var(--color-ui-80);
-    width: 90%;
-    height: 50%;
+.pageContainer {
+  min-height: 100vh;
+}
+
+.mainContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 7rem;
+  padding: 4rem 2rem;
+}
+
+.organizationTitle {
+  text-align: center;
+  color: #1e2a4d;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+}
+
+.chartContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.topSection {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.bottomSection {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.portfolioSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryCard {
+  background: white;
+  border: 2px dashed #cbd5e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.categoryCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.committeeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.committeeButtonWrapper {
+  position: relative;
+}
+
+.portfolioButtonWrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.committeeButton {
+  width: 100%;
+  background: #e6f5ff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #1e2a4d;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.portfolioButton {
+  width: 50%;
+  background: #1e2a4d;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  color: #e6f5ff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.committeeButton:hover {
+  background: #0173be;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(1, 115, 190, 0.3);
+}
+
+.hoverCard {
+  position: absolute;
+  bottom: calc(100% + 15px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #0173be 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  min-width: 350px;
+  max-width: 400px;
+  width: max-content;
+  animation: fadeInUp 0.3s ease;
+  pointer-events: none;
+}
+
+.hoverCard::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-top-color: #0173be;
+}
+
+.hoverCard h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.hoverCard p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.bottomButtons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.navButton {
+  background: #1e2a4d;
+  color: white;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.navButton:hover {
+  background: #0173be;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(1, 115, 190, 0.4);
+}
+
+.adHocNote {
+  text-align: right;
+  color: #718096;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .chartContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .topSection {
+    grid-template-columns: 1fr;
+  }
+  
+  .bottomSection {
+    grid-template-columns: 1fr;
+  }
+  
+  .hoverCard {
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 2rem 1rem;
+  }
+  
+  .organizationTitle {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .committeeGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolioButton {
+    width: 80%;
+    font-size: 0.85rem;
+  }
+  
+  .committeeButton {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.75rem;
+  }
+  
+  .bottomButtons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .navButton {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  /* Hide hover cards on mobile/touch devices */
+  .hoverCard {
+    display: none;
+  }
+}
+
+/* Only show hover cards on devices with hover capability (non-touch) */
+@media (hover: hover) and (pointer: fine) {
+  .hoverCard {
+    display: block;
+  }
+}
+
+@media (hover: none) {
+  .hoverCard {
+    display: none !important;
+  }
 }
