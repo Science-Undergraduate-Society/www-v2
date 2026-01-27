@@ -34,8 +34,8 @@ export default function MeetingMinutes() {
             <section className={styles.meetingMinutesType}>
                 <h1>Council Meeting Minutes</h1>
                 <p>
-                    Council normally runs every Tuesday on a bi-weekly schedule beginning from 6:30 PM at the Micheal Kingsmill Forum located at the 4th floor of the AMS Nest.
-                    (With the exception of the summer, where they run monthly and the month of September, where no council meetings are held due to elections).
+                    Council normally runs monthly beginning from 5:00 PM at the Micheal Kingsmill Forum located at the 4th floor of the AMS Nest.
+                    (With the exception of the month of September, where no council meetings are held due to elections).
                     <br /><br />
                     The meeting minutes are being updated periodically.
                 </p>
@@ -49,7 +49,7 @@ export default function MeetingMinutes() {
             <section className={styles.meetingMinutesType}>
                 <h1>Executive Meeting Minutes</h1>
                 <p>
-                    Executive Meetings normally run every Tuesday on a bi-weekly schedule beginning from 5:00 pm in the Abdul Lahda Science Student Building, Meeting Room 103.
+                    Executive Meetings run every Thursday, beginning from 5:00 PM in the Abdul Lahda Science Student Building, Meeting Room 103.
                     <br /><br />
                     The meeting minutes are being updated periodically.
                 </p>
@@ -63,8 +63,10 @@ export default function MeetingMinutes() {
             <section className={styles.meetingMinutesType}>
                 <h1>Working Group Meeting Minutes</h1>
                 <p>
-                    All working groups have different meeting schedules based on team members’ availability.
+                    All committees have different meeting schedules based on team members’ availability.
                     The meeting time and location can be found on the meeting minutes.
+                    <br /><br />
+                    The meeting minutes are being updated periodically. 
                 </p>
                 <WorkingGroupMeetingMinutes />
             </section>
