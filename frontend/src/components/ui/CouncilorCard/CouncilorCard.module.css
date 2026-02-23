@@ -1,0 +1,39 @@
+.councilorCard {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 250px;
+  background: color-mix(in srgb, var(--color-ui-80), transparent 25%);
+  background-origin: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 10px solid color-mix(in srgb, var(--color-ui-80), transparent 25%);
+  border-radius: 20px;
+  justify-content: flex-end;
+
+  .details {
+    padding: 6px 8px;
+    border-radius: 0 0 10px 10px;
+    backdrop-filter: blur(8px);
+    mask-image: linear-gradient(to bottom, transparent 0%, var(--color-ui-80) 15%);
+
+    .name {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--color-ui-10);
+    }
+
+    .role {
+      font-size: 14px;
+      color: var(--color-ui-10);
+    }
+  }
+
+  .email {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 32px;
+  }
+}
