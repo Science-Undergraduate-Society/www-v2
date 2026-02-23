@@ -27,6 +27,13 @@ export type ExecutiveRole =
     | 'AMS Representative'
     | "Interim VP Academic" // TEMP ROLE: TODO: delete when fall re-election is completed
 
+export interface Councilor {
+    name: string;
+    role: string;
+    email?: string;
+    image?: string;
+}
+
 // Ways to get involved in SUS
 export interface GetInvolved {
     id: number,
