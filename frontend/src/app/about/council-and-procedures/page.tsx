@@ -1,7 +1,10 @@
+import { executives, speaker, clerks, amsRepresentativesAndSenator, departmentRepresentatives, clubRepresentatives } from '@/data/councilors'
 import BannerHeader from '@/components/ui/BannerHeader/BannerHeader'
 import BannerSection from '@/components/ui/BannerSection/BannerSection'
 import FrostedCard from '@/components/ui/FrostedCard/FrostedCard'
 import BlueButton from '@/components/ui/BlueButton/BlueButton'
+import CollapsiblePanel from '@/components/ui/CollapsiblePanel/CollapsiblePanel'
+import CouncilorCard from '@/components/ui/CouncilorCard/CouncilorCard'
 import styles from './council.module.css'
 
 export default function CouncilAndProcedures() {
@@ -59,6 +62,56 @@ export default function CouncilAndProcedures() {
                     The councilors provide insight for student advocacy or SUS initiatives and receive updates for SUS portfolios.
                     If you have any questions or concerns, please feel free to email your respective representative! 
                 </p>
+            </section>
+            <section className={styles.peoplePanels}>
+                <CollapsiblePanel
+                    title="The Executives"
+                    titleClassName={styles.title}
+                    panelClassName={styles.panel}
+                    className={`${styles.collapsiblePanel} ${styles.blue}`}
+                >
+                    {executives.map(councilor => <CouncilorCard key={councilor.name} councilor={councilor} />)}
+                </CollapsiblePanel>
+                <CollapsiblePanel
+                    title="Speaker"
+                    titleClassName={styles.title}
+                    panelClassName={styles.panel}
+                    className={`${styles.collapsiblePanel} ${styles.frosted}`}
+                >
+                    {speaker.map(councilor => <CouncilorCard key={councilor.name} councilor={councilor} />)}
+                </CollapsiblePanel>
+                <CollapsiblePanel
+                    title="Clerks"
+                    titleClassName={styles.title}
+                    panelClassName={styles.panel}
+                    className={`${styles.collapsiblePanel} ${styles.blue}`}
+                >
+                    {clerks.map(councilor => <CouncilorCard key={councilor.name} councilor={councilor} />)}
+                </CollapsiblePanel>
+                <CollapsiblePanel
+                    title="AMS Representatives and Senator"
+                    titleClassName={styles.title}
+                    panelClassName={styles.panel}
+                    className={`${styles.collapsiblePanel} ${styles.frosted}`}
+                >
+                    {amsRepresentativesAndSenator.map(councilor => <CouncilorCard key={councilor.name} councilor={councilor} />)}
+                </CollapsiblePanel>
+                <CollapsiblePanel
+                    title="Department Representatives"
+                    titleClassName={styles.title}
+                    panelClassName={styles.panel}
+                    className={`${styles.collapsiblePanel} ${styles.blue}`}
+                >
+                    {departmentRepresentatives.map(councilor => <CouncilorCard key={councilor.name} councilor={councilor} />)}
+                </CollapsiblePanel>
+                <CollapsiblePanel
+                    title="Club Representatives"
+                    titleClassName={styles.title}
+                    panelClassName={styles.panel}
+                    className={`${styles.collapsiblePanel} ${styles.frosted}`}
+                >
+                    {clubRepresentatives.map(councilor => <CouncilorCard key={councilor.name} councilor={councilor} />)}
+                </CollapsiblePanel>
             </section>
         </div>
     )
