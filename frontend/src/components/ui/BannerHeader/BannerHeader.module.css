@@ -22,14 +22,14 @@
 
   h1 {
     margin-bottom: 30px;
-    font-size: 52px;
+    font-size: var(--font-size-h1);
     font-weight: bold;
     z-index: 1;
   }
 
   h2 {
     margin-bottom: 30px;
-    font-size: 40px;
+    font-size: var(--font-size-h2);
     font-weight: normal;
     z-index: 1;
   }
