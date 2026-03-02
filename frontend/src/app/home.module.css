@@ -46,12 +46,12 @@
 
     h1 {
         padding: 1rem 0;
-        font-size: 64px;
+        font-size: var(--font-size-h1);
     }
 
     p {
         padding: 1rem 0 3rem 0;
-        font-size: 24px;
+        font-size: var(--font-size-p);
     }
 
     a {
@@ -78,7 +78,7 @@
     text-align: center;
 
     h1 {
-        font-size: 64px;
+        font-size: var(--font-size-h1);
         font-style: italic;
     }
 
@@ -89,7 +89,7 @@
 
     p {
         padding-top: 12px;
-        font-size: 20px;
+        font-size: var(--font-size-p);
         font-style: italic;
     }
 }

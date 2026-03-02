@@ -19,6 +19,9 @@
   --color-ui-60: #0173be;
   --color-ui-80: #222755;
   --color-ui-100: #000000;
+
+  --font-size-h1: 52px;
+  --font-size-p: 20px;
 }
 
 html,
