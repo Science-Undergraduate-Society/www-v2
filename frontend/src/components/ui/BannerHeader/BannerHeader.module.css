@@ -12,10 +12,9 @@
     height: calc(100% + 200px);
     top: 0;
     left: 0;
-    background: url('/assets/backgrounds/background-stem-blue-reverse.svg');
+    background: url("/assets/backgrounds/background-stem-blue.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    filter: blur(2px);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - min(11vw, 175px)));
     z-index: 0;
   }
