@@ -95,3 +95,11 @@
         font-style: italic;
     }
 }
+
+@media (max-width: 768px) {
+    .header {
+        img {
+            width: 85%
+        }
+    }
+}
