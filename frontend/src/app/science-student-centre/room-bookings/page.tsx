@@ -81,7 +81,7 @@ export default function MeetingRoomBookingsPage() {
                 {/* cards grid */}
                 <div className={`${styles.container} ${styles["booking-cards"]}`}>
                     <div className={styles["card-grid"]}>
-                        {roomFeatures.map(({ name, capacity, img, features, roomNumber }) => (
+                        {roomFeatures.map(({ name, capacity, img, features, roomNumber, bookingUrl, calendarUrl }) => (
                             <div key={roomNumber} className={styles["room-card"]}>
                                 <Image
                                     src={img}
@@ -109,7 +109,10 @@ export default function MeetingRoomBookingsPage() {
                                         </ul>
                                     </div>
 
-                                    <button className={styles["btn-primary"]}>BOOK ROOM {roomNumber}</button>
+                                    <div className={styles["room-card-actions"]}>
+                                        <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className={styles["btn-primary"]}>BOOK ROOM {roomNumber}</a>
+                                        <a href={calendarUrl} target="_blank" rel="noopener noreferrer" className={styles["btn-secondary"]}>CHECK AVAILABILITY</a>
+                                    </div>
                                 </div>
                             </div>
                         ))}

@@ -6,6 +6,8 @@ export const roomFeatures: RoomFeatures[] = [
         roomNumber: 103,
         capacity: 8,
         img: "/assets/room-images/room-103.jpg",
+        bookingUrl: "https://alsscroom103.youcanbook.me/",
+        calendarUrl: "https://calendar.google.com/calendar/u/0/embed?src=sus.ubc.ca_uftrmmskndipsbndg151dtl5b8@group.calendar.google.com&ctz=America/Vancouver",
         features: [
             "8 Chairs",
             "Whiteboard",
@@ -19,6 +21,8 @@ export const roomFeatures: RoomFeatures[] = [
         roomNumber: 104,
         capacity: 8,
         img: "/assets/room-images/room-103.jpg",
+        bookingUrl: "https://alsscroom104.youcanbook.me/",
+        calendarUrl: "https://calendar.google.com/calendar/u/0/embed?src=sus.ubc.ca_5s71t4b60qmlfll20ktfp5a78g@group.calendar.google.com&ctz=America/Vancouver",
         features: [
             "8 Chairs",
             "Whiteboard",
@@ -32,6 +36,8 @@ export const roomFeatures: RoomFeatures[] = [
         roomNumber: 105,
         capacity: 5,
         img: "/assets/room-images/room-105.jpg",
+        bookingUrl: "https://alsscroom105.youcanbook.me/",
+        calendarUrl: "https://calendar.google.com/calendar/u/0/embed?src=sus.ubc.ca_5ml80mepktclmrihpjugh4g8k8@group.calendar.google.com&ctz=America/Vancouver",
         features: [
             "5 Chairs",
             "Whiteboard",

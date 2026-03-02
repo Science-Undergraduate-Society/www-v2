@@ -90,6 +90,8 @@ export interface RoomFeatures {
     img: string,
     capacity: number,
     roomNumber: number,
+    bookingUrl: string,
+    calendarUrl: string,
 }
 
 export interface BlueCardPartner {

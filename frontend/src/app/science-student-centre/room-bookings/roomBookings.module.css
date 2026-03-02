@@ -139,7 +139,7 @@
 /* BOOKING BANNER */
 .booking-banner{
     /* 289px -> proportional to viewport height */
-    height: clamp(14rem, 25vh, 20rem);
+    height: clamp(14rem, 35vh, 20rem);
     background:var(--bg-blue);
 }
 .booking-banner-inner{
@@ -160,9 +160,7 @@
 .room-card{
     display:flex; flex-direction:column; overflow:hidden; border-radius:.75rem; background:#fff;
     box-shadow:var(--card-shadow);
-    transition:transform var(--elevate), box-shadow var(--elevate);
 }
-.room-card:hover{ box-shadow:var(--card-shadow-hover); transform:scale(1.05); }
 
 .room-card-image{
     width:100%;
@@ -187,17 +185,44 @@
 .btn-primary{
     margin-top:auto;
     width:100%;
-    /* 54px -> 3.375rem; but allow line-height to control height via padding */
     border-radius:.75rem;
     padding:.75rem 1rem;
-    font-size: clamp(1rem, 2.2vw, 1.25rem);  /* 16–20px */
+    font-size: clamp(.8rem, 1.6vw, 1rem);
     font-weight:600; line-height:1.5;
     border:none; background:var(--brand); color:#fff;
     cursor:pointer;
-    transition: background var(--elevate), transform var(--elevate), box-shadow var(--elevate), filter var(--elevate);
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: filter var(--elevate), box-shadow var(--elevate), transform var(--elevate);
 }
-.btn-primary:hover{ filter:brightness(.95); box-shadow:0 12px 24px rgba(1,115,190,.25); }
+.btn-primary:hover{ filter:brightness(.9); box-shadow:0 8px 20px rgba(1,115,190,.3); }
 .btn-primary:active{ transform:translateY(1px); }
+
+.room-card-actions{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: auto;
+}
+
+.btn-secondary{
+    width:100%;
+    border-radius:.75rem;
+    padding:.75rem 1rem;
+    font-size: clamp(.8rem, 1.6vw, 1rem);
+    font-weight:600; line-height:1.5;
+    border: 2px solid var(--color-ui-80, #222755);
+    background: transparent;
+    color: var(--color-ui-80, #222755);
+    cursor:pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: background var(--elevate), color var(--elevate), box-shadow var(--elevate);
+}
+.btn-secondary:hover{ background: var(--color-ui-80, #222755); color: #fff; box-shadow:0 8px 20px rgba(34,39,85,.2); }
+.btn-secondary:active{ transform:translateY(1px); }
 
 /* CONTACT */
 .contact-section{
@@ -227,5 +252,5 @@
 /* Motion preference */
 @media (prefers-reduced-motion: reduce){
     .room-card, .btn-primary{ transition: none; }
-    .room-card:hover{ transform:none; }
+    .room-card:hover{ transform:none; box-shadow: var(--card-shadow); }
 }
