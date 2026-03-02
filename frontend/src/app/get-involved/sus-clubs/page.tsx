@@ -77,7 +77,7 @@ export default function SusClubs() {
         <div>
             <BannerHeader>
                 <h1>Clubs</h1>
-                <h2>Science Undergraduate Society is proud to support 26 departmental and 26 non-departmental clubs for the 2023/2024 academic year.</h2>
+                <h2>Science Undergraduate Society is proud to support 20 departmental and 30 non-departmental clubs for the 2025/2026 academic year.</h2>
             </BannerHeader>
 
             <section className={styles.content}>

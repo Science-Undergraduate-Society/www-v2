@@ -66,30 +66,6 @@ export const ClubsInfo: ClubInfo[] = [
         img: "/assets/club-images/GSA.webp"
     },
     {
-        name: "International Genetically Engineered Machines (iGEM)",
-        type: "departmental",
-        description:
-            "The International Genetically Engineered Machines (iGEM) Competition is an annual research experience in which teams dedicate themselves to the goal of producing organisms with new or unusual properties to tackle modern problems and evolve the field of synthetic biology. This experience leads students to think creatively about modern biology while gaining a wide range of technical skills. Outside of the lab, teams are also expected to assess the ethical and societal implications of their technology, network with industry professionals and engage in outreach activities with the local community. Other components of the project include hardware, software, finance and design. UBC has been participating in iGEM since 2009 and has consistently received gold medal awards for their projects.",
-        img: "/assets/club-images/iGEM-Logo.webp",
-        email: "ubcigem@gmail.com",
-        website: "https://www.ubcdsci.club/home",
-        instagram: "https://www.instagram.com/ubcigem",
-        twitter: "https://twitter.com/ubcigem",
-        linkedin: "https://ca.linkedin.com/company/ubcigem"
-    },
-    {
-        name: "Psychology Students’ Association (PSA)",
-        type: "departmental",
-        description:
-            "The Psychology Students’ Association (PSA) of UBC is a student-run organization that seeks to enhance the personal, professional, and academic success of Arts and Science undergraduate students interested in psychology. With the support of the Psychology Department, the PSA provides its 300+ members with many events and services, such as our CV workshop, Hanging Out a Prof, Psychology Undergraduate Research Conference, and Year End Gala.",
-        img: "/assets/club-images/psychology.png",
-        website: "https://psa.psych.ubc.ca/",
-        email: "psa.president@psych.ubc.ca",
-        instagram: "https://www.instagram.com/ubc.psa",
-        facebook: "https://www.facebook.com/psa.of.ubc/",
-        twitter: "https://twitter.com/PSA_UBC"
-    },
-    {
         name: "Physics Society (Physsoc)",
         type: "departmental",
         description:
@@ -136,19 +112,6 @@ export const ClubsInfo: ClubInfo[] = [
             "The Bachelor of Computer Science Students Association (BCSSA) is a student club for students completing their second degree in the Bachelor of Computer Science (BCS) Program at UBC. The BCSSA provides its members with opportunities to accelerate their career transition and enhance their employability. Our goal is to empower our members with technical proficiency and strong interpersonal skills. Our mission is to provide as much support as possible through a challenging career transition.",
         img: "/assets/club-images/bsc.png",
         email: "ubc.bcsclub@gmail.com"
-    },
-    {
-        name: "Biochemistry Pharmacology Physiology Club (BPP)",
-        type: "departmental",
-        description:
-            "BPP is a student led club at UBC and is committed to informing students about the disciplines of Biochemistry, Pharmacology and Physiology, all of which are the fundamental basis of medicine. Throughout the school year, BPP hosts different events and mentorship programs to aid with informing current and prospective students in these majors.",
-        img: "/assets/club-images/BPP.jpg"
-    },
-    {
-        name: "Biophysics Student Society (BPSS)",
-        type: "departmental",
-        description: "No blurb yet!",
-        img: "/assets/club-images/BPSS.png"
     },
     {
         name: "Cognitive Systems Society (CSS)",
@@ -202,12 +165,6 @@ export const ClubsInfo: ClubInfo[] = [
         description:
             "We are a passionate group of students dedicated to supporting students who are in, wanting to get in, or just interested in learning about pharmacology and CAPS through both academic and social resources.",
         img: "/assets/club-images/PCSA.webp"
-    },
-    {
-        name: "Science Co-op Students Association (SCOOPS)",
-        type: "departmental",
-        description: "No blurb yet!",
-        img: "/assets/club-images/SCOOPS.jpg"
     },
     {
         name: "Undergraduate Chemistry Society (UCS)",
@@ -267,6 +224,18 @@ export const ClubsInfo: ClubInfo[] = [
         type: "non-departmental",
         description: "No Blurb Yet!",
         img: "/assets/club-images/CLF.webp"
+    },
+    {
+        name: "International Genetically Engineered Machines (iGEM)",
+        type: "non-departmental",
+        description:
+            "The International Genetically Engineered Machines (iGEM) Competition is an annual research experience in which teams dedicate themselves to the goal of producing organisms with new or unusual properties to tackle modern problems and evolve the field of synthetic biology. This experience leads students to think creatively about modern biology while gaining a wide range of technical skills. Outside of the lab, teams are also expected to assess the ethical and societal implications of their technology, network with industry professionals and engage in outreach activities with the local community. Other components of the project include hardware, software, finance and design. UBC has been participating in iGEM since 2009 and has consistently received gold medal awards for their projects.",
+        img: "/assets/club-images/iGEM-Logo.webp",
+        email: "ubcigem@gmail.com",
+        website: "https://www.ubcdsci.club/home",
+        instagram: "https://www.instagram.com/ubcigem",
+        twitter: "https://twitter.com/ubcigem",
+        linkedin: "https://ca.linkedin.com/company/ubcigem"
     },
     {
         name: "Friends of Medecins Sans Frontieres (FoMSF) UBC",
