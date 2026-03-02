@@ -7,7 +7,7 @@ export const Footer = () => {
             name: "Email",
             src: "/assets/footer-icons/email.png",
             extra: styles.iconEmail,
-            link: "mailto:<EMAIL>",
+            link: "mailto:info@sus.ubc.ca",
         },
         {
             name: "Facebook",
