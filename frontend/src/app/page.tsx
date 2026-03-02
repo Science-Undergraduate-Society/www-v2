@@ -31,7 +31,6 @@ export default function Home() {
         <h2>Upcoming Events</h2>
         <p>Hover over the event to view details!</p>
         <SusCalendar></SusCalendar>
-        <h2>Past Events</h2>
       </section>
     </div>
   );
