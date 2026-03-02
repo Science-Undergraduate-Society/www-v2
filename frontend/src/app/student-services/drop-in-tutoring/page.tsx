@@ -9,8 +9,8 @@ export default function DropInTutoring() {
     return (
         <div className={styles.dropInTutoring}>
             <BannerHeader>
-                <h1>Drop-In Tutoring</h1>
-                <h2>Free online and in-person tutoring sessions led by upper-year science students. Sign-up or drop-in today.</h2>
+                <h1>SUS Tutoring</h1>
+                <h3>Free online and in-person tutoring sessions led by upper-year science students. Sign-up or drop-in today.</h3>
             </BannerHeader>
             <section>
                 <FrostedCard className={styles.survivalGuide}>
@@ -21,7 +21,7 @@ export default function DropInTutoring() {
                         Tutoring sessions are offered through <b>both in-person drop-in sessions and online appointment-based sessions.</b>
                     </p>
                     <br />
-                    <strong>Check out the 2025 Survival Guide for tips on how to transition into your life at UBC!</strong>
+                    <strong>Check out the 2026 Survival Guide for tips on how to transition into your life at UBC!</strong>
                     <br />
                     <a href="https://drive.google.com/file/d/1L8lPDrr3br4f3HeoBoeRuQkFWJEtnrZy/view">View Survival Guide</a>
                 </FrostedCard>
@@ -34,7 +34,7 @@ export default function DropInTutoring() {
                     <p>Courses: BIOL 112, BIOL 121, CHEM 121, PHYS 131, PHYS 117, CHEM 233, and BIOL 200</p>
                 </FrostedCard>
                 <FrostedCard className={styles.card}>
-                    <h2>Wednesdays: 4-6 PM, Abdul Ladha Science Student Centre, Room 105</h2>
+                    <h2>Wednesdays: 4-6 PM at BIOL 1001</h2>
                     <p>Courses: CHEM 203/233, CHEM 121, PHYS 117/118, BIOL 112, BIOL 121</p>
                 </FrostedCard>
             </section>

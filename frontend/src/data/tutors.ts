@@ -65,13 +65,6 @@ export const tutors: Tutor[] = [
     bio: "Hello! My name is Mehdi, and I'm currently studying mathematics. I chose to be a tutor for SUS to aid students like my past self who needed help but couldn't access it due to inconvenient office hours. On the weekends, I love to play soccer with my friends after work."
   },
   {
-    name: "Kiah Nirmal",
-    courses: ["BIOL 112", "MATH 101"],
-    image: "/assets/tutor-images/Kiah Nirmal.jpg",
-    link: "https://koalendar.com/e/book-a-meeting-with-kiah-nirmal",
-    bio: "Hi, I'm Kiah, a second-year Cellular, Anatomical, and Physiological Sciences student. I'm tutoring for SUS because I find teaching rewarding, love sharing knowledge, and enjoy helping peers gain confidence in challenging subjects. A fun fact about me is that I love singing (mostly to myself) and listening to music."
-  },
-  {
     name: "Hamin Park",
     courses: ["CHEM 121", "PHYS 117", "PHYS 131"],
     image: "/assets/tutor-images/Hamin Park.jpg",

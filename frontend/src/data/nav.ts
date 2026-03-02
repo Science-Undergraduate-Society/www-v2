@@ -23,7 +23,7 @@ export const NavMenus: NavMenu[] = [
         label: "Student Services",
         items: [
             { label: "Blue Card Program", href: "/student-services/blue-card", icon: "blue-card" },
-            { label: "Drop-In Tutoring", href: "/student-services/drop-in-tutoring", icon: "drop-in-tutoring" },
+            { label: "SUS Tutoring", href: "/student-services/drop-in-tutoring", icon: "drop-in-tutoring" },
             { label: "Grants & Subsidies", href: "/student-services/grants-and-subsidies", icon: "grants-and-subsidies" },
             { label: "External Subsidies", href: "/student-services/external-subsidies", icon: "external-subsidies" },
             { label: "SUS Pantry", href: "/student-services/sus-pantry", icon: "sus-pantry" },

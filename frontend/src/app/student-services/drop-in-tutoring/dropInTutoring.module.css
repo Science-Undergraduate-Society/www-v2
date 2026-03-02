@@ -14,8 +14,10 @@
     flex-direction: column;
     padding: 32px;
     margin: 0 10% 50px;
-    font-size: 24px;
     align-items: center;
+    p {
+        font-size: var(--font-size-p);
+    }
 
     b {
         color: var(--color-ui-60);
