@@ -12,6 +12,8 @@ export interface Executive {
     imagePath: string,
     description: string,
     email: string,
+    link: string,
+    officeHours: string
 }
 
 // Executive (elected) role in SUS

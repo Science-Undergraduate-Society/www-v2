@@ -4,6 +4,7 @@ import styles from "./executives.module.css";
 import { executives } from "@/data/executives";
 import { Executive } from "@/lib/types";
 import BannerHeader from "@/components/ui/BannerHeader/BannerHeader";
+import Link from "next/link";
 
 export default function Executives() {
   const [selectedExec, setSelectedExec] = useState<string | null>(null);
@@ -63,6 +64,12 @@ export default function Executives() {
                   <p>
                     <strong>Email:</strong> {e.email}
                   </p>
+                  <p>
+                    <strong>Office Hours:</strong>{e.officeHours}
+                  </p>
+                  <Link href={e.link} target="blank" className={styles.bookButton}>
+                    Book Appointment
+                  </Link>
                 </div>
               )}
             </div>
