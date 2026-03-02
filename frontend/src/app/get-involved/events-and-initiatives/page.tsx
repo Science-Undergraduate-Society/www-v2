@@ -1,11 +1,11 @@
 import styles from './susEvents.module.css'
-import { Navbar } from "@/components/layout/Navbar/Navbar";
 import { FeaturedEventsInitiative } from '@/lib/types';
 import { featuredEvents } from '@/data/getInvolved';
-import BlueButton from '@/components/ui/BlueButton/BlueButton';
+import BannerHeader from '@/components/ui/BannerHeader/BannerHeader';
+import SusCalendar from '@/components/features/Calendar/Calendar';
 
 export default function SusEvents() {
-    const currentMonth = "September";
+    const currentMonth = "March";
     const currentEvents = featuredEvents.filter((event, idx)=> event.isEvent && event.dates.includes(currentMonth))
     const futureEvents = featuredEvents.filter((event, idx) => event.isEvent && !event.dates.includes(currentMonth))
     const initiatives = featuredEvents.filter((event, idx) => !event.isEvent)
@@ -58,9 +58,9 @@ export default function SusEvents() {
 
         return (
                 <div className={styles.afterEvent}>
-                    <h1>
+                    <h2>
                         {feature.title}
-                    </h1>
+                    </h2>
                     {
                         hasDate && <h2>{feature.dates}</h2>
                     }
@@ -97,46 +97,62 @@ export default function SusEvents() {
     return (
         <div>
 
-            <section className={styles.heroSection}>
+            {/* <section className={styles.heroSection}>
                 <h1>Events & Initiatives</h1>
-            </section>
+            </section> */}
+            <BannerHeader>
+                <h1>Events & Initiatives</h1>
+            </BannerHeader>
             
             <div className={styles.socialMediaBox}>
                 <p>
-                    <em>Fall 2026 has arrived, UBC! </em> Check out what&apos;s coming up this September.  
+                    <em>Spring 2026 is here! </em> Check out some of our events coming up this March.  
                     <br /><br />
                     
                     To keep up to date on all our events, please check out our&nbsp;
-                    <a href="https://calendar.google.com/calendar/u/0/r?cid=Y19kNGE1NzA2MDBmZGFhMTEyZjFhYzdiZTgyMjg1MTM1MzY5Y2RlYjg3MGExNmIzMmE0YjY4ZGY2MWZkYWQ3ZGQ1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20">Google Calendar</a>&nbsp;and follow our&nbsp;
-                    <a href="https://www.instagram.com/susubc/">Instagram</a>!
+                    <a href="https://calendar.google.com/calendar/u/0/r?cid=Y19kNGE1NzA2MDBmZGFhMTEyZjFhYzdiZTgyMjg1MTM1MzY5Y2RlYjg3MGExNmIzMmE0YjY4ZGY2MWZkYWQ3ZGQ1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" style={{ color: '#DB4437' }}>Google Calendar</a>&nbsp;and follow our&nbsp;
+                    <a href="https://www.instagram.com/susubc/" style={{ color: '#1877F2' }}>Instagram</a>!
                 </p>
             </div>
+
             <div className={styles.monthEventsContainer}>
-                <h1>September Events</h1>
+                <h1>March Events</h1>
             </div>
+
             {
                 currentEvents.map((feature, idx) => (
                     <FeaturedEventItem key={idx} feature={feature} />
                 ))
             }
-            <div className={styles.afterEventsContainer}>
-                <h1>After {currentMonth} Events</h1>
-                <div className={styles.afterEvent}>
-                    {
-                        futureEvents.map((feature, idx) => (
-                            <FutureEvents key={idx} feature={feature} />
-                        ))
-                    }
+
+            <br></br>
+            
+            {/* {futureEvents.length > 0 && (
+                <div className={styles.afterEventsContainer}>
+                    <h1>Upcoming Events</h1>
+                    <div className={styles.afterEvent}>
+                        {
+                            futureEvents.map((feature, idx) => (
+                                <FutureEvents key={idx} feature={feature} />
+                            ))
+                        }
+                    </div>
                 </div>
-            </div>
-            <div className={styles.initiativesContainer}>
+            )} */}
+            {/* <div className={styles.initiativesContainer}>
                 <div className={styles.initiativesTitle}>Initiatives</div>
                 {
                 initiatives.map((feature, idx) => (
                     <FeaturedEventItem key={idx} feature={feature} />
                 ))
             }
-            </div>
+            </div> */}
+
+            <section className={styles.events}>
+                <h2>All SUS Events</h2>
+                <p>Hover over the event to view details!</p>
+                <SusCalendar></SusCalendar>
+            </section>
         </div>
     );
 }

@@ -41,35 +41,30 @@
 }
 
 .socialMediaBox {
-    position: absolute;
-    top: calc(100% - 65vh);
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: color-mix(in srgb, #e6f5ff, transparent 0%);
+    position: relative;
+    margin: 2rem auto;
+    background-color: color-mix(in srgb, #e6f5ff, transparent 2%);
     border-radius: 20px;
     color: var(--color-ui-100);
     width: 80vw;
-    height: 30vh;
     display: flex;
     justify-content: start;
     align-items: start;
-    padding: 2rem;
+    padding: 3rem;
     z-index: 10;
-    font-size: larger;
+    font-size: var(--font-size-p);
     flex-direction: column;
 }
 
 @media (max-width: 768px) {
     .socialMediaBox {
-        top: calc(100% - 45vh); 
-        width: 85vw;
+        width: 90vw;
     }
 }
 
 @media (max-width: 480px) {
     .socialMediaBox {
-        top: calc(100% - 35vh);
-        width: 90vw;
+        width: 92vw;
     }
 }
 
@@ -118,31 +113,16 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    padding-top: 5vh; /* Add padding instead of margin */
-}
-
-@media (max-width: 768px) {
-    .monthEventsContainer {
-        padding-top: 25vh;
-    }
-}
-
-@media (max-width: 480px) {
-    .monthEventsContainer {
-        padding-top: 30vh;
-    }
+    padding-top: 1rem;
 }
 
 .monthEventsContainer h1 {
     color: var(--color-ui-80);
+    font-size: var(--font-size-h1);
     font-weight: 700;
-    font-size: 40px;
     padding-left: 10vw;
-    margin: 0 0 1rem;
-    font-weight: 700;
+    margin: 0 0 0.5rem;
     align-self: flex-start;
-    padding-top: 5%;
-
 }
 
 .firstWord {
@@ -150,69 +130,64 @@
     font-weight: bold;
 }
 
-.spacer {
-    height: 5vh;
-}
-
 .monthEvent {
     display: flex;
     flex-direction: column;
-    padding-left: 15vw;
-    padding-right: 15vw;
+    padding: 2rem 10vw;
     width: 100%;
-    align-self: center;
-    align-items: start;
+    box-sizing: border-box;
+    gap: 0.75rem;
 }
 
 .monthEvent h1 {
-    font-size: 40px;
-    color:var(--color-ui-80);
+    font-size: var(--font-size-h2);
+    color: var(--color-ui-80);
     font-weight: bold;
-
+    margin: 0;
 }
 
 .monthEvent h2 {
-    font-size: 24;
+    font-size: var(--font-size-p);
     font-weight: bold;
-
+    margin: 0;
+    color: var(--color-ui-60);
 }
 
 .monthEvent p {
-    font-size: 20;
-
+    font-size: var(--font-size-p);
+    line-height: 1.6;
+    margin: 0;
 }
 
 .monthEventButtons {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: start;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
 }
 
 .monthEventPictureContainer {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    padding: 5%;
-    width: auto;
+    justify-content: flex-start;
     gap: 1rem;
-
+    margin-top: 0.5rem;
 }
 
 .monthEventPicture {
-    border-radius: 20px;
-
+    border-radius: 16px;
+    overflow: hidden;
 }
 
 .afterEventsContainer {
     --slant: 8vw;
-    position: relative; 
-    min-height: 70vh;
-    padding-top: var(--slant);
-    padding-bottom: var(--slant);
-    padding-left:10vw;
-    padding-top:15vh;
+    position: relative;
+    min-height: 50vh;
+    padding: 6rem 10vw;
+    margin-bottom: 2rem;
 }
 
 .afterEventsContainer::before {
@@ -226,91 +201,131 @@
     background-position: center -4rem;
     --slant: 8vw;
     clip-path: polygon(
-    0 0,                              
-    100% var(--slant),                
-    100% 100%,                        
-    0 calc(100% - var(--slant))
+        0 0,
+        100% var(--slant),
+        100% 100%,
+        0 calc(100% - var(--slant))
     );
-    display: flex;
-    color: var(--color-ui-10);
 }
 
-
 .afterEventsContainer h1 {
+    font-size: var(--font-size-h1);
     font-weight: 700;
-    align-self: start;
-    font-size: 40px;
     color: var(--color-ui-10);
+    margin-bottom: 2rem;
 }
 
 .afterEvent {
     display: flex;
     flex-direction: column;
-    padding-left:1vw;
-    width: 90%;
-    align-items: start;
+    gap: 0.75rem;
+    width: 100%;
     color: var(--color-ui-10);
-    text-align: start;
-    align-items: start;
-    justify-content: start;
-    align-self: center;
-
 }
 
 .afterEvent h1 {
-    font-weight: 500;
-    font-size: 40px;
-    width: 100%;
+    font-size: var(--font-size-h2);
+    font-weight: 600;
+    margin: 0;
+}
+
+.afterEvent h2 {
+    font-size: var(--font-size-p);
+    font-weight: bold;
+    margin: 0;
+    opacity: 0.85;
 }
 
 .afterEvent p {
-    font-size: 20px;
+    font-size: var(--font-size-p);
+    line-height: 1.6;
+    margin: 0;
 }
 
 .initiativesContainer {
-    margin-bottom: 5vh;
     display: flex;
     flex-direction: column;
-    gap: 3vh;
-
+    gap: 1rem;
+    margin: 2rem 0 4rem;
 }
 
 .initiativesTitle {
     color: var(--color-ui-80);
     font-weight: 700;
-    font-size: 40px;
+    font-size: var(--font-size-h1);
     padding-left: 10vw;
-    margin: 0 0 1rem;
-    font-weight: 700;
+    margin-bottom: 0.5rem;
     align-self: flex-start;
 }
 
 .button {
-    display: flex;
+    display: inline-flex;
     width: fit-content;
-    padding: 10px 20px;
-    border-radius: 16px;
-    height: 6vh;
-    font-size: 20px;
-    text-decoration: underline;
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-size: var(--font-size-p);
+    text-decoration: none;
     font-weight: bold;
-    margin-top: 1vw;
-    margin-right: 2vw;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    transition: opacity 0.2s ease;
 }
 
-.button.whiteBg { 
+.button:hover {
+    opacity: 0.85;
+}
+
+.button.whiteBg {
     background: var(--color-ui-10);
     color: var(--color-ui-100);
 }
 
-.button.navyBg{
+.button.navyBg {
     background: var(--color-ui-80);
     color: var(--color-ui-10);
 }
 
 .smallSpacer {
-    height: 3vh;
+    height: 1rem;
+}
+
+.spacer {
+    height: 2rem;
+}
+
+.events {
+    color: var(--color-ui-80);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+
+    h2 {
+        padding-top: 74px;
+        font-size: 40px;
+    }
+
+    p {
+        padding-top: 12px;
+        font-size: var(--font-size-p);
+        font-style: italic;
+    }
+}
+
+@media (max-width: 768px) {
+    .monthEvent {
+        padding: 1.5rem 6vw;
+    }
+
+    .afterEventsContainer {
+        padding: 5rem 6vw;
+    }
+
+    .monthEventsContainer h1,
+    .initiativesTitle {
+        padding-left: 6vw;
+    }
 }
