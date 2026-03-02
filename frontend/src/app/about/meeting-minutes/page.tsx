@@ -14,9 +14,8 @@ export default function MeetingMinutes() {
                 <FrostedCard className={styles.accessCard}>
                     <p>
                         All SUS meetings are open to Science students to attend unless otherwise stated.
-                        All meeting minutes on the present website are updated for the 2023/2024 academic year.
+                        All meeting minutes on the present website are updated for the 2025/2026 academic year.
                     </p>
-                    <br />
                     <div className={styles.requestAccess}>
                         <p>
                             If you wish to access the meeting minutes of previous years, please email our VP Admin:
@@ -31,12 +30,14 @@ export default function MeetingMinutes() {
                     </div>
                 </FrostedCard>
             </section>
+
+            <br /><br />
+
             <section className={styles.meetingMinutesType}>
                 <h1>Council Meeting Minutes</h1>
                 <p>
                     Council normally runs monthly beginning from 5:00 PM at the Micheal Kingsmill Forum located at the 4th floor of the AMS Nest.
                     (With the exception of the month of September, where no council meetings are held due to elections).
-                    <br /><br />
                     The meeting minutes are being updated periodically.
                 </p>
                 <BlueButton
@@ -46,11 +47,13 @@ export default function MeetingMinutes() {
                     View Council Meeting Minutes
                 </BlueButton>
             </section>
+
+            <br /><br />
+
             <section className={styles.meetingMinutesType}>
                 <h1>Executive Meeting Minutes</h1>
                 <p>
                     Executive Meetings run every Thursday, beginning from 5:00 PM in the Abdul Lahda Science Student Building, Meeting Room 103.
-                    <br /><br />
                     The meeting minutes are being updated periodically.
                 </p>
                 <BlueButton
@@ -60,14 +63,16 @@ export default function MeetingMinutes() {
                     View Executive Meeting Minutes
                 </BlueButton>
             </section>
+
+            <br /><br />
+            
             <section className={styles.meetingMinutesType}>
                 <h1>Working Group Meeting Minutes</h1>
                 <p>
                     All committees have different meeting schedules based on team members’ availability.
-                    The meeting time and location can be found on the meeting minutes.
-                    <br /><br />
-                    The meeting minutes are being updated periodically. 
-                </p>
+                    The meeting time and location can be found on the meeting minutes. The meeting minutes are being updated periodically. 
+                </p>                
+                <br /><br />
                 <WorkingGroupMeetingMinutes />
             </section>
         </div>

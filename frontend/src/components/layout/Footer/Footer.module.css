@@ -46,14 +46,14 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 5vw;
+    gap: 3vw;
     width: 100%;
     margin: 20px auto;
 }
 
 .icon {
     width: 6vw;
-    max-width: 68px;
+    max-width: 56px;
     min-width: 40px;
     height: auto;
     object-fit: cover;
@@ -68,7 +68,16 @@
     font-family: 'Figtree', Helvetica, sans-serif;
     font-weight: 500;
     color: #ffffff;
-    font-size: 1.25rem;
     line-height: 30px;
     letter-spacing: 0;
+
+    p {
+        font-size: var(--font-size-p);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer::before {
+        display: none;
+    }
 }

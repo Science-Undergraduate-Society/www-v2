@@ -49,51 +49,44 @@ const featuredEventLinks: EventLink[] = [
 export const featuredEvents: FeaturedEventsInitiative[] = [
   {
     isEvent: true,
-    title: "SUS First Week",
-    dates: "September 2-5, 2025",
-    description: "Get ready for an unforgettable start to the school year with the Science Undergraduate Society (SUS) First Week! Join us for four days of fun, September 2-5. Kick things off at Imagine Day & Faculty Fair on September 2nd to grab some free merch. On September 3rd, unwind at Sips and Swirls at Abdul Ladha from 6-8 p.m., where you can enjoy mocktails and paint while getting a hand or scalp massage from Lush Spa or even creating your own custom bubble bar! Show off your competitive side at Squidlympics on the Macinnes Field from 5:30-7:30 p.m. on September 4th, with a chance to win prizes. We'll end the week with our Welcome Back BBQ on September 5th outside Abdul Ladha from 5-8 p.m., featuring free food, a dunk tank, and a raffle full of exciting prizes. We can't wait to see you there!",
-    pictures: [
-      "/assets/event-images/sus_first_week_1.png",
-      "/assets/event-images/sus_first_week_2.png",
-      "/assets/event-images/sus_first_week_3.png"
-    ],
-    links: []
+    title: "International Women's Day Coffee Chat",
+    dates: "March 10, 4:00 – 6:00 PM",
+    description: "An International Women's Day Coffee Chat bringing together women from various STEM fields to share experiences, navigate barriers, and build meaningful connections through conversation and networking.",
+    pictures: [],
+    links: [
+      {
+        label: "Event RSVP",
+        description: "International Women's Day Coffee Chat RSVP",
+        url: "https://forms.gle/zypemG1yF4MPfAMe7"
+      }
+    ]
   },
   {
     isEvent: true,
-    title: "Science RXN",
-    dates: "September 13-14, 2025",
-    description: "Science RXN is the ultimate kickoff flagship event for first-year science students at UBC! Happening September 13-14, this two-day experience is designed to help you make lasting friendships and dive into campus life. Day one is packed with fun indoor and outdoor activities where you’ll bond with peers through games, challenges, and team-building. On day two, dress up in blue for our signature dinner and dance, a chance to celebrate the start of your university journey with new friends and unforgettable memories. Don’t miss this exciting opportunity to connect, celebrate, and start your UBC Science adventure on the right foot!",
-    pictures: [
-      "/assets/event-images/science_RXN_1.png",
-      "/assets/event-images/science_RXN_2.png",
-      "/assets/event-images/science_RXN_3.png"
-    ],
-    links: []
+    title: "Sustainability Week",
+    dates: "March 2 – 6",
+    description: "A week of sustainability-themed events including an iREACH lab tour, volunteering at the UBC Farm with lunch, plant pot painting, and a beach cleanup! Check out the SUS Instagram for more details!",
+    pictures: [],
+    links: [
+      {
+        label: "Event RSVP",
+        description: "Sustainability Week RSVP via Instagram linktree",
+        url: "https://linktr.ee/susubc"
+      }
+    ]
   },
   {
     isEvent: true,
-    title: "Hack the Coast",
-    dates: "",
-    description: "Hack the Coast is SUS’ first interdisciplinary hackathon, open to everyone! Spend a weekend collaborating across fields, learning new skills, and building impactful projects; no experience required.",
+    title: "SUS Research Exchange",
+    dates: "March 14, 10:00 AM – 4:00 PM",
+    description: "Last call to sign up for the SUS Research Exchange! Don't miss this chance to develop your research skills through case competitions, presentations and networking. RSVP by February 24th at midnight.",
     pictures: [],
-    links: [featuredEventLinks[0]]
+    links: [
+      {
+        label: "Event RSVP",
+        description: "SUS Research Exchange RSVP",
+        url: "https://ubc.ca1.qualtrics.com/jfe/form/SV_4MzlnG0bBGaGDhc"
+      }
+    ]
   },
-  {
-    isEvent: false,
-    title: "Back2School Survey",
-    dates: "",
-    description: "The SUS Back2School Survey is an annual initiative led by the Academic Portfolio to gather meaningful feedback from UBC Science students. Open to students across all years and majors, it provides critical insights that guide advocacy efforts and help enhance the student experience. This year, our goal is to collect more than 1,750 responses, ensuring the broadest representation of the science student body. By sharing their perspectives, students help shape programs, resources, and support systems tailored to their needs. To encourage participation, everyone who completes the survey will be entered into a raffle for a variety of exciting prizes.",
-    pictures: [],
-    links: [featuredEventLinks[1]]
-  },
-  {
-    isEvent: false,
-    title: "SUS Mentorship Program",
-    dates: "",
-    description: "The SUS Mentorship Program helps build a connected and supportive community within UBC Science by bringing together students across different years and disciplines. Mentors are upper-year undergraduates and graduate students who volunteer their time to support newer students. Through one-on-one or small-group pairings, mentors share their experiences while mentees gain guidance and encouragement as they navigate their academic and personal journeys. The program also hosts events and workshops designed to build meaningful connections, professional development, and community building. At the end of the year, both mentors and mentees are celebrated with awards recognizing their growth and contributions.",
-    pictures: [],
-    links: [featuredEventLinks[2], featuredEventLinks[3]]
-  },
-  
 ];

@@ -15,9 +15,9 @@
     .applicationInformationCard {
         display: flex;
         flex-direction: column;
-        gap: 65px;
-        padding: 50px 75px;
-        font-size: 24px;
+        gap: 40px;
+        padding: 40px 60px;
+        font-size: var(--font-size-p);
 
         .header {
             display: flex;
@@ -25,8 +25,8 @@
             align-items: center;
             justify-content: space-between;
 
-            h1 {
-                font-size: 40px;
+            h2 {
+                font-size: var(--font-size-h2);
                 font-weight: bold;
             }
         }
@@ -36,8 +36,13 @@
             flex-direction: column;
             gap: 16px;
 
-            h1 {
+            h2 {
                 font-weight: 600;
+                font-size: var(--font-size-h2);
+            }
+
+            p {
+                font-size: var(--font-size-p);
             }
 
             a {
@@ -51,10 +56,10 @@
         }
 
         .status {
-            padding: 15px 40px;
+            padding: 10px 24px;
             background: var(--color-ui-80);
             border-radius: 16px;
-            font-size: 40px;
+            font-size: var(--font-size-p);
             font-weight: bold;
             color: var(--color-ui-10);
             text-transform: uppercase;
@@ -71,7 +76,7 @@
 
     h1 {
         padding-top: 1rem;
-        font-size: 64px;
+        font-size: var(--font-size-h1);
         font-weight: bold;
     }
 
@@ -99,19 +104,19 @@
 
         h1 {
             padding: 0;
-            font-size: 40px;
+            font-size: var(--font-size-h2);
             font-weight: 600;
             color: var(--color-ui-80);
         }
 
         h2 {
-            font-size: 24px;
+            font-size: var(--font-size-p);
             color: var(--color-ui-60);
         }
 
         p {
             padding: 20px 0 45px 0;
-            font-size: 20px;
+            font-size: var(--font-size-p);
             color: var(--color-ui-100);
         }
     }
@@ -123,10 +128,10 @@
     }
 
     .grantsButtons {
-        gap: 25px;
+        gap: 16px;
 
         .button {
-            font-size: 40px;
+            font-size: var(--font-size-p);
             font-weight: bold;
         }
     }
@@ -144,8 +149,9 @@
     padding-bottom: 200px;
 
     .subsidiesButtons {
-        font-size: 40px;
+        font-size: var(--font-size-p);
         font-weight: bold;
+        gap: 16px;
     }
 
     .subsidiesList {

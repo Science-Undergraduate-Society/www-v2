@@ -27,6 +27,38 @@ export default function SusPantry() {
                         <p>According to Campus Nutrition, a shocking 40 per cent of UBC students are food insecure</p>
                     </div>
                 </div>
+
+                <FrostedCard className={styles.hoursCard}>
+                    <div className={styles.hoursContent}>
+                        <div>
+                            <h2>🕗 Extended Pantry Hours (2026)</h2>
+                            <p className={styles.hoursText}>
+                                Pantry hours have now been extended to <b>8:00 AM – 8:00 PM, Monday to Friday.</b>
+                            </p>
+                            <p className={styles.calendarNote}>
+                                Save the restock dates from our Google Calendar below, and make sure to check back each month for updated restock and event schedules.
+                            </p>
+                        </div>
+                        <a
+                            href="https://docs.google.com/spreadsheets/d/1CY7LgAQdAoL4SF5hAM0WXEXp7YyjSkIVVSw0e7cHjxU/edit?gid=0#gid=0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.dbLink}
+                        >
+                            Educational Database →
+                        </a>
+                    </div>
+                </FrostedCard>
+
+                <div className={styles.photoGrid}>
+                    <div className={styles.photoHorizontal}>
+                        <img src="/assets/pantry-images/pantry-image-1.jpg" alt="SUS Pantry" />
+                    </div>
+                    <div className={styles.photoVertical}>
+                        <img src="/assets/pantry-images/pantry-image-2.jpg" alt="SUS Pantry event" />
+                    </div>
+                </div>
+
                 <h1>SUStainable <b>Eats</b></h1>
                 <p>
                     A series of Community Dinners hosted at the Abdul Ladha Building where free, nutritious meals are prepared live and handed out to students.

@@ -21,6 +21,11 @@
     }
 }
 
+.portfoliosLink {
+    color: #0173BE;
+    text-decoration: underline;    
+}
+
 .statusBadge {
     color: #ffffff;
     padding: 12px 24px;
@@ -206,6 +211,10 @@
 .councilText {
     flex: 1;
 
+    .councilLink {
+        text-decoration: underline;
+    }
+
     p {
         font-size: 18px;
         line-height: 1.8;
@@ -249,6 +258,10 @@
     @media (max-width: 768px) {
         flex-direction: column;
     }
+}
+
+.experienceNote {
+    margin-bottom: 1rem;
 }
 
 .experienceImage {

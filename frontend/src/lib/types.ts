@@ -12,6 +12,8 @@ export interface Executive {
     imagePath: string,
     description: string,
     email: string,
+    link: string,
+    officeHours: string
 }
 
 // Executive (elected) role in SUS
@@ -88,6 +90,8 @@ export interface RoomFeatures {
     img: string,
     capacity: number,
     roomNumber: number,
+    bookingUrl: string,
+    calendarUrl: string,
 }
 
 export interface BlueCardPartner {

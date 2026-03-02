@@ -10,7 +10,7 @@ export default function EventBookings() {
             <BannerHeader>
                 <div className={styles["hero-left"]}>
                     <div className={styles["hero-heading"]}>
-                        <h1 className={styles["hero-title"]}>Meeting Room Bookings</h1>
+                        <h1 className={styles["hero-title"]}>Event Bookings</h1>
                         <div className={styles["location-row"]}>
                             <Image
                                 src="/assets/icons/location.png"
@@ -41,6 +41,18 @@ export default function EventBookings() {
                 </FrostedCard>
             </section>
 
+            {/* Building Availability Calendar */}
+            <section className={styles.calendar}>
+                <h2>Building Availability Calendar</h2>
+                <div className={styles.calendarPlaceholder}>
+                    <iframe 
+                        src="https://calendar.google.com/calendar/embed?src=bmanager.bookings%40sus.ubc.ca&ctz=America%2FVancouver"
+                        width="100%"
+                        height="800"
+                    ></iframe>
+                </div>
+            </section>
+
             {/* The Booking Process */}
             <section className={styles.bookingProcess}>
                 <h2>The Booking Process</h2>
@@ -49,7 +61,7 @@ export default function EventBookings() {
                     <h3>Before Submitting a Booking Request</h3>
                     <ul>
                         <li>Determine if the ALSSC is a suitable venue for your event. Visit the <a href="/science-student-centre/info">About the ALSSC page</a> for room building amenities and floor plans.</li>
-                        <li>Check building availability calendar below to ensure the date and time you would like to book is available.</li>
+                        <li>Check building availability calendar above to ensure the date and time you would like to book is available.</li>
                         <li>Carefully read the <strong>Booking Policies and Deadlines</strong>, including booking categories and fees associated with booking.</li>
                     </ul>
                 </div>
@@ -79,18 +91,6 @@ export default function EventBookings() {
                 <p className={styles.warningNote}>
                     Due to the high volume of booking requests that we receive, you may not receive a response if you request a date that is unavailable or if the booking request is submitted after the stated deadlines.
                 </p>
-            </section>
-
-            {/* Building Availability Calendar */}
-            <section className={styles.calendar}>
-                <h2>Building Availability Calendar</h2>
-                <div className={styles.calendarPlaceholder}>
-                    <iframe 
-                        src="https://calendar.google.com/calendar/embed?src=bmanager.bookings%40sus.ubc.ca&ctz=America%2FVancouver"
-                        width="100%"
-                        height="800"
-                    ></iframe>
-                </div>
             </section>
 
             {/* Booking Information */}
@@ -137,7 +137,7 @@ export default function EventBookings() {
                                 <li>The maximum capacity of ALSSC is 133 people, including event organizers.</li>
                                 <li>You must use a ticket system with tickets sold before the event. Tickets cannot be available at the event, and non-ticketholders cannot enter the event venue.</li>
                                 <li>Minors cannot be present at Events With Alcohol.</li>
-                                <li>SUS will provide 2+ professional security guards for the duration of the event.</li>
+                                <li>The Building Manager may require clubs to hire professional security for the duration of the event, if deemed necessary.</li>
                                 <li>You cannot advertise the availability of alcohol at an event, so terms like &quot;Beer Garden&quot; or &quot;Wine and Cheese&quot; are prohibited.</li>
                                 <li>There are multiple deliverables required for approval of alcohol service. You should plan to put in consistent effort towards planning the event starting as soon as your Booking Request is submitted.</li>
                                 <li>At least one event organizer must complete the Wellness Centre & SVPRO&apos;s &quot;Safer Partying Workshop,&quot; which is offered in-person. You should make sure the course is being offered before your event.</li>

@@ -106,4 +106,14 @@ export const subsidies: FundingOpportunity[] = [
     rubric:
       "https://docs.google.com/document/d/15s0q0SeeM56yT4bCf6cGKYgR5WpwlKC2qgKM75-nijg/edit?usp=drive_link",
   },
+  {
+    title: "SUS Merchandise Subsidy",
+    type: "Subsidy",
+    link: "",
+    eligibleRecipient: ["Science Students"],
+    description:
+      "The SUS Merchandise Subsidy is intended to alleviate personal financial burdens and encourage as many students to proudly represent UBC Science! This encompasses all merchandise produced by the SUS Sales Commission exclusively (must be featured on our website).",
+    rubric:
+      "https://docs.google.com/document/d/1VxyYbJXULQ27IW2_BU4fu7C48XMhjyMHIc16UV3H7Fs/edit?tab=t.0",
+  },
 ];

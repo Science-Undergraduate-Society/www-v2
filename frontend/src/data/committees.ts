@@ -120,8 +120,8 @@ export const committees: Committee[] = [
     category: 'Administration'
   },
   {
-    id: 'building-staff',
-    name: 'Building Staff',
+    id: 'building-management',
+    name: 'Building Management',
     description: 'The Building Management Committee manages all operations of the ALSSC, including event bookings, room bookings, meeting bookings, supervision and coordination of front desk and cleaning staff, overseeing cleaning equipment and supplies, IT implementation and maintenance, and volunteer maintenance to ensure ALSSC remains a safe space.',
     category: 'Administration'
   },

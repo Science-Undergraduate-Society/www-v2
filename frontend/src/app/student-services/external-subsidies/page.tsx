@@ -4,7 +4,7 @@ import styles from './externalSubsidies.module.css'
 import { externalGrants } from '@/data/externalGrants'
 import { ExternalGrantKeyword } from '@/lib/types';
 import FrostedCard from '@/components/ui/FrostedCard/FrostedCard'
-import { Search, SlidersHorizontal } from 'lucide-react'
+// import { Search, SlidersHorizontal } from 'lucide-react'
 
 export default function ExternalSubsidies() {
     const [searchTerm, setSearchTerm] = useState('')
@@ -72,7 +72,7 @@ export default function ExternalSubsidies() {
                 </p>
             </FrostedCard>
 
-            <section className={styles.searchbarContainer}>
+            {/* <section className={styles.searchbarContainer}>
                 <div className={styles.searchbar}>
                     <Search/>
                     <input
@@ -99,7 +99,7 @@ export default function ExternalSubsidies() {
                 <button className={styles.searchButton} onClick={handleSearch}>
                     Search
                 </button>
-            </section>
+            </section> */}
 
             <section className={styles.grantsContainer}>
                 {filteredGrants.length > 0 ? (

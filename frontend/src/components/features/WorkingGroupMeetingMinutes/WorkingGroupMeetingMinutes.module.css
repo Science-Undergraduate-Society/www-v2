@@ -1,15 +1,21 @@
 .meetingMinutesTabs {
     display: flex;
+    width: 100%;
 
     li {
+        flex: 1;
+        justify-content: center;
         background: color-mix(in srgb, #e6f5ff, transparent 25%);
         backdrop-filter: blur(20px);
-        border-bottom: none;
-        border-radius: 16px 16px 0 0;
+        border-radius: 10px 10px 0 0;
 
         &.selected {
             background: var(--color-ui-80);
             color: var(--color-ui-10);
+        }
+
+        &:hover:not(.selected) {
+            background: color-mix(in srgb, var(--color-ui-80), transparent 85%);
         }
     }
 }
@@ -18,14 +24,15 @@
 .meetingMinutesDropdownButton,
 .meetingMinutesDropdownPanel li {
     display: flex;
-    padding: 20px clamp(0px, 1vw, 30px);
+    padding: 10px 18px;
     border: 2px solid color-mix(in srgb, var(--color-ui-80), transparent 75%);
     border-bottom: none;
-    font-size: clamp(12px, 1.5vw, 20px);
+    font-size: 15px;
     font-weight: bold;
     text-transform: capitalize;
     align-items: center;
     cursor: pointer;
+    transition: background 0.2s ease;
 }
 
 .meetingMinutesDropdown {
@@ -33,12 +40,12 @@
 
     .meetingMinutesDropdownButton {
         background: var(--color-ui-80);
-        border-radius: 16px 16px 0 0;
+        border-radius: 10px 10px 0 0;
         color: var(--color-ui-10);
 
         .meetingMinutesDropdownIcon {
             position: relative;
-            margin-left: 16px;
+            margin-left: 12px;
             background: var(--color-ui-10);
             text-align: left;
             transform: rotate(-60deg) skewX(-30deg) scale(1,.866) scale(-1);
@@ -47,8 +54,8 @@
             &,
             &::before,
             &::after {
-                width: 8px;
-                height: 8px;
+                width: 7px;
+                height: 7px;
                 border-top-right-radius: 30%;
             }
 
@@ -68,7 +75,7 @@
             }
 
             &.open {
-                transform: rotate(120deg) skewX(-30deg) scale(1, 0.866) scale(-1) translateY(-3px)
+                transform: rotate(120deg) skewX(-30deg) scale(1, 0.866) scale(-1) translateY(-3px);
             }
         }
     }
@@ -82,7 +89,7 @@
 
             &:last-child {
                 border-bottom: 2px solid color-mix(in srgb, var(--color-ui-80), transparent 75%);
-                border-radius: 0 0 16px 16px;
+                border-radius: 0 0 10px 10px;
             }
         }
     }
@@ -90,21 +97,22 @@
 
 .meetingMinutesView {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 100%;
-    padding: 80px clamp(0px, 2vw, 80px);
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    width: 100%;
+    padding: 32px;
     background: var(--color-ui-80);
-    border-radius: 0 16px 16px 16px;
-    place-items: center;
+    border-radius: 0 10px 10px 10px;
+    box-sizing: border-box;
 
     .meetingMinutesButton {
-        width: calc(min(350px, 25vw));
-        padding: 30px clamp(0px, 1vw, 30px);
-        margin: 30px 15px;
-        font-size: clamp(16px, 1.75vw, 24px);
+        width: 100%;
+        padding: 16px 14px;
+        font-size: 14px;
         font-weight: bold;
         text-align: center;
         white-space: normal;
+        line-height: 1.4;
     }
 }
 
@@ -118,11 +126,7 @@
     }
 
     .meetingMinutesView {
-        grid-template-columns: none;
-        padding: 40px 5vw;
-
-        .meetingMinutesButton {
-            width: calc(min(350px, 75vw));
-        }
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        padding: 24px 16px;
     }
 }

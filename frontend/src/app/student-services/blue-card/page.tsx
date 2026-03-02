@@ -34,21 +34,9 @@ export default function BlueCard() {
                                 <h2>Unlock exclusive discounts at restaurants and shops across campus with your Blue Card.</h2>
                                 <a className={styles.signInButton} href='https://campus.hellorubric.com/?tab=memberships&s=10357'>Sign In/Up</a>
                             </div>
-                            <div className={styles.blueCard}> 
-                                <img 
-                                    src="/assets/logos/sus-logo.png" 
-                                    alt="SUS logo" 
-                                    className={styles.logo} 
-                                />
-                                <div>
-                                    <h1>The Blue Card</h1>
-                                    <h2>Science Undergraduate Society</h2>
-                                </div>
-                            </div>
                         </>
                     ) : (
                         <>
-                            {/* Desktop: blueCard first */}
                             <div className={styles.blueCard}> 
                                 <img 
                                     src="/assets/logos/sus-logo.png" 
@@ -63,7 +51,6 @@ export default function BlueCard() {
                             <div className={styles.headerContent}>
                                 <h1>The SUS Blue Card</h1>
                                 <h2>Unlock exclusive discounts at restaurants and shops across campus with your Blue Card.</h2>
-                                <a className={styles.signInButton} href='https://campus.hellorubric.com/?tab=memberships&s=10357'>Sign In/Up</a>
                             </div>
                         </>
                     )}
@@ -116,18 +103,53 @@ export default function BlueCard() {
                 </div>
             </section>
 
+            <section className={styles.howToJoinSection}>
+                <h1 className={styles.sectionTitle}>How to Become a SUS Blue Card Member?</h1>
+                <div className={styles.stepsContainer}>
+                    <div className={styles.step}>
+                        <div className={styles.stepNumber}>1</div>
+                        <div className={styles.stepContent}>
+                            <h3>Join SUS on Bounce</h3>
+                            <p>Become a member of the Science Undergraduate Society via the Bounce platform.</p>
+                            <a href="https://www.bouncelife.com/organizations/654c33a2dffc1792fff9c8c5" target="_blank" rel="noopener noreferrer" className={styles.stepLink}>Join on Bounce →</a>
+                        </div>
+                    </div>
+                    <div className={styles.step}>
+                        <div className={styles.stepNumber}>2</div>
+                        <div className={styles.stepContent}>
+                            <h3>Open the Memberships Tab</h3>
+                            <p>Once logged in, you&apos;ll see the top dashboard. Click on <strong>&quot;Memberships&quot;</strong> to find the SUS Blue Card membership.</p>
+                        </div>
+                    </div>
+                    <div className={styles.step}>
+                        <div className={styles.stepNumber}>3</div>
+                        <div className={styles.stepContent}>
+                            <h3>Request a Membership</h3>
+                            <p>Request a membership to join the Blue Card program!</p>
+                        </div>
+                    </div>
+                    <div className={styles.step}>
+                        <div className={styles.stepNumber}>4</div>
+                        <div className={styles.stepContent}>
+                            <h3>Enjoy Your Benefits</h3>
+                            <p>Enjoy all the amazing SUS Blue Card benefits at our partner restaurants and shops!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section className={styles.sponsorSection}>
                 <h1>Our Partners</h1>
                 <div className={styles.sponsorGrid}>
                     {blueCardPartners.map((item, index) => (
-                        <div key={index} className={styles.sponsorIconWrapper}>
+                        <a key={index} href={item.website} target="_blank" rel="noopener noreferrer" className={styles.sponsorIconWrapper}>
                             <img
                                 src={item.logoSrc}
                                 alt={`${item.name} logo`}
                                 className={styles.sponsorIcon}
                             />
                             <span className={styles.tooltiptext}>{item.description}</span>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </section>

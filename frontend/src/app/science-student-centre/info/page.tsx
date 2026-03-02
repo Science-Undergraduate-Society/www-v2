@@ -12,6 +12,9 @@ export default function ScienceStudentCentreInfo() {
                 <h1>Abdul Ladha Science Student Centre (ALSSC)</h1>
             </BannerHeader>
             <FrostedCard className={styles.openingHours}>
+                <p className={styles.bookingNote}>
+                    📅 Looking to book a room or event? Check out our <Link className={styles.bookingLink} href="/science-student-centre/room-bookings">room booking</Link> and <Link className={styles.bookingLink} href="/science-student-centre/event-bookings">events booking page</Link>.
+                </p>
                 <div className={styles.hours}>
                     <h1>Opening Hours</h1>
                     <div>
@@ -35,6 +38,7 @@ export default function ScienceStudentCentreInfo() {
                             <li>open during the first and second terms of the winter session only</li>
                             <li>closed during the summer academic terms</li>
                             <li>closed during all university closures (including, but not limited to reading break, Christmas holidays, and any holidays)</li>
+                            <li>opening during reading break is contingent on VP Administration and Building Management availability</li>
                         </ul>
                     </div>
                 </div>

@@ -15,12 +15,12 @@ export default function GrantsAndSubsidies() {
             <section className={styles.applicationInformation}>
                 <FrostedCard className={styles.applicationInformationCard}>
                     <div className={styles.header}>
-                        <h1>Application Information</h1>
-                        <div className={styles.status}>OPENING SOON</div>
+                        <h2>Application Information</h2>
+                        <div className={styles.status}>OPEN</div>
                     </div>
                     <div className={styles.description}>
                         <p>
-                            <b>Applications for 25/26 Grant and Subsidies will open in <span className={styles.deadline}>Early September 2025!</span></b>
+                            <b>Applications for 25/26 Grant and Subsidies are open!</b>
                             <br /><br />
                             Applications for Grants & Subsidies will open on <b>September 15, 2025</b> and will be reviewed on a first-submitted, first-reviewed basis.
                             SUS will be accepting applications until <b>April 10, 2026, or until funds run out. </b>
@@ -30,18 +30,16 @@ export default function GrantsAndSubsidies() {
                         </p>
                     </div>
                     <div className={styles.description}>
-                        <h1>TO APPLY:</h1>
+                        <h2>TO APPLY:</h2>
                         <p>
                             Please submit your application package by emailing <a href="mailto:vpfinance@sus.ubc.ca">vpfinance@sus.ubc.ca</a> and cc-ing <a href="mailto:">avp.finance@sus.ubc.ca</a>.
                             You will receive a confirmation email upon receipt of your application.
                         </p>
                     </div>
                     <div className={styles.description}>
-                        <h1>NOTE:</h1>
+                        <h2>NOTE:</h2>
                         <p>
                             All grant & subsidy applications have a checklist at the bottom of the document which details the required documentation that is necessary to be considered for a given grant/subsidy.
-                            Best of luck to all applicants!
-                            <br /><br />
                             Best of luck to all applicants!
                         </p>
                     </div>
@@ -51,16 +49,16 @@ export default function GrantsAndSubsidies() {
                 <h1>Grants</h1>
                 <div className={styles.grantsButtons}>
                     <GlassButton
-                        href="https://drive.google.com/open?id=10IOyK3iQT9NZMmGeMr5C6I6umKnYtuP7"
+                        href="https://drive.google.com/drive/folders/1d0mxkbiAJdmBTKzFV6f1ivdidA06xVzB"
                         className={styles.button}
                     >
-                        Grants Information 24/25
+                        Grants Information 25/26
                     </GlassButton>
                     <GlassButton
-                        href="https://drive.google.com/open?id=1qJldIJrrRcPXTXhdPitiryMFsFKS34Y6"
+                        href="https://drive.google.com/drive/folders/1PdZWwoA1Uo-bHLF-5V6cS8mTHfREl1X6"
                         className={styles.button}
                     >
-                        Grants Rubric 24/25
+                        Grants Rubrics 25/26
                     </GlassButton>
                 </div>
                 <div className={styles.grantsList}>
@@ -78,10 +76,16 @@ export default function GrantsAndSubsidies() {
                 <h1>Subsidies</h1>
                 <div className={styles.subsidiesButtons}>
                     <BlueButton
-                        href='https://drive.google.com/open?id=1Wh8PZTiKSlZcphLSQyc1oEbir2ag-JuB'
+                        href='https://drive.google.com/drive/folders/1J3bbOK8aKQxwcRqgaws7Oy0JFecNrBQh'
                         className={styles.button}
                     >
-                        Subsidies Information 24/25
+                        Subsidies Information 25/26
+                    </BlueButton>
+                    <BlueButton
+                        href='https://ubc.ca1.qualtrics.com/jfe/form/SV_8H3fBJPZNU0GTFc'
+                        className={styles.button}
+                    >
+                        Subsidy Application Form
                     </BlueButton>
                 </div>
                 <div className={styles.subsidiesList}>

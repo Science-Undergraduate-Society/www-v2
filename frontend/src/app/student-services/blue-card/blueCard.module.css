@@ -71,7 +71,7 @@
 
 .blueCard {
     background: var(--color-ui-80);
-    opacity: 0.81;
+    opacity: 0.95;
     color: white;
     display: flex;
     flex-direction: column;
@@ -194,6 +194,79 @@
     }
 }
 
+.howToJoinSection {
+    background-color: color-mix(in srgb, var(--color-ui-80), transparent 95%);
+    border-radius: 20px;
+    margin: 1rem 5%;
+    padding: 3rem 4rem !important;
+}
+
+.stepsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 2rem auto 0;
+    width: 100%;
+}
+
+.step {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: var(--color-ui-10);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.stepNumber {
+    background: var(--color-ui-80);
+    color: var(--color-ui-10);
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 50%;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stepContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    p {
+        font-size: var(--font-size-p);
+        line-height: 1.5;
+        margin: 0;
+        opacity: 0.85;
+    }
+}
+
+.stepLink {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--color-ui-60);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: underline;
+}
+
+.stepLink:hover {
+    opacity: 0.75;
+}
+
 .sponsorSection {
   display: flex;
   flex-direction: column;
@@ -295,6 +368,16 @@
 }
 
 @media (max-width: 480px) {
+
+    .howToJoinSection {
+        padding: 2rem 1.5rem !important;
+        margin: 1rem 0;
+        border-radius: 0;
+    }
+
+    .step {
+        padding: 1rem 1.25rem;
+    }
 
     .pageHeaderContainer {
         flex-direction: column;

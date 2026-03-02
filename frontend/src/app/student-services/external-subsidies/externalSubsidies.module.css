@@ -8,6 +8,9 @@
     color: var(--color-ui-100);
     padding: 2rem;
     margin: 0 10% 0 10%;
+    p {
+        font-size: var(--font-size-p)
+    }    
     font-size: 24px;
 
     em {

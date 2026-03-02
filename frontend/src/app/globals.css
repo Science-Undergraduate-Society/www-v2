@@ -19,6 +19,17 @@
   --color-ui-60: #0173be;
   --color-ui-80: #222755;
   --color-ui-100: #000000;
+
+  --font-size-h1: 52px;
+  --font-size-h2: 32px;
+  --font-size-h3: 28px;
+  --font-size-p: 20px;
+}
+
+@media (max-width: 768px) {
+    :root {
+      --font-size-h1: 44px;
+    }
 }
 
 html,
@@ -50,7 +61,6 @@ body {
     background: url('/assets/backgrounds/background-stem-blue-reverse.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    filter: blur(2px);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - min(11vw, 175px)));
   }
 
@@ -61,12 +71,12 @@ body {
   }
 
   h1 {
-    font-size: 64px;
+    font-size: var(--font-size-h1);
     font-weight: bold;
   }
 
   h2 {
-    font-size: 40px;
+    font-size: var(--font-size-h2);
     font-weight: normal;
   }
 }

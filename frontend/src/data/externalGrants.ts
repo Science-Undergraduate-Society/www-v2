@@ -7,6 +7,7 @@ export const externalGrants: ExternalGrant[] = [
     deadline: "at least 3 weeks prior to project start date",
     keywords: ["#Initiatives"],
     contact: "fundsandgrants@ams.ubc.ca",
+    link: "https://www.ams.ubc.ca/opportunities/funds-grants/funds-grants/student-initiatives-fund-application/",
     eligiblityBlurb: [
       "For UBC Students. Projects MUST NOT be affiliated with any UBC club or subsidiary (ex: SUS). For initiatives that benefit UBC students, and/or AMS/UBC as a whole.",],
     amount: [
