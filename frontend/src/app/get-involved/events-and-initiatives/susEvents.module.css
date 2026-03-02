@@ -5,7 +5,7 @@
     background-position: center -4rem;
     overflow: hidden;
     padding-bottom: 20vh;
-   height: 60vh;
+    height: 60vh;
 }
 
 .heroSection::before {
@@ -45,7 +45,7 @@
     top: calc(100% - 65vh);
     left: 50%;
     transform: translateX(-50%);
-    background-color: color-mix(in srgb, #e6f5ff, transparent 10%);
+    background-color: color-mix(in srgb, #e6f5ff, transparent 0%);
     border-radius: 20px;
     color: var(--color-ui-100);
     width: 80vw;
