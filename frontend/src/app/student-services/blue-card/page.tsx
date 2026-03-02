@@ -51,7 +51,6 @@ export default function BlueCard() {
                             <div className={styles.headerContent}>
                                 <h1>The SUS Blue Card</h1>
                                 <h2>Unlock exclusive discounts at restaurants and shops across campus with your Blue Card.</h2>
-                                <a className={styles.signInButton} href='https://campus.hellorubric.com/?tab=memberships&s=10357'>Sign In/Up</a>
                             </div>
                         </>
                     )}
