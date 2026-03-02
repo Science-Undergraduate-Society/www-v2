@@ -71,7 +71,7 @@
 
 .blueCard {
     background: var(--color-ui-80);
-    opacity: 0.81;
+    opacity: 0.95;
     color: white;
     display: flex;
     flex-direction: column;
