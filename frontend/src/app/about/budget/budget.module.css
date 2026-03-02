@@ -5,31 +5,15 @@
         display: flex;
         flex-direction: column;
     }
+
     h1 {
-        font-size: 40px;
+        font-size: var(--font-size-h1);
         font-weight: bold;
     }
 
     p {
-        font-size: 24px;
-    }
-
-    @media (max-width: 768px) {
-        h1 {
-            font-size: 32px;
-        }
-        p {
-            font-size: 20px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        h1 {
-            font-size: 28px;
-        }
-        p {
-            font-size: 18px;
-        }
+        font-size: var(--font-size-p);
+        line-height: 1.6;
     }
 }
 
@@ -53,11 +37,10 @@
         padding: 50px 20px;
         min-height: 100px;
         height: 150px;
-
     }
 }
 
-.spacer{
+.spacer {
     height: 100px;
 
     @media (max-width: 480px) {
@@ -76,19 +59,11 @@
         display: flex;
         flex-direction: row;
         align-items: start;
-        gap: 25px;
+        gap: 16px;
     }
 
     @media (max-width: 768px) {
         padding: 80px 30px;
-
-        h1 {
-            font-size: 32px;
-        }
-
-        p {
-            font-size: 20px;
-        }
 
         .buttonsContainer {
             flex-direction: column;
@@ -98,14 +73,6 @@
 
     @media (max-width: 480px) {
         padding: 60px 20px;
-
-        h1 {
-            font-size: 28px;
-        }
-
-        p {
-            font-size: 18px;
-        }
     }
 }
 
@@ -118,18 +85,10 @@
 
     @media (max-width: 768px) {
         padding: 80px 30px;
-
-        h1 {
-            font-size: 32px;
-        }
     }
 
     @media (max-width: 480px) {
         padding: 60px 20px;
-
-        h1 {
-            font-size: 28px;
-        }
     }
 }
 
@@ -139,46 +98,27 @@
     align-items: start;
     justify-content: center;
     width: 80%;
-    gap: 40px;
+    gap: 28px;
 
     @media (max-width: 768px) {
         width: 100%;
-        gap: 30px;
-    }
-
-    @media (max-width: 480px) {
-        width: 100%;
-        gap: 25px;
+        gap: 20px;
     }
 }
 
 .boldButton {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 15px;
     text-align: center;
-
-    @media (max-width: 768px) {
-        font-size: 20px;
-    }
-
-    @media (max-width: 480px) {
-        font-size: 18px;
-    }
+    padding: 12px 24px;
 }
 
 .emphasizedButton {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 15px;
     text-align: center;
     text-decoration: underline;
-
-    @media (max-width: 768px) {
-        font-size: 20px;
-    }
-
-    @media (max-width: 480px) {
-        font-size: 18px;
-    }
+    padding: 12px 24px;
 }
 
 .banner {
@@ -192,40 +132,20 @@
     .buttonsContainer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 32px;
     }
 
     @media (max-width: 768px) {
         padding: 80px 30px;
         min-height: auto;
 
-        h1 {
-            font-size: 32px;
-        }
-
-        p {
-            font-size: 20px;
-        }
-
         .buttonsContainer {
             grid-template-columns: 1fr;
-            gap: 15px;
+            gap: 12px;
         }
     }
 
     @media (max-width: 480px) {
         padding: 60px 20px;
-
-        h1 {
-            font-size: 28px;
-        }
-
-        p {
-            font-size: 18px;
-        }
-
-        .buttonsContainer {
-            gap: 12px;
-        }
     }
 }

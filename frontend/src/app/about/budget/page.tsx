@@ -59,10 +59,10 @@ export default function Budget () {
                     <p>Below are links to all SUS Budget presentations made during council throughout the year.</p>
                     <div className={styles.buttonsContainer}>
                         {glassButtonLinks.map((l) => (
-                        <GlassButton key={l.name} className={styles.boldButton} href={l.link}>
-                            {l.name}
-                        </GlassButton>
-                    ))}
+                            <GlassButton key={l.name} className={styles.boldButton} href={l.link}>
+                                {l.name}
+                            </GlassButton>
+                        ))}
                     </div>
                 </div>
                 
