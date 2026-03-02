@@ -43,7 +43,7 @@ export default function CouncilAndProcedures() {
                     <br /><br />
                     Councilors meet additionally with SUS Executives in 5 council committees: Academic Affairs, External Relations, Student Life & Events, President’s Advisory, and the Joint Policy and Advocacy.  
                     <br /><br />
-                    All members of the Undergraduate Science Community are welcome to attend these monthly Council Meetings as members at large.
+                    All UBC science students are welcome to attend these monthly Council Meetings as members at large.
                     Please email our AVP Administrations, Gloria and Alyssa, through <a href="mailto:avp.administration@sus.ubc.ca">avp.administration@sus.ubc.ca</a> to notify us of your intent to attend.
                     For any additional questions, feel free to also contact our AVP Administrations!
                 </p>
