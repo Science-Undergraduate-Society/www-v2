@@ -37,7 +37,6 @@ export default function BlueCard() {
                         </>
                     ) : (
                         <>
-                            {/* Desktop: blueCard first */}
                             <div className={styles.blueCard}> 
                                 <img 
                                     src="/assets/logos/sus-logo.png" 
@@ -109,14 +108,14 @@ export default function BlueCard() {
                 <h1>Our Partners</h1>
                 <div className={styles.sponsorGrid}>
                     {blueCardPartners.map((item, index) => (
-                        <div key={index} className={styles.sponsorIconWrapper}>
+                        <a key={index} href={item.website} target="_blank" rel="noopener noreferrer" className={styles.sponsorIconWrapper}>
                             <img
                                 src={item.logoSrc}
                                 alt={`${item.name} logo`}
                                 className={styles.sponsorIcon}
                             />
                             <span className={styles.tooltiptext}>{item.description}</span>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </section>
