@@ -33,6 +33,85 @@
         font-size: 24px;
     }
 
+    .hoursCard {
+        padding: 40px 60px;
+        margin-top: 20px;
+    }
+
+    .hoursContent {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        h2 {
+            font-size: var(--font-size-h2);
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+    }
+
+    .hoursText {
+        font-size: var(--font-size-p);
+        padding-bottom: 8px !important;
+    }
+
+    .calendarNote {
+        font-size: var(--font-size-p);
+        opacity: 0.8;
+        padding-bottom: 0 !important;
+    }
+
+    .dbLink {
+        display: inline-block;
+        white-space: nowrap;
+        padding: 12px 28px;
+        background: var(--color-ui-80);
+        color: var(--color-ui-10);
+        border-radius: 12px;
+        font-size: var(--font-size-p);
+        font-weight: 600;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+        flex-shrink: 0;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .photoGrid {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: auto;
+        gap: 12px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        align-items: stretch;
+
+        img {
+            width: 800%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
+        }
+    }
+
+    .photoHorizontal {
+        aspect-ratio: 10 / 9;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .photoVertical {
+        aspect-ratio: 3 / 4;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
     .stats {
         display: flex;
         flex-wrap: wrap;
@@ -58,6 +137,32 @@
                 font-weight: bold;
                 padding-top: 30px;
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        .hoursCard {
+            padding: 30px 24px;
+        }
+
+        .hoursContent {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .dbLink {
+            width: 100%;
+            text-align: center;
+        }
+
+        .photoGrid {
+            grid-template-columns: 1fr;
+        }
+
+        .photoVertical {
+            aspect-ratio: 4 / 3;
         }
     }
 }
