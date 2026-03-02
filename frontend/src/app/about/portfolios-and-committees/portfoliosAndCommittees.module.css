@@ -5,7 +5,7 @@
 .mainContent {
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 7rem;
+  margin-top: 12rem;
   padding: 4rem 2rem;
 }
 
@@ -194,11 +194,10 @@
 }
 
 .adHocNote {
-  text-align: right;
+  text-align: center;
   color: #718096;
   font-size: 0.9rem;
   font-style: italic;
-  margin-top: 2rem;
 }
 
 /* Responsive Design */

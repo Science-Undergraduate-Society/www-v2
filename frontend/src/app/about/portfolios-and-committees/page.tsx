@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import styles from './portfoliosAndCommittees.module.css'
 import { committees, Committee } from '@/data/committees'
-import Link from 'next/link'
 import BannerHeader from '@/components/ui/BannerHeader/BannerHeader'
 
 const portfolioDescriptions: Record<string, string> = {
@@ -68,6 +67,9 @@ export default function PortfoliosAndCommittees() {
 
             {/* Main Content */}
             <div className={styles.mainContent}>
+                {/* Ad-hoc Note */}
+                <p className={styles.adHocNote}>*Indicate an ad-hoc committee</p>
+
                 <h2 className={styles.organizationTitle}>The Science Undergraduate Society</h2>
 
                 {/* Organizational Chart */}
@@ -168,9 +170,6 @@ export default function PortfoliosAndCommittees() {
                         </div>
                     </div>
                 </div>
-
-                {/* Ad-hoc Note */}
-                <p className={styles.adHocNote}>*Indicate an ad-hoc committee</p>
             </div>
         </div>
     )
