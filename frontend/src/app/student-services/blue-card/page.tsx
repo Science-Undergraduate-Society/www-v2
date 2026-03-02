@@ -104,6 +104,41 @@ export default function BlueCard() {
                 </div>
             </section>
 
+            <section className={styles.howToJoinSection}>
+                <h1 className={styles.sectionTitle}>How to Become a SUS Blue Card Member?</h1>
+                <div className={styles.stepsContainer}>
+                    <div className={styles.step}>
+                        <div className={styles.stepNumber}>1</div>
+                        <div className={styles.stepContent}>
+                            <h3>Join SUS on Bounce</h3>
+                            <p>Become a member of the Science Undergraduate Society via the Bounce platform.</p>
+                            <a href="https://www.bouncelife.com/organizations/654c33a2dffc1792fff9c8c5" target="_blank" rel="noopener noreferrer" className={styles.stepLink}>Join on Bounce →</a>
+                        </div>
+                    </div>
+                    <div className={styles.step}>
+                        <div className={styles.stepNumber}>2</div>
+                        <div className={styles.stepContent}>
+                            <h3>Open the Memberships Tab</h3>
+                            <p>Once logged in, you&apos;ll see the top dashboard. Click on <strong>&quot;Memberships&quot;</strong> to find the SUS Blue Card membership.</p>
+                        </div>
+                    </div>
+                    <div className={styles.step}>
+                        <div className={styles.stepNumber}>3</div>
+                        <div className={styles.stepContent}>
+                            <h3>Request a Membership</h3>
+                            <p>Request a membership to join the Blue Card program!</p>
+                        </div>
+                    </div>
+                    <div className={styles.step}>
+                        <div className={styles.stepNumber}>4</div>
+                        <div className={styles.stepContent}>
+                            <h3>Enjoy Your Benefits</h3>
+                            <p>Enjoy all the amazing SUS Blue Card benefits at our partner restaurants and shops!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section className={styles.sponsorSection}>
                 <h1>Our Partners</h1>
                 <div className={styles.sponsorGrid}>
