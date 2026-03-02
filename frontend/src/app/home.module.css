@@ -13,6 +13,8 @@
 }
 
 .header {
+    position: relative;
+    overflow: hidden;
     padding-top: 8rem;
     img {
         width: 70%;
