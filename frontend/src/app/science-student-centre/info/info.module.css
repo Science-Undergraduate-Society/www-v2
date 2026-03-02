@@ -1,6 +1,6 @@
 .scienceStudentCentreInfo {
     p {
-        font-size: 24px;
+        font-size: var(--font-size-p);
         color: var(--color-ui-80);
     }
 
@@ -11,13 +11,21 @@
         padding: 36px;
         margin: 0 10%;
 
+        .bookingNote {
+            width: 100%;
+            font-size: var(--font-size-p);
+            color: var(--color-ui-60);
+            font-style: italic;
+            padding: 0;
+        }
+
         div {
             flex: 1;
         }
 
         h1 {
-            margin-bottom: 20px;
-            font-size: 40px;
+            margin-bottom: 16px;
+            font-size: var(--font-size-h2);
             font-weight: bold;
             color: var(--color-ui-60);
         }
@@ -45,15 +53,15 @@
         .hoursNote {
             display: flex;
             flex-direction: column;
-            gap: 36px;
+            gap: 24px;
 
             p {
-                font-size: 20px;
+                font-size: var(--font-size-p);
             }
 
             li {
                 margin-left: 30px;
-                font-size: 20px;
+                font-size: var(--font-size-p);
                 color: var(--color-ui-80);
                 list-style-type: disc;
             }
@@ -72,7 +80,7 @@
         }
 
         h1 {
-            font-size: 40px;
+            font-size: var(--font-size-h2);
             font-weight: bold;
         }
 
@@ -87,10 +95,10 @@
 
             a {
                 width: fit-content;
-                padding: 12px 42px;
+                padding: 10px 28px;
                 background: var(--color-ui-10);
                 border-radius: 16px;
-                font-size: 20px;
+                font-size: var(--font-size-p);
                 color: var(--color-ui-80);
                 transition: all 0.1s ease;
 
@@ -134,7 +142,7 @@
             }
 
             p {
-                font-size: 20px;
+                font-size: var(--font-size-p);
                 font-weight: bold;
                 color: var(--color-ui-60);
             }
@@ -155,29 +163,29 @@
         margin-bottom: 72px;
 
         h1 {
-            font-size: 40px;
+            font-size: var(--font-size-h2);
             font-weight: bold;
             color: var(--color-ui-80);
         }
 
         h2 {
-            font-size: 24px;
+            font-size: var(--font-size-p);
             font-weight: bold;
             color: var(--color-ui-80);
         }
 
         p {
-            font-size: 20px;
+            font-size: var(--font-size-p);
         }
 
         b {
-            font-size: 20px;
+            font-size: var(--font-size-p);
             color: var(--color-ui-80);
         }
 
         li {
             margin-left: 30px;
-            font-size: 20px;
+            font-size: var(--font-size-p);
             color: var(--color-ui-80);
             list-style-type: disc;
         }
@@ -196,4 +204,8 @@
             }
         }
     }
+}
+
+.bookingLink{
+    text-decoration: underline;
 }
