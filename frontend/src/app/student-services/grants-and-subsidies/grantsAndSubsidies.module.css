@@ -100,6 +100,17 @@
             height: fit-content;
             max-width: 500px;
             box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+
+            .buttons {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                .button {
+                    font-size: var(--font-size-p);
+                    font-weight: bold;
+                }
+            }
         }
 
         h1 {
@@ -115,7 +126,7 @@
         }
 
         p {
-            padding: 20px 0 45px 0;
+            padding: 20px 0 40px 0;
             font-size: var(--font-size-p);
             color: var(--color-ui-100);
         }
@@ -140,7 +151,7 @@
         height: 2000px;
 
         .card {
-            padding: 40px 50px 80px;
+            padding: 40px 50px 50px;
         }
     }
 }

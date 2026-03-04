@@ -52,13 +52,13 @@ export default function GrantsAndSubsidies() {
                         href="https://drive.google.com/drive/folders/1d0mxkbiAJdmBTKzFV6f1ivdidA06xVzB"
                         className={styles.button}
                     >
-                        Grants Information 25/26
+                        Grant Packages 25/26
                     </GlassButton>
                     <GlassButton
                         href="https://drive.google.com/drive/folders/1PdZWwoA1Uo-bHLF-5V6cS8mTHfREl1X6"
                         className={styles.button}
                     >
-                        Grants Rubrics 25/26
+                        Grant Rubrics 25/26
                     </GlassButton>
                 </div>
                 <div className={styles.grantsList}>
@@ -67,7 +67,20 @@ export default function GrantsAndSubsidies() {
                             <h1>{grant.title}</h1>
                             <h2>For {grant.eligibleRecipient.join(' & ')}</h2>
                             <p>{grant.description}</p>
-                            <h2><a href={grant.rubric} target="_blank">Adjudication Rubric</a></h2>
+                            <div className={styles.buttons}>
+                                <BlueButton
+                                    href={grant.applicationLink}
+                                    className={styles.button}
+                                >
+                                    Application
+                                </BlueButton>
+                                <BlueButton
+                                    href={grant.rubricLink}
+                                    className={styles.button}
+                                >
+                                    Rubric
+                                </BlueButton>
+                            </div>
                         </FrostedCard>
                     ))}
                 </div>
@@ -79,14 +92,14 @@ export default function GrantsAndSubsidies() {
                         href='https://drive.google.com/drive/folders/1J3bbOK8aKQxwcRqgaws7Oy0JFecNrBQh'
                         className={styles.button}
                     >
-                        Subsidies Information 25/26
+                        Subsidy Packages 25/26
                     </BlueButton>
-                    <BlueButton
+                    {/* <BlueButton
                         href='https://ubc.ca1.qualtrics.com/jfe/form/SV_8H3fBJPZNU0GTFc'
                         className={styles.button}
                     >
                         Subsidy Application Form
-                    </BlueButton>
+                    </BlueButton> */}
                 </div>
                 <div className={styles.subsidiesList}>
                     {subsidies.map((subsidy, index) => (
@@ -94,6 +107,14 @@ export default function GrantsAndSubsidies() {
                             <h1>{subsidy.title}</h1>
                             <h2>For {subsidy.eligibleRecipient.join(' & ')}</h2>
                             <p>{subsidy.description}</p>
+                            <div className={styles.buttons}>
+                                <BlueButton
+                                    href={subsidy.applicationLink}
+                                    className={styles.button}
+                                >
+                                    Application
+                                </BlueButton>
+                            </div>
                         </FrostedCard>
                     ))}
                 </div>
