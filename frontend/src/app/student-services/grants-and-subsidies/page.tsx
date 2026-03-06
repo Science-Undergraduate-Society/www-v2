@@ -69,10 +69,10 @@ export default function GrantsAndSubsidies() {
                             <p>{grant.description}</p>
                             <div className={styles.buttons}>
                                 <BlueButton
-                                    href={grant.applicationLink}
+                                    href={grant.packageLink}
                                     className={styles.button}
                                 >
-                                    Application
+                                    Package
                                 </BlueButton>
                                 <BlueButton
                                     href={grant.rubricLink}
@@ -89,10 +89,16 @@ export default function GrantsAndSubsidies() {
                 <h1>Subsidies</h1>
                 <div className={styles.subsidiesButtons}>
                     <BlueButton
-                        href='https://drive.google.com/drive/folders/1J3bbOK8aKQxwcRqgaws7Oy0JFecNrBQh'
+                        href="https://drive.google.com/drive/folders/1J3bbOK8aKQxwcRqgaws7Oy0JFecNrBQh"
                         className={styles.button}
                     >
                         Subsidy Packages 25/26
+                    </BlueButton>
+                    <BlueButton
+                        href="https://docs.google.com/document/d/1tlcYoj6fslTnWf3w9ZPou-ml844z5wZsYedCVgeYyLw"
+                        className={styles.button}
+                    >
+                        Subsidy Guidelines 25/26
                     </BlueButton>
                     {/* <BlueButton
                         href='https://ubc.ca1.qualtrics.com/jfe/form/SV_8H3fBJPZNU0GTFc'
@@ -109,10 +115,10 @@ export default function GrantsAndSubsidies() {
                             <p>{subsidy.description}</p>
                             <div className={styles.buttons}>
                                 <BlueButton
-                                    href={subsidy.applicationLink}
+                                    href={subsidy.packageLink}
                                     className={styles.button}
                                 >
-                                    Application
+                                    Package
                                 </BlueButton>
                             </div>
                         </FrostedCard>

@@ -108,7 +108,7 @@ export type FundingType = 'Grant' | 'Subsidy';
 export interface FundingOpportunity {
     title: string;
     type: FundingType;
-    applicationLink: string;
+    packageLink: string;
     rubricLink?: string;
     eligibleRecipient: FundingRecipient[];
     description: string;
