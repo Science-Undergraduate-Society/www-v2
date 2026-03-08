@@ -63,20 +63,6 @@ export const featuredEvents: FeaturedEventsInitiative[] = [
   },
   {
     isEvent: true,
-    title: "Sustainability Week",
-    dates: "March 2 – 6",
-    description: "A week of sustainability-themed events including an iREACH lab tour, volunteering at the UBC Farm with lunch, plant pot painting, and a beach cleanup! Check out the SUS Instagram for more details!",
-    pictures: [],
-    links: [
-      {
-        label: "Event RSVP",
-        description: "Sustainability Week RSVP via Instagram linktree",
-        url: "https://linktr.ee/susubc"
-      }
-    ]
-  },
-  {
-    isEvent: true,
     title: "SUS Research Exchange",
     dates: "March 14, 10:00 AM – 4:00 PM",
     description: "Last call to sign up for the SUS Research Exchange! Don't miss this chance to develop your research skills through case competitions, presentations and networking. RSVP by February 24th at midnight.",
@@ -86,6 +72,20 @@ export const featuredEvents: FeaturedEventsInitiative[] = [
         label: "Event RSVP",
         description: "SUS Research Exchange RSVP",
         url: "https://ubc.ca1.qualtrics.com/jfe/form/SV_4MzlnG0bBGaGDhc"
+      }
+    ]
+  },
+  {
+    isEvent: true,
+    title: "EDI Community Survey",
+    dates: "March 1 - 31",
+    description: "The SUS EDI team has launched a community reflection survey to better understand how our initiatives and events have felt this year. Fill out the survey for a chance to win a $20 Blue Chip gift card!",
+    pictures: [],
+    links: [
+      {
+        label: "Survey Link",
+        description: "EDI Community Survey Link",
+        url: "https://qualtricsxmg7mjmcft5.qualtrics.com/jfe/form/SV_elCJRUAXO1vszS6"
       }
     ]
   },
