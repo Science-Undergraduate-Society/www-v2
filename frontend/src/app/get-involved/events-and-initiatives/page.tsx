@@ -1,14 +1,15 @@
 import styles from './susEvents.module.css'
 import { FeaturedEventsInitiative } from '@/lib/types';
-import { featuredEvents } from '@/data/getInvolved';
+import { getApprovedEvents } from '@/lib/events';
 import BannerHeader from '@/components/ui/BannerHeader/BannerHeader';
 import SusCalendar from '@/components/features/Calendar/Calendar';
 
-export default function SusEvents() {
+export default async function SusEvents() {
+    const featuredEvents = await getApprovedEvents();
     const currentMonth = "March";
-    const currentEvents = featuredEvents.filter((event, idx)=> event.isEvent && event.dates.includes(currentMonth))
-    const futureEvents = featuredEvents.filter((event, idx) => event.isEvent && !event.dates.includes(currentMonth))
-    const initiatives = featuredEvents.filter((event, idx) => !event.isEvent)
+    const currentEvents = featuredEvents.filter((event) => event.isEvent && event.dates.includes(currentMonth))
+    const futureEvents = featuredEvents.filter((event) => event.isEvent && !event.dates.includes(currentMonth))
+    const initiatives = featuredEvents.filter((event) => !event.isEvent)
 
     function FeaturedEventItem({ feature }: { feature: FeaturedEventsInitiative }) {
         const hasDate = feature.dates.length > 0
