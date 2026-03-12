@@ -1,0 +1,507 @@
+.container {
+    font-family: 'Figtree', Helvetica, sans-serif;
+    min-height: 100vh;
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Header Styles */
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    
+    h1 {
+        margin: 0;
+    }
+}
+
+.statusBadge {
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 24px;
+    z-index: 2;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.notice {
+    font-size: 16px !important;
+    color: #6b7280 !important;
+    font-style: italic;
+}
+
+/* Access Card Section */
+.access {
+    padding: 0 5% 100px;
+
+    .accessCard {
+        padding: 50px 75px;
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+    }
+}
+
+.docList {
+    margin: 12px 0 0 24px;
+    padding: 0;
+    list-style: disc;
+
+    li {
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    a {
+        color: #0173BE;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Documentation Section */
+.join_steps {
+    padding: 60px 5%;
+    margin-bottom: 0;
+    background-color: white;
+
+    h2 {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        color: #222755;
+        margin-bottom: 12px;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 40px;
+        font-size: 18px;
+        color: #374151;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    .steps_container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        gap: 40px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .steps_individual_step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 220px;
+        
+        .stepNumber {
+            color: #0173BE;
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0 0 12px 0;
+        }
+
+        a {
+            color: #0173BE;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            line-height: 1.4;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/* Timeline Section */
+.societySection {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 80px 5%;
+    color: white;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: white;
+    }
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 900px;
+}
+
+.timelineItem {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 17px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    a {
+        color: #93c5fd;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.timelineHighlight {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 18px 16px;
+    margin: 4px 0;
+    border-bottom: none !important;
+}
+
+.timelineDate {
+    font-weight: 700;
+    white-space: nowrap;
+    color: white;
+    min-width: 280px;
+
+    @media (max-width: 768px) {
+        min-width: unset;
+        white-space: normal;
+    }
+}
+
+.timelineDivider {
+    color: rgba(255, 255, 255, 0.5);
+    flex-shrink: 0;
+}
+
+/* Contact Section */
+.councilSection {
+    padding: 80px 5%;
+    background-color: white;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        color: #222755;
+    }
+}
+
+.councilText {
+    max-width: 700px;
+
+    p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #374151;
+    }
+
+    a {
+        color: #0173BE;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Candidates Section */
+.candidatesSection {
+    padding: 80px 5%;
+    background-color: #f9fafb;
+
+    > h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 48px;
+        color: #222755;
+    }
+}
+
+.positionGroup {
+    margin-bottom: 56px;
+}
+
+.positionGroupTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0173BE;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0173BE;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.candidatesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+/* Candidate Card */
+.candidateCard {
+    background: color-mix(in srgb, #e6f5ff, transparent 20%);
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 4px 24px 0px rgba(162, 162, 162, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0px 8px 32px 0px rgba(1, 115, 190, 0.15);
+    }
+}
+
+.candidateImageWrapper {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.candidatePlaceholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #dbeafe 0%, #e2e8f0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.candidatePhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.candidateBody {
+    padding: 20px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.candidateName {
+    font-size: 19px;
+    font-weight: 700;
+    color: #222755;
+    margin: 0 0 8px;
+}
+
+.candidateLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+.candidateSocialLink {
+    color: #0173BE;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.candidateBlurb {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #374151;
+    white-space: pre-line;
+    margin: 0;
+    flex: 1;
+}
+
+.blurbClamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.readMoreBtn {
+    background: none;
+    border: none;
+    color: #0173BE;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 0 0;
+    text-align: left;
+    font-family: inherit;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.noBlurb {
+    font-size: 14px;
+    color: #9ca3af;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Image Styles */
+.imageRounded {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .headerContent {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .statusBadge {
+        align-self: flex-start;
+        font-size: 16px;
+        /* padding: 8px 16px; */
+        margin-bottom: 24px;
+        margin-top: -40px;
+        margin-left: -20px;
+    }
+
+    .access {
+        padding: 0 5% 60px;
+
+        .accessCard {
+            padding: 24px 20px;
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .join_steps {
+        padding: 40px 5%;
+        margin-bottom: 40px;
+
+        p {
+            font-size: 18px;
+            margin-bottom: 32px;
+        }
+
+        .steps_container {
+            flex-direction: column;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .steps_individual_step {
+            width: 100%;
+            max-width: 300px;
+
+            .stepNumber {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .societySection {
+        padding: 50px 5%;
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .timelineItem {
+        flex-wrap: wrap;
+        gap: 6px;
+        font-size: 15px;
+    }
+
+    .timelineDate {
+        min-width: unset;
+        white-space: normal;
+        width: 100%;
+    }
+
+    .councilSection {
+        padding: 50px 5%;
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .councilText {
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .experienceSection,
+    .candidatesSection {
+        padding: 50px 5%;
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 32px;
+        }
+    }
+
+    .candidatesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .experienceNote {
+        font-size: 16px;
+    }
+}
