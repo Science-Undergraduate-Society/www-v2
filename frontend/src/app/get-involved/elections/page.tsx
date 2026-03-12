@@ -41,8 +41,8 @@ export default function Elections() {
                             </a>
                         </li>
                         <li>
-                            <a href="https://docs.google.com/document/d/1g2NkYzeiXozFcICgTMnB8d95ula4vNmI2c5i2cTk5ms/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-                                Spring 2026 Elections Guidelines
+                            <a href="/assets/elections-2026/spring-elections-guidelines-2026.pdf" target="_blank" rel="noopener noreferrer">
+                                Spring 2026 Elections Guidelines (PDF)
                             </a>
                         </li>
                         <li>
