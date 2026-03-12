@@ -14,6 +14,7 @@ export const NavMenus: NavMenu[] = [
     {
         label: "Get Involved",
         items: [
+            { label: "Elections", href: "/get-involved/elections", icon: "elections" },
             { label: "Clubs", href: "/get-involved/sus-clubs", icon: "sus-clubs" },
             { label: "Events & Initiatives", href: "/get-involved/events-and-initiatives", icon: "events-and-initiatives" },
             { label: "Join SUS", href: "/get-involved/join-sus", icon: "join-sus" },
