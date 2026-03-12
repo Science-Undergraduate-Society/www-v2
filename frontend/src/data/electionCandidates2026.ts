@@ -22,8 +22,8 @@ export const electionCandidates: ElectionPositionGroup[] = [
                 position: 'President',
                 imagePath: '/assets/elections-2026/candidate-images/jenevieve-lee.png',
                 blurb: `Hello, my name is Jenevieve Lee, and I am running to be your next SUS President! As your current VP Student Life, previous AVP Internal and FYC chair, I have the experience and insight into what it takes to run our society effectively. Over the past three years, I have built a proven track record of turning ideas into impactful events and initiatives that enhance the Science student experience.\n\nADVOCACY: Strengthen Science student representation by consolidating clear advocacy priorities, expanding lecture recording accessibility, and gathering direct student feedback through a Science Student Advocacy Inbox and President's Council.\n\nIMPACT: Deliver high-impact, high-turnout events through intentional programming, stronger collaboration across portfolios, and better support for SUS clubs while building new annual traditions that increase Science spirit.\n\nTRANSPARENCY: Be clearer about how SUS operates through initiatives like a SUS Events Brochure, student council and executive work, and restructuring council processes to keep councillors and students better informed.\n\nINTERNAL SUPPORT: Build a stronger internal foundation through initiatives like a SUS-wide retreat, improved onboarding for VPs, chairs and coordinators, and embedding EDI considerations across all portfolios.`,
-                instagram: '@votejenevievelee',
-                website: 'https://votejenevievelee.my.canva.site/',
+                instagram: '@votejenevievelee'
+                // website: 'https://votejenevievelee.my.canva.site/',
             },
             {
                 name: 'Katherine Cai',
