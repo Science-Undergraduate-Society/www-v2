@@ -1,9 +1,81 @@
 'use client'
 
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
+import type { ReactNode } from 'react'
 import Image from 'next/image'
 import styles from './elections.module.css'
 import { ElectionCandidate } from '@/data/electionCandidates2026'
+
+const BLURB_LINK_REGEX = /(https?:\/\/[^\s]+|(?:[a-z0-9-]+\.)+[a-z]{2,}(?:\/[^\s]*)?|@[a-z0-9._]+)/gi
+
+function normalizeBlurbLink(match: string): string {
+    if (match.startsWith('@')) {
+        return `https://instagram.com/${match.slice(1)}`
+    }
+    if (/^https?:\/\//i.test(match)) {
+        return match
+    }
+    return `https://${match}`
+}
+
+function renderBlurb(blurb: string) {
+    return blurb.split('\n').map((line, lineIndex, allLines) => {
+        const lineParts: ReactNode[] = []
+        let lastIndex = 0
+        const matches = line.matchAll(new RegExp(BLURB_LINK_REGEX))
+
+        for (const match of matches) {
+            const start = match.index ?? 0
+            const raw = match[0]
+            const end = start + raw.length
+            const prevChar = start > 0 ? line[start - 1] : ''
+
+            lineParts.push(line.slice(lastIndex, start))
+
+            let core = raw
+            let trailing = ''
+            while (core.length > 0 && /[.,!?;:)]/.test(core[core.length - 1])) {
+                trailing = `${core[core.length - 1]}${trailing}`
+                core = core.slice(0, -1)
+            }
+
+            const isEmailPart =
+                (core.startsWith('@') && /[a-z0-9._%+-]/i.test(prevChar)) ||
+                (!core.startsWith('@') && prevChar === '@')
+
+            if (core.length > 0 && !isEmailPart) {
+                lineParts.push(
+                    <a
+                        key={`blurb-link-${lineIndex}-${start}`}
+                        href={normalizeBlurbLink(core)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.candidateBlurbLink}
+                    >
+                        {core}
+                    </a>
+                )
+            } else {
+                lineParts.push(raw)
+            }
+
+            if (trailing) {
+                lineParts.push(trailing)
+            }
+
+            lastIndex = end
+        }
+
+        lineParts.push(line.slice(lastIndex))
+
+        return (
+            <Fragment key={`blurb-line-${lineIndex}`}>
+                {lineParts}
+                {lineIndex < allLines.length - 1 && <br />}
+            </Fragment>
+        )
+    })
+}
 
 export default function CandidateCard({ candidate }: { candidate: ElectionCandidate }) {
     const [expanded, setExpanded] = useState(false)
@@ -69,7 +141,7 @@ export default function CandidateCard({ candidate }: { candidate: ElectionCandid
                 {candidate.blurb ? (
                     <>
                         <p className={`${styles.candidateBlurb} ${expanded ? '' : styles.blurbClamped}`}>
-                            {candidate.blurb}
+                            {renderBlurb(candidate.blurb)}
                         </p>
                         <button
                             onClick={() => setExpanded(e => !e)}

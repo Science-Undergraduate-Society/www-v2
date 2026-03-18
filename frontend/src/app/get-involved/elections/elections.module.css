@@ -355,6 +355,16 @@
     flex: 1;
 }
 
+.candidateBlurbLink {
+    color: #0173BE;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .blurbClamped {
     display: -webkit-box;
     -webkit-line-clamp: 5;
