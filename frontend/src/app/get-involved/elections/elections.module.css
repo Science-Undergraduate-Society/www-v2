@@ -254,6 +254,18 @@
     }
 }
 
+.candidatesDisclosure {
+    max-width: 980px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1f2937;
+    margin: -20px 0 36px;
+    padding: 16px 18px;
+    border-left: 4px solid #0173BE;
+    background: rgba(1, 115, 190, 0.08);
+    border-radius: 8px;
+}
+
 .positionGroup {
     margin-bottom: 56px;
 }
