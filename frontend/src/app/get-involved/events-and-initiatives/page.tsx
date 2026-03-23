@@ -1,15 +1,18 @@
+export const revalidate = 604800; // revalidate weekly as fallback
+
 import styles from './susEvents.module.css'
 import { FeaturedEventsInitiative } from '@/lib/types';
-import { getApprovedEvents } from '@/lib/events';
+import { getAllFeaturedItems } from '@/lib/events';
 import BannerHeader from '@/components/ui/BannerHeader/BannerHeader';
 import SusCalendar from '@/components/features/Calendar/Calendar';
 
 export default async function SusEvents() {
-    const featuredEvents = await getApprovedEvents();
+    const featuredEvents = await getAllFeaturedItems();
     const currentMonth = "March";
     const currentEvents = featuredEvents.filter((event) => event.isEvent && event.dates.includes(currentMonth))
     const futureEvents = featuredEvents.filter((event) => event.isEvent && !event.dates.includes(currentMonth))
     const initiatives = featuredEvents.filter((event) => !event.isEvent)
+    const featuredItems = featuredEvents.filter((event) => event.isFeatured)
 
     function FeaturedEventItem({ feature }: { feature: FeaturedEventsInitiative }) {
         const hasDate = feature.dates.length > 0
@@ -128,18 +131,18 @@ export default async function SusEvents() {
 
             <br></br>
             
-            {/* {futureEvents.length > 0 && (
+            {featuredItems.length > 0 && (
                 <div className={styles.afterEventsContainer}>
                     <h1>Upcoming Events</h1>
                     <div className={styles.afterEvent}>
                         {
-                            futureEvents.map((feature, idx) => (
+                            featuredItems.map((feature, idx) => (
                                 <FutureEvents key={idx} feature={feature} />
                             ))
                         }
                     </div>
                 </div>
-            )} */}
+            )}
             {/* <div className={styles.initiativesContainer}>
                 <div className={styles.initiativesTitle}>Initiatives</div>
                 {

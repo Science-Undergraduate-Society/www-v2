@@ -228,11 +228,16 @@ export type NavMenuItem = {
 
 
 // for events on the Events page, not on calendar
-// if isEvent is false the type is initiative
+export type EventType = "event" | "initiative";
+
 export type FeaturedEventsInitiative = {
+    type: EventType;
     isEvent: boolean;
+    isFeatured?: boolean;
     title: string;
     dates: string;
+    time?: string;
+    location?: string;
     description: string;
     pictures: string[];
     links: EventLink[];
