@@ -30,12 +30,12 @@ export default function DropInTutoring() {
                 <h1>Weekly Drop-Ins</h1>
                 <p>Join us for weekly sessions! Drop by to work on practice questions and get your questions answered by experienced tutors!</p>
                 <FrostedCard className={styles.card}>
-                    <h2>Mondays: 4-6 PM at BIOL 1001</h2>
-                    <p>Courses: BIOL 112, BIOL 121, CHEM 121, PHYS 131, PHYS 117, CHEM 233, and BIOL 200</p>
+                    <h2>Monday: 5-7 PM at SCRF 202</h2>
+                    <p>Courses: CHEM 123, CHEM 205, BIOL 112, BIOL 121, MATH 101</p>
                 </FrostedCard>
                 <FrostedCard className={styles.card}>
-                    <h2>Wednesdays: 4-6 PM at BIOL 1001</h2>
-                    <p>Courses: CHEM 203/233, CHEM 121, PHYS 117/118, BIOL 112, BIOL 121</p>
+                    <h2>Wednesday: 5-7 PM at SCRF 202</h2>
+                    <p>Courses: CHEM 123, BIOL 112, BIOL 121, PHYS 131, MATH 101</p>
                 </FrostedCard>
             </section>
             <section className={styles.appointmentBased}>

@@ -3,42 +3,42 @@ import { Tutor } from "@/lib/types";
 export const tutors: Tutor[] = [
   {
     name: "Kavi Balsara",
-    courses: [],
+    courses: ["BIOL 121", "BIOL 112", "CPSC 103"],
     image: "/assets/tutor-images/Placeholder.jpg",
     link: "",
     bio: ""
   },
   {
     name: "Mia Boguslavsky",
-    courses: ["CHEM 123", "PHYS 131"],
+    courses: ["CHEM 123", "PHYS 131", "BIOL 112"],
     image: "/assets/tutor-images/Mia Boguslavsky.jpg",
     link: "https://koalendar.com/e/team-meetings-with-mia-boguslavsky",
     bio: "Hi! I'm Mia, a second-year neuroscience student. I find helping fellow students with their homework so fulfilling, and as such I am chemistry and physics tutor for SUS. Outside of academics, I love sailing, and have been active in the BC sailing community for the past ten years."
   },
   {
     name: "Maya Boyd",
-    courses: ["BIOL 112", "BIOL 121"],
+    courses: ["BIOL 112", "CHEM 123", "BIOL 121"],
     image: "/assets/tutor-images/Maya Boyd.jpg",
     link: "https://koalendar.com/e/maya-boyd-sus-tutor",
     bio: "Hey! My name is Maya and I am a second year biochemistry student. I love biology and am super excited to share that through tutoring both Biol 112 and Biol 121 this academic year. Outside of school I love taking dance classes and running."
   },
   {
     name: "Maggie Cao",
-    courses: ["BIOL 112", "MICB 211"],
+    courses: ["BIOL 112", "BIOL 200", "MICB 211"],
     image: "/assets/tutor-images/Maggie Cao.jpg",
     link: "https://koalendar.com/e/maggie-cao-sus-tutoring",
     bio: "Hi! I'm a 3rd year CAPS student. I am a tutor for SUS because I want to boost other peoples confidence and help them succeed. A fun fact about myself is that I have a vast collection of beanie boos."
   },
   {
     name: "Felix Chan",
-    courses: ["CHEM 121", "CHEM 123", "CHEM 203", "CHEM 213", "CHEM 233", "MATH 100", "MATH 101", "MATH 215", "PHYS 117", "PHYS 118"],
+    courses: ["CHEM 203", "CHEM 233", "CHEM 213", "PHYS 117", "PHYS 118", "MATH"],
     image: "/assets/tutor-images/Felix Chan.jpg",
     link: "https://koalendar.com/e/felix-chan-sus-tutor",
     bio: "Hi everyone! My name is Felix and I'm starting my third year in combined chemical physics. I tutored for SUS last year and I found it so rewarding to offer support to first year students. I think this program is important because the adjustment period for first years can be quite tough and there can never be enough resources for them. A fun fact about it me is that I just did a summer abroad at Yonsei University in South Korea. Feel free to ask me about that!"
   },
   {
     name: "Rudra Dave",
-    courses: ["DSCI 100"],
+    courses: ["CPSC 210", "DSCI 100", "CPSC 121"],
     image: "/assets/tutor-images/Placeholder.jpg",
     link: "https://koalendar.com/e/dsci100-coaching-session",
     bio: "I am currently a third-year CS major at UBC. I am a tutor for SUS because I enjoy helping fellow students succeed and gain confidence in their studies. A fun fact about me is that I am really passionate about playing and watching soccer!"
@@ -52,14 +52,14 @@ export const tutors: Tutor[] = [
   },
   {
     name: "William Lee",
-    courses: ["CHEM 121", "CHEM 123"],
+    courses: ["CHEM 123", "CHEM 121", "BIOL 112"],
     image: "/assets/tutor-images/William Lee.jpg",
     link: "https://koalendar.com/e/william-lee-sus-tutoring",
     bio: "Hi, my name is William, and I am a second-year pharmacology student. I became a SUS tutor because I like sharing my knowledge and helping other students. Outside of school, I enjoy playing soccer."
   },
   {
     name: "Mehdi Naami",
-    courses: ["MATH 100", "MATH 101", "MATH 215"],
+    courses: ["MATH 101", "MATH 100", "MATH 215"],
     image: "/assets/tutor-images/Mehdi Naami.jpg",
     link: "https://koalendar.com/e/mehdi-naami-sus-tutor",
     bio: "Hello! My name is Mehdi, and I'm currently studying mathematics. I chose to be a tutor for SUS to aid students like my past self who needed help but couldn't access it due to inconvenient office hours. On the weekends, I love to play soccer with my friends after work."
@@ -80,14 +80,14 @@ export const tutors: Tutor[] = [
   },
   {
     name: "Melody Wu",
-    courses: ["BIOL 121"],
+    courses: ["BIOL 121", "BIOL 112"],
     image: "/assets/tutor-images/Melody Wu.jpg",
     link: "https://koalendar.com/e/melody-wu-sus-tutoring",
     bio: "Hi! My name is Melody and I'm a fourth year Honours CAPS student. I became a SUS tutor because I enjoy helping other students succeed. A fun fact about me is that I love action movies and TV shows."
   },
   {
     name: "Karen Xiao",
-    courses: ["BIOL 200", "MICB 211"],
+    courses: ["MICB 212", "MICB 211", "BIOL 200"],
     image: "/assets/tutor-images/Karen Xiao.jpg",
     link: "https://koalendar.com/e/karen-xiao-sus-tutoring",
     bio: "Hi! I'm Karen, and I'm a fourth-year student in Microbiology and Immunology. I'm a tutor for SUS because I want to help students build a strong foundation for success in upper-level science courses. Outside of classes, I enjoy staying active and trying out new restaurants!"
@@ -98,5 +98,68 @@ export const tutors: Tutor[] = [
     image: "/assets/tutor-images/Placeholder.jpg",
     link: "https://koalendar.com/e/nathan-yang-team-meetings",
     bio: "Hi! I'm Nathan, and I am a third-year neuroscience student. I'm a tutor for SUS because I want to help other students study and learn. Outside of school, I enjoy playing the guitar and working out."
+  },
+  {
+    name: "Mutsumi Ito",
+    courses: ["BIOL 112", "BIOL 121", "CHEM 123", "MATH 100"],
+    image: "/assets/tutor-images/Placeholder.jpg",
+    link: "https://koalendar.com/e/Mutsumi",
+    bio: ""
+  },
+  {
+    name: "Sheena Jiang",
+    courses: ["BIOC 202", "BIOL 112", "BIOL 121", "BIOL 200", "DSCI 100", "MICB 212"],
+    image: "/assets/tutor-images/Placeholder.jpg",
+    link: "https://koalendar.com/e/sheena-jiang-sus-tutoring",
+    bio: ""
+  },
+  {
+    name: "Lucas Tousignant",
+    courses: ["MATH 100", "MATH 101", "PHYS 117", "PHYS 118", "MATH 215", "MATH 221", "MATH 200", "MATH 317", "MATH 316", "PHYS 216", "PHYS 200", "PHYS 203", "PHYS 119", "PHYS 301", "PHYS 304"],
+    image: "/assets/tutor-images/Placeholder.jpg",
+    link: "https://koalendar.com/e/Lucas-Tousignant",
+    bio: ""
+  },
+  {
+    name: "Aasha Gill",
+    courses: ["BIOL 112", "BIOL 121", "CHEM 121", "CHEM 123", "PHYS 131", "BIOL 260", "CHEM 141"],
+    image: "/assets/tutor-images/Placeholder.jpg",
+    link: "https://koalendar.com/e/AashaGill",
+    bio: ""
+  },
+  {
+    name: "Buvan Bhaskara Reddy",
+    courses: ["MATH 100", "MATH 101", "CPSC 103"],
+    image: "/assets/tutor-images/Placeholder.jpg",
+    link: "https://koalendar.com/e/buvan-bhaskara-reddy-sus-tutoring",
+    bio: ""
+  },
+  {
+    name: "Tanraj Sekhon",
+    courses: ["BIOL 112", "BIOL 121"],
+    image: "/assets/tutor-images/Placeholder.jpg",
+    link: "https://koalendar.com/e/tanraj-sekhon-sus-tutor",
+    bio: ""
+  },
+  {
+    name: "Jisong Han",
+    courses: ["BIOL 112", "CHEM 123", "PHYS 117", "PHYS 118"],
+    image: "/assets/tutor-images/Placeholder.jpg",
+    link: "https://koalendar.com/e/jisong-han-sus-tutoring",
+    bio: ""
+  },
+  {
+    name: "Katherine Chen",
+    courses: ["BIOL 112", "BIOL 121", "CHEM 121", "CHEM 123", "DSCI 100", "MATH 100", "MATH 101", "PHYS 131", "BIOL 111", "BIOL 180", "PHYS 100"],
+    image: "/assets/tutor-images/Placeholder.jpg",
+    link: "https://koalendar.com/e/katherine-chen-sus-tutoring",
+    bio: ""
+  },
+  {
+    name: "Kiah Nirmal",
+    courses: [],
+    image: "/assets/tutor-images/Placeholder.jpg",
+    link: "https://koalendar.com/e/book-a-meeting-with-kiah-nirmal",
+    bio: ""
   },
 ]
