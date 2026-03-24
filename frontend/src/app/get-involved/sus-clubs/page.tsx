@@ -12,6 +12,17 @@ type Filter = "departmental" | "non-departmental";
 
 const slug = (s: string) => s.toLowerCase().replace(/[\s_]/g, "-");
 
+const getClubHref = (club: ClubInfo) => {
+    return (
+        club.website ??
+        club.instagram ??
+        club.facebook ??
+        club.linkedin ??
+        club.twitter ??
+        "/get-involved/sus-clubs"
+    );
+};
+
 const getDisplayedClubs = (
     allClubs: ClubInfo[],
     filter: Filter,
@@ -81,6 +92,34 @@ export default function SusClubs() {
             </BannerHeader>
 
             <section className={styles.content}>
+                <div className={styles.clubLogosSection}>
+                    <div className={styles.clubLogosGrid}>
+                        {ClubsInfo.map((club) => {
+                            const href = getClubHref(club);
+                            const isExternal = href.startsWith("http");
+
+                            return (
+                                <a
+                                    key={club.name}
+                                    href={href}
+                                    className={styles.clubLogoLink}
+                                    aria-label={`${club.name} website`}
+                                    title={club.name}
+                                    {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                                >
+                                    <img
+                                        src={club.img}
+                                        alt={`${club.name} logo`}
+                                        loading="lazy"
+                                        draggable="false"
+                                        className={styles.clubLogoImage}
+                                    />
+                                </a>
+                            );
+                        })}
+                    </div>
+                </div>
+
                 <div className={styles.topContainer}>
                     <div>
                         <ToggleButton onToggle={handleToggle} />
