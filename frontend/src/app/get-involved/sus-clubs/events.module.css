@@ -35,15 +35,68 @@
 }
 
 .content {
-    padding: 4.5rem 4.5rem 14rem;
+    --clubs-scale: 0.8;
+    padding: 3rem 4rem 11rem;
+    margin-top: 11rem;
+}
+
+.clubLogosSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.8rem;
+}
+
+.clubLogosSection h3 {
+    font-size: clamp(1rem, 1.6vw, 1.32rem);
+    color: var(--color-ui-80);
+    margin-bottom: 0.8rem;
+}
+
+.clubLogosGrid {
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+    gap: 0.6rem;
+    padding-bottom: 3rem;
+}
+
+.clubLogoLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(34, 39, 85, 0.18);
+    border-radius: 10px;
+    height: 56px;
+    padding: 0.36rem;
+    transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+}
+
+.clubLogoLink:hover {
+    transform: translateY(-2px);
+    border-color: rgba(34, 39, 85, 0.35);
+    box-shadow: 0 6px 15px rgba(16, 25, 62, 0.14);
+}
+
+.clubLogoLink:focus-visible {
+    outline: 2px solid var(--color-ui-80);
+    outline-offset: 2px;
+}
+
+.clubLogoImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .topContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    padding: 2rem 0;
+    gap: 0.8rem;
+    padding: 1.6rem 0;
     flex-wrap: nowrap;
 }
 
@@ -59,29 +112,29 @@
     display: flex;
     align-items: center;
     flex: 1 1 auto;
-    max-width: 40rem;
+    max-width: 32rem;
 }
 
 .searchBar {
-    flex: 1 1 40rem;
+    flex: 1 1 32rem;
     width: 100%;
-    height: 4.5rem;
-    padding: 0 1rem 0 4rem;
-    border-radius: 1rem;
+    height: 3.6rem;
+    padding: 0 0.8rem 0 3.2rem;
+    border-radius: 0.8rem;
     border: 2px solid rgba(0, 0, 0, 0.7);
     background: #fff;
     color: #000;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: var(--font-weight-bold);
 }
 
 .searchIcon {
     position: absolute;
-    left: 1rem;
+    left: 0.8rem;
     top: 50%;
     transform: translateY(-50%); /* Center vertically */
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     fill: #000;
     pointer-events: none; /* Prevent icon from blocking input clicks */
     z-index: 1; /* Ensure icon appears above input */
@@ -92,7 +145,7 @@
     flex-direction: column;
 
     background: var(--color-ui-30);
-    padding: 4rem 4.8rem;
+    padding: 3.2rem 3.84rem;
     border-radius: var(--border-radius);
     font-weight: var(--font-weight-bold);
 
@@ -133,11 +186,28 @@
 @media (max-width: 1024px) {
     .heroSection h1 { font-size: 48px; }
     .heroSection p  { font-size: 28px; max-width: 90%; }
-    .topContainer   { padding: 2rem; }
+    .content        { padding: 3.2rem 2.8rem 8rem; }
+    .topContainer   { padding: 2rem 0; }
     .clubsContainer { padding: 2rem; }
 }
 
 @media (max-width: 640px) {
+    .content { padding: 2rem 1rem 5rem; }
+
+    .clubLogosSection {
+        margin-bottom: 1.5rem;
+    }
+
+    .clubLogosGrid {
+        grid-template-columns: repeat(auto-fit, minmax(54px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .clubLogoLink {
+        height: 54px;
+        border-radius: 9px;
+    }
+
     .topContainer {
         flex-direction: column;
         align-items: stretch;

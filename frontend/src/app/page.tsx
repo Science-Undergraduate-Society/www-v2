@@ -1,14 +1,24 @@
 import BannerSection from '@/components/ui/BannerSection/BannerSection'
 import SusCalendar from "@/components/features/Calendar/Calendar";
+import { ClubsInfo } from "@/data/clubs";
 import styles from "./home.module.css";
+
+const getClubHref = (club: (typeof ClubsInfo)[number]) => {
+  return (
+    club.website ??
+    club.instagram ??
+    club.facebook ??
+    club.linkedin ??
+    club.twitter ??
+    "/get-involved/sus-clubs"
+  );
+};
 
 export default function Home() {
   return (
     <div className={styles.home}>
       <section className={styles.header}>
         <img src="/assets/home-header.svg" alt="Representing 10,000+ Science Students & 50+ Science Clubs" draggable="false" />
-        <div className={styles.headerGradient1} />
-        <div className={styles.headerGradient2} />
       </section>
       <BannerSection className={styles.about}>
         <div className={styles.whoWeAre}>
@@ -31,6 +41,35 @@ export default function Home() {
         <h2>Upcoming Events</h2>
         <p>Hover over the event to view details!</p>
         <SusCalendar></SusCalendar>
+
+        <div className={styles.clubLogosSection}>
+          <h3>SUS Affiliated Clubs</h3>
+          <div className={styles.clubLogosGrid}>
+            {ClubsInfo.map((club) => {
+              const href = getClubHref(club);
+              const isExternal = href.startsWith("http");
+
+              return (
+                <a
+                  key={club.name}
+                  href={href}
+                  className={styles.clubLogoLink}
+                  aria-label={`${club.name} website`}
+                  title={club.name}
+                  {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                >
+                  <img
+                    src={club.img}
+                    alt={`${club.name} logo`}
+                    loading="lazy"
+                    draggable="false"
+                    className={styles.clubLogoImage}
+                  />
+                </a>
+              );
+            })}
+          </div>
+        </div>
       </section>
     </div>
   );
