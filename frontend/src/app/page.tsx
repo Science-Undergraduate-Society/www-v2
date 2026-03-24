@@ -7,8 +7,6 @@ export default function Home() {
     <div className={styles.home}>
       <section className={styles.header}>
         <img src="/assets/home-header.svg" alt="Representing 10,000+ Science Students & 50+ Science Clubs" draggable="false" />
-        <div className={styles.headerGradient1} />
-        <div className={styles.headerGradient2} />
       </section>
       <BannerSection className={styles.about}>
         <div className={styles.whoWeAre}>
