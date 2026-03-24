@@ -34,8 +34,10 @@ export async function getApprovedEvents(): Promise<FeaturedEventsInitiative[]> {
         time: d.time ? formatTime(d.time as string) : undefined,
         location: (d.location as string) ?? undefined,
         description: (d.description as string) ?? "",
-        pictures: d.image ? [d.image as string] : [],
-        links: d.link ? [{ label: "Event Link", description: "", url: d.link as string }] : [],
+        pictures: Array.isArray(d.images) ? d.images.filter(Boolean) as string[] : d.image ? [d.image as string] : [],
+        links: Array.isArray(d.links)
+          ? (d.links.filter(Boolean) as string[]).map((url) => ({ label: "Event Link", description: "", url }))
+          : d.link ? [{ label: "Event Link", description: "", url: d.link as string }] : [],
         _date: (d.date as string) ?? "",
       };
     })
@@ -58,8 +60,10 @@ export async function getApprovedInitiatives(): Promise<FeaturedEventsInitiative
         title: (d.title as string) ?? "",
         dates: "",
         description: (d.description as string) ?? "",
-        pictures: d.image ? [d.image as string] : [],
-        links: d.link ? [{ label: "Learn More", description: "", url: d.link as string }] : [],
+        pictures: Array.isArray(d.images) ? d.images.filter(Boolean) as string[] : d.image ? [d.image as string] : [],
+        links: Array.isArray(d.links)
+          ? (d.links.filter(Boolean) as string[]).map((url) => ({ label: "Learn More", description: "", url }))
+          : d.link ? [{ label: "Learn More", description: "", url: d.link as string }] : [],
       };
     })
     .filter((e): e is NonNullable<typeof e> => e !== null);

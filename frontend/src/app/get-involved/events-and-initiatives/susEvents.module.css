@@ -186,7 +186,7 @@
     --slant: 8vw;
     position: relative;
     min-height: 50vh;
-    padding: 6rem 10vw;
+    padding: 6rem 10vw 10rem;
     margin-bottom: 2rem;
 }
 
@@ -209,7 +209,7 @@
 }
 
 .afterEventsContainer h1 {
-    font-size: var(--font-size-h1);
+    font-size: var(--font-size-h2);
     font-weight: 700;
     color: var(--color-ui-10);
     margin-bottom: 2rem;
@@ -230,14 +230,21 @@
 }
 
 .afterEvent h2 {
-    font-size: var(--font-size-p);
+    font-size: 1.4rem;
     font-weight: bold;
+    margin: 0;
+}
+
+.eventDate {
+    font-size: 1rem;
+    font-weight: normal;
     margin: 0;
     opacity: 0.85;
 }
 
 .afterEvent p {
     font-size: var(--font-size-p);
+    font-weight: normal;
     line-height: 1.6;
     margin: 0;
 }

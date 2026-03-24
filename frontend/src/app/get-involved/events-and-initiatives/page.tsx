@@ -66,7 +66,7 @@ export default async function SusEvents() {
                         {feature.title}
                     </h2>
                     {
-                        hasDate && <h2>{feature.dates}</h2>
+                        hasDate && <p className={styles.eventDate}>{feature.dates}</p>
                     }
                     {
                         !hasDate && <div className={styles.smallSpacer}/>
@@ -131,12 +131,12 @@ export default async function SusEvents() {
 
             <br></br>
             
-            {featuredItems.length > 0 && (
+            {futureEvents.length > 0 && (
                 <div className={styles.afterEventsContainer}>
                     <h1>Upcoming Events</h1>
                     <div className={styles.afterEvent}>
                         {
-                            featuredItems.map((feature, idx) => (
+                            futureEvents.map((feature, idx) => (
                                 <FutureEvents key={idx} feature={feature} />
                             ))
                         }
