@@ -69,7 +69,7 @@ export const Footer = () => {
                 </div>
 
                 <p className={styles.copyright}>
-                    Copyright © 2025 UBC Science Undergraduate Society
+                    Copyright © 2026 UBC Science Undergraduate Society
                 </p>
             </div>
         </footer>
