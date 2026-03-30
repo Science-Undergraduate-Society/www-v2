@@ -85,7 +85,7 @@ export default function JoinSus() {
                             <p><strong>Posting/Application Info:</strong></p>
                             <ul>
                                 <li>Positions are posted on CareersOnline (resume and cover letter needed)</li>
-                                <li>Look out for an Instagram (<a href="https://www.instagram.com/susubc" target="_blank" rel="noopener noreferrer">@ubcsus</a>) post or <a href="https://www.linkedin.com/company/susubc/" target="_blank" rel="noopener noreferrer">LinkedIn</a> event titled &quot;SUS Executive Hiring 20XX [Summer]&quot; for a list of all available positions!</li>
+                                <li>Look out for an Instagram (<a href="https://www.instagram.com/susubc" target="_blank" rel="noopener noreferrer">@susubc</a>) post or <a href="https://www.linkedin.com/company/susubc/" target="_blank" rel="noopener noreferrer">LinkedIn</a> event titled &quot;SUS Executive Hiring 20XX [Summer]&quot; for a list of all available positions!</li>
                             </ul>
 
                             <p><strong>Typical Positions:</strong></p>
