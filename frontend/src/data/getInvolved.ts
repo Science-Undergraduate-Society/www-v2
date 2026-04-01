@@ -47,59 +47,53 @@ const featuredEventLinks: EventLink[] = [
 ]
 
 export const featuredEvents: FeaturedEventsInitiative[] = [
+    {
+        isEvent: true,
+        title: "SUS Study Sphere",
+        dates: "April 1-31",
+        description: "Enroll in our SUS Study Sphere Canvas Course to access notes, anki decks, practice questions and review session slides for common science courses like MATH 101, BIOL 121/112, CHEM 123 and much more!",
+        pictures: [],
+        links: [
+          {
+            label: "Link",
+            description: "",
+            url: "https://canvas.ubc.ca/enroll/GMT8NL"
+          }
+        ]
+      },
   {
     isEvent: true,
-    title: "EDI Community Survey",
-    dates: "March 1 - 31",
-    description: "The SUS EDI team has launched a community reflection survey to better understand how our initiatives and events have felt this year. Fill out the survey for a chance to win a $20 Blue Chip gift card!",
+    title: "SUS Annual General Meeting",
+    dates: "April 9th, 5:00 - 7:00 PM",
+    description: "Come join us on April 9th, 5-7PM for our Annual General Meeting! We will be sharing our annual budget summary, portfolio reports and our election winners. Everyone will be entered to win a $25 giftcard of your choice and free pizza and drinks will be available. See you there!",
     pictures: [],
-    links: [
-      {
-        label: "Survey Link",
-        description: "EDI Community Survey Link",
-        url: "https://qualtricsxmg7mjmcft5.qualtrics.com/jfe/form/SV_elCJRUAXO1vszS6"
-      }
-    ]
+    links: []
   },
   {
     isEvent: true,
-    title: "FYC Gala",
-    dates: "March 26th, 6:00 - 10:00 PM",
-    description: "SUS FYC presents the Year End Gala! Join us March 26, 7 - 10 PM at the Alumni Centre (Jack Poole Hall) for snacks, drinks, a photobooth, DJ, dancing, and roulette. Theme: La La Land: City of Stars",
+    title: "Year-End Game Fair",
+    dates: "April 9th, 5:00 - 7:00 PM",
+    description: "Join us for a Year-End Games Fair featuring interactive booths, games, and reflection activities. Open to all students. Complete all stations for a guaranteed prize and a chance to win a $50 gift card",
     pictures: [],
     links: [
       {
         label: "RSVP Link",
         description: "",
-        url: "https://www.bouncelife.com/events/69a7a2c83a33469009c8eb43"
+        url: "https://ubc.ca1.qualtrics.com/jfe/form/SV_3jyXUlbRQ9QIDUG"
       }
     ]
   },
   {
     isEvent: true,
-    title: "Indigenous Cedar-Weaving Event",
-    dates: "March 27th, 5:00 - 7:30 PM",
-    description: "Join us March 27 (5 - 7:30 PM) for a cultural workshop with Musqueam cedar weaver Rita Kompst. Participants will craft cedar hearts, learn about Indigenous art, and enjoy an Indigenous dinner afterward!",
+    title: "Final Exam Review Sessions",
+    dates: "BIOL 112: April 13, 1-3 PM; CHEM 123: April 13, 4-7 PM, PHYS 131: April 17, 5-6 PM, CHEM 205: April 21, 4-7 PM",
+    description: "Hi UBC Science! Want to ace your finals? Come to our free review sessions! BIOL 112: April 13, 1-3 PM; CHEM 123: April 13, 4-7 PM; PHYS 131: April 17, 5-6 PM; CHEM 205: April 21, 4-7 PM; *Locations TBD",
     pictures: [],
     links: [
       {
         label: "RSVP Link",
         description: "",
-        url: "https://www.instagram.com/p/DV1R5IUlDeN/?img_index=1"
-      }
-    ]
-  },
-  {
-    isEvent: true,
-    title: "Science Celebration Boat Cruise",
-    dates: "March 28th, 6:00 - 10:00 PM",
-    description: "A celebration gathering the Science community for an evening of elegance & glamour. Join us on the water participate in exclusive raffles & celebrate the school year. Get your tickets now! (19+ event)",
-    pictures: [],
-    links: [
-      {
-        label: "RSVP Link",
-        description: "",
-        url: "https://www.bouncelife.com/events/699d160732f8e257f81829a4"
+        url: "https://forms.gle/eRPbMS43rcy2Xr2N7"
       }
     ]
   },
