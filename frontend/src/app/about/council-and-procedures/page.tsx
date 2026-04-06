@@ -15,24 +15,25 @@ export default function CouncilAndProcedures() {
             </BannerHeader>
             <section className={styles.about}>
                 <FrostedCard className={styles.aboutCard}>
-                    The SUS Council is the highest governing body in SUS.
+                    <p>The SUS Council is the highest governing body in SUS.
                     The purpose of Council is to provide a platform for the science community to engage with the Science Undergraduate Society’s initiatives throughout the year.
-                    It allows students hold executives accountable for their work, and ensures that the voices of Science students are represented in their government.
+                    It allows students hold executives accountable for their work, and ensures that the voices of Science students are represented in their government.</p>
                 </FrostedCard>
             </section>
+
             <section className={styles.codeAndProcedures}>
                 <h1>Council Meeting Minutes</h1>
                 <p>
                     The following document outlines how the SUS is organized, how the student fees are used, how decisions are made on behalf of Science Students and the responsibilities of elected officials.
                     For any questions regarding our code or procedures, please contact the VP Administration, Alan Wei at vpadministration@sus.ubc.ca! 
                     <br /><br />
-                    <b>Last Updated: August 31st, 2025</b>
+                    <b>Last Updated: March 12, 2026</b>
                 </p>
                 <BlueButton
-                    href="https://docs.google.com/document/d/1LeaQmUL0Gy5AwfrW24eZTjXHoojVE6SHIPk5n-SZ8lM/edit?tab=t.0"
+                    href="https://drive.google.com/drive/folders/16Tw9wtai_6c_poGPKkapX1JowegFBGBm?usp=drive_link"
                     className={styles.button}
                 >
-                    SUS Code of Procedures Document
+                    SUS Governance Documenation
                 </BlueButton>
             </section>
             <BannerSection className={styles.councilMeetings}>

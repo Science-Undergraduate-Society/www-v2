@@ -332,7 +332,7 @@ export const ClubsInfo: ClubInfo[] = [
         type: "non-departmental",
         description:
             "AMS SCIA connects students with the spinal cord injury community through education, research, and service opportunities.",
-        img: "/assets/club-images/ams.webp",
+        img: "/assets/club-images/ubc-scia.jpg",
     },
     {
         name: "AMS unboundED",
