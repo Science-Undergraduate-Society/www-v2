@@ -17,9 +17,12 @@ const getClubHref = (club: (typeof ClubsInfo)[number]) => {
 export default function Home() {
   return (
     <div className={styles.home}>
-      <section className={styles.header}>
-        <img src="/assets/home-header.svg" alt="Representing 10,000+ Science Students & 50+ Science Clubs" draggable="false" />
-      </section>
+      <div className={styles.hero}>
+        <img src="/assets/hero_image.jpg" className={styles.hero_image} alt="SUS UBC Hero Image" draggable="false" />
+        <section className={styles.header}>
+          <img src="/assets/home-header.svg" alt="Representing 10,000+ Science Students & 50+ Science Clubs" draggable="false" />
+        </section>
+      </div>
       <BannerSection className={styles.about}>
         <div className={styles.whoWeAre}>
           <h1>Who We Are</h1>
