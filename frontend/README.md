@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# www-v2 Frontend
+
+This folder contains the SUS website built with Next.js App Router.
+
+For the maintainer handoff, read [TEAM-HANDBOOK.md](TEAM-HANDBOOK.md). It documents the route map, shared components, data files, assets, and the calendar API flow.
+
+This project was originally bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
