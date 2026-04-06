@@ -26,7 +26,7 @@ export const NavbarDesktop = () => {
         <nav className={styles.navbarDesktop}>
             <div className={styles.navbar}>
                 <Link href="/">
-                    <img src="/assets/logos/sus-logo.png" alt="SUS logo" draggable="false" />
+                    <img src="/assets/logos/sus-logo-long-white.png" alt="SUS logo" draggable="false" />
                 </Link>
             </div>
             <div className={styles.menu}>
