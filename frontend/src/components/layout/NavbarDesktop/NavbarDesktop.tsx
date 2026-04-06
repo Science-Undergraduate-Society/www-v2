@@ -30,52 +30,52 @@ export const NavbarDesktop = () => {
                 </Link>
             </div>
             <div className={styles.menu}>
-                    {NavMenus.map(menuItem => (
-                        <div key={menuItem.label}>
+                {NavMenus.map(menuItem => (
+                    <div key={menuItem.label}>
+                        <div
+                            className={`${styles.menuItem} ${menuState === menuItem.label && styles.open}`}
+                            onClick={() => setMenuState(menuState ? '' : menuItem.label)}
+                            onMouseEnter={() => {
+                                cancelClose()
+                                setMenuState(menuItem.label)
+                            }}
+                            onMouseLeave={() => close()}
+                        >
+                            {menuItem.label}
+                            <div className={styles.dropdownButton}>
+                                <div className={styles.dropdownButtonBar} />
+                                <div className={styles.dropdownButtonBar} />
+                            </div>
+                        </div>
+                        {menuState === menuItem.label && (
                             <div
-                                className={`${styles.menuItem} ${menuState === menuItem.label && styles.open}`}
-                                onClick={() => setMenuState(menuState ? '' : menuItem.label)}
-                                onMouseEnter={() => {
-                                    cancelClose()
-                                    setMenuState(menuItem.label)
-                                }}
+                                className={styles.submenuContainer}
+                                onMouseEnter={() => cancelClose()}
                                 onMouseLeave={() => close()}
                             >
-                                {menuItem.label}
-                                <div className={styles.dropdownButton}>
-                                    <div className={styles.dropdownButtonBar} />
-                                    <div className={styles.dropdownButtonBar} />
+                                <div className={styles.submenu}>
+                                    {menuItem.items.map(submenuItem => (
+                                        <Link
+                                            key={submenuItem.label}
+                                            href={submenuItem.href}
+                                            className={styles.submenuItem}
+                                            onClick={() => setMenuState('')}
+                                        >
+                                            <img src={`/assets/navbar-icons/${submenuItem.icon}.svg`} alt={submenuItem.label} />
+                                            {submenuItem.label}
+                                        </Link>
+                                    ))}
                                 </div>
                             </div>
-                            {menuState === menuItem.label && (
-                                <div
-                                    className={styles.submenuContainer}
-                                    onMouseEnter={() => cancelClose()}
-                                    onMouseLeave={() => close()}
-                                >
-                                    <div className={styles.submenu}>
-                                        {menuItem.items.map(submenuItem => (
-                                            <Link
-                                                key={submenuItem.label}
-                                                href={submenuItem.href}
-                                                className={styles.submenuItem}
-                                                onClick={() => setMenuState('')}
-                                            >
-                                                <img src={`/assets/navbar-icons/${submenuItem.icon}.svg`} alt={submenuItem.label} />
-                                                {submenuItem.label}
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                    <Link href="https://shop.susubc.ca/" className={styles.shop}>
-                        Shop
-                    </Link>
-                    <Link href="/get-involved/join-sus" className={styles.joinSus}>
-                        Join SUS
-                    </Link>
+                        )}
+                    </div>
+                ))}
+                <Link href="https://shop.susubc.ca/" className={styles.shop}>
+                    Shop
+                </Link>
+                <Link href="/get-involved/join-sus" className={styles.joinSus}>
+                    Join SUS
+                </Link>
             </div>
         </nav>
     )
