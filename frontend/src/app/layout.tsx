@@ -26,7 +26,7 @@ const geistMono = Geist_Mono({
 const gtmId = "GTM-PGBF9S6V";
 
 export const metadata: Metadata = {
-  title: "UBC SUS",
+  title: "UBC Science Undergraduate Society",
   description: "UBC Science Undergraduate Society",
 };
 
