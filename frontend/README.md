@@ -2,7 +2,7 @@
 
 This folder contains the SUS website built with Next.js App Router.
 
-For the maintainer handoff, read [TEAM-HANDBOOK.md](TEAM-HANDBOOK.md). It documents the route map, shared components, data files, assets, and the calendar API flow.
+For the maintainer handoff, read [the wiki](https://github.com/Science-Undergraduate-Society/www-v2/wiki/Team-Handbook). It documents the route map, shared components, data files, assets, and the calendar API flow.
 
 This project was originally bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
