@@ -48,6 +48,7 @@ const featuredEventLinks: EventLink[] = [
 
 export const featuredEvents: FeaturedEventsInitiative[] = [
   {
+    type: "event",
     isEvent: true,
     title: "EDI Community Survey",
     dates: "March 1 - 31",
@@ -62,6 +63,7 @@ export const featuredEvents: FeaturedEventsInitiative[] = [
     ]
   },
   {
+    type: "event",
     isEvent: true,
     title: "FYC Gala",
     dates: "March 26th, 6:00 - 10:00 PM",
@@ -76,6 +78,7 @@ export const featuredEvents: FeaturedEventsInitiative[] = [
     ]
   },
   {
+    type: "event",
     isEvent: true,
     title: "Indigenous Cedar-Weaving Event",
     dates: "March 27th, 5:00 - 7:30 PM",
@@ -90,6 +93,7 @@ export const featuredEvents: FeaturedEventsInitiative[] = [
     ]
   },
   {
+    type: "event",
     isEvent: true,
     title: "Science Celebration Boat Cruise",
     dates: "March 28th, 6:00 - 10:00 PM",

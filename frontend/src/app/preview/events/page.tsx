@@ -104,6 +104,7 @@ export default async function EventsPreviewPage({
     const dateDisplay = [dateStr, timeStr].filter(Boolean).join(" · ");
 
     const previewItem: FeaturedEventsInitiative = {
+        type: mode === "initiative" ? "initiative" : "event",
         isEvent: mode !== "initiative",
         title: params.title ?? "Your Event Title",
         dates: dateDisplay,
@@ -115,6 +116,7 @@ export default async function EventsPreviewPage({
     const currentMonth = new Date().toLocaleString("en-US", { month: "long" });
 
     const dummyCurrentEvent: FeaturedEventsInitiative = {
+        type: "event",
         isEvent: true,
         title: "Sample Current Event",
         dates: `${currentMonth} 20, 2026`,
@@ -124,6 +126,7 @@ export default async function EventsPreviewPage({
     };
 
     const dummyUpcomingEvent: FeaturedEventsInitiative = {
+        type: "event",
         isEvent: true,
         title: "Sample Upcoming Event",
         dates: "Next Month 10, 2026",
@@ -133,6 +136,7 @@ export default async function EventsPreviewPage({
     };
 
     const dummyInitiative: FeaturedEventsInitiative = {
+        type: "initiative",
         isEvent: false,
         title: "Sample Initiative",
         dates: "",
