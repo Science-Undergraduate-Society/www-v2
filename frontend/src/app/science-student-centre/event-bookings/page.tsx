@@ -36,6 +36,15 @@ export default function EventBookings() {
                         bookings at the ALSSC.
                     </p>
                     <p>
+                        <strong>Please note the following dates for booking availability:</strong>
+                        <br />
+                        August 2nd - August 8th, 2026. (SUS Internal Bookings Only)
+                        <br />
+                        August 9th - August 15th, 2026. (SUS Clubs Bookings Only)
+                        <br />
+                        August 16th - onward. (All Public Bookings)
+                    </p>
+                    <p>
                         For any outstanding questions, please contact <a href="mailto:bmanager.bookings@ubcsus.ca">bmanager.bookings@ubcsus.ca</a>
                     </p>
                 </FrostedCard>
