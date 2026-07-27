@@ -32,7 +32,7 @@ export default function GrantsAndSubsidies() {
                     <div className={styles.description}>
                         <h2>TO APPLY:</h2>
                         <p>
-                            Please submit your application package by emailing <a href="mailto:vpfinance@sus.ubc.ca">vpfinance@sus.ubc.ca</a> and cc-ing <a href="mailto:">avp.finance@sus.ubc.ca</a>.
+                            Please submit your application package by emailing <a href="mailto:vpfinance@sus.ubc.ca">vpfinance@sus.ubc.ca</a> and cc-ing <a href="mailto:avp.finance@sus.ubc.ca">avp.finance@sus.ubc.ca</a>.
                             You will receive a confirmation email upon receipt of your application.
                         </p>
                     </div>
