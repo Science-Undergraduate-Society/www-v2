@@ -38,7 +38,7 @@ export const Footer = () => {
             name: "Youtube",
             src: "/assets/footer-icons/youtube.png",
             extra: styles.iconYoutube,
-            link: "https://www.youtube.com/@scienceundergraduatesocietyubc"
+            link: "https://www.youtube.com/@ubcsus"
         },
     ];
 
