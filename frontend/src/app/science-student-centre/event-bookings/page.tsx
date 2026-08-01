@@ -385,7 +385,7 @@ export default function EventBookings() {
             {/* Contact Section */}
             <section className={styles.contact}>
                 <h2>Contact our ALSSC Team</h2>
-                <p>For Booking Inquiries: <a href="mailto:bmanager.bookings@sus.ubc.ca">bmanager.bookings@sus.ubc.ca</a></p>
+                <p>For Booking Inquiries: <a href="mailto:bmanager.bookings@ubcsus.ca">bmanager.bookings@ubcsus.ca</a></p>
                 <p>For Operations & Maintenance: <a href="mailto:bmanager.operations@sus.ubc.ca">bmanager.operations@sus.ubc.ca</a></p>
             </section>
         </div>
