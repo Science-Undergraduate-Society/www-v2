@@ -13,6 +13,7 @@
   justify-content: flex-end;
 
   .details {
+    z-index: 1;
     padding: 6px 8px;
     border-radius: 0 0 10px 10px;
     backdrop-filter: blur(8px);
@@ -30,10 +31,18 @@
     }
   }
 
-  .email {
+  .bgImage {
+    z-index: 0;
+  }
+
+  .emailWrapper {
+    z-index: 1;
     position: absolute;
     bottom: 8px;
     right: 8px;
+  }
+
+  .email {
     width: 32px;
   }
 }
