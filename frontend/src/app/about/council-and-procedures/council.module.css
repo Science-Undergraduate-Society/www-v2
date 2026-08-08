@@ -76,10 +76,10 @@
 
     .collapsiblePanel {
         .title {
-            width: fit-content;
-            padding: 12px 20px;
+            width: 100%;
+            padding: 16px 24px;
             margin-bottom: 24px;
-            font-size: calc(var(--font-size-p) * var(--council-scale));
+            font-size: calc(var(--font-size-h3) * var(--council-scale));
         }
 
         .panel {

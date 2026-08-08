@@ -1,6 +1,26 @@
 .collapsiblePanel {
   .title {
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-family: inherit;
+    transition: background-color 0.2s, opacity 0.2s;
+  }
+
+  .title:hover {
+    opacity: 0.9;
+  }
+
+  .chevron {
+    transition: transform 0.3s ease;
+  }
+
+  .chevron.open {
+    transform: rotate(180deg);
   }
 }
 
