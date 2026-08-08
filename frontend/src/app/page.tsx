@@ -1,3 +1,4 @@
+import Image from "next/image";
 import BannerSection from '@/components/ui/BannerSection/BannerSection'
 import SusCalendar from "@/components/features/Calendar/Calendar";
 import { ClubsInfo } from "@/data/clubs";
@@ -18,9 +19,9 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <div className={styles.hero}>
-        <img src="/assets/hero_image.jpg" className={styles.hero_image} alt="SUS UBC Hero Image" draggable="false" />
+        <Image src="/assets/hero_image.jpg" className={styles.hero_image} alt="SUS UBC Hero Image" draggable="false" width={1920} height={1080} priority />
         <section className={styles.header}>
-          <img src="/assets/home-header.svg" alt="Representing 10,000+ Science Students & 50+ Science Clubs" draggable="false" />
+          <Image src="/assets/home-header.svg" alt="Representing 10,000+ Science Students & 50+ Science Clubs" draggable="false" width={1359} height={471} priority />
         </section>
       </div>
       <BannerSection className={styles.about}>
@@ -61,10 +62,11 @@ export default function Home() {
                   title={club.name}
                   {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 >
-                  <img
+                  <Image
                     src={club.img}
                     alt={`${club.name} logo`}
-                    loading="lazy"
+                    width={96}
+                    height={96}
                     draggable="false"
                     className={styles.clubLogoImage}
                   />
