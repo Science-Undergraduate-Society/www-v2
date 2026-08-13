@@ -58,8 +58,8 @@ export default function MeetingRoomBookingsPage() {
 
                     <p className={styles["contact-line"]} style={{ paddingTop: "1rem", marginBottom: "-2rem" }}>
                         For more information, please contact{" "}
-                        <a className={styles["link-primary"]} href="mailto:bmanager.bookings@ubc.ca">
-                            bmanager.bookings@ubc.ca
+                        <a className={styles["link-primary"]} href="mailto:bmanager.bookings@sus.ubc.ca">
+                            bmanager.bookings@sus.ubc.ca
                         </a>
                     </p>
                 </div>
