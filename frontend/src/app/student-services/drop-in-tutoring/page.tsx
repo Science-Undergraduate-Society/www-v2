@@ -61,7 +61,7 @@ export default function DropInTutoring() {
             </section>
             <BannerSection className={styles.book}>
                 <h1>Book An Appointment</h1>
-                <Tutors />
+                {/* <Tutors /> */}
             </BannerSection>
             <section className={styles.examReviewSessions}>
                 <h1>Exam Review Sessions</h1>

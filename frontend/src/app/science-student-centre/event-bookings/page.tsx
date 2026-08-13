@@ -45,7 +45,7 @@ export default function EventBookings() {
                         August 16th - onward. (All Public Bookings)
                     </p>
                     <p>
-                        For any outstanding questions, please contact <a href="mailto:bmanager.bookings@ubcsus.ca">bmanager.bookings@ubcsus.ca</a>
+                        For any outstanding questions, please contact <a href="mailto:bmanager.bookings@sus.ubc.ca">bmanager.bookings@sus.ubc.ca</a>
                     </p>
                 </FrostedCard>
             </section>
