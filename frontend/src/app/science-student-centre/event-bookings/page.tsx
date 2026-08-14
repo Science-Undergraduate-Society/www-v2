@@ -128,7 +128,7 @@ export default function EventBookings() {
                     <CollapsibleBox titleElement={<h3>Booking Group Categories</h3>}>
                         <div className={styles.collapsibleContent}>
                             <p><strong>SUS Groups:</strong> internal groups in SUS, such as the Health & Wellness Working Group or the First Year Council.</p>
-                            <p><strong>SUS Clubs:</strong> departmental and non-departmental clubs supported by SUS. For a complete list of SUS Clubs, see here.</p>
+                            <p><strong>SUS Clubs:</strong> departmental and non-departmental clubs supported by SUS. For a complete list of SUS Clubs, <a href="/get-involved/sus-clubs">see here</a></p>
                             <p><strong>Science Organizations and Science Clubs:</strong> groups which are not supported directly by SUS, but are of interest to students in the Faculty of Science (including, but not limited to SCI Team, Science Peer Academic Coaches, UBC Cancer Association). At least 60% of students contributing to the planning and execution of the event must be in the Faculty of Science in order to qualify for this rate.</p>
                             <p><strong>UBC Organizations:</strong> groups who either have an address on the University Endowment Lands, or are affiliated in some way with UBC (including, but not limited to Regent College, UBC VP Students&apos; Office, groups from other UBC campuses).</p>
                             <p><strong>External Organizations:</strong> organizations that are unaffiliated with UBC.</p>
