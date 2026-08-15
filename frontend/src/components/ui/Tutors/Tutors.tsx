@@ -78,7 +78,7 @@ export default function Tutors() {
               <p>{tutor.bio}</p>
               <br />
               <p><b>Courses Taught: </b>{tutor.courses.join(', ')}</p>
-              <a href={tutor.link}>Koalender</a>
+              <a href={tutor.link}>Koalendar</a>
             </div>
           </div>
         ))}
