@@ -3,11 +3,15 @@
 import { useState } from "react"
 import Link from "next/link"
 import { NavMenus } from "@/data/nav"
+import { useTheme } from "@/components/providers/ThemeProvider"
+import { Moon, Sun } from "lucide-react"
 import styles from "./NavbarMobile.module.css"
 
 export const NavbarMobile = () => {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
     const [menuState, setMenuState] = useState<string>('')
+    const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
+    const { theme, toggleTheme } = useTheme()
 
     function clickMenu() {
         setIsMenuOpen(state => !state)
@@ -29,6 +33,15 @@ export const NavbarMobile = () => {
                     <img src="/assets/logos/sus-logo.png" alt="SUS logo" draggable="false" />
                 </Link>
                 <h1>Science Undergraduate Society</h1>
+                <button
+                    type="button"
+                    className={`${styles.themeToggle} ${styles.themeToggle}`}
+                    onClick={toggleTheme}
+                    aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+                    aria-pressed={theme === "dark"}
+                >
+                    {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+                </button>
                 <div
                     className={`${styles.menuButton} ${isMenuOpen && styles.open}`}
                     onClick={clickMenu}

@@ -34,7 +34,7 @@
 
 .notice {
     font-size: 16px !important;
-    color: #6b7280 !important;
+    color: var(--color-text-muted) !important;
     font-style: italic;
 }
 
@@ -78,13 +78,13 @@
 .join_steps {
     padding: 60px 5%;
     margin-bottom: 0;
-    background-color: white;
+    background-color: var(--color-surface);
 
     h2 {
         text-align: center;
         font-size: 32px;
         font-weight: 700;
-        color: #222755;
+        color: var(--color-text);
         margin-bottom: 12px;
     }
 
@@ -92,7 +92,7 @@
         margin-top: 0;
         margin-bottom: 40px;
         font-size: 18px;
-        color: #374151;
+        color: var(--color-text-muted);
         text-align: center;
         font-weight: normal;
     }
@@ -211,13 +211,13 @@
 /* Contact Section */
 .councilSection {
     padding: 80px 5%;
-    background-color: white;
+    background-color: var(--color-surface);
 
     h2 {
         font-size: 36px;
         font-weight: 700;
         margin-bottom: 24px;
-        color: #222755;
+        color: var(--color-text);
     }
 }
 
@@ -227,7 +227,7 @@
     p {
         font-size: 18px;
         line-height: 1.8;
-        color: #374151;
+        color: var(--color-text-muted);
     }
 
     a {
@@ -244,13 +244,13 @@
 /* Candidates Section */
 .candidatesSection {
     padding: 80px 5%;
-    background-color: #f9fafb;
+    background-color: var(--color-surface-alt);
 
     > h2 {
         font-size: 36px;
         font-weight: 700;
         margin-bottom: 48px;
-        color: #222755;
+        color: var(--color-text);
     }
 }
 
@@ -258,7 +258,7 @@
     max-width: 980px;
     font-size: 16px;
     line-height: 1.7;
-    color: #1f2937;
+    color: var(--color-text);;
     margin: -20px 0 36px;
     padding: 16px 18px;
     border-left: 4px solid #0173BE;
@@ -289,9 +289,9 @@
 
 /* Candidate Card */
 .candidateCard {
-    background: color-mix(in srgb, #e6f5ff, transparent 20%);
+    background: color-mix(in srgb, var(--color-accent-panel), transparent 20%);
     backdrop-filter: blur(20px);
-    box-shadow: 0px 4px 24px 0px rgba(162, 162, 162, 0.2);
+    box-shadow: 0px 4px 24px 0px var(--color-shadow-base);
     border-radius: 20px;
     overflow: hidden;
     display: flex;
@@ -336,7 +336,7 @@
 .candidateName {
     font-size: 19px;
     font-weight: 700;
-    color: #222755;
+    color: var(--color-text);
     margin: 0 0 8px;
 }
 
@@ -361,7 +361,7 @@
 .candidateBlurb {
     font-size: 14px;
     line-height: 1.7;
-    color: #374151;
+    color: var(--color-text);
     white-space: pre-line;
     margin: 0;
     flex: 1;
@@ -402,7 +402,7 @@
 
 .noBlurb {
     font-size: 14px;
-    color: #9ca3af;
+    color: var(--color-text-muted);;
     font-style: italic;
     margin: 0;
 }

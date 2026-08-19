@@ -1,7 +1,7 @@
 .councilAndProcedures {
     font-family: 'Figtree', Helvetica, sans-serif;
-    color: var(--color-ui-80);
-    background: var(--color-ui-10);
+    color: var(--color-text);
+    background: var(--color-bg);
     --council-scale: 0.8;
 
     section {
@@ -33,11 +33,11 @@
     p {
         margin: 40px 0;
         font-size: calc(var(--font-size-p) * var(--council-scale));
-        color: var(--color-ui-100);
+        color: var(--color-text);
     }
 
     b {
-        color: var(--color-ui-80);
+        color: var(--color-text);
     }
 
     .button {
@@ -99,9 +99,9 @@
 
         &.frosted {
             .title {
-                background: color-mix(in srgb, #e6f5ff, transparent 20%);
+                background: color-mix(in srgb, var(--color-accent-panel), transparent 20%);
                 backdrop-filter: blur(20px);
-                box-shadow: 0px 4px 24px 0px rgba(162, 162, 162, 0.2);
+                box-shadow: 0px 4px 24px 0px var(--color-shadow-base);
                 border-radius: 20px;
             }
         }

@@ -1,7 +1,7 @@
 .scienceStudentCentreInfo {
     p {
         font-size: var(--font-size-p);
-        color: var(--color-ui-80);
+        color: var(--color-text);
     }
 
     .openingHours {
@@ -62,7 +62,7 @@
             li {
                 margin-left: 30px;
                 font-size: var(--font-size-p);
-                color: var(--color-ui-80);
+                color: var(--color-text);
                 list-style-type: disc;
             }
         }
@@ -96,14 +96,14 @@
             a {
                 width: fit-content;
                 padding: 10px 28px;
-                background: var(--color-ui-10);
+                background: var(--color-surface);
                 border-radius: 16px;
                 font-size: var(--font-size-p);
-                color: var(--color-ui-80);
+                color: var(--color-text);
                 transition: all 0.1s ease;
 
                 &:hover {
-                    background: #e6f5ff;
+                    background: var(--color-accent-panel);
                 }
             }
         }
@@ -131,14 +131,14 @@
             width: fit-content;
             gap: 12px;
             padding: 12px 36px;
-            background: var(--color-ui-10);
+            background: var(--color-surface);
             border-radius: 16px;
             align-items: center;
             align-self: flex-end;
             transition: all 0.1s ease;
 
             &:hover {
-                background: #e6f5ff;
+                background: var(--color-accent-panel);
             }
 
             p {
@@ -165,13 +165,13 @@
         h1 {
             font-size: var(--font-size-h2);
             font-weight: bold;
-            color: var(--color-ui-80);
+            color: var(--color-text);
         }
 
         h2 {
             font-size: var(--font-size-p);
             font-weight: bold;
-            color: var(--color-ui-80);
+            color: var(--color-text);
         }
 
         p {
@@ -180,13 +180,13 @@
 
         b {
             font-size: var(--font-size-p);
-            color: var(--color-ui-80);
+            color: var(--color-text);
         }
 
         li {
             margin-left: 30px;
             font-size: var(--font-size-p);
-            color: var(--color-ui-80);
+            color: var(--color-text);
             list-style-type: disc;
         }
 

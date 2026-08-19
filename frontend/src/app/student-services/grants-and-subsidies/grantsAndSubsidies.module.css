@@ -1,7 +1,7 @@
 .grantsAndSubsidies {
     font-family: 'Figtree', Helvetica, sans-serif;
-    color: var(--color-ui-80);
-    background: var(--color-ui-10);
+    color: var(--color-text);
+    background: var(--color-bg);
 
     section {
         display: flex;
@@ -117,7 +117,7 @@
             padding: 0;
             font-size: var(--font-size-h2);
             font-weight: 600;
-            color: var(--color-ui-80);
+            color: var(--color-text);
         }
 
         h2 {
@@ -128,7 +128,7 @@
         p {
             padding: 20px 0 40px 0;
             font-size: var(--font-size-p);
-            color: var(--color-ui-100);
+            color: var(--color-text);
         }
     }
 }

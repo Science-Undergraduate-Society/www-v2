@@ -11,6 +11,12 @@
   border: 10px solid color-mix(in srgb, var(--color-ui-80), transparent 25%);
   border-radius: 20px;
   justify-content: flex-end;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 12px 32px 0px var(--color-shadow-heavy), 0 0 0 1px var(--color-shadow-glow);
+  }
 
   .details {
     z-index: 1;

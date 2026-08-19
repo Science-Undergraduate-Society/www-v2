@@ -38,7 +38,8 @@
   font-family: 'Figtree', sans-serif;
 
   .calendarBox {
-    background-color: rgba(230, 245, 255, 0.8);
+    background-color: var(--color-panel-30);
+    color: var(--color-text);
     display: flex;
     width: 100%;
     gap: 0.75rem;
@@ -125,8 +126,8 @@
           align-items: flex-start;
           justify-content: flex-start;
           padding: 0;
-          border: 1px solid #000;
-          background: #fff;
+          border: 1px solid var(--color-border);
+          background: var(--color-surface);
           height: 12vh;
           min-height: 12vh;
           max-height: 12vh;
@@ -138,9 +139,9 @@
           &:focus { outline: 2px solid #9fd3ff; outline-offset: 2px; }
 
           &.cellOutside { opacity: 0.45; }
-          &.cellSelected { box-shadow: 0 0 0 2x #1f7a8c inset; }
-          &.cellToday { box-shadow: 0 0 0 3px #9fd3ff inset; }
-          &.cellPlain { background: #fff; }
+          &.cellSelected { box-shadow: 0 0 0 2x var(--color-ui-60) inset; }
+          &.cellToday { box-shadow: 0 0 0 3px var(--color-ui-60) inset; }
+          &.cellPlain { background: var(--color-surface); }
           &.cellWithEvents {
             background-image: url('/assets/backgrounds/background-two.svg');
             background-size: cover;
@@ -154,7 +155,7 @@
             justify-content: center;
             min-width: 2rem;
             min-height: 2rem;
-            background-color: rgba(230, 245, 255, 0.2);
+            background-color: var(--color-accent-panel);
             border-bottom-right-radius: 1rem;
             position: relative;
 
@@ -201,8 +202,8 @@
               text-overflow: ellipsis;
               white-space: nowrap;
 
-              &:nth-child(odd) { color: white; }
-              &:nth-child(even) { color: #00aaff; }
+              &:nth-child(odd) { color: var(--color-ui-10); }
+              &:nth-child(even) { color: var(--color-ui-10); opacity: 0.8; }
 
               .cellEventTitle {
                 font-size: 0.95rem;
@@ -255,13 +256,14 @@
 /* Sidebar */
 .sidebar {
   min-height: 60vh;
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid var(--color-border);
   border-radius: 0.75rem;
-  background: #fff;
+  background: var(--color-surface);
+  color: var(--color-text);
   padding: 0.75rem;
 
-  &.sidebarEmpty { color: #666; }
-  .noEvents { color: #333; }
+  &.sidebarEmpty { color: var(--color-text);; }
+  .noEvents { color: var(--color-text);; }
 
   .eventList {
     display: flex;
@@ -274,7 +276,7 @@
       gap: 0.5rem;
 
       .eventListHeaderDate { font-size: 1.1rem; font-weight: 700; }
-      .eventListHeaderMeta { color: #555; }
+      .eventListHeaderMeta { color: var(--color-text);; }
     }
   }
 }

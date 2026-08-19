@@ -43,9 +43,9 @@
 .socialMediaBox {
     position: relative;
     margin: 2rem auto;
-    background-color: color-mix(in srgb, #e6f5ff, transparent 2%);
+    background-color: color-mix(in srgb, var(--color-accent-panel), transparent 2%);
     border-radius: 20px;
-    color: var(--color-ui-100);
+    color: var(--color-text);
     width: 80vw;
     display: flex;
     justify-content: start;
@@ -117,7 +117,7 @@
 }
 
 .monthEventsContainer h1 {
-    color: var(--color-ui-80);
+    color: var(--color-text);
     font-size: var(--font-size-h1);
     font-weight: 700;
     padding-left: 10vw;
@@ -141,7 +141,7 @@
 
 .monthEvent h1 {
     font-size: var(--font-size-h2);
-    color: var(--color-ui-80);
+    color: var(--color-text);
     font-weight: bold;
     margin: 0;
 }
@@ -250,7 +250,7 @@
 }
 
 .initiativesTitle {
-    color: var(--color-ui-80);
+    color: var(--color-text);
     font-weight: 700;
     font-size: var(--font-size-h1);
     padding-left: 10vw;
@@ -276,8 +276,8 @@
 }
 
 .button.whiteBg {
-    background: var(--color-ui-10);
-    color: var(--color-ui-100);
+    background: var(--color-surface);
+    color: var(--color-text);
 }
 
 .button.navyBg {
@@ -294,7 +294,7 @@
 }
 
 .events {
-    color: var(--color-ui-80);
+    color: var(--color-text);
     text-align: center;
     display: flex;
     align-items: center;

@@ -5,7 +5,7 @@
     li {
         flex: 1;
         justify-content: center;
-        background: color-mix(in srgb, #e6f5ff, transparent 25%);
+        background: color-mix(in srgb, var(--color-accent-panel), transparent 25%);
         backdrop-filter: blur(20px);
         border-radius: 10px 10px 0 0;
 
@@ -46,7 +46,7 @@
         .meetingMinutesDropdownIcon {
             position: relative;
             margin-left: 12px;
-            background: var(--color-ui-10);
+            background: var(--color-surface);
             text-align: left;
             transform: rotate(-60deg) skewX(-30deg) scale(1,.866) scale(-1);
             transition: all 0.3s ease;
@@ -85,7 +85,7 @@
         z-index: 1;
 
         li {
-            background: color-mix(in srgb, #e6f5ff, transparent 25%);
+            background: color-mix(in srgb, var(--color-accent-panel), transparent 25%);
 
             &:last-child {
                 border-bottom: 2px solid color-mix(in srgb, var(--color-ui-80), transparent 75%);

@@ -2,7 +2,21 @@
   width: fit-content;
   padding: 20px 40px;
   background: var(--color-ui-80);
-  box-shadow: 0px 4px 20px 0px color-mix(in srgb, var(--color-ui-100), transparent 75%);
+  box-shadow: 0px 4px 20px 0px var(--color-shadow-heavy);
   border-radius: 16px;
   color: var(--color-ui-10);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.blueButton:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0px 8px 24px 0px var(--color-shadow-heavy);
+  background: color-mix(in srgb, var(--color-ui-80), var(--color-ui-60) 20%);
+}
+
+.blueButton:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0px 2px 10px 0px var(--color-shadow-heavy);
 }

@@ -1,6 +1,12 @@
 .frostedCard {
-  background: color-mix(in srgb, #e6f5ff, transparent 20%);
+  background: color-mix(in srgb, var(--color-accent-panel), transparent 20%);
   backdrop-filter: blur(20px);
-  box-shadow: 0px 4px 24px 0px rgba(162, 162, 162, 0.2);
+  box-shadow: 0px 4px 24px 0px var(--color-shadow-base);
   border-radius: 20px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.frostedCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 32px 0px var(--color-shadow-heavy), 0 0 0 1px var(--color-shadow-glow);
 }
