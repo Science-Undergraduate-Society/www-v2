@@ -1,7 +1,7 @@
 .blueCardPage {
     font-family: 'Figtree', Helvetica, sans-serif;
-    color: var(--color-ui-80);
-    background: var(--color-ui-10);
+    color: var(--color-text);
+    background: var(--color-bg);
     min-height: 100vh;
 }
 
@@ -215,7 +215,7 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 1.5rem;
-    background: var(--color-ui-10);
+    background: var(--color-surface);
     border-radius: 16px;
     padding: 1.5rem 2rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);

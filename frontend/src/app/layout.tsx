@@ -6,6 +6,7 @@ import "./globals.css";
 // LAYOUT COMPONENTS
 import { Navbar } from "@/components/layout/Navbar/Navbar";
 import { Footer } from "@/components/layout/Footer/Footer";
+import { ThemeProvider, themeInitScript } from "@/components/providers/ThemeProvider";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -41,12 +42,15 @@ export default function RootLayout({
       className={`${figtree.variable} ${geistSans.variable} ${geistMono.variable}`}
     >
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <GoogleTagManager gtmId={gtmId} />
       </head>
       <body className={`${figtree.className}`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

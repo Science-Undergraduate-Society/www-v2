@@ -30,7 +30,7 @@
         font-size: 18px;
         line-height: 1.8;
         margin-bottom: 16px;
-        color: #374151;
+        color: var(--color-text-muted);
 
         &:last-child {
             margin-bottom: 0;
@@ -51,13 +51,13 @@
 /* Booking Process Section */
 .bookingProcess {
     padding: 60px 5%;
-    background-color: white;
+    background-color: var(--color-surface);
 
     h2 {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 40px;
-        color: #222755;
+        color: var(--color-text);
     }
 }
 
@@ -68,7 +68,7 @@
         font-size: 22px;
         font-weight: 700;
         margin-bottom: 16px;
-        color: #222755;
+        color: var(--color-text);
     }
 
     ul {
@@ -80,7 +80,7 @@
             font-size: 16px;
             line-height: 1.8;
             margin-bottom: 12px;
-            color: #374151;
+            color: var(--color-text-muted);
 
             a {
                 color: #0173BE;
@@ -94,36 +94,36 @@
 
             strong {
                 font-weight: 700;
-                color: #222755;
+                color: var(--color-text);
             }
         }
     }
 }
 
 .note {
-    background-color: #f0f9ff;
+    background-color: color-mix(in srgb, var(--color-surface), #0173BE 10%);
     padding: 20px 24px;
     border-radius: 8px;
     border-left: 4px solid #0173BE;
     font-size: 16px;
     line-height: 1.6;
-    color: #374151;
+    color: var(--color-text-muted);
     margin-top: 24px;
 
     strong {
-        color: #222755;
+        color: var(--color-text);
         font-weight: 700;
     }
 }
 
 .warningNote {
-    background-color: #fffbeb;
+    background-color: color-mix(in srgb, var(--color-surface), #f59e0b 10%);
     padding: 20px 24px;
     border-radius: 8px;
     border-left: 4px solid #f59e0b;
     font-size: 15px;
     line-height: 1.6;
-    color: #374151;
+    color: var(--color-text-muted);
     margin-top: 16px;
     font-style: italic;
 }
@@ -131,19 +131,19 @@
 /* Building Availability Calendar Section */
 .calendar {
     padding: 60px 5%;
-    background-color: white;
+    background-color: var(--color-surface);
 
     h2 {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 32px;
-        color: #222755;
+        color: var(--color-text);
     }
 }
 
 .calendarPlaceholder {
-    background-color: #f9fafb;
-    border: 2px dashed #d1d5db;
+    background-color: var(--color-surface-alt);
+    border: 2px dashed var(--color-border);
     border-radius: 12px;
     padding: 60px 40px;
     text-align: center;
@@ -154,7 +154,7 @@
 
     p {
         font-size: 18px;
-        color: #6b7280;
+        color: var(--color-text-muted);;
         margin: 0;
     }
 }
@@ -162,13 +162,13 @@
 /* Booking Information Section */
 .bookingInfo {
     padding: 60px 5%;
-    background-color: #f9fafb;
+    background-color: var(--color-surface-alt);
 
     h2 {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 32px;
-        color: #222755;
+        color: var(--color-text);
     }
 }
 
@@ -180,13 +180,13 @@
 
 .collapsibleContent {
     padding: 24px;
-    background-color: white;
+    background-color: var(--color-surface);
     animation: slideDown 0.3s ease-out;
 
     p {
         font-size: 16px;
         line-height: 1.8;
-        color: #374151;
+        color: var(--color-text-muted);
 
         &:last-child {
             margin-bottom: 0;
@@ -201,7 +201,7 @@
         li {
             font-size: 16px;
             line-height: 1.8;
-            color: #374151;
+            color: var(--color-text-muted);
             margin-bottom: 12px;
 
             &:last-child {
@@ -234,13 +234,13 @@
 /* Fees Section */
 .fees {
     padding: 60px 5%;
-    background-color: white;
+    background-color: var(--color-surface);
 
     h2 {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 32px;
-        color: #222755;
+        color: var(--color-text);
     }
 }
 
@@ -251,7 +251,7 @@
         font-size: 22px;
         font-weight: 700;
         margin-bottom: 24px;
-        color: #222755;
+        color: var(--color-text);
     }
 }
 
@@ -263,13 +263,13 @@
 .feeTable {
     width: 100%;
     border-collapse: collapse;
-    background-color: white;
+    background-color: var(--color-surface);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
 
     thead {
-        background-color: #1e3a8a;
+        background-color: var(--color-accent-panel);
         
         tr {
             th {
@@ -285,20 +285,20 @@
 
     tbody {
         tr {
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid var(--color-border);
 
             &:last-child {
                 border-bottom: none;
             }
 
             &:nth-child(even) {
-                background-color: #f9fafb;
+                background-color: var(--color-surface-alt);
             }
 
             td {
                 padding: 14px 16px;
                 font-size: 14px;
-                color: #374151;
+                color: var(--color-text-muted);
                 line-height: 1.6;
             }
         }
@@ -307,7 +307,7 @@
 
 .footnote {
     font-size: 14px;
-    color: #6b7280;
+    color: var(--color-text-muted);;
     line-height: 1.6;
     margin: 8px 0;
     font-style: italic;
@@ -316,32 +316,32 @@
 /* FAQ Section */
 .faq {
     padding: 60px 5%;
-    background-color: #f9fafb;
+    background-color: var(--color-surface-alt);
 
     h2 {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 32px;
-        color: #222755;
+        color: var(--color-text);
     }
 }
 
 /* Submit Booking Section */
 .submitBooking {
     padding: 60px 5%;
-    background-color: white;
+    background-color: var(--color-surface);
 
     h2 {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 16px;
-        color: #222755;
+        color: var(--color-text);
     }
 
     p {
         font-size: 16px;
         line-height: 1.8;
-        color: #374151;
+        color: var(--color-text-muted);
         margin-bottom: 32px;
 
         a {
@@ -357,8 +357,8 @@
 }
 
 .jotformPlaceholder {
-    background-color: #f9fafb;
-    border: 2px solid #d1d5db;
+    background-color: var(--color-surface-alt);
+    border: 2px solid var(--color-border);
     border-radius: 12px;
     padding: 20px;
     min-height: 800px;
@@ -374,19 +374,19 @@
 /* Contact Section */
 .contact {
     padding: 60px 5%;
-    background-color: white;
+    background-color: var(--color-surface);
 
     h2 {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 24px;
-        color: #222755;
+        color: var(--color-text);
     }
 
     p {
         font-size: 18px;
         line-height: 1.8;
-        color: #374151;
+        color: var(--color-text-muted);
         margin-bottom: 12px;
 
         a {

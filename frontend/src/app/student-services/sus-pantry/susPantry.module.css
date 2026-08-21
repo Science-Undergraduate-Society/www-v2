@@ -1,7 +1,7 @@
 .susPantry {
     font-family: 'Figtree', Helvetica, sans-serif;
-    color: var(--color-ui-80);
-    background: var(--color-ui-10);
+    color: var(--color-text);
+    background: var(--color-bg);
 
     section {
         display: flex;

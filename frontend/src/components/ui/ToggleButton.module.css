@@ -52,12 +52,12 @@
 
 .inactive {
     background-color: transparent;
-    color: var(--color-ui-80);
+    color: var(--color-text);
 }
 
 .inactive:hover {
     background-color: var(--color-ui-30);
-    color: var(--color-ui-80);
+    color: var(--color-text);
     transform: translateY(-0.5px);
 }
 

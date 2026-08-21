@@ -3,11 +3,14 @@
 import { useState, useRef } from "react"
 import Link from "next/link"
 import { NavMenus } from "@/data/nav"
+import { useTheme } from "@/components/providers/ThemeProvider"
+import { Moon, Sun } from "lucide-react"
 import styles from "./NavbarDesktop.module.css"
 
 export const NavbarDesktop = () => {
     const [menuState, setMenuState] = useState<string>('')
     const closeTimeout = useRef<NodeJS.Timeout | null>(null)
+    const { theme, toggleTheme } = useTheme()
 
     function close() {
         closeTimeout.current = setTimeout(() => {
@@ -76,6 +79,15 @@ export const NavbarDesktop = () => {
                 <Link href="/get-involved/join-sus" className={styles.joinSus}>
                     Join SUS
                 </Link>
+                <button
+                    type="button"
+                    className={styles.themeToggle}
+                    onClick={toggleTheme}
+                    aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+                    aria-pressed={theme === "dark"}
+                >
+                    {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+                </button>
             </div>
         </nav>
     )

@@ -1,9 +1,9 @@
 .collapsibleBox {
-  background: #e8f4f8;
+  background: var(--color-accent-panel);
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 2px 12px var(--color-shadow-base);
 
   .header {
     display: flex;
@@ -13,14 +13,14 @@
     transition: background-color 0.2s ease;
 
     &:hover {
-      background-color: #d9eef5;
+      background-color: color-mix(in srgb, var(--color-accent-panel), var(--color-ui-60) 10%);
     }
 
     h3 {
       margin: 0;
       font-size: 18px;
       font-weight: 600;
-      color: #222755;
+      color: var(--color-text);
       flex: 1;
     }
   }
@@ -37,7 +37,7 @@
     .collapseButtonBar {
       width: 12px;
       height: 3px;
-      background: #222755;
+      background: var(--color-text);
       border-radius: 16px;
       transition: all 0.3s ease;
 

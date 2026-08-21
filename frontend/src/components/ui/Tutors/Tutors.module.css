@@ -101,7 +101,7 @@
             }
 
             .page {
-                background: color-mix(in srgb, var(--color-ui-10), transparent 20%);
+                background: color-mix(in srgb, var(--color-surface), transparent 20%);
                 font-weight: bold;
                 color: var(--color-ui-80);
                 user-select: none;
@@ -117,7 +117,7 @@
                 }
 
                 &.disabled {
-                    background: color-mix(in srgb, var(--color-ui-10), transparent 80%);
+                    background: color-mix(in srgb, var(--color-surface), transparent 80%);
                     cursor: auto;
                 }
 
@@ -128,7 +128,7 @@
                     .bar {
                         width: 12px;
                         height: 4px;
-                        background: var(--color-ui-10);
+                        background: var(--color-surface);
                         border-radius: 16px;
                         transition: all 0.3s ease;
                     }
@@ -162,7 +162,7 @@
             .dropdownButtonBar {
                 width: 12px;
                 height: 4px;
-                background: var(--color-ui-10);
+                background: var(--color-surface);
                 border-radius: 16px;
                 transition: all 0.3s ease;
 

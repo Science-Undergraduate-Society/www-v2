@@ -1,9 +1,9 @@
 /* Meeting Room Bookings — CSS Module (relative-units version) */
 
 .meeting-page{
-    --ink:#222755;
-    --brand:#0173BE;
-    --bg-blue:#CCEBFF;
+    --ink: var(--color-text);
+    --brand: #0173BE;
+    --bg-blue: var(--color-accent-panel);
 
     --max: min(80rem, 96vw);
     --cut: clamp(3.5rem, 10vw, 10rem);
@@ -67,7 +67,7 @@
     position:absolute;
     left:-.125rem; right:-.125rem; bottom:-.125rem;        /* ~2px */
     height:calc(100% + .25rem);                             /* ~4px */
-    background:#fff;
+    background: var(--color-surface);
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 calc(100% - var(--cut)));
     backface-visibility:hidden;
     transform: translateZ(0);
@@ -158,7 +158,7 @@
 }
 
 .room-card{
-    display:flex; flex-direction:column; overflow:hidden; border-radius:.75rem; background:#fff;
+    display:flex; flex-direction:column; overflow:hidden; border-radius:.75rem; background: var(--color-surface);
     box-shadow:var(--card-shadow);
 }
 
@@ -212,16 +212,16 @@
     padding:.75rem 1rem;
     font-size: clamp(.8rem, 1.6vw, 1rem);
     font-weight:600; line-height:1.5;
-    border: 2px solid var(--color-ui-80, #222755);
+    border: 2px solid var(--color-text);
     background: transparent;
-    color: var(--color-ui-80, #222755);
+    color: var(--color-text);
     cursor:pointer;
     text-align: center;
     text-decoration: none;
     display: block;
     transition: background var(--elevate), color var(--elevate), box-shadow var(--elevate);
 }
-.btn-secondary:hover{ background: var(--color-ui-80, #222755); color: #fff; box-shadow:0 8px 20px rgba(34,39,85,.2); }
+.btn-secondary:hover{ background: var(--color-text); color: var(--color-bg); box-shadow:0 8px 20px var(--color-shadow-base); }
 .btn-secondary:active{ transform:translateY(1px); }
 
 /* CONTACT */
