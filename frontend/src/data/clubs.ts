@@ -160,11 +160,13 @@ export const ClubsInfo: ClubInfo[] = [
         facebook: "https://www.facebook.com/ubcmisa"
     },
     {
-        name: "Pharmacology and CAPS Student Association",
+        name: "Pharmacology Student Association",
         type: "departmental",
         description:
-            "We are a passionate group of students dedicated to supporting students who are in, wanting to get in, or just interested in learning about pharmacology and CAPS through both academic and social resources.",
-        img: "/assets/club-images/PCSA.webp"
+            "The Pharmacology Student Association (PSA) strives to offer valuable networking opportunities that connect students with peers, professionals, and mentors to support their academic and career goals. The PSA offers resources for course success and degree navigation, in addition to social events like trivia nights, beach socials, and murder mysteries to foster community beyond the classroom.",
+        img: "/assets/club-images/pharmacology_SA_logo.webp",
+        email: "The Pharmacology Student Association (PSA) strives to offer valuable networking opportunities that connect students with peers, professionals, and mentors to support their academic and career goals. The PSA offers resources for course success and degree navigation, in addition to social events like trivia nights, beach socials, and murder mysteries to foster community beyond the classroom.",
+        instagram: "https://www.instagram.com/ubc.pharmacology/"
     },
     {
         name: "Undergraduate Chemistry Society (UCS)",
