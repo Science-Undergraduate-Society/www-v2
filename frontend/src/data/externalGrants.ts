@@ -43,17 +43,10 @@ export const externalGrants: ExternalGrant[] = [
     link:"https://equity.ubc.ca/resources/funding-opportunities/strategic-equity-anti-racism-enhancement-fund-faculty-staff-stream/",
     eligiblityBlurb: [
       "Supports community-led initiatives that advance broad campus equity and anti-racism priorities aligned with UBC’s StEAR Framework and Roadmap for Change.",
-      "Applicants can apply for funds from $500 up to $10,000 per project.",
+      "Applicants can apply for funds from $500 up to $7,500 per project.",
     ],
     amount: [
-      "Small grants (< $2000)",
-      {
-        bullets: ["For those who are looking for start-up funding to support their project/idea."]
-      },
-      "Large grants (up to $1500)",
-      {
-        bullets: ["To support a project with larger impact and reach."]
-      }
+      "$500 – $7,500 per project",
     ],
   },
   {
@@ -105,11 +98,11 @@ export const externalGrants: ExternalGrant[] = [
       "Projects can target the entire UBC community or specific audience within UBC. Preference given to low-barrier/accessible initiatives with larger reach.",
     ],
     amount: [
-      "Small grants (< $2000)",
+      "Small grants (< $200)",
       {
         bullets: ["For those who are looking for start-up funding to support their project/idea."]
       },
-      "Large grants (up to $1500)",
+      "Large grants ($200 – $1,500)",
       {
         bullets: ["To support a project with larger impact and reach."]
       }
