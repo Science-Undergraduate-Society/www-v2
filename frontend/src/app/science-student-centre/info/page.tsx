@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import BannerHeader from '@/components/ui/BannerHeader/BannerHeader'
+import Image from 'next/image'
 import BannerSection from '@/components/ui/BannerSection/BannerSection'
 import FrostedCard from '@/components/ui/FrostedCard/FrostedCard'
 import CollapsibleBox from '@/components/ui/CollapsibleBox/CollapsibleBox'
@@ -59,7 +60,7 @@ export default function ScienceStudentCentreInfo() {
                 </div>
                 <h1>About Abdul Ladha</h1>
                 <div className={styles.abdulLadha}>
-                    <img src="/assets/student-science-centre-images/abdul-ladha.png" alt="Abdul Ladha" />
+                    <Image src="/assets/student-science-centre-images/abdul-ladha.png" alt="Abdul Ladha" width={600} height={400} style={{ width: '30vw', height: 'auto', borderRadius: '20px', flex: 1, minWidth: '300px' }} />
                     <p>
                         Abdul Ladha, an Honours graduate in Electrical Engineering from UBC, has made significant contributions across business, philanthropy, and education.
                         As CEO of Ableauctions.com Inc., he pioneered live online auction technology, making it a global leader serving platforms like eBay.
@@ -71,7 +72,7 @@ export default function ScienceStudentCentreInfo() {
                 </div>
                 <a href="http://abdulladha.com/" className={styles.learnMore} >
                     <p>Learn More</p>
-                    <img src="/assets/student-science-centre-images/link.svg" alt="Link" />
+                    <Image src="/assets/student-science-centre-images/link.svg" alt="Link" width={18} height={18} />
                 </a>
             </BannerSection>
             <section className={styles.buildingFeatures}>
@@ -152,7 +153,7 @@ export default function ScienceStudentCentreInfo() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img src="/assets/student-science-centre-images/1f-floor-plan.svg" alt="1F Floor Plan" />
+                        <Image src="/assets/student-science-centre-images/1f-floor-plan.svg" alt="1F Floor Plan" width={800} height={600} style={{ width: '80%', height: 'auto', margin: '0 auto', display: 'block', borderRadius: '16px' }} />
                     </a>
                 </CollapsibleBox>
                 <CollapsibleBox
@@ -172,7 +173,7 @@ export default function ScienceStudentCentreInfo() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img src="/assets/student-science-centre-images/2f-floor-plan.svg" alt="2F Floor Plan" />
+                        <Image src="/assets/student-science-centre-images/2f-floor-plan.svg" alt="2F Floor Plan" width={800} height={600} style={{ width: '80%', height: 'auto', margin: '0 auto', display: 'block', borderRadius: '16px' }} />
                     </a>
                 </CollapsibleBox>
                 <CollapsibleBox
@@ -188,7 +189,7 @@ export default function ScienceStudentCentreInfo() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img src="/assets/student-science-centre-images/3f-floor-plan.svg" alt="3F Floor Plan" />
+                        <Image src="/assets/student-science-centre-images/3f-floor-plan.svg" alt="3F Floor Plan" width={800} height={600} style={{ width: '80%', height: 'auto', margin: '0 auto', display: 'block', borderRadius: '16px' }} />
                     </a>
                 </CollapsibleBox>
             </section>

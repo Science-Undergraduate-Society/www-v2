@@ -2,8 +2,8 @@ import BannerHeader from '@/components/ui/BannerHeader/BannerHeader'
 import BannerSection from '@/components/ui/BannerSection/BannerSection'
 import FrostedCard from '@/components/ui/FrostedCard/FrostedCard'
 import BlueButton from '@/components/ui/BlueButton/BlueButton'
-import Tutors from '@/components/ui/Tutors/Tutors'
 import styles from './dropInTutoring.module.css'
+import Image from 'next/image'
 
 export default function DropInTutoring() {
     return (
@@ -67,7 +67,7 @@ export default function DropInTutoring() {
                 <h1>Exam Review Sessions</h1>
                 <p>Select first-year Science courses will be having midterm and final review sessions. Stay tuned on our SUS Instagram and website to learn more!</p>
                 <a href="https://www.instagram.com/susubc">
-                    <img src="/assets/icons/instagram.svg" alt="Instagram" />
+                    <Image src="/assets/icons/instagram.svg" alt="Instagram" width={75} height={75} />
                 </a>
             </section>
             <section className={styles.studentFeedbackForm}>

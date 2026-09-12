@@ -196,12 +196,6 @@
             gap: 24px;
             padding: 24px 32px;
             border-radius: 16px;
-
-            img {
-                width: 80%;
-                margin: 0 auto;
-                border-radius: 16px;
-            }
         }
     }
 }

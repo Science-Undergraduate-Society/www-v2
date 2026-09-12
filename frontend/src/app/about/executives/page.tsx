@@ -5,6 +5,7 @@ import { executives } from "@/data/executives";
 import { Executive } from "@/lib/types";
 import BannerHeader from "@/components/ui/BannerHeader/BannerHeader";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Executives() {
   const [selectedExec, setSelectedExec] = useState<string | null>(null);
@@ -29,6 +30,7 @@ export default function Executives() {
       <div className={styles.executiveContainer}>
         {executives.map((e: Executive) => {
           const isSelected = selectedExec === e.name;
+          const isPlaceholder = e.imagePath?.includes('logo-blue.png');
 
           return (
             <div key={e.name} className={styles.execWrapper}>
@@ -43,10 +45,12 @@ export default function Executives() {
                   onClick={() => handleClick(e.name)}
                 >
                   {e.imagePath && (
-                    <img
+                    <Image
                       src={e.imagePath}
                       alt={e.name}
-                      className={styles.executiveImage}
+                      fill
+                      sizes="(max-width: 1000px) 60vw, 30vw"
+                      className={`${styles.executiveImage} ${isPlaceholder ? styles.placeholderImage : ''}`}
                     />
                   )}
                   <div className={styles.executiveText}>
@@ -76,9 +80,11 @@ export default function Executives() {
                   <p>
                     <strong>Office Hours:</strong> {e.officeHours}
                   </p>
-                  <Link href={e.link} target="blank" className={styles.bookButton}>
-                    Book Appointment
-                  </Link>
+                  {e.link && e.link !== "" && (
+                    <Link href={e.link} target="blank" className={styles.bookButton}>
+                      Book Appointment
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

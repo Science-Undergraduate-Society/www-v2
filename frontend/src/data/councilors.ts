@@ -2,47 +2,54 @@ import { Councilor } from "@/lib/types";
 
 export const executives: Councilor[] = [
   {
-    name: "Rachel Dong",
+    name: "Katherine Cai",
     role: "President",
     email: "president@sus.ubc.ca",
-    image: "/assets/executive-images/executive-images/rachel-dong.png"
+    image: "/assets/logos/logo-blue.png"
   },
   {
-    name: "Anika Lee",
+    name: "Annie Wang",
     role: "VP Academic",
     email: "vpacademic@sus.ubc.ca",
-    image: "/assets/executive-images/executive-images/anika-lee.png"
+    image: "/assets/logos/logo-blue.png"
   },
   {
-    name: "Alan Wei",
+    name: "Gloria Zhuo",
     role: "VP Administration",
     email: "vpadministration@sus.ubc.ca",
-    image: "/assets/executive-images/executive-images/alan-wei.jpg"
+    image: "/assets/logos/logo-blue.png"
   },
   {
-    name: "Carmen Choo",
+    name: "Eesha Rathod",
     role: "VP Communications",
     email: "vpcommunications@sus.ubc.ca",
-    image: "/assets/executive-images/executive-images/carmen-choo.png"
+    image: "/assets/logos/logo-blue.png"
   },
   {
-    name: "Catherine Jiang",
+    name: "Alex Chui",
     role: "VP External",
     email: "vpexternal@sus.ubc.ca",
-    image: "/assets/executive-images/executive-images/catherine-jiang.jpg"
+    image: "/assets/logos/logo-blue.png"
   },
   {
-    name: "Judy Kim",
+    name: "Harleen Randhawa",
     role: "VP Finance",
-    email: "vpfinance@sus.ubc.ca"
+    email: "vpfinance@sus.ubc.ca",
+    image: "/assets/logos/logo-blue.png"
   },
   {
-    name: "Jenevieve Lee",
+    name: "Issac Chen",
     role: "VP Student Life",
     email: "vpstudentlife@sus.ubc.ca",
-    image: "/assets/executive-images/executive-images/jenevieve-lee.png"
+    image: "/assets/logos/logo-blue.png"
+  },
+  {
+    name: "Moya Ku",
+    role: "VP Engagement",
+    email: "vpengagement@sus.ubc.ca",
+    image: "/assets/logos/logo-blue.png"
   }
-]
+];
 
 export const speaker: Councilor[] = [
   {
@@ -53,32 +60,32 @@ export const speaker: Councilor[] = [
 
 export const clerks: Councilor[] = [
   {
-    name: "Alyssa Wong",
-    role: "Associate Vice President, Administration",
+    name: "Lucy Zhang",
+    role: "Associate VP, Administration",
     email: "avp.administration@sus.ubc.ca"
   },
   {
-    name: "Gloria Zhuo",
-    role: "Associate Vice President, Administration",
+    name: "Sheeza Saleem",
+    role: "Associate VP, Administration",
     email: "avp.administration@sus.ubc.ca"
   }
 ]
 
 export const amsRepresentativesAndSenator: Councilor[] = [
   {
-    name: "Bardia Mohammadizadeh",
+    name: "Angela Qian",
     role: "AMS Representative",
     email: "amsrep@sus.ubc.ca"
   },
   {
-    name: "Yolanda Yang",
+    name: "Alyssa Wong",
     role: "AMS Representative",
     email: "amsrep@sus.ubc.ca"
   },
   {
-    name: "Abby Sun",
+    name: "Katherine Cai",
     role: "AMS Representative",
-    email: "amsrep@sus.ubc.ca"
+    email: "president@sus.ubc.ca"
   },
   {
     name: "Alex Chui",

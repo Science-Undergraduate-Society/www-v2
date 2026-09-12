@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { NavMenus } from "@/data/nav"
 import { useTheme } from "@/components/providers/ThemeProvider"
 import { Moon, Sun } from "lucide-react"
@@ -29,7 +30,7 @@ export const NavbarDesktop = () => {
         <nav className={styles.navbarDesktop}>
             <div className={styles.navbar}>
                 <Link href="/">
-                    <img src="/assets/logos/sus-logo-long-white.png" alt="SUS logo" draggable="false" />
+                    <Image src="/assets/logos/sus-logo-long-white.png" alt="SUS logo" draggable="false" width={140} height={50} style={{ width: '140px', height: 'auto' }} />
                 </Link>
             </div>
             <div className={styles.menu}>
@@ -64,7 +65,7 @@ export const NavbarDesktop = () => {
                                             className={styles.submenuItem}
                                             onClick={() => setMenuState('')}
                                         >
-                                            <img src={`/assets/navbar-icons/${submenuItem.icon}.svg`} alt={submenuItem.label} />
+                                            <Image src={`/assets/navbar-icons/${submenuItem.icon}.svg`} alt={submenuItem.label} width={52} height={52} style={{ width: 'auto', height: '52px' }} />
                                             {submenuItem.label}
                                         </Link>
                                     ))}

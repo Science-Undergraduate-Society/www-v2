@@ -7,6 +7,7 @@ import BannerHeader from '@/components/ui/BannerHeader/BannerHeader'
 import ClubCard from "@/components/ui/ClubCard";
 import ToggleButton from "@/components/ui/ToggleButton";
 import type { ClubInfo } from "@/lib/types";
+import Image from "next/image";
 
 type Filter = "departmental" | "non-departmental";
 
@@ -107,12 +108,12 @@ export default function SusClubs() {
                                     title={club.name}
                                     {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                                 >
-                                    <img
+                                    <Image
                                         src={club.img}
                                         alt={`${club.name} logo`}
-                                        loading="lazy"
-                                        draggable="false"
                                         className={styles.clubLogoImage}
+                                        width={56}
+                                        height={56}
                                     />
                                 </a>
                             );
@@ -126,10 +127,12 @@ export default function SusClubs() {
                     </div>
 
                     <div className={styles.searchContainer}>
-                        <img
+                        <Image
                             src={"/assets/icons/search.svg"}
                             alt="Search"
                             className={styles.searchIcon}
+                            width={32}
+                            height={32}
                         />
                         <input
                             className={styles.searchBar}

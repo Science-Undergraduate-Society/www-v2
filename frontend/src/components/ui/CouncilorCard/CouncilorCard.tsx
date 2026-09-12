@@ -8,6 +8,8 @@ type CouncilorCardProps = {
 }
 
 export default function CouncilorCard({ councilor, className }: CouncilorCardProps) {
+  const isPlaceholder = councilor.image?.includes('logo-blue.png');
+
   return (
     <div
       className={[styles.councilorCard, className].filter(Boolean).join(' ')}
@@ -18,9 +20,9 @@ export default function CouncilorCard({ councilor, className }: CouncilorCardPro
           src={councilor.image}
           alt={councilor.name}
           fill
-          style={{ objectFit: 'cover', borderRadius: '10px' }}
+          style={{ borderRadius: '10px' }}
           sizes="250px"
-          className={styles.bgImage}
+          className={`${styles.bgImage} ${isPlaceholder ? styles.placeholderImage : ''}`}
         />
       )}
       <div className={styles.details}>

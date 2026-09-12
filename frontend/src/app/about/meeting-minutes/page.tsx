@@ -3,6 +3,7 @@ import FrostedCard from "@/components/ui/FrostedCard/FrostedCard";
 import BlueButton from "@/components/ui/BlueButton/BlueButton";
 import WorkingGroupMeetingMinutes from "@/components/features/WorkingGroupMeetingMinutes/WorkingGroupMeetingMinutes";
 import styles from './meetingMinutes.module.css'
+import Image from 'next/image'
 
 export default function MeetingMinutes() {
     return (
@@ -24,7 +25,7 @@ export default function MeetingMinutes() {
                             href="mailto:vpadministration@sus.ubc.ca"
                             className={styles.email}
                         >
-                            <img src="/assets/footer-icons/email.png" />
+                            <Image src="/assets/footer-icons/email.png" alt="Email" width={20} height={20} />
                             <p>Email</p>
                         </BlueButton>
                     </div>
