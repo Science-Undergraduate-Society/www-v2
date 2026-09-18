@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { tutors } from '@/data/tutors'
 import styles from './Tutors.module.css'
+import Image from 'next/image'
 
 const TUTORS_PER_PAGE = 6
 
@@ -72,7 +73,7 @@ export default function Tutors() {
             key={tutor.name}
             className={styles.card}
           >
-            <img src={tutor.image} alt={tutor.name} draggable="false" />
+            <Image src={tutor.image} alt={tutor.name} draggable="false" width={250} height={250} />
             <div className={styles.profile}>
               <h1>{tutor.name}</h1>
               <p>{tutor.bio}</p>

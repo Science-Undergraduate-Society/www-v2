@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import BannerHeader from '@/components/ui/BannerHeader/BannerHeader'
 import FrostedCard from '@/components/ui/FrostedCard/FrostedCard'
 import styles from './susPantry.module.css'
@@ -15,15 +16,15 @@ export default function SusPantry() {
                 </FrostedCard>
                 <div className={styles.stats}>
                     <div className={styles.statsCard}>
-                        <img src="/assets/pantry-images/ubc-logo.svg" alt="UBC Logo" />
+                        <Image src="/assets/pantry-images/ubc-logo.svg" alt="UBC Logo" width={64} height={64} />
                         <p>30-40% of UBC students face challenges of food insecurity</p>
                     </div>
                     <div className={styles.statsCard}>
-                        <img src="/assets/pantry-images/graduation-cap.svg" alt="UBC Logo" />
+                        <Image src="/assets/pantry-images/graduation-cap.svg" alt="Graduation Cap" width={64} height={64} />
                         <p>24% of new Greater Vancouver Food Bank registrants in 2022 were post-secondary students, and this number is expected to grow</p>
                     </div>
                     <div className={styles.statsCard}>
-                        <img src="/assets/pantry-images/cutlery.svg" alt="UBC Logo" />
+                        <Image src="/assets/pantry-images/cutlery.svg" alt="Cutlery" width={64} height={64} />
                         <p>According to Campus Nutrition, a shocking 40 per cent of UBC students are food insecure</p>
                     </div>
                 </div>
@@ -52,10 +53,10 @@ export default function SusPantry() {
 
                 <div className={styles.photoGrid}>
                     <div className={styles.photoHorizontal}>
-                        <img src="/assets/pantry-images/pantry-image-1.jpg" alt="SUS Pantry" />
+                        <Image src="/assets/pantry-images/pantry-image-1.jpg" alt="SUS Pantry" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 60vw" />
                     </div>
                     <div className={styles.photoVertical}>
-                        <img src="/assets/pantry-images/pantry-image-2.jpg" alt="SUS Pantry event" />
+                        <Image src="/assets/pantry-images/pantry-image-2.jpg" alt="SUS Pantry event" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 40vw" />
                     </div>
                 </div>
 

@@ -23,6 +23,7 @@ export type ExecutiveRole =
     | 'VP External'
     | 'VP Communications'
     | 'VP Academic'
+    | 'VP Engagement'
     | 'VP Student Life'
     | 'VP Administration'
     | 'Science Senator'

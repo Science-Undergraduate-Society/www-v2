@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { NavMenus } from "@/data/nav"
 import { useTheme } from "@/components/providers/ThemeProvider"
 import { Moon, Sun } from "lucide-react"
@@ -30,7 +31,7 @@ export const NavbarMobile = () => {
         <nav className={styles.navbarMobile}>
             <div className={styles.navbar}>
                 <Link href="/">
-                    <img src="/assets/logos/sus-logo.png" alt="SUS logo" draggable="false" />
+                    <Image src="/assets/logos/sus-logo.png" alt="SUS logo" draggable="false" width={40} height={40} style={{ width: '40px', height: 'auto' }} />
                 </Link>
                 <h1>Science Undergraduate Society</h1>
                 <button

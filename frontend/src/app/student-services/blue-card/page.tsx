@@ -2,6 +2,7 @@
 import styles from './blueCard.module.css'
 import { blueCardPartners } from '@/data/bluecardPartners'
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 
 export default function BlueCard() {
@@ -38,10 +39,12 @@ export default function BlueCard() {
                     ) : (
                         <>
                             <div className={styles.blueCard}> 
-                                <img 
+                                <Image 
                                     src="/assets/logos/sus-logo.png" 
                                     alt="SUS logo" 
                                     className={styles.logo} 
+                                    width={150}
+                                    height={150}
                                 />
                                 <div>
                                     <h1>The Blue Card</h1>
@@ -68,19 +71,23 @@ export default function BlueCard() {
                 </h2>
                 <div className={styles.featureCardContainer}>
                     <div className={styles.featureCard}>
-                        <img 
+                        <Image 
                             src="/assets/icons/percent-icon.svg" 
                             alt="percent icon" 
                             className={styles.icon} 
+                            width={60}
+                            height={60}
                         />
                         <h1>For all Science Students</h1>
                         <p>All UBC students enrolled in the faculty of science are eligible!</p>
                     </div>
                     <div className={styles.featureCard}>
-                        <img 
+                        <Image 
                             src="/assets/icons/utensil-icon.png" 
                             alt="utensil icon" 
                             className={styles.icon} 
+                            width={60}
+                            height={60}
                         />
                         <h1>Wide Selection</h1>
                         <p>
@@ -89,10 +96,12 @@ export default function BlueCard() {
                         </p>
                     </div>
                     <div className={styles.featureCard}>
-                        <img 
+                        <Image 
                             src="/assets/icons/phone-icon.png" 
                             alt="phone icon" 
                             className={styles.icon} 
+                            width={60}
+                            height={60}
                         />
                         <h1>Easy To Use</h1>
                         <p>
@@ -143,10 +152,12 @@ export default function BlueCard() {
                 <div className={styles.sponsorGrid}>
                     {blueCardPartners.map((item, index) => (
                         <a key={index} href={item.website} target="_blank" rel="noopener noreferrer" className={styles.sponsorIconWrapper}>
-                            <img
+                            <Image
                                 src={item.logoSrc}
                                 alt={`${item.name} logo`}
                                 className={styles.sponsorIcon}
+                                width={300}
+                                height={300}
                             />
                             <span className={styles.tooltiptext}>{item.description}</span>
                         </a>

@@ -90,23 +90,17 @@
         margin-top: 60px;
         margin-bottom: 20px;
         align-items: stretch;
-
-        img {
-            width: 800%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
-            display: block;
-        }
     }
 
     .photoHorizontal {
+        position: relative;
         aspect-ratio: 10 / 9;
         overflow: hidden;
         border-radius: 20px;
     }
 
     .photoVertical {
+        position: relative;
         aspect-ratio: 3 / 4;
         overflow: hidden;
         border-radius: 20px;

@@ -75,6 +75,12 @@
   z-index: 1;
 }
 
+.placeholderImage {
+  object-fit: contain;
+  background-color: var(--color-surface-alt);
+  padding: 2rem;
+}
+
 .executiveText {
   position: absolute;
   bottom: 0;
@@ -87,8 +93,8 @@
   padding: 20px;
   color: white;
   background: linear-gradient(
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.14)
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.6)
   );
 }
 

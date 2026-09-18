@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import styles from "./ClubCard.module.css";
 import { ClubInfo } from "@/lib/types";
 
@@ -44,7 +45,7 @@ const ClubCard = (club: ClubInfo) => {
 
             {isExpanded && (
                 <div className={styles.content}>
-                    <img src={club.img} alt={club.name} className={styles.image} />
+                    <Image src={club.img} alt={club.name} className={styles.image} width={300} height={300} />
                     <div>
                         <p className={styles.desc}>{club.description}</p>
                         {links.length > 0 && (

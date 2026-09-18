@@ -3,6 +3,7 @@ import { FeaturedEventsInitiative } from '@/lib/types';
 import { featuredEvents } from '@/data/getInvolved';
 import BannerHeader from '@/components/ui/BannerHeader/BannerHeader';
 import SusCalendar from '@/components/features/Calendar/Calendar';
+import Image from 'next/image';
 
 export default function SusEvents() {
     const currentMonth = "September";
@@ -30,7 +31,7 @@ export default function SusEvents() {
                         <div className={styles.monthEventPictureContainer}>
                             {feature.pictures.map((pics, idx) => (
                                 <div key={idx} className={styles.monthEventPicture}>
-                                    <img src={pics} alt={`${feature.title} image ${idx + 1}`} />
+                                    <Image src={pics} alt={`${feature.title} image ${idx + 1}`} width={800} height={800} style={{ width: '100%', height: 'auto', maxHeight: '500px', objectFit: 'contain' }} />
                                 </div>
                             ))}
                         </div>
@@ -73,7 +74,7 @@ export default function SusEvents() {
                         <div className={styles.monthEventPictureContainer}>
                             {feature.pictures.map((pics, idx) => (
                                 <div key={idx} className={styles.monthEventPicture}>
-                                    <img src={pics} alt={`${feature.title} image ${idx + 1}`} />
+                                    <Image src={pics} alt={`${feature.title} image ${idx + 1}`} width={800} height={800} style={{ width: '100%', height: 'auto', maxHeight: '500px', objectFit: 'contain' }} />
                                 </div>
                             ))}
                         </div>

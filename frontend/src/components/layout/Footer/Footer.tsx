@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 export const Footer = () => {
@@ -45,10 +46,12 @@ export const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.content}>
-                <img
+                <Image
                     className={styles.logo}
                     alt="SUS Logo"
                     src="/assets/footer-icons/sus-logo.png"
+                    width={165}
+                    height={165}
                 />
 
                 <div className={styles.socialContainer}>
@@ -59,10 +62,12 @@ export const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img
+                            <Image
                                 className={`${styles.icon} ${extra || ""}`}
                                 alt={name}
                                 src={src}
+                                width={56}
+                                height={56}
                             />
                         </a>
                     ))}
