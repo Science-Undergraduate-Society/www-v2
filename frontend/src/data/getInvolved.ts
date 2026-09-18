@@ -47,55 +47,18 @@ const featuredEventLinks: EventLink[] = [
 ]
 
 export const featuredEvents: FeaturedEventsInitiative[] = [
-    {
-        isEvent: true,
-        title: "SUS Study Sphere",
-        dates: "April 1-31",
-        description: "Enroll in our SUS Study Sphere Canvas Course to access notes, anki decks, practice questions and review session slides for common science courses like MATH 101, BIOL 121/112, CHEM 123 and much more!",
-        pictures: [],
-        links: [
-          {
-            label: "Link",
-            description: "",
-            url: "https://canvas.ubc.ca/enroll/GMT8NL"
-          }
-        ]
-      },
   {
     isEvent: true,
-    title: "SUS Annual General Meeting",
-    dates: "April 9th, 5:00 - 7:00 PM",
-    description: "Come join us on April 9th, 5-7PM for our Annual General Meeting! We will be sharing our annual budget summary, portfolio reports and our election winners. Everyone will be entered to win a $25 giftcard of your choice and free pizza and drinks will be available. See you there!",
-    pictures: [],
-    links: []
-  },
-  {
-    isEvent: true,
-    title: "Year-End Game Fair",
-    dates: "April 9th, 5:00 - 7:00 PM",
-    description: "Join us for a Year-End Games Fair featuring interactive booths, games, and reflection activities. Open to all students. Complete all stations for a guaranteed prize and a chance to win a $50 gift card",
+    title: "Faculty of Science x SUS Research Exchange",
+    dates: "September 22nd, 5:30 - 8:00 PM",
+    description: "Hi Science Students! Do you have summer research that you would like to present? Come join us at our research exchange to practice your research presentations skills and showcase your hard work! You will have the opportunity to get feedback from science professors and students, build your resume and presentation experience, and potentially win prizes for winners based on adjudication!",
     pictures: [],
     links: [
       {
         label: "RSVP Link",
         description: "",
-        url: "https://ubc.ca1.qualtrics.com/jfe/form/SV_3jyXUlbRQ9QIDUG"
+        url: "https://ubc.ca1.qualtrics.com/jfe/form/SV_8p2NF3QX2utXMI6"
       }
     ]
   },
-  {
-    isEvent: true,
-    title: "Final Exam Review Sessions",
-    dates: "BIOL 112: April 13, 1-3 PM; CHEM 123: April 13, 4-7 PM, PHYS 131: April 17, 5-6 PM, CHEM 205: April 21, 4-7 PM",
-    description: "Hi UBC Science! Want to ace your finals? Come to our free review sessions! BIOL 112: April 13, 1-3 PM; CHEM 123: April 13, 4-7 PM; PHYS 131: April 17, 5-6 PM; CHEM 205: April 21, 4-7 PM; *Locations TBD",
-    pictures: [],
-    links: [
-      {
-        label: "RSVP Link",
-        description: "",
-        url: "https://forms.gle/eRPbMS43rcy2Xr2N7"
-      }
-    ]
-  },
-  
 ];

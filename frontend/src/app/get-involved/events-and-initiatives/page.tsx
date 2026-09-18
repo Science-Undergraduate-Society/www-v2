@@ -5,7 +5,7 @@ import BannerHeader from '@/components/ui/BannerHeader/BannerHeader';
 import SusCalendar from '@/components/features/Calendar/Calendar';
 
 export default function SusEvents() {
-    const currentMonth = "April";
+    const currentMonth = "September";
     const currentEvents = featuredEvents.filter((event, idx)=> event.isEvent && event.dates.includes(currentMonth))
     const futureEvents = featuredEvents.filter((event, idx) => event.isEvent && !event.dates.includes(currentMonth))
     const initiatives = featuredEvents.filter((event, idx) => !event.isEvent)
@@ -106,7 +106,7 @@ export default function SusEvents() {
             
             <div className={styles.socialMediaBox}>
                 <p>
-                    <em>Spring 2026 is here! </em> Check out some of our events coming up this April.  
+                    <em>Fall 2026 is here! </em> Check out some of our events coming up this September.
                     <br /><br />
                     
                     To keep up to date on all our events, please check out our&nbsp;
@@ -116,7 +116,7 @@ export default function SusEvents() {
             </div>
 
             <div className={styles.monthEventsContainer}>
-                <h1>April Events</h1>
+                <h1>September Events</h1>
             </div>
 
             {
