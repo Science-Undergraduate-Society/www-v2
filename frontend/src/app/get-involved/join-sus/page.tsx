@@ -21,7 +21,7 @@ export default function JoinSus() {
                 <FrostedCard className={styles.accessCard}>
                     <p>Thank you to everyone who applied this summer. If you missed this round, stay tuned; more opportunities will open during Fall Hiring!</p>
                     <br/>
-                    <p>In meantime, keep reading to learn more about different ways to become a part of SUS.</p>
+                    <p>In the meantime, keep reading to learn more about different ways to become a part of SUS.</p>
                     <br/>
                     <p className={styles.portfoliosLink}><Link href="/about/portfolios-and-committees">Learn more about our portfolios and committees →</Link></p>
                 </FrostedCard>
