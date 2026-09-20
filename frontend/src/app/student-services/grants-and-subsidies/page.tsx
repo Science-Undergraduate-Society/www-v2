@@ -20,13 +20,13 @@ export default function GrantsAndSubsidies() {
                     </div>
                     <div className={styles.description}>
                         <p>
-                            <b>Applications for 25/26 Grant and Subsidies are open!</b>
+                            <b>Applications for 26/27 Grant and Subsidies are open!</b>
                             <br /><br />
-                            Applications for Grants & Subsidies will open on <b>September 15, 2025</b> and will be reviewed on a first-submitted, first-reviewed basis.
-                            SUS will be accepting applications until <b>April 10, 2026, or until funds run out. </b>
+                            Applications for Grants & Subsidies will open on <b>September 20, 2026</b> and will be reviewed on a first-submitted, first-reviewed basis.
+                            SUS will be accepting applications until <b>April 4, 2027, or until funds run out. </b>
                             Please utilize the following resources and submission link to put forth your application.
                             <br /><br />
-                            To read more about the 2025/2026 available grants and subsidies, as well as to view the application form, see below and click on the name of the grant/subsidy you are interested in.
+                            To read more about the 2026/2027 available grants and subsidies, as well as to view the application form, see below and click on the name of the grant/subsidy you are interested in.
                         </p>
                     </div>
                     <div className={styles.description}>
