@@ -44,7 +44,8 @@
 .weeklyDropIns,
 .appointmentBased,
 .examReviewSessions,
-.studentFeedbackForm {
+.studentFeedbackForm, 
+.mailingList {
     padding: 50px 10%;
     font-size: 20px;
 
