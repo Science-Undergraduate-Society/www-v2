@@ -47,6 +47,20 @@ const featuredEventLinks: EventLink[] = [
 ]
 
 export const featuredEvents: FeaturedEventsInitiative[] = [
+  {
+    isEvent: false,
+    title: "Science Survival Guide",
+    dates: "",
+    description: "The UBC Science Survival Guide is an annual resource compiled for both incoming and current UBC Science students, and aims to assist them in navigating the academic, organizational, and personal aspects of student life.",
+    pictures: [],
+    links: [
+      {
+        label: "View Guide",
+        description: "Read the 2026–27 UBC Science Survival Guide",
+        url: "/assets/guides/SCIENCE%20SURVIVAL%20GUIDE%202026-27.pdf"
+      }
+    ]
+  },
     {
         isEvent: true,
         title: "SUS Study Sphere",

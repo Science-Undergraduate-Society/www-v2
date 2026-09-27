@@ -23,7 +23,7 @@ export default function DropInTutoring() {
                     <br />
                     <strong>Check out the 2026 Survival Guide for tips on how to transition into your life at UBC!</strong>
                     <br />
-                    <a href="https://drive.google.com/file/d/1L8lPDrr3br4f3HeoBoeRuQkFWJEtnrZy/view">View Survival Guide</a>
+                    <a href="/assets/guides/SCIENCE%20SURVIVAL%20GUIDE%202026-27.pdf" target="_blank">View Survival Guide</a>
                 </FrostedCard>
             </section>
             <section className={styles.weeklyDropIns}>
