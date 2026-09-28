@@ -23,9 +23,9 @@ export default function DropInTutoring() {
                         Tutoring sessions are offered through <b>both in-person drop-in sessions and online appointment-based sessions.</b>
                     </p>
                     <br />
-                    <strong>Check out the 2027 Survival Guide for tips on how to transition into your life at UBC!</strong>
+                    <strong>Check out the 2026-2027 Survival Guide for tips on how to transition into your life at UBC!</strong>
                     <br />
-                    <a href="https://drive.google.com/file/d/1L8lPDrr3br4f3HeoBoeRuQkFWJEtnrZy/view">View Survival Guide</a>
+                    <a href="/assets/guides/SCIENCE%20SURVIVAL%20GUIDE%202026-27.pdf" target="_blank">View Survival Guide</a>
                 </FrostedCard>
             </section>
             <section className={styles.weeklyDropIns}>

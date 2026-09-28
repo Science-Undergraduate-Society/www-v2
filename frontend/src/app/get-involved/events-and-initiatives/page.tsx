@@ -140,14 +140,14 @@ export default function SusEvents() {
                     </div>
                 </div>
             )} */}
-            {/* <div className={styles.initiativesContainer}>
+            <div className={styles.initiativesContainer}>
                 <div className={styles.initiativesTitle}>Initiatives</div>
                 {
                 initiatives.map((feature, idx) => (
                     <FeaturedEventItem key={idx} feature={feature} />
                 ))
             }
-            </div> */}
+            </div>
 
             <section className={styles.events}>
                 <h2>All SUS Events</h2>
