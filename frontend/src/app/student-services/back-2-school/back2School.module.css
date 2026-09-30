@@ -1,0 +1,75 @@
+.back2SchoolPage {
+    font-family: 'Figtree', Helvetica, sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+    min-height: 100vh;
+}
+
+.back2SchoolPage section {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 5%;
+    padding-block: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.pageHeaderContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 3rem;
+    height: 40vh;
+}
+
+.spacer {
+    height: 25vh;
+}
+
+.headerContent {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem; 
+    z-index: 20;
+    margin-top: 30vh;
+    position: relative;
+
+    h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: bold;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    .signInButton {
+        background-color: var(--color-ui-60);
+        color: white;
+        border-radius: 16px;
+        padding: 0.75rem 2rem;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        align-self: start; 
+        position: relative;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+   
+}
