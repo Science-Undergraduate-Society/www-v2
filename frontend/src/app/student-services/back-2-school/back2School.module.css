@@ -54,6 +54,42 @@
         line-height: 1.6;
     }
 
+    h2 {
+        font-weight: bold;
+    }
+
+    p {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        margin: 0;
+        line-height: 1.6;
+        z-index: 1;
+    }
+
+    .prizes {
+        z-index: 1;
+
+        h3 {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            font-weight: bold;
+            margin: 0 0 0.5rem;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+
+        li {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.6;
+        }
+    }
+
+    .deadline {
+        font-weight: bold;
+    }
+
     .signInButton {
         background-color: var(--color-ui-60);
         color: white;
