@@ -42,7 +42,7 @@ export default function Elections() {
                         </li>
                         <li>
                             <a href="https://docs.google.com/document/d/11UTCrnUyFXL6_GpH-o4_pEW2jaE-n7sOidP9Bw2Drjg/edit?tab=t.0" target="_blank" rel="noopener noreferrer">
-                                Spring 2026 Elections Guidelines
+                                Fall 2026 Elections Guidelines
                             </a>
                         </li>
                         <li>
