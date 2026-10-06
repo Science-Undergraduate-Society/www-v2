@@ -28,6 +28,7 @@ export const NavMenus: NavMenu[] = [
             { label: "Grants & Subsidies", href: "/student-services/grants-and-subsidies", icon: "grants-and-subsidies" },
             { label: "External Subsidies", href: "/student-services/external-subsidies", icon: "external-subsidies" },
             { label: "SUS Pantry", href: "/student-services/sus-pantry", icon: "sus-pantry" },
+            { label: "Back2School Survey", href: "/student-services/back-2-school", icon: "back-2-school" }
         ],
     },
     {

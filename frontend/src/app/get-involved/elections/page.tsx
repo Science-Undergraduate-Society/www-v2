@@ -10,9 +10,9 @@ export default function Elections() {
         <div className={styles.container}>
             <BannerHeader>
                 <div className={styles.headerContent}>
-                    <h1>Spring Elections 2026</h1>
+                    <h1>Fall Elections 2026</h1>
                     <div className={styles.statusBadge}>
-                        Vote from March 16-25
+                        Vote from October 12-19
                     </div>
                 </div>
             </BannerHeader>
@@ -36,28 +36,28 @@ export default function Elections() {
                     <p><strong>Elections Documentation</strong></p>
                     <ul className={styles.docList}>
                         <li>
-                            <a href="https://docs.google.com/document/d/1imwZP-_LZTZSwtwTGRXgrcM6J3ngryNEoR4yKmYcvYQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-                                Spring 2026 Elections Brochure
+                            <a href="https://docs.google.com/document/d/1KnpGQ1j4SuVSANlj7AROzJMKjAeQl1U4soB_zbRCLLg/edit?tab=t.0" target="_blank" rel="noopener noreferrer">
+                                Fall 2026 Elections Brochure
                             </a>
                         </li>
                         <li>
-                            <a href="/assets/elections-2026/spring-elections-guidelines-2026.pdf" target="_blank" rel="noopener noreferrer">
-                                Spring 2026 Elections Guidelines (PDF)
+                            <a href="https://docs.google.com/document/d/11UTCrnUyFXL6_GpH-o4_pEW2jaE-n7sOidP9Bw2Drjg/edit?tab=t.0" target="_blank" rel="noopener noreferrer">
+                                Fall 2026 Elections Guidelines
                             </a>
                         </li>
                         <li>
-                            <a href="https://ubc.ca1.qualtrics.com/jfe/form/SV_0DikAIZUfq28z6S" target="_blank" rel="noopener noreferrer">
+                            <a href="https://ubc.ca1.qualtrics.com/jfe/form/SV_eIFkMtx6TUIJFZA" target="_blank" rel="noopener noreferrer">
                                 Nomination Submission Form
                             </a>
                         </li>
                         <li>
-                            <a href="/assets/elections-2026/campaign-violations.pdf" target="_blank" rel="noopener noreferrer">
-                                Campaign Violations Document (PDF)
+                            <a href="https://docs.google.com/document/d/1nZQO15ZUPUvvWgaWa9kcIuwDhDc8G-4dtZTcKDbTNzs/edit?tab=t.0" target="_blank" rel="noopener noreferrer">
+                                Campaign Violations Document
                             </a>
                         </li>
                         <li>
-                            <a href="https://forms.gle/uFUBrd9KRdN3vAAE9" target="_blank" rel="noopener noreferrer">
-                                Campaign Violations Form
+                            <a href="https://docs.google.com/document/d/1fIZw5lGG1rNB7u1S9JXVb5dNRg5RdpthIRN0zYUVKgU/edit?tab=t.0" target="_blank" rel="noopener noreferrer">
+                                Fall Elections FAQs
                             </a>
                         </li>
                     </ul>
@@ -70,37 +70,32 @@ export default function Elections() {
 
                 <div className={styles.timeline}>
                     <div className={styles.timelineItem}>
-                        <span className={styles.timelineDate}>Friday, February 13th, 12:00 AM</span>
+                        <span className={styles.timelineDate}>Friday, September 11th, 12:00 AM</span>
                         <span className={styles.timelineDivider}>—</span>
                         <span>Nomination submissions open</span>
                     </div>
                     <div className={styles.timelineItem}>
-                        <span className={styles.timelineDate}>Sunday, March 1st, 11:59 PM</span>
+                        <span className={styles.timelineDate}>Friday, Sept 25th, 11:59 PM (Extended to Sunday, Sept 27 at 12pm)</span>
                         <span className={styles.timelineDivider}>—</span>
                         <span>Deadline for nomination submissions</span>
                     </div>
                     <div className={styles.timelineItem}>
-                        <span className={styles.timelineDate}>Wednesday, March 4th, 6:00 – 8:00 PM</span>
+                        <span className={styles.timelineDate}>Wednesday,  Sept 30th,  6:00 PM</span>
                         <span className={styles.timelineDivider}>—</span>
-                        <span>Mandatory All Candidates Meeting (Abdul Ladha)</span>
+                        <span>MANDATORY All Candidates Meeting (online), time will depend on availability of candidates</span>
                     </div>
                     <div className={styles.timelineItem}>
-                        <span className={styles.timelineDate}>Saturday, March 7th, 11:59 PM</span>
+                        <span className={styles.timelineDate}>Friday,  Oct 2nd,  11:59 PM</span>
                         <span className={styles.timelineDivider}>—</span>
-                        <span>Deadline for headshots, blurbs, and IG handles</span>
+                        <span>Deadline for sending in headshots & blurbs for voting platform to elections@sus.ubc.ca</span>
                     </div>
                     <div className={styles.timelineItem}>
-                        <span className={styles.timelineDate}>Monday, March 9th, 12:00 AM</span>
+                        <span className={styles.timelineDate}>Monday,  Oct 5th, 12:00 AM</span>
                         <span className={styles.timelineDivider}>—</span>
-                        <span>Campaigning begins</span>
+                        <span>Campaigning Begins (paperless campaigning)</span>
                     </div>
                     <div className={styles.timelineItem}>
-                        <span className={styles.timelineDate}>Friday, March 13th, 10:00 AM – 8:00 PM</span>
-                        <span className={styles.timelineDivider}>—</span>
-                        <span>All Candidates Forum</span>
-                    </div>
-                    <div className={`${styles.timelineItem} ${styles.timelineHighlight}`}>
-                        <span className={styles.timelineDate}>Monday, March 16th, 12:00 AM</span>
+                        <span className={styles.timelineDate}>Monday, October 12, 12:00 AM</span>
                         <span className={styles.timelineDivider}>—</span>
                         <span>
                             Voting opens —{" "}
@@ -114,9 +109,19 @@ export default function Elections() {
                         </span>
                     </div>
                     <div className={styles.timelineItem}>
-                        <span className={styles.timelineDate}>Wednesday, March 25th, 11:59 PM</span>
+                        <span className={styles.timelineDate}>Wednesday, October 14th 6:00 PM</span>
+                        <span className={styles.timelineDivider}>—</span>
+                        <span>All Candidates Forum for VP External and First Year Reps</span>
+                    </div>
+                    <div className={styles.timelineItem}>
+                        <span className={styles.timelineDate}>Monday, October 19th, 11:59 PM</span>
                         <span className={styles.timelineDivider}>—</span>
                         <span>Voting closes and campaigning ends</span>
+                    </div>
+                    <div className={styles.timelineItem}>
+                        <span className={styles.timelineDate}>Thursday, October 22nd, 5:00 PM </span>
+                        <span className={styles.timelineDivider}>—</span>
+                        <span>Councillor Orientation (in-person) -  5-7PM</span>
                     </div>
                 </div>
             </BannerSection>
@@ -125,7 +130,7 @@ export default function Elections() {
             <section className={styles.councilSection}>
                 <div className={styles.councilText}>
                     <h2>Contact Information</h2>
-                    <p>Elections Chairs: <strong>Katelyn Milan and Kelly Park</strong></p>
+                    <p>Elections Chairs: <strong>Megan Chao and Vicky Nguyen</strong></p>
                     <br />
                     <p>
                         Email:{" "}

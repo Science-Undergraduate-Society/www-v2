@@ -22,7 +22,7 @@ export default function GrantsAndSubsidies() {
                         <p>
                             <b>Applications for 26/27 Grant and Subsidies are open!</b>
                             <br /><br />
-                            Applications for Grants & Subsidies will open on <b>September 20, 2026</b> and will be reviewed on a first-submitted, first-reviewed basis.
+                            Applications for Grants & Subsidies will open on <b>September 30, 2026</b> and will be reviewed on a first-submitted, first-reviewed basis.
                             SUS will be accepting applications until <b>April 4, 2027, or until funds run out. </b>
                             Please utilize the following resources and submission link to put forth your application.
                             <br /><br />
