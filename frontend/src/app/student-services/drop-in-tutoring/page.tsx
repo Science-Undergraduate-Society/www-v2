@@ -4,6 +4,7 @@ import FrostedCard from '@/components/ui/FrostedCard/FrostedCard'
 import BlueButton from '@/components/ui/BlueButton/BlueButton'
 import styles from './dropInTutoring.module.css'
 import Image from 'next/image'
+import Tutors from '@/components/ui/Tutors/Tutors'
 
 export default function DropInTutoring() {
     return (
@@ -61,7 +62,7 @@ export default function DropInTutoring() {
             </section>
             <BannerSection className={styles.book}>
                 <h1>Book An Appointment</h1>
-                {/* <Tutors /> */}
+                <Tutors />
             </BannerSection>
             <section className={styles.examReviewSessions}>
                 <h1>Exam Review Sessions</h1>
