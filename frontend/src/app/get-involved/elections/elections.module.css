@@ -364,7 +364,6 @@
     color: var(--color-text);
     white-space: pre-line;
     margin: 0;
-    flex: 1;
 }
 
 .candidateBlurbLink {
@@ -394,6 +393,7 @@
     padding: 10px 0 0;
     text-align: left;
     font-family: inherit;
+    margin-top: auto;
 
     &:hover {
         text-decoration: underline;
