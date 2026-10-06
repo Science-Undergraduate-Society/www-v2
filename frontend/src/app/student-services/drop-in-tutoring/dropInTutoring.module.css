@@ -107,17 +107,29 @@
 .appointmentBased {
     a {
         color: var(--color-ui-60);
-        text-decoration: underline; 
+        text-decoration: underline;
     }
 }
 
 .book  {
     padding: 0 10%;
+    overflow-x: hidden;
 
     h1 {
         margin-bottom: 50px;
         font-size: 40px;
         font-weight: bold;
         color: var(--color-ui-10);
+    }
+}
+
+@media (max-width: 700px) {
+    .book {
+        padding-inline: 5%;
+
+        h1 {
+            margin-bottom: 28px;
+            font-size: 32px;
+        }
     }
 }

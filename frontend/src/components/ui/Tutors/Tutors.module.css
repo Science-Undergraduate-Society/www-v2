@@ -1,5 +1,9 @@
 .tutors {
     padding: 40px 60px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    touch-action: pan-y;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -42,24 +46,33 @@
         flex-direction: column;
         gap: 50px;
         padding: 60px 0 0;
+        touch-action: pan-y;
 
         .card {
             display: flex;
             gap: 50px;
             font-size: 20px;
+            min-width: 0;
+            touch-action: pan-y;
 
             img {
+                flex: 0 0 auto;
                 width: 250px;
                 height: 250px;
                 border-radius: 16px;
                 object-fit: cover;
                 aspect-ratio: 1 / 1;
+                pointer-events: none;
+                user-select: none;
             }
 
             .profile {
                 display: flex;
                 width: 100%;
+                min-width: 0;
                 flex-direction: column;
+                overflow-wrap: anywhere;
+                touch-action: pan-y;
 
                 h1 {
                     margin-bottom: 16px;
@@ -172,6 +185,63 @@
 
                 &:nth-child(2) {
                     transform: translateX(-25%) rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .tutors {
+        padding: 24px 18px;
+        border-radius: 16px;
+
+        .filters {
+            gap: 12px;
+
+            .department {
+                flex: 1 1 calc(50% - 12px);
+                min-width: 0;
+                padding: 12px 10px;
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+
+        .cards {
+            gap: 36px;
+            padding-top: 36px;
+
+            .card {
+                flex-direction: column;
+                gap: 20px;
+                font-size: 16px;
+
+                img {
+                    width: min(100%, 240px);
+                    height: auto;
+                    align-self: center;
+                }
+
+                .profile {
+                    h1 {
+                        font-size: 22px;
+                    }
+
+                    a {
+                        align-self: stretch;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .buttons {
+                .page,
+                .prev,
+                .next {
+                    width: 52px;
+                    height: 52px;
+                    border-radius: 12px;
                 }
             }
         }

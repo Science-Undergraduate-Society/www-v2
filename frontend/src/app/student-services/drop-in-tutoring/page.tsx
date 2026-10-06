@@ -6,7 +6,6 @@ import styles from './dropInTutoring.module.css'
 import Image from 'next/image'
 import Tutors from '@/components/ui/Tutors/Tutors'
 
-
 export default function DropInTutoring() {
     return (
         <div className={styles.dropInTutoring}>
@@ -52,7 +51,7 @@ export default function DropInTutoring() {
                 </FrostedCard>
                 <b>Note: Please put the course you are booking a session for in brackets in addition to your name.</b>
                 <p>
-                    “If you decide to reschedule or cancel a session, please email your tutor at least 
+                    “If you decide to reschedule or cancel a session, please email your tutor at least
                     24 hours in advance at least 24 hours in advance. If you are running late, please
                     also let your tutor know. If you do not show up within 5 minutes of your scheduled
                     appointment and have not notified the tutor in advance about being late, you will be deemed a no-show”
@@ -93,7 +92,6 @@ export default function DropInTutoring() {
                     Tutoring Feedback Form
                 </BlueButton>
             </section>
-            
         </div>
     )
 }
