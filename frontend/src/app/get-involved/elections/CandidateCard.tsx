@@ -93,6 +93,7 @@ export default function CandidateCard({ candidate }: { candidate: ElectionCandid
                         width={400}
                         height={400}
                         className={styles.candidatePhoto}
+                        style={{ objectPosition: candidate.imagePosition || 'center' }}
                         onError={() => setImgError(true)}
                     />
                 ) : (
@@ -140,15 +141,17 @@ export default function CandidateCard({ candidate }: { candidate: ElectionCandid
 
                 {candidate.blurb ? (
                     <>
-                        <p className={`${styles.candidateBlurb} ${expanded ? '' : styles.blurbClamped}`}>
+                        <p className={`${styles.candidateBlurb} ${expanded ? '' : (candidate.blurb.length > 180 ? styles.blurbClamped : '')}`}>
                             {renderBlurb(candidate.blurb)}
                         </p>
-                        <button
-                            onClick={() => setExpanded(e => !e)}
-                            className={styles.readMoreBtn}
-                        >
-                            {expanded ? 'Show less ↑' : 'Read more ↓'}
-                        </button>
+                        {candidate.blurb.length > 180 && (
+                            <button
+                                onClick={() => setExpanded(e => !e)}
+                                className={styles.readMoreBtn}
+                            >
+                                {expanded ? 'Show less ↑' : 'Read more ↓'}
+                            </button>
+                        )}
                     </>
                 ) : (
                     <p className={styles.noBlurb}>No profile available.</p>

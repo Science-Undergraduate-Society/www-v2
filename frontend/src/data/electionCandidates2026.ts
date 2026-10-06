@@ -6,6 +6,7 @@ export interface ElectionCandidate {
     instagram?: string
     email?: string
     website?: string
+    imagePosition?: string
 }
 
 export interface ElectionPositionGroup {
@@ -15,73 +16,137 @@ export interface ElectionPositionGroup {
 
 export const electionCandidates: ElectionPositionGroup[] = [
     {
-        position: 'President',
+        position: 'Microbiology and Immunology Department Representative',
         candidates: [
             {
-                name: 'Jenevieve Lee',
-                position: 'President',
-                imagePath: '/assets/elections-2026/candidate-images/jenevieve-lee.png',
-                blurb: `Hello, my name is Jenevieve Lee, and I am running to be your next SUS President! As your current VP Student Life, previous AVP Internal and FYC chair, I have the experience and insight into what it takes to run our society effectively. Over the past three years, I have built a proven track record of turning ideas into impactful events and initiatives that enhance the Science student experience.\n\nAs your President, I will focus on:\nADVOCACY: Strengthen Science student representation by consolidating clear advocacy priorities, expanding lecture recording accessibility, and gathering direct student feedback through a Science Student Advocacy Inbox and President's Council.\n\nIMPACT: Deliver high-impact, high-turnout events through intentional programming, stronger collaboration across portfolios, and better support for SUS clubs while building new annual traditions that increase Science spirit.\n\nTRANSPARENCY: Be clearer about how SUS operates through initiatives like a SUS Events Brochure, student council and executive work, and restructuring council processes to keep councillors and students better informed.\n\nINTERNAL SUPPORT: Build a stronger internal foundation through initiatives like a SUS-wide retreat, improved onboarding for VPs, chairs and coordinators, and embedding EDI considerations across all portfolios.\n\nVisit @votejenevievelee on Instagram or votejenevievelee.my.canva.site to learn more about my platform!`,
-                instagram: '@votejenevievelee',
-                website: 'https://votejenevievelee.my.canva.site/',
-            },
-            {
-                name: 'Katherine Cai',
-                position: 'President',
-                imagePath: '/assets/elections-2026/candidate-images/katherine-cai.jpg',
-                blurb: `Hey UBC Science! I'm Katherine, and I'm running to be your SUS President.\nThis year as Assistant to the President, I worked closely with UBC faculty to advocate for improved mental health supports and supported the Dean's Office in securing $90,000 to expand lab accessibility. As Academic Experience Co-Chair, I gathered feedback from 1,500+ students through the Back2School Survey to guide SUS initiatives. With 3 years of SUS experience, I'm committed to strengthening SUS through three key priorities: community, wellbeing, and opportunity.\nCOMMUNITY & BELONGING: Strengthen the Science community by collaborating with Science Clubs to align advocacy goals and maximize event impact. Increase SUS participation in inter-constituency events via President's Council to build stronger campus connections.\nWELLBEING & ACCESSIBILITY: Create a Mental Health and Accessibility Working Group to strengthen mental health advocacy and collaborate with the Science Embedded Counsellor. Introduce a SUS Accessibility Checklist to make events more inclusive and increase participation across the Science community.\nSTUDENT OPPORTUNITIES: Expand career development opportunities through research workshops, industry panels, and programming highlighting underrepresented fields. Grow volunteer opportunities through the SUS Community Engagement Fair and improve SUS training for clubs and student leaders.\nVisit votekatherinecai.com or @votekatherinecai for more information!`,
-                instagram: '@votekatherinecai',
-                website: 'https://votekatherinecai.com',
+                name: 'Chris Yan',
+                position: 'Microbiology and Immunology Department Representative',
+                imagePath: '/assets/elections-2026/candidate-images/chris-yan.jpg',
+                blurb: `Hello UBC Science! I'm Chris Yan, running to be the Microbiology and Immunology departmental representative and would greatly appreciate your support in this election. I am passionate about advocacy and student support, and will help amplify your voices! Follow my campaigning page @votechrisyan on Instagram for more updates and information, such as my current experiences and goals for an upcoming year in this role. Also keep your eye out for some snazzy reels 😆.`,
+                instagram: '@votechrisyan',
             },
         ],
     },
     {
-        position: 'VP Administration',
+        position: 'Earth, Ocean, and Atmospheric Sciences and Geographical Sciences Representative',
         candidates: [
             {
-                name: 'Dilnoor Cheema',
-                position: 'VP Administration',
-                imagePath: '/assets/elections-2026/candidate-images/dilnoor-cheema.jpg',
-                blurb: `Hi UBC Science! I'm Dilnoor, a Neuroscience student, and I'm running to be your next VP Administration. With extensive experience in science community engagement, serving as the past President of the UBC Blood for Life Club and working as an administrative assistant and mentor for SUS, I am committed to building a more connected, efficient, and student-centred Science community. My platform will work on making science students feel supported through CONNECTION, ACCESSIBILITY, and SUPPORT.\nCONNECTED SCIENCE COMMUNITY:\nI will strengthen collaboration across clubs and portfolios by creating structured opportunities to connect. Through frequent inter-club socials, networking coffee chats, expanded club fairs, and consistent promotion opportunities, I aim to make collaboration easier and more intentional within the Science community.\nACCESSIBILITY:\nAdministrative systems should be clear and easy to navigate. I will work toward centralized access to booking information, uploading documents swiftly, simplified governance communication, and accessible, well-structured election processes.\nSTUDENT-CENTRED SPACES:\nLadha and SUS spaces should feel welcoming and supportive, especially during high-stress academic periods. I will continue extended exam-season accessibility and prioritize exam-relief initiatives to make SUS spaces a reliable student hub.\n@vote.dilnoorcheema`,
-                instagram: '@vote.dilnoorcheema',
-            },
-            {
-                name: 'Gloria Zhuo',
-                position: 'VP Administration',
-                imagePath: '/assets/elections-2026/candidate-images/gloria-zhuo.jpg',
-                blurb: `Hi! I'm Gloria Zhuo, a third-year neuroscience student, and I'm excited to be running for your next SUS Vice President, Administration. As the current AVP Administration with 2 years of experience supporting the Society, I've seen how strong administrative systems shape student life behind the scenes, from club support to building management and council operations.\n\nI've learned that good administration is about making SUS more accessible, organized, and responsive to science students. If elected, I hope to improve building management by advocating for clearer, more accessible ways of letting students know when the space is being used, rework of booking systems including better prioritization for SUS working groups & clubs, and stronger safety planning for students using the space. I also hope to continue simplifying key resources, such as club guides and code and policy documents, making easier and more comprehensive guides for councillors, clubs, and general science students. In addition, I hope to strengthen student engagement in elections so more students feel informed, represented, and motivated to vote.\n\nI'll be sharing more about my goals for the Administration portfolio and how we can make SUS more connected, transparent, and supportive for all science students, so feel free to reach out on Instagram at @gloriazhuo4vpadmin to learn more or share your ideas!`,
-                instagram: '@gloriazhuo4vpadmin',
+                name: 'Cory Law',
+                position: 'Earth, Ocean, and Atmospheric Sciences and Geographical Sciences Representative',
+                imagePath: '/assets/elections-2026/candidate-images/cory-law.jpeg',
+                blurb: `Hi friends! My name’s Cory and I’m a 4th year student in Atmospheric Science. Having been involved in both the EOAS and Geography departments for a while now (through things like UBC Storm Club, the EOAS Undergraduate Clubs Council (UCC), research, and teaching assistance), I recognize the importance of our voice in the Science Undergraduate Society and the weight these decisions have on our undergraduate experience. I plan to advocate for a greater consideration of EOAS and Geographical Science students in SUS initiatives and opportunities, given that we’ve been without a representative for the past little while. Our input matters, and I hope to foster these positive relationships between EOAS, Geographical Sciences, and the wider UBC Science community :)`,
             },
         ],
     },
     {
-        position: 'VP Academic',
+        position: 'ISCI Rep',
         candidates: [
             {
-                name: 'Annie Wang',
-                position: 'VP Academic',
-                imagePath: '/assets/elections-2026/candidate-images/annie-wang.jpg',
-                blurb: `Hi UBC Science!\nMy name is Annie Wang, and I'm excited to be running for Vice President Academic of the Science Undergraduate Society! Through four years of involvement in SUS, and most recently serving as your AVP Academic, I've gained firsthand experience advocating for Science students and collaborating with faculty to strengthen the academic experience.\nMy platform is centered on advocacy, engagement, accessibility, and opportunity. I hope to strengthen student representation in faculty decision-making, build a more connected academic community through impactful events, make academic supports like tutoring and degree planning tools easier to access, and expand pathways for students to explore research and professional development beyond the classroom. Some of my leadership experiences outside of SUS include serving as Co-President of the CAPS Student Association and supporting students as a Science Peer Academic Coach and BIOL 112 Peer Tutor. These roles have strengthened my commitment to creating inclusive, supportive environments where students can learn, grow, and succeed. I'm excited to connect with students and work together to enhance the Science academic experience.\nVisit @voteanniewang to learn more about my platform and goals, and feel free to reach out to me - I'd love to connect!`,
-                instagram: '@voteanniewang',
-            },
-            {
-                name: 'Megan Chao',
-                position: 'VP Academic',
-                imagePath: '/assets/elections-2026/candidate-images/megan-chao.jpg',
-                blurb: `Hi everyone! My name is Megan, I'm in my 3rd year of the Cellular, Anatomical, and Physiological Sciences (CAPS) program, and I'm running to be your Vice President Academic in this year's SUS Elections! I have spent the past 2 years working in SUS's Academic Experience Committee. I am incredibly passionate about improving the academic experience of Science Students! One of my major goals for next year is to increase student engagement with SUS and student input in advocacy efforts by creating open space for you to share concerns and ideas surrounding your experience with SUS and UBC Science! Working with the Faculty of Science, I will advocate for availability of recorded lectures, a more user-friendly Workday, a more lenient Exam Hardship Policy, and increasing diversity and representation within UBC Science.\nMy future projects include implementing a SUS Opportunities portal for science-related job opportunities, awards, and scholarships, expansion of the SUS Study Sphere to include more student- and SUS-made academic resources, and SUS Resource Fairs for students to learn about our initiatives.\nAs your SUS VP Academic, I'll do my best to support your academic journey! @votemegansusvpacademic`,
-                instagram: '@votemegansusvpacademic',
+                name: 'Renee Hui',
+                position: 'ISCI Rep',
+                imagePath: '/assets/elections-2026/candidate-images/renee-hui.png',
+                blurb: `Heyyyy, I’m Renee and I’m in my 3rd year integrating neuroscience, physiology, and human health. \n ૮ ˶ᴖ ᴗ ᴖ˶ ა \n-Platform: RISE (Represent, Integrate, Support, Engage), learn more about it on my instagram! \n-Goal: I am running as the ISCI rep because I want to make your voice heard. There is this common saying that ISCI does not really have a community so I am here to change that.\n-Vision: Fun events, academic resources, networking opportunities… You name it, and I will try my best to make it happen!! \n-Qualities: Responsible, reliable, approachable, efficient.\n \nFeel free to check out my instagram @renee_for_isci_rep_2026 to learn more about me and my platform (shameless self promotion oops…). \nDon’t forget to check out other candidate’s profiles because ultimately, you want to vote for the person who you think would best represent us as ISCI students!\n\nThank you for taking the time to vote and please email me (reneehui22@gmail.com) if you would like to connect, I love talking to people hehe!`,
+                instagram: '@renee_for_isci_rep_2026',
+                email: 'reneehui22@gmail.com',
             },
         ],
     },
     {
-        position: 'VP Communications',
+        position: 'First Year Representative',
         candidates: [
             {
-                name: 'Eesha Rathod',
-                position: 'VP Communications',
-                imagePath: '/assets/elections-2026/candidate-images/eesha-rathod.jpg',
-                blurb: `Hi UBC Science! My name is Eesha, and I'm excited to be running for your next VP Communications. With three years of experience in the Science Undergraduate Society, I want to strengthen how SUS connects with science students and showcases the diverse opportunities within our faculty.\n\nSome initiatives I hope to focus on include:\n• Make merchandise more affordable and accessible by using the Communications budget to help subsidize costs\n• Showcase science students through regular social media spotlights highlighting research, clubs, and student experiences\n• Expand outreach across multiple social media platforms to better reach and engage science students\n• Broaden the Hackathon to encourage participation from students across different science disciplines\n• Highlight science clubs and opportunities through stronger collaborations and promotional initiatives\n\nI'm passionate about building community within science and would love the opportunity to bring creativity, collaboration, and thoughtful communication to this role. For any questions regarding my platform, please feel free to dm me @vote.eesha.vpcomms. Thank you for your support!`,
-                instagram: '@vote.eesha.vpcomms',
+                name: 'Mirabelle Onovwiona',
+                position: 'First Year Representative',
+                imagePath: '/assets/elections-2026/candidate-images/mirabelle-onovwiona.jpeg',
+                blurb: `Hi UBC Science! My name is Mirabelle Onovwiona, but everyone calls me Mimi, and I’m running to be your SUS First-Year Representative. As a representative, my intention is to “Put First-Years FIRST.” (FIRST: Feedback, Inclusion, Representation, Support, Transparency).\n\nSome of my leadership experiences include being a Student Council Grade Representative throughout all of high school and acting as Graduation Council President, where I managed a budget of almost $200,000/year. Event planning, advocacy, leadership, and communication have defined a large part of my life, and I’m committed to serving the first year science students with these skills. \n\nI want first year science students to feel a sense of belonging so strong that they are confident that they made the right choice with UBC. The goal is to look back and realize that our worries were insignificant! Every student deserves to feel supported, especially as we navigate the novelty of university and the rigour of first year science classes. \n\nUltimately, I’ve learned what it means for people to trust me to steer their experiences. I am dedicated to earning that trust in this role. \n\nTogether, let’s make this year unforgettable. Put your experience FIRST and vote for Mirabelle.`,
+            },
+            {
+                name: 'Stephanie Yoon',
+                position: 'First Year Representative',
+                imagePath: '/assets/elections-2026/candidate-images/stephanie-yoon.jpg',
+                blurb: `Hey everyone! My name is Stephanie, and just like you, I am a first year science student at UBC who is very enthusiastic about building a strengthened community within our faculty.\n\nAs a SUS First Year Representative, I hope to contribute in fostering a science cohort in which every first year can feel a personal belonging to. I will work to make all 2400+ of our voices heard!\n\nI have a fair amount of experience and a great passion for student committee work and advocacy, as I was a long standing member of my highschool’s Music Executive Committee–where I took part in planning major community-bonding events, facilitating inter-grade connections, and serving as a representative of the faculty.\n\nThrough being a part of this cohort for 5 years, I learned that the school environment becomes a lot more enjoyable once you get the chance to engage and connect with the people around you.\n\nThat’s why my goal as a First Year Representative is to offer every one of us the opportunity to settle in and develop our own connection to the science community here at UBC, through promoting festivities, collaboration, and discussion.\n\nLet’s work to turn this campus into a home!`,
+            },
+            {
+                name: 'Jeslyn Wong',
+                position: 'First Year Representative',
+                imagePath: '/assets/elections-2026/candidate-images/jeslyn-w.jpeg',
+                blurb: `Hi UBC Science first-years! My name is Jeslyn, and I’m running for SUS First-Year Representative. \nThrough my past involvement in leadership, I’ve seen how much of a difference a supportive community can make. Those experiences taught me how important it is for students to feel heard and to know that their input matters.\nAs First-Year Rep, my goal is to make our first year feel less overwhelming by making useful resources and opportunities easier to find. I also hope to help students feel more confident taking part in the Science community and exploring what UBC has to offer. Most importantly, I want to be someone first-years can come to with ideas or concerns and trust to bring their voices forward within SUS.\nOutside of school, I love art, hiking, reading, and anything outdoorsy. I’m so excited to meet more of you and make the most of our first-year together!`,
+            },
+            {
+                name: 'Joshua Low',
+                position: 'First Year Representative',
+                imagePath: '/assets/elections-2026/candidate-images/joshua-low.png',
+                blurb: `Hey there! My name is Josh, and after 13 years of school, the one thing I’ve learned is that everyone deserves to have a little fun! Whether that’s through the events we host, the community we build, or just the vibe we bring, one of my goals for this year as your First Year Rep will be to make sure there’s always a place for you to express your whimsy, cry about that one Chem midterm, or escape from the stress of school when things just get too overwhelming. But I don’t want to make these decisions alone. I want to hear your opinions, ideas, and even your most out-of-pocket event suggestions so we can make this first year a memorable experience for everyone!\n\nFrom leading youth events to coaching ultimate frisbee to even selling day-old donuts on the street, I’ve learned that the best communities are the ones where everyone feels comfortable being themselves. If you’re looking for a representative who can bring your ideas to SUS, someone who will understand every niche reference you make, or even a friend to film the weirdest TikTok audios with… consider voting for me as your SUS First Year Rep! :)`,
+            },
+            {
+                name: 'Nicky Nguyen',
+                position: 'First Year Representative',
+                imagePath: '/assets/elections-2026/candidate-images/nicky-nguyen.JPG',
+                blurb: `Hey! I’m Nicky Nguyen, and I’m running to be YOUR SUS First-Year Representative!\nStarting UBC Science has been exciting, rewarding, but also a little overwhelming. From navigating a new academic environment to meeting hundreds of new people, first year definitely comes with many challenges. I’m here to help make this experience a little easier and more approachable for all of us!\nAs your First-Year Representative, I want to turn your ideas into action. I will put my best effort to actively engage with our first-year community, listen to your experiences, and bring your ideas, suggestions, and concerns to the foreground in SUS. Whether you’re looking for academic resources, professional opportunities, ways to get involved, or simply a chance to meet more people, I want SUS to reflect what YOU actually want and need.\nMy priorities are simple: build community, create opportunities, and amplify your voice. I hope to introduce new events while supporting existing initiatives that bring students together, encourage collaboration, and help us discover everything UBC Science has to offer both inside and outside the classroom.\nWe’re all figuring out our first year together – let’s make it a little less overwhelming and a lot more memorable. Your Voice, Your Community – Vote Nicky!`,
+            },
+            {
+                name: 'Carson Kwok',
+                position: 'First Year Representative',
+                imagePath: '/assets/elections-2026/candidate-images/carson-kwok.jpg',
+                imagePosition: 'top',
+                blurb: `I will advocate for better food in the dining hall.`,
+            },
+        ],
+    },
+    {
+        position: 'Chemistry Representative',
+        candidates: [
+            {
+                name: 'Marijke Barr',
+                position: 'Chemistry Representative',
+                imagePath: '/assets/elections-2026/candidate-images/marijke-barr-eburne.jpeg',
+                blurb: `Hi! I’m Marijke, a third-year Chemistry student and the current SUS Representative on the Undergraduate Chemistry Society (UCS). I’m running for the position of Chemistry Representative because I want chemistry students to have a strong voice within the larger Science Undergraduate Society and someone who will actually bring their perspectives into the conversation.\nI’m involved in chemistry research at UBC and have become increasingly involved in the chemistry community during my degree, so I care about representing the students and department I’m a part of. As your Chemistry Representative, I want to hear what matters to chemistry students, speak up for our interests, and make sure our community is represented in the decisions SUS makes.\nI’d love the opportunity to represent Chemistry on SUS this year, and I'd appreciate your vote!`,
+            },
+        ],
+    },
+    {
+        position: 'CAPS Representative',
+        candidates: [
+            {
+                name: 'Hunter Wyndham',
+                position: 'CAPS Representative',
+                imagePath: '/assets/elections-2026/candidate-images/hunter-wyndham.jpeg',
+                imagePosition: 'top',
+                blurb: `Hi, I’m Hunter, a 3rd year CAPS major! \n\nThrough my involvement both within SUS and CAPSSA, I’ve grown passionate about advocating for students in order to better their university experience. I’ve been part of SUS for 3 years, starting as a First Year Committee Coordinator, and rising to the rank of Associate Vice-President of the Student Life portfolio, overseeing four committees, eight chairs, and 50+ coordinators. In my two years in CAPSSA, I’ve been both an Academic Coordinator, where I designed 350+ flashcards for the CAPS 205 and 206 courses, and a Co-VP Events, where I will be organizing various events in order to support the professional and social development of CAPS students (YOU!).`,
+            },
+        ],
+    },
+    {
+        position: 'Biology Department Representative',
+        candidates: [
+            {
+                name: 'Ruby Beach',
+                position: 'Biology Department Representative',
+                imagePath: '/assets/elections-2026/candidate-images/ruby-beach.png',
+                blurb: `My name is Ruby Beach, and I am a third-year Biology student eager to serve as your Departmental Representative on the Science Undergraduate Society (SUS). Passionate about translating our rigorous academic experiences into meaningful peer support, I want to bridge the gap between Biology and SUS leadership. My interests in molecular genetics, human physiology, and ecological systems have driven my involvement across campus and field opportunities, from intertidal ecological research on Galiano Island to clinical trial work here at UBC.\nAs a representative, my priority is fostering an inclusive, transparent, and collaborative environment for every Biology student. Having campaigned within BioSoc and engaged with mentorship programs across campus, I understand the importance of clear academic pathways, strong communication channels with the department, and accessible wellness resources tailored to students' workload. I am unafraid to bring forth any concerns from Biology to SUS as I want everyone to have a voice and be heard. \nBeyond labs and lectures, I bring a community-minded, balanced approach to leadership, whether collaborating on data-driven research, road biking around Vancouver, or organizing student initiatives. I am committed to making sure any collective concerns get voiced, students well-being is advocated for, and success is celebrated within SUS. I look forward to serving as an approachable, dedicated liaison on behalf of Biology!`,
+            },
+        ],
+    },
+    {
+        position: 'Mathematics Department Representative',
+        candidates: [
+            {
+                name: 'Aydin den Ouden',
+                position: 'Mathematics Department Representative',
+                imagePath: '/assets/elections-2026/candidate-images/aydin-den-ouden.JPG',
+                blurb: `Hello! I’m Aydin, a second-year combined Math and Chem student looking to support mathematics undergraduates as this year’s SUS Math Department Representative. \n\nDuring my math courses in my first and second year thus far, I’ve received a lot of help from department resources like the Math Learning Center and Calculus Commons Room, but also from student-led resources such as Math exam packs from the Mathematics Undergraduate Society. While the SUS frequently advertises resources, review sessions, and tutoring services, I’ve found Math help to often be underrepresented there, which is something I wish to change, be that to better encourage new students to join the department, or for students in lower years like me to find the help that’s already around them.\n\nWhile I’m focusing on changes directed towards lower years, it’s because of a lack of experience, rather than willingness; so if you’re a math student, please reach out to me with any questions, feedback, or suggestions via Instagram @vc.aydin`,
+                instagram: '@vc.aydin',
+            },
+        ],
+    },
+    {
+        position: 'Pharmacology Representative',
+        candidates: [
+            {
+                name: 'Ethan Tyau',
+                position: 'Pharmacology Representative',
+                imagePath: '/assets/elections-2026/candidate-images/ethan-tyau.jpeg',
+                blurb: `I have come to appreciate how our relatively small program makes Pharmacology feel more interconnected. We have a unique opportunity to get to know people, build a strong community, and support one another throughout our degree. This allows for a strong sense of what matters to Pharmacology students. \n\nAs your representative, I hope to be someone you feel comfortable bringing your thoughts and concerns, to show what matters to you. I want to make sure that our program's unique perspectives are heard and represented in the broader science society. While pharmacology may be a small program, this does not mean our voice should be any smaller!`,
             },
         ],
     },
@@ -89,79 +154,62 @@ export const electionCandidates: ElectionPositionGroup[] = [
         position: 'VP External',
         candidates: [
             {
-                name: 'Kiana Bagherpour',
+                name: 'Zara Shaikh',
                 position: 'VP External',
-                imagePath: '/assets/elections-2026/candidate-images/kiana-bagherpour.jpg',
-                blurb: `Hi everyone! My name is Kiana Bagherpour, and I'm a second-year Integrated Sciences student running for VP External of the Science Undergraduate Society. Over the past year, I've had the opportunity to serve as a Careers & Professional Development (CAPD) Coordinator with SUS, where I helped organize and promote initiatives such as Coffee Chats, IGNITE, and Science Fair.\n\nThrough this role, I've worked on connecting Science students with career resources, industry professionals, and networking opportunities beyond the classroom. Being part of the External portfolio has shown me how valuable these connections can be in helping students explore different career paths and develop skills for the future.\n\nI'm excited about the opportunity to expand these initiatives and create more ways for students to engage with career and professional development opportunities. If elected, I hope to strengthen partnerships with external organizations, continue growing career development initiatives, highlight student achievements through Science Student Recognition, and expand sustainability initiatives within the Science community.`,
-                instagram: '@kiana4_vpexternal',
+                imagePath: '/assets/elections-2026/candidate-images/zara-shaikh.jpeg',
+                blurb: `Hello Science Students! My name is Zara, I’m a fourth-year Pharmacology student, and I’m so excited to be running to be your next SUS VP External!\n\nI’ve been part of the SUS External portfolio for the past two years, first as a Coordinator and second as Sponsorships Co-Chair, so I’ve had the chance to be involved across CAPD, SSRAN, and Sustainability working groups. From helping secure funds for Coffee Chats and Ignite (Science’s biggest career fair) to securing over $4,500 in sponsorships distributed to you (science students!) and expanding the Blue Card (your student discount card) by 13+ partners, I’ve loved creating opportunities that actually benefit Science students.\n \nAs VP External, I want to make the portfolio feel more relevant and accessible to all Science students. I hope to expand research opportunities, bring in diverse Coffee Chat speakers from various career pathways (including computer science, health sciences and much more), strengthen connections with industry and student groups, and make sure students across all science specializations feel represented.\n\nI’ve loved being part of External, and I’d be so excited to take everything I’ve learned and make the portfolio even better for students this year! Check out my campaign on Instagram: @zara4vpexternal`,
+                instagram: '@zara4vpexternal',
             },
             {
-                name: 'Maria Shevyakova',
+                name: 'Kelly Park',
                 position: 'VP External',
-                imagePath: '/assets/elections-2026/candidate-images/maria-shevyakova.png',
-                blurb: `Hello fellow Science students! My name is Maria Shevyakova, and I am a first-year BS student running to be your next SUS VP External. I am passionate about connecting science students with opportunities beyond the classroom while fostering connections between our science community here at UBC and the broader scientific and professional world.\n\nAs a first-year student, I bring a perspective that reflects the experiences of students who are just beginning their time at UBC. Many students early in their degrees are exploring research opportunities, career paths, and ways to connect with the scientific community. Because I am navigating this stage myself, I understand how important accessible networking, mentorship, and professional exposure can be.\n\nAs VP External, I aim to strengthen partnerships with researchers, healthcare organizations, and industry partners to create meaningful opportunities for science students. Whether through networking events, speaker panels, or collaborations with research and healthcare institutions, my goal is to expand the connections that help students explore careers in science, research, and medicine.\n\ncampaign Instagram: @vote.maria.susvp`,
-                instagram: '@vote.maria.susvp',
+                imagePath: '/assets/elections-2026/candidate-images/kelly-park.jpeg',
+                blurb: `Hello UBC Science students! My name is Kelly Park and I’m incredibly honoured to be your VP External candidate. I’ve held a variety of positions within SUS: First Year Committee Coordinator, Research Conference Coordinator, Elections Co-Chair, and I’m currently an Assistant to the President. The time I’ve spent working in different teams fulfilling unique purposes have taught me vital skills for achieving my goals.\n\nHere is how I will broaden support for all Science students and strengthen our community:\n\n- Be an approachable peer by listening to your voices and cater to your needs by combatting food insecurity, promoting volunteer/career opportunities, and advocating to our Faculty. 📞\n- Increase physical, computational, and environmental science focused initiatives while continuing to support life science students. 📈\n- Collaborate with more SUS clubs for sustainability efforts and build a network that better serves science students. 🌳\n- Expand the scope of the Science Student Celebration Awards Night by including Faculty recognized award recipients to celebrate more achievements! 🌟\n\nThank you for your attention and support, further details on my campaign initiatives can be found at @kelly4vpexternal! I would love to get in contact via DMs or email (kellypark0623@gmail.com) for any inquiries.`,
+                instagram: '@kelly4vpexternal',
+                email: 'kellypark0623@gmail.com',
+            },
+            {
+                name: 'Bella Wang',
+                position: 'VP External',
+                imagePath: '/assets/elections-2026/candidate-images/bella-wang.jpeg',
+                blurb: `Hi Science! My name is Bella Wang, and I’m a third-year Microbiology and Immunology student running for VP External. There’s no single image of a Science student, and I believe External should represent that. Science is full of students with different interests and futures. My goal is to broaden the fields and perspectives represented in the SUS External portfolio. This means creating more opportunities for Science students across all majors to connect with industry leaders and faculty, and to discover paths beyond their degree. I also want to bring External closer to the students it represents. Opportunities only matter if students know about them and feel welcomed. I want to make External more accessible and transparent to the Science community and create more ways for students to voice what they want to see from us. I’m not running to reinvent SUS. I’m running to make External feel more engaging, more open, and more representative of all the Science students it serves. Let’s Bring Science Together.`,
             },
         ],
     },
     {
-        position: 'VP Finance',
+        position: 'Phys/Astro/Biophys Department Representative',
         candidates: [
             {
-                name: 'Harleen Randhawa',
-                position: 'VP Finance',
-                imagePath: '/assets/elections-2026/candidate-images/harleen-randhawa.jpg',
-                blurb: `Harleen Randhawa is a third-year Integrated Sciences student and current Associate Vice President of Finance for the Science Undergraduate Society. She supports student initiatives and raises awareness of financial resources for science students through her work with the SUS finance portfolio.\n\nIf elected VP Finance, Harleen aims to make financial resources more accessible, practical, and transparent for science students. Her platform focuses on four main areas. She plans to support food security and everyday budgeting through affordable meal planning and grocery-budgeting workshops. She will expand and launch a monthly financial literacy series covering topics such as taxes and students' guide to building credit. Harleen also aims to improve transparency in the Science Undergraduate Society's finances. She will increase awareness of grants and funding opportunities by creating centralized resources and offering grant-writing workshops.`,
-                instagram: '@vote.harleenrandhawa',
+                name: 'Rain Zhong',
+                position: 'Phys/Astro/Biophys Department Representative',
+                imagePath: '/assets/elections-2026/candidate-images/rain-zhong.jpg',
+                blurb: `Weather forecast — Rain expected.\n\nHi physics students! My name is Rain and I am excited to be your potential Physics Department Representative.\n\nI am currently in 2nd year Biophysics. Over the past year, I have had the honour to serve on the SUS Council as the Science One Program Representative. This year, I would love to return to the Council to further impact executive decisions through the voices of the physics student body.\n\nI have had the experience of amplifying student voice as a First Year Committee Coordinator, strengthening the bonds of such a vast community through events such as the White Lie House Party and Year End Gala. This year, I am also an HR Coordinator for SUS, managing the internal newsletter and handling interpersonal relationships. \n\nThis universe was built on relationships (whether it be electrons orbiting the nucleus or planets orbiting stars), and I am no stranger to how these relationships form and develop. As the Physics Department Representative, I wish to strengthen our forces of attraction with the greater executive body.\n\nThe forecast this morning told me there was a 100% chance of rain; will there also be a 100% chance of YOU voting for Rain?`,
+                instagram: '@rain4physrep',
             },
         ],
     },
     {
-        position: 'VP Student Life',
+        position: 'Cognitive Systems Representative',
         candidates: [
             {
-                name: 'Issac Chen',
-                position: 'VP Student Life',
-                imagePath: '/assets/elections-2026/candidate-images/issac-chen.jpg',
-                blurb: `Hi UBC Science! My name is Issac Chen, and I am running to be your next Vice President Student Life! I am currently in my fourth year studying Pharmacology and completing my Co-op placement as a Clinical Research Assistant at BC Children's Hospital.\n\nOver the past three years, the Student Life portfolio has been a defining part of my undergraduate experience. I started as a Sports coordinator, then as the Sports Chair, and I am currently one of the AVP Student Life. Through these roles, I have gained firsthand experience and knowledge on what truly brings our Science community together! Having witnessed the impact that Student Life can create, I am confident in working towards an even stronger year for SUS Student Life.\n\nMy goal is to build on the strong momentum from past years and continue to elevate the portfolio with student-centered initiatives. I want to create an environment where we can bring out the FUN in every Science student and introduce new initiatives that deliver consistent, tangible changes year-round! I am beyond excited to step into this role and turn some of my visions and goals into life for the next academic year!`,
-                instagram: '@vote.issacchen',
+                name: 'Serafina Sunario',
+                position: 'Cognitive Systems Representative',
+                imagePath: '/assets/elections-2026/candidate-images/serafina-sunario.png',
+                imagePosition: 'top',
+                blurb: `I’m Serafina Sunario, a third-year Cognitive Systems student, and I’m thrilled to run as your Departmental Representative! COGS has connected me with some of the most passionate minds, and despite our diverse interests, we always come back to one community. The program has given me so much, and I want to give back by making sure my peers feel heard, supported, and empowered to succeed. As our program continues to grow, I want to strengthen our community, advocate for opportunities that reflect our unique passions, and help you make the most of your time in COGS. I’m keen to learn about your personal experience and bring your voice forward!`,
             },
         ],
     },
     {
-        position: 'VP Engagement',
+        position: 'Neuroscience Departmental Representative',
         candidates: [
             {
-                name: 'Moya Ku',
-                position: 'VP Engagement',
-                imagePath: '/assets/elections-2026/candidate-images/moya-ku.jpg',
-                blurb: `Hi UBC Science! I'm Moya Ku, a third-year Biology student running for VP Engagement. Over the past three years, I've been actively involved with the Science Undergraduate Society in several event-planning roles that have allowed me to help build community within the Faculty of Science. I began as a First Year Committee Coordinator, planning events designed to welcome new science students and help them make connections early in their university experience. I later served as a Science RXN Coordinator, where I organized events for incoming first-year students to meet one another, and as a Social Committee Coordinator, helping plan large-scale events open to the entire science student body. This past year, I'm proud to have served as Flagship Experience Co-Chair, leading a team that planned major SUS events like Science RXN and Science Week, while collaborating with other faculties and Science faculty staff. As VP Engagement, my goal is to strengthen connection, inclusivity, and collaboration within the Science community. I want to continue growing flagship events so they create meaningful opportunities for students to meet and engage with one another. I also hope to prioritize accessible and welcoming events for all science students, while expanding cross-faculty collaborations that bring different communities on campus together. My campaigning Instagram handle is this: @vote.moya.ku`,
-                instagram: '@vote.moya.ku',
-            },
-        ],
-    },
-    {
-        position: 'AMS Representative',
-        candidates: [
-            {
-                name: 'Alyssa Wong',
-                position: 'AMS Representative',
-                imagePath: '/assets/elections-2026/candidate-images/alyssa-wong.jpg',
-                blurb: `Hi everyone! My name is Alyssa, and I am running to be your AMS Representative to ensure Science students have a strong voice in the decisions that shape our university experience.\n\nOver the past two years in SUS, as Internal Committee Coordinator and now AVP Administration, I have worked closely with student leaders to support initiatives that benefit science students. These roles have strengthened my skills in collaboration, organization, and student advocacy, and have shown me how effective representation can turn student concerns into real action.\n\nMy priorities are: (1) increasing transparency and strengthening funding for science initiatives, including advocating for more support for science programs and spaces like the Abdul Ladha Science Student Centre (ALSSC); (2) improving communication between the AMS and science students through regular updates to SUS Council and better awareness of available resources; and (3) expanding opportunities for involvement by supporting clubs, promoting undergraduate research, and encouraging professional development.\n\nWith over 10,000 science students represented by SUS, strong advocacy matters. I am committed to ensuring science students are informed, supported, and meaningfully represented!\n@vote.alyssa4amsrep`,
-                instagram: '@vote.alyssa4amsrep',
-            },
-            {
-                name: 'Angela Qian',
-                position: 'AMS Representative',
-                imagePath: '/assets/elections-2026/candidate-images/angela-qian.png',
-                blurb: `Hi UBC Science! My name is Angela, and I'm a fourth-year Biology student running to be one of your next SUS AMS Representatives. Over the past three years as AVP Communications with SUS, I've had the opportunity to connect with science students and hear firsthand about the challenges we face on campus.\n\nI want to bring those perspectives forward and advocate for meaningful, practical improvements at the AMS level. Some initiatives I hope to focus on include:\n• Improving academic support by advocating for expanded study spaces, extended hours in science buildings and the AMS Nest, and stronger support for student-run review sessions\n• Supporting student-run academic resources through improved room booking access, small funding opportunities, and shared repositories of practice materials and question banks\n• Promoting financial transparency by advocating for clearer summaries of AMS budgets, student fees, and Council decisions so students understand where their money goes\n• Addressing affordability and food insecurity by increasing awareness of resources like the AMS Food Bank, Sprouts, and other low-cost food initiatives on campus\n• Strengthening student voice and accountability through student consultation, open office hours, and regular updates on AMS decisions that impact science students\nI'm passionate about ensuring science students feel heard, informed, and supported. If you have any ideas, concerns, or questions, I'd love to hear from you! Please feel free to reach out at @vote.angela.amsrep!`,
-                instagram: '@vote.angela.amsrep',
-            },
-            {
-                name: 'Elisa Nasimi',
-                position: 'AMS Representative',
-                imagePath: null,
-                blurb: null,
+                name: 'Maya Ong',
+                position: 'Neuroscience Departmental Representative',
+                imagePath: '/assets/elections-2026/candidate-images/maya-ong.jpg',
+                blurb: `Hi UBC Science! I’m Maya, a second-year Neuroscience student, and I am excited to be running for your next Neuroscience Departmental Representative. Over the past year, I have had the opportunity to be a part of the SUS First Year Committee, gaining hands-on experience advocating for Science students and helping create a connected and welcoming Science community.Through my experience in SUS, I’ve learned how important it is for students to have representatives who listen to their concerns and bring their ideas forward. If elected, I aim to ensure that Neuroscience students have a strong voice within SUS, that their perspectives are heard, and that their experiences are valued. I also hope to offer a space where our community feels comfortable reaching out with their ideas or feedback, and are confident that they are represented at SUS Council meetings. I am passionate about advocating for our voices and would love the opportunity to help Neuroscience students feel seen and supported within SUS. I look forward to connecting with you and representing our department. If you have any questions, feel free to reach out @votemayaong!`,
+                instagram: '@votemayaong',
+                email: 'mayaong@student.ubc.ca',
             },
         ],
     },
