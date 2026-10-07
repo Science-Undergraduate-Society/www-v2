@@ -27,7 +27,7 @@ export default function Elections() {
                     </p>
                     <br />
                     <p className={styles.notice}>
-                        All information stated here is up to date as of February 12th, 2026.
+                        All information stated here is up to date as of October 5th, 2026.
                         If there are any inconsistencies or you believe you have an old copy,
                         please contact the Elections Team immediately.
                     </p>
@@ -144,9 +144,7 @@ export default function Elections() {
             {/* Candidates Section */}
             <section className={styles.candidatesSection}>
                 <h2>Candidates</h2>
-                <p className={styles.candidatesDisclosure}>
-                    The SUS Elections Committee would like to publicly acknowledge the Conflict of Interest that is present between the current President and one of the presidential candidates during this election to help voters make an informed decision. This Conflict of Interest may have potentially benefited the campaign of one candidate, Katherine, while potentially negatively impacting the campaign of the other candidate, Jenevieve.
-                </p>
+
                 {electionCandidates.map(group => (
                     <div key={group.position} className={styles.positionGroup}>
                         <h3 className={styles.positionGroupTitle}>{group.position}</h3>
