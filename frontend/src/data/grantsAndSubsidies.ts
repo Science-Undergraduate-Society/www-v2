@@ -1,6 +1,6 @@
 import { FundingOpportunity } from "@/lib/types";
 // import { FundingRecipient } from "@/lib/types";
- 
+
 
 export const grants: FundingOpportunity[] = [
   {
@@ -19,16 +19,25 @@ export const grants: FundingOpportunity[] = [
     rubricLink: "https://docs.google.com/spreadsheets/d/10fODHdeq-thBic3hN665RkV1_3ih8Soe3KVRa_nmztI",
     eligibleRecipient: ["SUS Clubs"],
     description:
-      "The Special Projects Grant is intended to help facilitate any new or special projects undertaken by SUS Clubs. The Special Project Grants can only be used towards new events/projects or new additions to annual or existing activities that benefit a sizable portion of the science student body. The maximum allocation of the Special Projects Grant is 50% of relevant fees to a maximum of $500.",
+      "The Special Projects Grant is intended to provide financial support for new or special projects undertaken by SUS-affiliated clubs. The grant may be used to support new events, projects, or significant additions to existing or annual activities that benefit a substantial portion of the UBC Science student community. The maximum allocation of the Special Projects Grant is 50% of eligible expenses, up to a maximum of $500 per club.",
   },
   {
-    title: "Professional Development Grant",
+    title: "Professional Development Grant - Stream A",
     type: "Grant",
     packageLink: "https://docs.google.com/document/d/1599wRShfoET_PHkxoGlXg957_Tpas8CS1f0-teI3RLo",
     rubricLink: "https://docs.google.com/spreadsheets/d/14jhbinrysdPb1IP8FQ-8RCPMrADLcb6WzCdng-SN2Fg",
     eligibleRecipient: ["Science Students"],
     description:
-      "The Professional Development Grant is intended to alleviate financial burdens relating to the attendance of events that further one’s professional careers such as relevant events, conferences, and seminars. The maximum allocation of the Grant is 50% of related fees with a limit of $300.",
+      "The Professional Development Grant – Stream A is intended to alleviate financial barriers associated with attending opportunities that support students' academic and professional development. These opportunities include, but are not limited to, relevant conferences, seminars, workshops, and other career-related events. The maximum allocation of the grant is 50% of eligible expenses, up to a maximum of $300 per individual.",
+  },
+  {
+    title: "(Pilot Project) Professional Development Grant - Stream B",
+    type: "Grant",
+    packageLink: "https://docs.google.com/document/d/15Bvjc2h-cGuabaIKfrnSSGFMpFGAWeDsyV0LOInictU/edit?usp=sharing",
+    rubricLink: "https://docs.google.com/spreadsheets/d/19VJ-OJ5QEX8flczFTjiVOmsaBduqvbAFfyeJMURQGBc/edit?usp=sharing",
+    eligibleRecipient: ["Science Students"],
+    description:
+      "The Professional Development Grant – Stream B is a new pilot initiative introduced by the 2026/27 SUS VP Finance to improve financial accessibility to professional education. The grant provides partial financial assistance to UBC Science students registering for professional entrance examinations, including the MCAT, DAT, and LSAT. The maximum allocation is 50% of eligible registration fees, up to $150.00 per individual.",
   },
   {
     title: "EDI Grant",
@@ -84,12 +93,12 @@ export const subsidies: FundingOpportunity[] = [
       "The UBC Recreation Subsidy is intended to alleviate personal financial burdens by providing a subsidy that students can use to engage in activities that promote physical health and wellness. This includes, but is not limited to, relevant events, competitions and recreational intramural league costs. The maximum allocation of the subsidy is 50% of the cost with a limit of $250.",
   },
   {
-    title: "AMS & Affiliate Event Subsidy",
+    title: "(New Pilot Project) Commuter Hostel Subsidy",
     type: "Subsidy",
-    packageLink: "https://docs.google.com/document/d/1KSE14OHty4GN5pKbYz-YtmooGTZigLWBNttOsb-ZxhM",
+    packageLink: "https://docs.google.com/document/d/1wRh86v7RcSEfM2z2XOZopkciMRfhaWwrRz9hMftQZ4Y/edit?usp=sharing",
     eligibleRecipient: ["Science Students"],
     description:
-      "The AMS & Affiliated clubs (AMS Clubs) Events Subsidy is intended to alleviate personal financial burdens by providing a subsidy that students can use to attend events hosted for UBC students. This includes all ticketed events hosted by clubs with AMS club standing. A list of these clubs can be found on UBC Campus Base. The maximum allocation of the subsidy is 50% of paid ticket price with a limit of $15.",
+      "Introduced by the SUS VP Finance for the 2026/27 academic year, the Commuter Hostel Subsidy aims to alleviate financial barriers for Science students with long commutes by providing up to $30 in financial assistance toward stays at the UBC Student Commuter Hostel.",
   },
   {
     title: "SUS Merchandise Subsidy",
@@ -97,6 +106,6 @@ export const subsidies: FundingOpportunity[] = [
     packageLink: "https://docs.google.com/document/d/1VxyYbJXULQ27IW2_BU4fu7C48XMhjyMHIc16UV3H7Fs",
     eligibleRecipient: ["Science Students"],
     description:
-      "The SUS Merchandise Subsidy is intended to alleviate personal financial burdens and encourage as many students to proudly represent UBC Science! This encompasses all merchandise produced by the SUS Sales Commission exclusively (must be featured on our website).",
+      "The SUS Merchandise Subsidy is intended to alleviate personal financial burdens and encourage as many students to proudly represent UBC Science! This encompasses all merchandise produced by the SUS Sales Commission exclusively (must be featured on our website). The maximum allocation of the subsidy is $50.",
   },
 ];

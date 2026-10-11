@@ -10,7 +10,7 @@ export default function GrantsAndSubsidies() {
     return (
         <div className={styles.grantsAndSubsidies}>
             <BannerHeader>
-                <h1>Internal Grants & Subsidies</h1>
+                <h1>Internal SUS Grants & Subsidies</h1>
             </BannerHeader>
             <section className={styles.applicationInformation}>
                 <FrostedCard className={styles.applicationInformationCard}>
@@ -22,18 +22,24 @@ export default function GrantsAndSubsidies() {
                         <p>
                             <b>Applications for 26/27 Grant and Subsidies are open!</b>
                             <br /><br />
-                            Applications for Grants & Subsidies will open on <b>September 30, 2026</b> and will be reviewed on a first-submitted, first-reviewed basis.
-                            SUS will be accepting applications until <b>April 4, 2027, or until funds run out. </b>
-                            Please utilize the following resources and submission link to put forth your application.
+                            Applications for Grants & Subsidies will open on <b>October 16, 2026</b> and will be reviewed on a first-submitted, first-reviewed basis.
+                            SUS will be accepting applications until <b>April 4 2027, or until funds run out.</b> Please utilize the following resources and submission link to put forth your application.
+                            <br /><br />
+                            <b>A message from VP Finance:</b>
+                            <br />
+                            As your VP Finance for 2026/27, I&apos;m committed to making financial resources more accessible, equitable, and transparent for all Science students. Through our grants and subsidies, I hope to alleviate financial barriers and empower students to pursue meaningful academic, professional, and extracurricular opportunities. I encourage you to explore the funding available and reach out with any questions or suggestions!
+                            <br /><br />
+                            <b>Important:</b>
+                            <br />
+                            Please note that grant applications will not be reviewed during the 2026/27 Winter Break, and processing will resume once the break has concluded.
                             <br /><br />
                             To read more about the 2026/2027 available grants and subsidies, as well as to view the application form, see below and click on the name of the grant/subsidy you are interested in.
                         </p>
                     </div>
                     <div className={styles.description}>
-                        <h2>TO APPLY:</h2>
+                        <h2>To Apply:</h2>
                         <p>
-                            Please submit your application package by emailing <a href="mailto:vpfinance@sus.ubc.ca">vpfinance@sus.ubc.ca</a> and cc-ing <a href="mailto:avp.finance@sus.ubc.ca">avp.finance@sus.ubc.ca</a>.
-                            You will receive a confirmation email upon receipt of your application.
+                            <b>[NEW] Please complete and submit the relevant application form included in each application package linked below.</b> Once submitted, your application will be reviewed by the SUS Finance Team. You will receive a confirmation email upon receipt of your application.
                         </p>
                     </div>
                     <div className={styles.description}>
@@ -52,13 +58,13 @@ export default function GrantsAndSubsidies() {
                         href="https://drive.google.com/drive/folders/1d0mxkbiAJdmBTKzFV6f1ivdidA06xVzB"
                         className={styles.button}
                     >
-                        Grant Packages 25/26
+                        Grant Packages 2026/2027
                     </GlassButton>
                     <GlassButton
                         href="https://drive.google.com/drive/folders/1PdZWwoA1Uo-bHLF-5V6cS8mTHfREl1X6"
                         className={styles.button}
                     >
-                        Grant Rubrics 25/26
+                        Grant Rubrics 2026/2027
                     </GlassButton>
                 </div>
                 <div className={styles.grantsList}>
@@ -92,13 +98,13 @@ export default function GrantsAndSubsidies() {
                         href="https://drive.google.com/drive/folders/1J3bbOK8aKQxwcRqgaws7Oy0JFecNrBQh"
                         className={styles.button}
                     >
-                        Subsidy Packages 25/26
+                        Subsidy Packages 2026/2027
                     </BlueButton>
                     <BlueButton
                         href="https://docs.google.com/document/d/1tlcYoj6fslTnWf3w9ZPou-ml844z5wZsYedCVgeYyLw"
                         className={styles.button}
                     >
-                        Subsidy Guidelines 25/26
+                        Subsidy Guideline 2026/2027
                     </BlueButton>
                     {/* <BlueButton
                         href='https://ubc.ca1.qualtrics.com/jfe/form/SV_8H3fBJPZNU0GTFc'
