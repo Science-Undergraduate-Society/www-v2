@@ -25,8 +25,8 @@ export const executives: Executive[] = [
         imagePath: "/assets/logos/logo-blue.png",
         description: "Hi UBC Science! My name is Gloria Zhuo, and I’m a 4th year Neuroscience Student in the Cellular stream. I am excited to serve as VP Administration for the 2026/27 academic year! As part of the Administration portfolio, I take on supporting building management (ALSSC), SUS Clubs, governance documents and our Elections committee. I also organize SUS’ meeting minutes, transition reports and bookings. This year, I hope to maximize resources provided to students for organizational clarity and assistance!\n\nIf you have any questions or suggestions about these aspects of SUS, feel free to reach out via email at vpadministration@sus.ubc.ca or drop by my office hours at Abdul Ladha 5:30-6:30 PM. I look forward to hearing from all of you this year!",
         email: "vpadministration@sus.ubc.ca",
-        link: "",
-        officeHours: "Wednesdays 5:30-6:30pm, In-person - Abdul Ladha Science Student Centre / Online via Google Meets"
+        link: "https://meet.google.com/svf-eoxo-hoy",
+        officeHours: "Wednesdays 5:30-6:30pm, In-person - Abdul Ladha Science Student Centre / Mondays 7-8pm, Online - via link below."
     },
     {
         name: "Eesha Rathod",
