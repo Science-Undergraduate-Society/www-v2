@@ -72,5 +72,23 @@ export const executives: Executive[] = [
         email: "vpengagement@sus.ubc.ca",
         link: "",
         officeHours: "TBD"
+    },
+    {
+        name: "Angela Qian",
+        role: "AMS Representative",
+        imagePath: "/assets/logos/logo-blue.png",
+        description: "Hi UBC Science! My name is Angela, and I’m currently in my fifth year studying Biology and I’m super excited to be one of your Science AMS Representatives this year!\n\nI’ve been involved with SUS since my first year, and I’m especially excited to be stepping into an advocacy role for the first time. As a Science AMS Rep, I represent Science students on AMS and SUS Council and advocate for decisions that reflect the specific needs and interests of our community. I also sit on the AMS Building Operations Council, where I’ll be able to advocate specifically for issues affecting The Nest and student spaces.\n\nComing from a communications background with SUS, one of my biggest goals this year is to make AMS level decision making more accessible and digestible for students. I also want to advocate for more study spaces, better access to student spaces, and longer hours for spaces like the Nest.\n\nIf you have questions, concerns, or ideas about the Nest, AMS services, SUS, or anything else affecting Science students, come chat with me at my office hours Wednesdays, 10–11 am at Abdul Ladha or online! You can also email me at amsrep@sus.ubc.ca to schedule another time to chat. Looking forward to representing you all this year! 💙",
+        email: "amsrep@sus.ubc.ca",
+        link: "https://meet.google.com/prn-manf-gwn",
+        officeHours: "Wednesdays 10:00 AM - 11:00 AM"
+    },
+    {
+        name: "Alyssa Wong",
+        role: "AMS Representative",
+        imagePath: "/assets/logos/logo-blue.png",
+        description: "Hey UBC Science! I’m Alyssa, and I’m so excited to be serving as one of your AMS Science Representatives for the 2026/2027 school year! I’m heading into my fifth year studying Neuroscience, and after being involved with SUS for the past three years, I’m excited to take on a new role representing our community at the AMS level.\n\nAs your AMS Representative, I’ll serve as a voting member of AMS Council and sit on various AMS committees throughout the year. I’ll have the opportunity to bring the perspectives, concerns, and priorities of Science students into conversations across UBC, while also helping to keep our community informed about issues and decisions that affect us.\n\nOver the past three years with SUS, I’ve had the opportunity to see firsthand just how diverse the Science community is. With students across so many different programs, years, and experiences, I know that there is no single “Science experience.” That’s why I believe good representation starts with listening and making sure that different student perspectives are being heard.\n\nAs your AMS Representative, I aim to be a bridge between Science students, SUS, and the AMS. Whether you have a concern you’d like brought forward, an issue you think deserves more attention, or an idea for how we can improve the student experience at UBC, I want to hear from you! I’m looking forward to the year ahead and to working alongside all of you to ensure that Science student voices are heard, valued, and represented across UBC!",
+        email: "amsrep@sus.ubc.ca",
+        link: "https://ubc.zoom.us/j/63639956987?pwd=Jba3PxDupmcHUgEApW7Fwb2z5kCa2t.1",
+        officeHours: "Thursdays 11:00 AM - 12:00 PM"
     }
 ];

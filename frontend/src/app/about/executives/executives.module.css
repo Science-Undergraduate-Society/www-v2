@@ -195,3 +195,17 @@
   background: var(--color-ui-60);
   transform: scale(1.03);
 }
+
+.descriptionText {
+  white-space: pre-line;
+}
+
+.officeHoursLink {
+  color: var(--color-ui-60);
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+.officeHoursLink:hover {
+  opacity: 0.8;
+}
