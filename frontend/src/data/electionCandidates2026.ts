@@ -75,12 +75,6 @@ export const electionCandidates: ElectionPositionGroup[] = [
                 imagePosition: 'top',
                 blurb: `I will advocate for better food in the dining hall.`,
             },
-            {
-                name: 'Jason Huang',
-                position: 'First Year Representative',
-                imagePath: null,
-                blurb: null,
-            },
         ],
     },
     {
