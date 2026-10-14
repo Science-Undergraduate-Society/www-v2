@@ -8,7 +8,7 @@ export const executives: Executive[] = [
         description: "Hi, I'm Katherine. President of your Science Undergraduate Society (SUS)!\n\nIf you're a Science student, you're automatically a member of SUS. My role is to make sure the society understands, delivers on, and advocates for your academic and wellness needs, through engaging events and higher-level advocacy.\n\nI've been involved with SUS since first year, holding various roles across social, academic, and student advocacy programming. I have a particular interest in high-impact community building, career development initiatives, and disability advocacy.\n\nI represent Science students' collective interests on Faculty of Science committees and on AMS Council, alongside our SUS AMS Representatives. I'm a voting member on the AMS Governance Review, Events, and Clubs and Societies Committees. If you'd like to bring something forward to any of these, come chat with me at office hours or reach out by email.\n\nWithin SUS, I work alongside our 7 Vice-Presidents to provide strategic oversight for the society as a whole. As part of the Presidential Portfolio, I also mentor and support our Inclusion, Diversity, Equity & Accessibility (IDEA) Committee and our Human Resources Committee. I'm committed to attending committee meetings and supporting my team through every season of their role. This year, I'm excited to pilot new events and bring students from all walks of life into our programming.\n\nWhether you're a club exec, a fellow Science student, or a staff member, office hours are the best way to connect with me, or I can point you to the right person within SUS. Talk to me about collaborations, Science Co-op, campus life, or anything! Drop by the Abdul Ladha Science Student Centre, Mondays 1-3PM.",
         email: "president@sus.ubc.ca",
         link: "",
-        officeHours: "Mondays 1:00 PM - 3:00 PM"
+        officeHours: "Mondays 1:00 PM - 3:00 PM, In-Person - Abdul Ladha Science Student Centre"
     },
     {
         name: "Annie Wang",
@@ -17,7 +17,7 @@ export const executives: Executive[] = [
         description: "Hi UBC Science! My name is Annie, and I’m honoured to be serving as your VP Academic for the 2026/2027 academic year. Heading into my fifth year in Honours CAPS, I bring a strong understanding of the academic experiences and needs of Science students. I’ve also been involved with SUS since my first year, serving in various roles focused on community engagement, academic programming, and student advocacy.\n\nAs VP Academic, I represent Science students in discussions with faculty and advocate for accessible, inclusive, and meaningful academic opportunities. My portfolio includes the Academic Experience, Mentorship, Tutoring, and Research Conference Committees. I’m especially passionate about expanding undergraduate research opportunities, strengthening academic support, and diversifying the ways students can engage with learning beyond the classroom.\n\nIf you have any questions, concerns, or ideas related to academic advocacy, please feel free to reach out at vpacademic@sus.ubc.ca or drop by my office hours at Abdul Ladha on Wednesdays from 12-2 PM. I look forward to working with you and advocating for your academic experiences this year.",
         email: "vpacademic@sus.ubc.ca",
         link: "",
-        officeHours: "Wednesday 12-2 PM"
+        officeHours: "Wednesday 12-2 PM, In-person - Abdul Ladha Science Student Centre"
     },
     {
         name: "Gloria Zhuo",
@@ -26,7 +26,7 @@ export const executives: Executive[] = [
         description: "Hi UBC Science! My name is Gloria Zhuo, and I’m a 4th year Neuroscience Student in the Cellular stream. I am excited to serve as VP Administration for the 2026/27 academic year! As part of the Administration portfolio, I take on supporting building management (ALSSC), SUS Clubs, governance documents and our Elections committee. I also organize SUS’ meeting minutes, transition reports and bookings. This year, I hope to maximize resources provided to students for organizational clarity and assistance!\n\nIf you have any questions or suggestions about these aspects of SUS, feel free to reach out via email at vpadministration@sus.ubc.ca or drop by my office hours at Abdul Ladha 5:30-6:30 PM. I look forward to hearing from all of you this year!",
         email: "vpadministration@sus.ubc.ca",
         link: "",
-        officeHours: "Wednesdays 5:30-6:30pm"
+        officeHours: "Wednesdays 5:30-6:30pm, In-person - Abdul Ladha Science Student Centre / Online via Google Meets"
     },
     {
         name: "Eesha Rathod",
@@ -35,7 +35,7 @@ export const executives: Executive[] = [
         description: "Hi everyone! My name is Eesha and I’m in my fifth year of Biochemistry. I’m so excited to be serving as the VP Communications of the UBC Science Undergraduate Society for the 2026/2027 year!\n\nAs VP Communications, I get to work on a variety of creative and collaborative projects, including managing and updating the SUS website, supporting marketing and production, and working with Sales to design SUS merchandise. I’m also involved in organizing Hack the Coast, the SUS Hackathon and helping create events where students can connect, collaborate, and bring their ideas to life.\n\nI’m really looking forward to finding new ways to share what SUS has to offer and make our events, initiatives, and opportunities more accessible and engaging for Science students. If you ever have an idea, question, or feedback, please feel free to reach out to me anytime at vpcommunications@sus.ubc.ca. I’d love to hear from you!",
         email: "vpcommunications@sus.ubc.ca",
         link: "",
-        officeHours: ""
+        officeHours: "TBD"
     },
     {
         name: "Alex Chui",
@@ -43,17 +43,17 @@ export const executives: Executive[] = [
         imagePath: "/assets/logos/logo-blue.png",
         description: "Hi! I’m Alex and I’m in my 5th-year in Microbiology and Immunology. I am so thrilled to be the VP External of the UBC Science Undergraduate Society (SUS) for the 2026/2027 year! My role is really about connecting Science students with opportunities, communities, and organizations both within and beyond UBC, while making sure our work reflects what students actually want and need.\n\nI oversee and support several areas of the External portfolio, including Careers, Academics & Professional Development (CAPD), Community Engagement (COMME), and Sustainability. Through these committees, I work with student leaders on everything from career and professional development opportunities to volunteering, community partnerships, sustainability initiatives, and collaborations between Science clubs. Another part of my role that I really value is recognizing the people who make the Science community what it is. I also oversee the Science Student Recognition Awards Night (SSRAN) Committee, which celebrates the contributions and achievements of students, clubs, and student leaders across the Faculty of Science.\n\nWhat I enjoy most about being VP External is how broad the portfolio is. I get to work with an incredible range of people toward the same goal: making the Science undergraduate experience more connected, rewarding, and impactful.",
         email: "vpexternal@sus.ubc.ca",
-        link: "",
-        officeHours: "Thursday 10AM - 12PM"
+        link: "https://meet.google.com/nvr-wmcu-pqr",
+        officeHours: "Thursday 10AM - 12PM, In-person - Abdul Ladha Science Student Centre / Online via link below"
     },
     {
         name: "Harleen Randhawa",
         role: "VP Finance",
         imagePath: "/assets/logos/logo-blue.png",
-        description: "",
+        description: "N/A",
         email: "vpfinance@sus.ubc.ca",
         link: "",
-        officeHours: ""
+        officeHours: "TBD"
     },
     {
         name: "Issac Chen",
@@ -62,7 +62,7 @@ export const executives: Executive[] = [
         description: "Hi UBC Science! I am Issac, this year’s VP Student Life. I will be entering my final year at UBC studying Pharmacology, and I am ready to make this year as fulfilling and meaningful as possible - not just for myself, but for every single Science student. The Student Life portfolio holds a special place in my heart and has been a defining part of my undergraduate experience. I started as a Sports Coordinator, then Sports Co-Chair, and just recently wrapped up my term as one of the AVPs of Student Life. Through these roles, I have gained firsthand experience and knowledge of what truly brings our Science community together!\n\nMy goal this year is to continue the momentum from past years and keep elevating the portfolio with student-centered initiatives. Ultimately, I want to create an environment - a community - where we can bring out the FUN part of every Science student. With my four committees being First Year, Sports, Social, and Wellness, I am ready to bring out events catered towards the wide array of students within the Faculty of Science, and to take care of everyone’s mental, social, and physical wellbeing. That is my priority!\n\nNow that you have heard all about me, I encourage YOU to reach out to me at vpstudentlife@sus.ubc.ca if there is anything you would like to see from us. I am always happy to chat through my office hours, in-person or online, and stay tuned for many exciting events to come in the 2026/27 school year!",
         email: "vpstudentlife@sus.ubc.ca",
         link: "https://calendly.com/studentlife-interviews/issac-chen-office-hours",
-        officeHours: "Tues/Thurs 11-1pm"
+        officeHours: "Tues/Thurs 11-1pm, In person - Abdul Ladha Science Student Centre / Online with the link below"
     },
     {
         name: "Moya Ku",
@@ -72,5 +72,23 @@ export const executives: Executive[] = [
         email: "vpengagement@sus.ubc.ca",
         link: "",
         officeHours: "TBD"
+    },
+    {
+        name: "Alyssa Wong",
+        role: "AMS Representative",
+        imagePath: "/assets/logos/logo-blue.png",
+        description: "Hey UBC Science! I’m Alyssa, and I’m so excited to be serving as one of your AMS Science Representatives for the 2026/2027 school year! I’m heading into my fifth year studying Neuroscience, and after being involved with SUS for the past three years, I’m excited to take on a new role representing our community at the AMS level. As your AMS Representative, I’ll serve as a voting member of AMS Council and sit on various AMS committees throughout the year. I’ll have the opportunity to bring the perspectives, concerns, and priorities of Science students into conversations across UBC, while also helping to keep our community informed about issues and decisions that affect us. Over the past three years with SUS, I’ve had the opportunity to see firsthand just how diverse the Science community is. With students across so many different programs, years, and experiences, I know that there is no single “Science experience.” That’s why I believe good representation starts with listening and making sure that different student perspectives are being heard. As your AMS Representative, I aim to be a bridge between Science students, SUS, and the AMS. Whether you have a concern you’d like brought forward, an issue you think deserves more attention, or an idea for how we can improve the student experience at UBC, I want to hear from you! I’m looking forward to the year ahead and to working alongside all of you to ensure that Science student voices are heard, valued, and represented across UBC!", 
+        email: "amsreps@sus.ubc.ca",
+        link: "",
+        officeHours: "Thursdays 11-2, In-person, Abdul Ladha Science Student Centre"
+    }, 
+    {
+        name: "Angela Qian",
+        role: "AMS Representative",
+        imagePath: "/assets/logos/logo-blue.png",
+        description: "Hi UBC Science! My name is Angela, and I’m currently in my fifth year studying Biology and  I’m super excited to be one of your Science AMS Representatives this year! I’ve been involved with SUS since my first year, and I’m especially excited to be stepping into an advocacy role for the first time. As a Science AMS Rep, I represent Science students on AMS and SUS Council and advocate for decisions that reflect the specific needs and interests of our community. I also sit on the AMS Building Operations Council, where I’ll be able to advocate specifically for issues affecting The Nest and student spaces. Coming from a communications background with SUS, one of my biggest goals this year is to make AMS level decision making more accessible and digestible for students. I also want to advocate for more study spaces, better access to student spaces, and longer hours for spaces like the Nest. If you have questions, concerns, or ideas about the Nest, AMS services, SUS, or anything else affecting Science students, come chat with me at my office hours Wednesdays, 10–11 am at Abdul Ladha or online! You can also email me at amsrep@sus.ubc.ca to schedule another time to chat. Looking forward to representing you all this year! 💙", 
+        email: "amsreps@sus.ubc.ca",
+        link: "https://meet.google.com/prn-manf-gwn",
+        officeHours: "Wednesdays 10–11, In-person, Abdul Ladha Science Student Centre / Online via the link below "
     }
 ];
