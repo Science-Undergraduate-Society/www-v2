@@ -73,16 +73,43 @@ export default function Executives() {
                   </button>
                   <h2>{e.name}</h2>
                   <h4>{e.role}</h4>
-                  <p>{e.description}</p>
-                  <p>
-                    <strong>Email:</strong> {e.email}
-                  </p>
-                  <p>
-                    <strong>Office Hours:</strong> {e.officeHours}
-                  </p>
+                  {e.description && (
+                    <p className={styles.descriptionText}>{e.description}</p>
+                  )}
+                  {e.email && (
+                    <p>
+                      <strong>Email:</strong> {e.email}
+                    </p>
+                  )}
+                  {e.officeHours && (
+                    <p>
+                      <strong>Office Hours:</strong>{" "}
+                      {e.link && (e.link.includes("zoom.us") || e.link.includes("meet.google.com")) ? (
+                        <a
+                          href={e.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.officeHoursLink}
+                        >
+                          {e.officeHours} ({e.link.includes("zoom.us") ? "Zoom Link" : "Google Meet Link"})
+                        </a>
+                      ) : (
+                        e.officeHours
+                      )}
+                    </p>
+                  )}
                   {e.link && e.link !== "" && (
-                    <Link href={e.link} target="blank" className={styles.bookButton}>
-                      Book Appointment
+                    <Link
+                      href={e.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.bookButton}
+                    >
+                      {e.link.includes("zoom.us")
+                        ? "Join Zoom Office Hours"
+                        : e.link.includes("meet.google.com")
+                        ? "Join Google Meet"
+                        : "Book Appointment"}
                     </Link>
                   )}
                 </div>
