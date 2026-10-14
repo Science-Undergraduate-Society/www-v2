@@ -8,7 +8,7 @@ export const executives: Executive[] = [
         description: "Hi, I'm Katherine. President of your Science Undergraduate Society (SUS)!\n\nIf you're a Science student, you're automatically a member of SUS. My role is to make sure the society understands, delivers on, and advocates for your academic and wellness needs, through engaging events and higher-level advocacy.\n\nI've been involved with SUS since first year, holding various roles across social, academic, and student advocacy programming. I have a particular interest in high-impact community building, career development initiatives, and disability advocacy.\n\nI represent Science students' collective interests on Faculty of Science committees and on AMS Council, alongside our SUS AMS Representatives. I'm a voting member on the AMS Governance Review, Events, and Clubs and Societies Committees. If you'd like to bring something forward to any of these, come chat with me at office hours or reach out by email.\n\nWithin SUS, I work alongside our 7 Vice-Presidents to provide strategic oversight for the society as a whole. As part of the Presidential Portfolio, I also mentor and support our Inclusion, Diversity, Equity & Accessibility (IDEA) Committee and our Human Resources Committee. I'm committed to attending committee meetings and supporting my team through every season of their role. This year, I'm excited to pilot new events and bring students from all walks of life into our programming.\n\nWhether you're a club exec, a fellow Science student, or a staff member, office hours are the best way to connect with me, or I can point you to the right person within SUS. Talk to me about collaborations, Science Co-op, campus life, or anything! Drop by the Abdul Ladha Science Student Centre, Mondays 1-3PM.",
         email: "president@sus.ubc.ca",
         link: "",
-        officeHours: "Mondays 1:00 PM - 3:00 PM, In-Person - Abdul Ladha Science Student Centre"
+        officeHours: "Mondays 1:00 PM - 3:00 PM, In-Person - Abdul Ladha Science Student Centre (COME PLAY NINTENDO GAMES WITH ME + CHAT!)."
     },
     {
         name: "Annie Wang",
@@ -72,6 +72,15 @@ export const executives: Executive[] = [
         email: "vpengagement@sus.ubc.ca",
         link: "",
         officeHours: "TBD"
+    },
+    {
+        name: "Alex Chui",
+        role: "Science Senator",
+        imagePath: "/assets/logos/logo-blue.png",
+        description: "Hello UBC Science! My name is Moya, and I’m ecstatic to serve as your VP Engagement for the 2026/2027 year! I’m heading into my fourth year studying Biology and Nutritional Sciences, and I’ve been a part of SUS since my very first year. My experiences over the past few years have taught me the importance of teamwork, organization, and persistence when it comes to running successful events - all things I’m excited to bring to our flagship events this year!\n\nMy favourite part of being a part of the UBC Science community is just how much variety there is within our family. Everyone has something unique that they’re passionate about, and seeing people work toward their own goals is truly inspiring. At the same time, I know how hard Science students work, which is why I’ve made it a priority to create events where students can take a break, relax, have fun, and reward themselves after a long day of classes and studying. That passion is what led me to spearhead the Engagement portfolio this year!\n\nI’m super excited to continue bringing you positive and memorable flagship experiences where you can destress, declutter, and just focus on having a good time. As your VP Engagement, I want to make sure your voices are heard and that our events reflect what you want to see from SUS. Everyone should have a say in what their flagship experiences look like!\n\nStay tuned for all the lovely initiatives Engagement has to offer this year. Our team has got you!",
+        email: "senator@sus.ubc.ca",
+        link: "https://meet.google.com/nvr-wmcu-pqr",
+        officeHours: "Thursday 10AM-12PM, In-person - Abdul Ladha Science Student Centre / Online with the link below."
     },
     {
         name: "Alyssa Wong",
