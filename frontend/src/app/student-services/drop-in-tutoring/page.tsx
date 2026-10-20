@@ -79,7 +79,7 @@ export default function DropInTutoring() {
                     href="https://forms.gle/P2WVR5nhX7aZbE8v5"
                     className={styles.button}
                 >
-                    Tutoring Feedback Form
+                    Tutoring Mailing List
                 </BlueButton>
             </section>
             <section className={styles.studentFeedbackForm}>
