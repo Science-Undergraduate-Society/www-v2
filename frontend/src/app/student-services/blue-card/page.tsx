@@ -67,7 +67,7 @@ export default function BlueCard() {
                 <h2 className={styles.sectionSubtitle}>
                     Welcome to Blue Card -- Your FREE Virtual Discount Program for all UBC Science Students! 
                     Discover exclusive benefits at local restaurants and shops by simply presenting your Blue Card. 
-                    To get started, follow the register link at the top of the page.
+                    To get started, follow the instructions below.
                 </h2>
                 <div className={styles.featureCardContainer}>
                     <div className={styles.featureCard}>
@@ -118,16 +118,15 @@ export default function BlueCard() {
                     <div className={styles.step}>
                         <div className={styles.stepNumber}>1</div>
                         <div className={styles.stepContent}>
-                            <h3>Join SUS on Bounce</h3>
-                            <p>Become a member of the Science Undergraduate Society via the Bounce platform.</p>
-                            <a href="https://www.bouncelife.com/organizations/654c33a2dffc1792fff9c8c5" target="_blank" rel="noopener noreferrer" className={styles.stepLink}>Join on Bounce →</a>
+                            <h3>Join SUS on Showpass</h3>
+                            <p>Become a member of the Science Undergraduate Society via the Showpass platform.</p>
                         </div>
                     </div>
                     <div className={styles.step}>
                         <div className={styles.stepNumber}>2</div>
                         <div className={styles.stepContent}>
                             <h3>Open the Memberships Tab</h3>
-                            <p>Once logged in, you&apos;ll see the top dashboard. Click on <strong>&quot;Memberships&quot;</strong> to find the SUS Blue Card membership.</p>
+                            <p>Click on <strong>&quot;Memberships&quot;</strong> to find the SUS Blue Card membership.</p>
                         </div>
                     </div>
                     <div className={styles.step}>
