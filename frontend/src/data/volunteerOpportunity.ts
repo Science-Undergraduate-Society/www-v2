@@ -36,6 +36,8 @@ export const VolunteerJobs: VolunteerOpportunity[] = [
       "Canuck Place accepts applications from prospective volunteers on an ongoing basis, and recruitment cycles are held on a quarterly basis (Winter, Spring, Summer, Fall). Volunteers are required to commit to a minimum of a biweekly shift for 1 year of service.",
     website: "https://www.canuckplace.org/how-to-give/volunteer/",
     industry: ["Non-profit"],
+    commitment: "A biweekly shift for a minimum of 1 year of service.",
+    howToApply: "Applications are accepted on an ongoing basis, with recruitment cycles each quarter (Winter, Spring, Summer, Fall).",
   },
   {
     id: 4,
@@ -61,6 +63,7 @@ export const VolunteerJobs: VolunteerOpportunity[] = [
       "The CityReach Care Society requires hundreds of volunteers to run the Food for Families Program. Volunteers help to prepare fresh, healthy, and wholesome food hampers that include fruits, vegetables, dairy, proteins, and grains. Training and support are provided to assist volunteers in being successful in their role. There are four different shifts available each week: Tuesdays – 9:30am-1:30pm & 2:00pm-6:00pm, and Thursdays – 8:30am-12:30pm & 2:00pm-6:00pm.",
     website: "https://www.cityreach.org/volunteer",
     industry: ["Non-profit"],
+    commitment: "Four shifts each week: Tuesdays 9:30am-1:30pm and 2:00pm-6:00pm, Thursdays 8:30am-12:30pm and 2:00pm-6:00pm.",
   },
   {
     id: 6,
@@ -146,6 +149,7 @@ export const VolunteerJobs: VolunteerOpportunity[] = [
       "Shelter Movers is a national volunteer-powered charity providing free moving and storage services to individuals and families fleeing abuse. Since November 2018, our Vancouver chapter has assisted over 1,000 survivors across the Lower Mainland. We collaborate with local businesses and community agencies to support people, primarily women and children, as they transition to a life free of violence.\n\nVolunteering with Shelter Movers means making a meaningful impact on families experiencing abuse and playing a role in ending gender-based violence. Movers and Drivers are the backbone of our organization, helping to transport clients' belongings to safety. Volunteers work in teams of 2-7, following a detailed itinerary. Rental vehicles are provided, and volunteers with a valid driver's license can register as drivers. Each move typically lasts 4-4.5 hours. This role is ideal for those looking to make a significant impact through hands-on volunteering.",
     website: "https://www.sheltermovers.com/volunteer/",
     industry: ["Non-profit", "Housing"],
+    commitment: "Each move typically lasts 4-4.5 hours, with volunteers working in teams of 2-7.",
   },
   {
     id: 13,
@@ -158,6 +162,7 @@ export const VolunteerJobs: VolunteerOpportunity[] = [
       "Volunteers take part in a thank-a-thon calls to call and thank our donors who financially support or donate to Covenant House. This is usually a 4 x two-hour session planned around the academic year that take place every month or so depending on our organization's needs. Students will use CHV phones and will be briefed on how to conduct the call. All information required for each call is given beforehand so no student will be left in the dark not knowing what to do! A certificate of volunteer hours is given upon completion of the course. ",
     website: "https://www.covenanthousebc.org/take-action/volunteer-with-us/",
     industry: ["Non-profit", "Housing"],
+    commitment: "Four two-hour sessions, planned around the academic year and held roughly once a month.",
   },
   {
     id: 14,
@@ -207,17 +212,6 @@ export const VolunteerJobs: VolunteerOpportunity[] = [
     website: "https://amsclubs.ca/heart-and-stroke-foundation/",
     industry: ["Non-profit"],
   },
-  {
-    id: 18,
-    title: "Volunteer Tutor",
-    company: "Covenant House Vancouver",
-    location: "Vancouver",
-    type: ["In-Person"],
-    logo: "https://www.covenanthousebc.org/wp-content/themes/wp-framework-child-theme/assets/img/logo.png",
-    description: "Students and professionals are paired with a youth at Covenant House Vancouver (CHV) to take part in 1:1 tutoring sessions. Most sessions are run once per week and last 2 hours. They take place on site at our downtown Vancouver locations. Volunteers are welcome to share their subjects of expertise and are matched with a youth who is interested in learning this subject. Sessions are volunteer and youth lead, meaning that volunteers are given the independence and flexibility of organizing the sessions and preparing study materials as needed, and youth are given the choice to participate in the ways that suit their comfort levels, abilities, and needs most. There is also a volunteer lead tutoring group that takes place once per month where volunteers share their experiences, challenges, and supports with one another. ",
-    website: "https://www.wildliferescue.ca/what-we-do/volunteering/",
-    industry: ["Non-profit"],
-    },
     {
     id: 19,
     title: "Volunteer Tutor",
@@ -231,17 +225,4 @@ export const VolunteerJobs: VolunteerOpportunity[] = [
       "https://linktr.ee/cubsvan?utm_source=linktree_profile_share&ltsid=b718c146-6c83-4fcc-aa54-30bed920182a",
     industry: ["Non-profit", "Education"],
   },
-  {
-    id: 20,
-    title: "Wildlife Rescue Volunteer",
-    company: "Wildlife Rescue Association of BC",
-    location: "Vancouver",
-    type: ["In-Person"],
-    logo: "https://www.wildliferescue.ca/wp-content/themes/wra/images/wildlife-rescue-logo.png",
-    description:
-      "The Wildlife Rescue Association of BC offers a number of volunteer roles in areas such as animal care, admissions, helpline, and transport.",
-    website: "https://www.wildliferescue.ca/what-we-do/volunteering/",
-    industry: ["Non-profit"],
-  },
-
 ]

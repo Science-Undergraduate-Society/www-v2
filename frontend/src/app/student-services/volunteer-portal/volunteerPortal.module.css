@@ -1,0 +1,155 @@
+.volunteerPortal {
+    font-family: 'Figtree', Helvetica, sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.about {
+    padding: 0 5% 100px;
+
+    b {
+        color: var(--color-ui-60);
+    }
+
+    .aboutCard {
+        padding: 50px 75px;
+        font-size: 24px;
+    }
+}
+
+.topContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+    padding: 3.2rem 0 1.6rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    flex: 1 1 auto;
+}
+
+.tag {
+    border: 2px solid var(--color-ui-80);
+    background: transparent;
+    color: var(--color-text);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tag:hover {
+    background: var(--color-ui-30);
+}
+
+.tag:focus-visible {
+    outline: 2px solid var(--color-ui-60);
+    outline-offset: 2px;
+}
+
+.tagActive,
+.tagActive:hover {
+    background: var(--color-ui-80);
+    color: var(--color-ui-10);
+}
+
+.searchContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 0 1 28rem;
+}
+
+.searchBar {
+    width: 100%;
+    height: 3.6rem;
+    padding: 0 0.8rem 0 3.2rem;
+    border-radius: 0.8rem;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    background: var(--color-surface);
+    color: #000;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.searchIcon {
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: column;
+
+    background: var(--color-ui-30);
+    padding: 3.2rem 3.84rem;
+    border-radius: var(--border-radius);
+    font-weight: var(--font-weight-bold);
+
+    min-height: 20rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.28) transparent;
+}
+
+.empty {
+    margin: auto;
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+}
+
+@media (max-width: 1024px) {
+    .about .aboutCard {
+        padding: 32px 36px;
+        font-size: 20px;
+    }
+
+    .topContainer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .searchContainer {
+        flex: 1 1 auto;
+        max-width: 100%;
+    }
+
+    .listContainer {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .about .aboutCard {
+        padding: 24px 20px;
+        font-size: 18px;
+    }
+
+    .listContainer {
+        padding: 1rem;
+    }
+}
