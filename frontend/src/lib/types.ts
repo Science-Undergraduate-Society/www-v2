@@ -168,7 +168,9 @@ export interface VolunteerOpportunity {
     "logo": string,
     "description": string,
     "website": string,
-    "industry": Industry[]
+    "industry": Industry[],
+    "commitment"?: string,
+    "howToApply"?: string
 }
 
 export type WorkMode =

@@ -1,0 +1,230 @@
+.container {
+    width: 100%;
+    margin: 0 auto 1.6rem;
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.25rem 5rem var(--color-shadow-base);
+    padding: 1.6rem 1.6rem 1.2rem;
+    color: var(--color-text);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 2rem var(--color-shadow-heavy), 0 0 0 1px var(--color-shadow-glow);
+}
+
+/* top bar */
+.topbar {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.topbar:focus-visible {
+    outline: 2px solid var(--color-ui-60);
+    outline-offset: 2px;
+    border-radius: var(--border-radius);
+}
+
+.title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: var(--color-text);
+}
+
+.topbarRight {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-shrink: 0;
+}
+
+.count {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+.arrow {
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-block;
+    background-color: var(--color-text);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.arrowExpanded {
+    transform: rotate(180deg);
+}
+
+/* expanded content */
+.content {
+    display: grid;
+    grid-template-columns: 13.6rem 1fr;
+    gap: 5.6rem;
+    align-items: start;
+    padding: 1.6rem 6.4rem 3.2rem;
+}
+
+.logoBox {
+    width: 13.6rem;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: calc(var(--border-radius, 16px) + 4px);
+    padding: 1rem;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logoFallback {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-ui-80);
+}
+
+.roles {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.role + .role {
+    padding-top: 2.4rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.roleTitle {
+    margin: 0 0 0.6rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.location {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    margin-right: 0.4rem;
+}
+
+.modeTag,
+.industryTag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+}
+
+.modeTag {
+    background: var(--color-ui-80);
+    color: var(--color-ui-10);
+}
+
+.industryTag {
+    background: var(--color-ui-20);
+    color: #222755;
+}
+
+.desc {
+    margin: 0.25rem 0 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    white-space: pre-line;
+}
+
+.detail {
+    margin: 0.8rem 0 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.detail b {
+    color: var(--color-ui-60);
+}
+
+.applyLink {
+    display: inline-block;
+    margin-top: 1.4rem;
+    padding: 0.7rem 1.6rem;
+    border-radius: 12px;
+    background: var(--color-ui-80);
+    color: var(--color-ui-10);
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.applyLink:hover {
+    opacity: 0.85;
+}
+
+.applyLink:focus-visible {
+    outline: 2px solid var(--color-ui-60);
+    outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        gap: 2.4rem;
+        padding: 1.2rem 1.6rem 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem 0.8rem 0.8rem;
+    }
+
+    .topbar {
+        padding: 0.6rem 0.6rem;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        padding: 0.8rem 0.6rem 1.4rem;
+    }
+
+    .logoBox {
+        width: 8rem;
+    }
+
+    .count {
+        display: none;
+    }
+}
