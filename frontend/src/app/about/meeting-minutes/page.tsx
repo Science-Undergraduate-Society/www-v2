@@ -15,7 +15,7 @@ export default function MeetingMinutes() {
                 <FrostedCard className={styles.accessCard}>
                     <p>
                         All SUS meetings are open to Science students to attend unless otherwise stated.
-                        All meeting minutes on the present website are updated for the 2025/2026 academic year.
+                        All meeting minutes on the present website are updated for the 2026/2027 academic year.
                     </p>
                     <div className={styles.requestAccess}>
                         <p>
@@ -42,7 +42,7 @@ export default function MeetingMinutes() {
                     The meeting minutes are being updated periodically.
                 </p>
                 <BlueButton
-                    href="https://drive.google.com/drive/folders/1-PVBSWfZlZPP7NPNQT3oZn8dIP7jsXa1"
+                    href="https://drive.google.com/drive/folders/1ilofiPvGxR6inLR2gakxZq4j9Bdz2pYE"
                     className={styles.button}
                 >
                     View Council Meeting Minutes
@@ -58,10 +58,25 @@ export default function MeetingMinutes() {
                     The meeting minutes are being updated periodically.
                 </p>
                 <BlueButton
-                    href="https://drive.google.com/drive/folders/1lJJ4gWDYDzz1B4FDpwPFL5Jo10TjwFKR"
+                    href="https://drive.google.com/drive/folders/1Ons5h8U4ZIY9EqBJI6GO6ybemyzQOYBi"
                     className={styles.button}
                 >
                     View Executive Meeting Minutes
+                </BlueButton>
+            </section>
+
+            <br /><br />
+
+            <section className={styles.meetingMinutesType}>
+                <h1>General Meeting Minutes</h1>
+                <p>
+                    General meeting minutes are updated periodically.
+                </p>
+                <BlueButton
+                    href="https://drive.google.com/drive/folders/1Cdt9_6UQ5Ovt_o6hVsnXWYDEHwbytzHe?usp=drive_link"
+                    className={styles.button}
+                >
+                    View General Meeting Minutes
                 </BlueButton>
             </section>
 
