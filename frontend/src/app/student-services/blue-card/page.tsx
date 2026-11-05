@@ -120,24 +120,18 @@ export default function BlueCard() {
                         <div className={styles.stepContent}>
                             <h3>Join SUS on Showpass</h3>
                             <p>Become a member of the Science Undergraduate Society via the Showpass platform.</p>
+                            <a href="https://www.showpass.com/m/the-sus-blue-card/" target="_blank" rel="noopener noreferrer" className={styles.stepLink}>Join us on Showpass →</a>
                         </div>
                     </div>
                     <div className={styles.step}>
                         <div className={styles.stepNumber}>2</div>
                         <div className={styles.stepContent}>
-                            <h3>Open the Memberships Tab</h3>
-                            <p>Click on <strong>&quot;Memberships&quot;</strong> to find the SUS Blue Card membership.</p>
+                            <h3>Request a Membership</h3>
+                            <p>Request a membership to join the Blue Card program! After registering, add your Blue Card to your digital wallet through Showpass.</p>
                         </div>
                     </div>
                     <div className={styles.step}>
                         <div className={styles.stepNumber}>3</div>
-                        <div className={styles.stepContent}>
-                            <h3>Request a Membership</h3>
-                            <p>Request a membership to join the Blue Card program!</p>
-                        </div>
-                    </div>
-                    <div className={styles.step}>
-                        <div className={styles.stepNumber}>4</div>
                         <div className={styles.stepContent}>
                             <h3>Enjoy Your Benefits</h3>
                             <p>Enjoy all the amazing SUS Blue Card benefits at our partner restaurants and shops!</p>
