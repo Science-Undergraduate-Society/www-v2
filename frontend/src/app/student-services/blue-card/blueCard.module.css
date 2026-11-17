@@ -330,11 +330,16 @@
         height: auto;
         aspect-ratio: 1;
         object-fit: contain;
+        background-color: #fff;
         border-radius: 20px;
         border: 10px solid color-mix(in srgb, var(--color-ui-80), transparent 25%);
         margin: 0 auto;
         display: block;
         overflow: hidden; 
+    }
+
+    .sponsorIconDark {
+        background-color: #0d0042;
     }
 
     .tooltiptext {
