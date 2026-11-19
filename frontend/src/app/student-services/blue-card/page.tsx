@@ -148,7 +148,7 @@ export default function BlueCard() {
                             <Image
                                 src={item.logoSrc}
                                 alt={`${item.name} logo`}
-                                className={styles.sponsorIcon}
+                                className={`${styles.sponsorIcon} ${item.darkLogoBackground ? styles.sponsorIconDark : ""}`}
                                 width={300}
                                 height={300}
                             />

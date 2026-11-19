@@ -100,7 +100,8 @@ export interface BlueCardPartner {
     logoSrc: string,
     description: string,
     location: string,
-    website: string
+    website: string,
+    darkLogoBackground?: boolean
 }
 
 // Subsidies and Grants
