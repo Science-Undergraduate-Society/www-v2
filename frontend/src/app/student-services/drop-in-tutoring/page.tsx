@@ -35,7 +35,7 @@ export default function DropInTutoring() {
                     <p>Courses: CHEM 121/123/223, BIOL 112/121/200, PHYS100/131/117/118, MATH 100/101/200/221, DSCI 100, MICB 211</p>
                 </FrostedCard>
                 <FrostedCard className={styles.card}>
-                    <h2>Tuesday: 5-6 PM at Abdul Ladha Science Student Center (ALSC 104)</h2>
+                    <h2>Tuesday: 5-7 PM at Abdul Ladha Science Student Center (ALSC 104)</h2>
                     <p>Courses: CHEM 121/123/223, BIOL 121/112 PHYS 131, MATH 100/101, CPSC 110/121/210, DSCI 100</p>
                 </FrostedCard>
             </section>
