@@ -130,7 +130,7 @@ export const tutors: Tutor[] = [
   {
     name: "Arsham Eslamkish",
     courses: ["CHEM 123", "CHEM 205", "BIOC 202", "BIOL 112"],
-    image: "/assets/tutor-images/Placeholder.jpg",
+    image: "/assets/tutor-images/arsham_eslamkish.jpg",
     link: "https://koalendar.com/e/arsham-eslamkish-sus-tutoring",
     bio: "Hi!!! My name is Arsham, I am a third year currently CAPS! I hope to help make a difference in these stressful and confusing first and second year classes the best I can. Outside of school I enjoy video games, collecting fragrances, and collecting posters!"
   },
